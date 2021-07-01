@@ -1,0 +1,1 @@
+{_x enableSimulation true;} forEach units player_squad;

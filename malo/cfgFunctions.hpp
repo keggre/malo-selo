@@ -12,6 +12,7 @@ class malo
 		class flee {};
 		class initFlee {};
 		class main {};
+		class playerSquadSimulation {};
 		class radio {};
 		class reload {};
 		class smugglerTrucks {};

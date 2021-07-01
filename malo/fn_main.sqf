@@ -27,6 +27,7 @@ while {true} do {
 	// CALLS
 	call MALO_fnc_reload;
 	call MALO_fnc_allowWarCrimes;
+	call MALO_fnc_playerSquadSimulation;
 	
 	// CONDITIONS
 	if (random [0, 50, 100] == 1) then {

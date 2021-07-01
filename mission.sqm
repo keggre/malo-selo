@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3014.6677,365.82758,5878.584};
-		dir[]={-0.82865369,-0.41728669,-0.37311196};
-		up[]={-0.38049862,0.90877461,-0.17132433};
-		aside[]={-0.41056553,-2.4028122e-007,0.91183639};
+		pos[]={4277.4487,216.43016,5757.7231};
+		dir[]={-0.61015654,-0.76344538,0.21180905};
+		up[]={-0.72122663,0.64587092,0.25036603};
+		aside[]={0.32794246,3.3527613e-008,0.94469965};
 	};
 };
 binarizationWanted=0;
@@ -22119,6 +22119,7 @@ class Mission
 						name="kapetan";
 						description="Капетан";
 						isPlayer=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -22250,6 +22251,7 @@ class Mission
 						init="call{this setUnitTrait [""Engineer"", true];}";
 						description="Пушкар";
 						isPlayable=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -22344,6 +22346,7 @@ class Mission
 						init="call{this setUnitTrait [""Engineer"", true];}";
 						description="Пушкар";
 						isPlayable=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -22438,6 +22441,7 @@ class Mission
 						init="call{this setUnitTrait [""Engineer"", true];}";
 						description="Пушкар";
 						isPlayable=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -22532,6 +22536,7 @@ class Mission
 						init="call{this setUnitTrait [""Engineer"", true];}";
 						description="Пушкар";
 						isPlayable=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -22626,6 +22631,7 @@ class Mission
 						init="call{this setUnitTrait [""Engineer"", true];}";
 						description="Пушкар";
 						isPlayable=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -22720,6 +22726,7 @@ class Mission
 						init="call{this setUnitTrait [""Engineer"", true];}";
 						description="Пушкар";
 						isPlayable=1;
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -24690,7 +24697,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4132.5,210.96077,5748.061};
-			angle=2.9035819;
+			angle=2.9035807;
 			class Attributes
 			{
 				text="activates bosnian ambush task";
@@ -108383,7 +108390,7 @@ class Mission
 			};
 			id=14229;
 			type="CFP_C_ASIA_Datsun_Pickup_01";
-			atlOffset=0.76835632;
+			atlOffset=0.83027649;
 		};
 		class Item3755
 		{
