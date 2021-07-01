@@ -1,11 +1,15 @@
-sleep 33;
+if (MALO_enable_cutscenes == true) then {
 
-private _camera = "camera" camCreate [4231.22,5803.2,43.1528];
-_camera camPrepareTarget mortar_cutscene_tgt;
-_camera cameraEffect ["internal", "back"];
-_camera camCommitPrepared 0;
-waitUntil { camCommitted _camera };
+	sleep 33;
 
-sleep 20;
-_camera cameraEffect ["terminate", "back"];
-camDestroy _camera;
+	private _camera = "camera" camCreate [4231.22,5803.2,43.1528];
+	_camera camPrepareTarget mortar_cutscene_tgt;
+	_camera cameraEffect ["internal", "back"];
+	_camera camCommitPrepared 0;
+	waitUntil { camCommitted _camera };
+
+	sleep 20;
+	_camera cameraEffect ["terminate", "back"];
+	camDestroy _camera;
+
+}
