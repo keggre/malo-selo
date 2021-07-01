@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4307.4277,271.44543,5805.2471};
-		dir[]={-0.62007266,-0.64142966,-0.45175606};
-		up[]={-0.51843303,0.76717997,-0.37770659};
-		aside[]={-0.58885038,7.9162419e-008,0.80824631};
+		pos[]={3014.6677,365.82758,5878.584};
+		dir[]={-0.82865369,-0.41728669,-0.37311196};
+		up[]={-0.38049862,0.90877461,-0.17132433};
+		aside[]={-0.41056553,-2.4028122e-007,0.91183639};
 	};
 };
 binarizationWanted=0;
@@ -24690,7 +24690,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4132.5,210.96077,5748.061};
-			angle=2.9035821;
+			angle=2.9035819;
 			class Attributes
 			{
 				text="activates bosnian ambush task";
@@ -213754,8 +213754,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3009.9702,364.18387,5875.4043};
-				angles[]={0,3.9399865,0};
+				position[]={3009.97,364.18384,5875.4038};
+				angles[]={0,3.9399934,0};
 			};
 			side="Empty";
 			class Attributes
@@ -213764,7 +213764,7 @@ class Mission
 			};
 			id=17757;
 			type="Land_WallSign_01_F";
-			atlOffset=2.9150391;
+			atlOffset=2.9147034;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -213801,7 +213801,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="src\kafana1.jpg";
+							value="src\kafana_1.jpg";
 						};
 					};
 				};
