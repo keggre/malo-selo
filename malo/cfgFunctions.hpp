@@ -15,9 +15,12 @@ class malo
 		class playerSquadSimulation {};
 		class radio {};
 		class reload {};
+		class setViewDistance {};
+		class sliders {};
 		class smugglerTrucks {};
 		class supplyTruck {};
 		class suppressingFire {};
+		class viewDistance {};
 		
 	};
 };

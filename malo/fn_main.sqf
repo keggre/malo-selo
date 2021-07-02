@@ -1,16 +1,20 @@
-
-
 // VARS
-CHBN_adjustBrightness = MALO_night_brightness;
+CHBN_adjustBrightness = MALO_night_brightness / 100;
+current_view_distance = 1;
+next_view_distance = 1;
+
+publicVariable "current_view_distance";
+publicVariable "next_view_distance";
 
 // COMMANDS
 setTimeMultiplier MALO_time_multiplier; 
-setViewDistance MALO_view_distance;
+setViewDistance current_view_distance;
 
 // CALLS
 call MALO_fnc_civs;
 call MALO_fnc_radio;
 call MALO_fnc_initFlee;
+call MALO_fnc_sliders;
 
 // CONDITIONS
 if (MALO_ambient_plane == true) then {
@@ -28,6 +32,7 @@ while {true} do {
 	call MALO_fnc_reload;
 	call MALO_fnc_allowWarCrimes;
 	call MALO_fnc_playerSquadSimulation;
+	call MALO_fnc_viewDistance;
 	
 	// CONDITIONS
 	if (random [0, 50, 100] == 1) then {

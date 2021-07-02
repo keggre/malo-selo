@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4277.4487,216.43016,5757.7231};
-		dir[]={-0.61015654,-0.76344538,0.21180905};
-		up[]={-0.72122663,0.64587092,0.25036603};
-		aside[]={0.32794246,3.3527613e-008,0.94469965};
+		pos[]={4333.4219,282.3949,5800.8472};
+		dir[]={-0.64101553,-0.64244175,-0.41996169};
+		up[]={-0.53738302,0.76633453,-0.35206679};
+		aside[]={-0.54801357,0,0.83646965};
 	};
 };
 binarizationWanted=0;
@@ -1368,7 +1368,6 @@ randomSeed=15011716;
 class ScenarioData
 {
 	author="keg";
-	briefing=0;
 	debriefing=0;
 	forceRotorLibSimulation=1;
 	disabledAI=1;
@@ -55357,7 +55356,7 @@ class Mission
 			{
 				text="capture village";
 				condition="call{this}";
-				onActivation="call{""guglovo"" setMarkerType ""o_hq"";  trg_poi4 setTriggerArea [5000,5000,0,false,100];  trg_poi5 setTriggerArea [5000,5000,0,false,100]; trg_poi6 setTriggerArea [5000,5000,0,false,100]; guglovo_flag setFlagTexture """"; hint ""We have captured Guglovo""; guglovo_marker setDamage 1; {_x enableAi ""PATH"";} forEach units un_check1_units; {_x enableAi ""PATH"";} forEach units un_check2_units; un_check1_apc setVehicleAmmo 0; _handle = execVM ""capsquad_1.sqf"";}";
+				onActivation="call{""guglovo"" setMarkerType ""o_hq"";  trg_poi4 setTriggerArea [5000,5000,0,false,100];  trg_poi5 setTriggerArea [5000,5000,0,false,100]; trg_poi6 setTriggerArea [5000,5000,0,false,100]; guglovo_flag setFlagTexture """"; hint ""We have captured Guglovo""; guglovo_marker setDamage 1; {_x enableAi ""PATH"";} forEach units un_check1_units; {_x enableAi ""PATH"";} forEach units un_check2_units; un_check1_apc setVehicleAmmo 0; [cap_1, ""cap_marker_1""] spawn MALO_fnc_capsquads;}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={20,30,60};
@@ -100713,7 +100712,7 @@ class Mission
 			{
 				text="capture village";
 				condition="call{this}";
-				onActivation="call{""novy"" setMarkerType ""o_hq""; trg_poi7 setTriggerArea [5000,5000,0,false,100]; novy_flag setFlagTexture """"; hint ""We have captured Novy Sobor""; novy_marker setDamage 1;  _handle = execVM ""capsquad_2.sqf""; _handle = execVM ""capsquad_3.sqf""; {_x enableAi ""ALL"";} forEach units t_enemy_1;  {_x enableAi ""ALL"";} forEach units t_enemy_2; {_x enableAi ""ALL"";} forEach units t_friendly_1;}";
+				onActivation="call{""novy"" setMarkerType ""o_hq""; trg_poi7 setTriggerArea [5000,5000,0,false,100]; novy_flag setFlagTexture """"; hint ""We have captured Novy Sobor""; novy_marker setDamage 1;  [cap_2, ""cap_marker_2""] spawn MALO_fnc_capsquads; [cap_3, ""cap_marker_3""] spawn MALO_fnc_capsquads; {_x enableAi ""ALL"";} forEach units t_enemy_1;  {_x enableAi ""ALL"";} forEach units t_enemy_2; {_x enableAi ""ALL"";} forEach units t_friendly_1;}";
 				sizeA=220;
 				sizeB=220;
 				timeout[]={20,30,60};
@@ -112446,7 +112445,7 @@ class Mission
 			{
 				text="capture village";
 				condition="call{this}";
-				onActivation="call{""msta"" setMarkerType ""o_hq""; hint ""We have captured Msta""; us_plane_1 enableSimulation true; trg_poi8 setTriggerArea [5000,5000,0,false,100]; trg_poi9 setTriggerArea [5000,5000,0,false,100]; msta_marker setDamage 1; {_x enableAi ""PATH"";} forEach units un_check3_units; {_x enableAi ""PATH"";} forEach units un_check4_units; {_x enableAi ""PATH"";} forEach units un_check5_units; un_check3_apc setVehicleAmmo 0; un_check4_apc setVehicleAmmo 0; un_check5_apc setVehicleAmmo 0;  _handle = execVM ""capsquad_6.sqf""; _handle = execVM ""capsquad_7.sqf"";}";
+				onActivation="call{""msta"" setMarkerType ""o_hq""; hint ""We have captured Msta""; us_plane_1 enableSimulation true; trg_poi8 setTriggerArea [5000,5000,0,false,100]; trg_poi9 setTriggerArea [5000,5000,0,false,100]; msta_marker setDamage 1; {_x enableAi ""PATH"";} forEach units un_check3_units; {_x enableAi ""PATH"";} forEach units un_check4_units; {_x enableAi ""PATH"";} forEach units un_check5_units; un_check3_apc setVehicleAmmo 0; un_check4_apc setVehicleAmmo 0; un_check5_apc setVehicleAmmo 0;  [cap_6, ""cap_marker_6""] spawn MALO_fnc_capsquads; [cap_7, ""cap_marker_7""] spawn MALO_fnc_capsquads;}";
 				sizeA=220;
 				sizeB=220;
 				timeout[]={20,30,60};
@@ -139083,7 +139082,7 @@ class Mission
 			{
 				text="capture village";
 				condition="call{this}";
-				onActivation="call{""pusta"" setMarkerType ""o_hq""; hint ""We have captured Pusta""; pusta_flag setFlagTexture """"; pusta_marker setDamage 1; _handle = execVM ""capsquad_8.sqf""; _handle = execVM ""capsquad_9.sqf""; {_x enableAi ""ALL"";} forEach units t_enemy_3;}";
+				onActivation="call{""pusta"" setMarkerType ""o_hq""; hint ""We have captured Pusta""; pusta_flag setFlagTexture """"; pusta_marker setDamage 1; [cap_8, ""cap_marker_8""] spawn MALO_fnc_capsquads; [cap_9, ""cap_marker_9""] spawn MALO_fnc_capsquads; {_x enableAi ""ALL"";} forEach units t_enemy_3;}";
 				sizeA=220;
 				sizeB=220;
 				timeout[]={20,30,60};
@@ -141957,7 +141956,7 @@ class Mission
 			{
 				text="capture village";
 				condition="call{false}";
-				onActivation="call{""stary"" setMarkerType ""o_hq""; stary_flag setFlagTexture """"; hint ""We have captured Stary Sobor""; stary_marker setDamage 1; _handle = execVM ""capsquad_4.sqf""; _handle = execVM ""capsquad_5.sqf"";}";
+				onActivation="call{""stary"" setMarkerType ""o_hq""; stary_flag setFlagTexture """"; hint ""We have captured Stary Sobor""; stary_marker setDamage 1; [cap_4, ""cap_marker_4""] spawn MALO_fnc_capsquads; [cap_5, ""cap_marker_5""] spawn MALO_fnc_capsquads;}";
 				sizeA=300;
 				sizeB=300;
 				timeout[]={20,30,60};
@@ -152548,7 +152547,7 @@ class Mission
 			{
 				name="trg_e_obj_1";
 				condition="call{this}";
-				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; _handle = execVM ""capsquad_e_1.sqf"";}";
+				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, ""cap_marker_e_1""] spawn MALO_fnc_capsquads;}";
 				sizeA=45;
 				activationType="NOT PRESENT";
 				activationBy="WEST";
@@ -152843,7 +152842,7 @@ class Mission
 			{
 				name="trg_e_obj_2";
 				condition="call{this}";
-				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; _handle = execVM ""capsquad_e_2.sqf"";}";
+				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, ""cap_marker_e_2""] spawn MALO_fnc_capsquads;}";
 				sizeA=30;
 				sizeB=30;
 				activationType="NOT PRESENT";
@@ -153140,7 +153139,7 @@ class Mission
 			{
 				name="trg_e_obj_3";
 				condition="call{this}";
-				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; _handle = execVM ""capsquad_e_3.sqf"";}";
+				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, ""cap_marker_e_3""] spawn MALO_fnc_capsquads;}";
 				sizeA=0;
 				sizeB=0;
 				activationType="NOT PRESENT";
@@ -153438,7 +153437,7 @@ class Mission
 			{
 				name="trg_e_obj_4";
 				condition="call{this}";
-				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; _handle = execVM ""capsquad_e_4.sqf"";}";
+				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, ""cap_marker_e_4""] spawn MALO_fnc_capsquads;}";
 				sizeA=20;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153737,7 +153736,7 @@ class Mission
 			{
 				name="trg_e_obj_5";
 				condition="call{this}";
-				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; _handle = execVM ""capsquad_e_5.sqf"";}";
+				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, ""cap_marker_e_5""] spawn MALO_fnc_capsquads;}";
 				sizeA=30;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -154033,7 +154032,7 @@ class Mission
 			{
 				name="trg_e_obj_6";
 				condition="call{this}";
-				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; _handle = execVM ""capsquad_e_6.sqf"";}";
+				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, ""cap_marker_e_6""] spawn MALO_fnc_capsquads;}";
 				sizeA=35;
 				sizeB=15;
 				activationType="NOT PRESENT";
