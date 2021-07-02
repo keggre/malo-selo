@@ -15,3 +15,6 @@ MALO_enable_cutscenes = true; 								// true
 
 MALO_ambient_plane = true;									// true
 MALO_ambient_fire = true;									// true
+
+MALO_enable_radio = true;									// true
+MALO_enable_backpack_radio = false;							// false

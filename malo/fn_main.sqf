@@ -12,7 +12,6 @@ setViewDistance current_view_distance;
 
 // CALLS
 call MALO_fnc_civs;
-call MALO_fnc_radio;
 call MALO_fnc_initFlee;
 call MALO_fnc_sliders;
 
@@ -33,6 +32,7 @@ while {true} do {
 	call MALO_fnc_allowWarCrimes;
 	call MALO_fnc_playerSquadSimulation;
 	call MALO_fnc_viewDistance;
+	call MALO_fnc_radio;
 	
 	// CONDITIONS
 	if (random [0, 50, 100] == 1) then {

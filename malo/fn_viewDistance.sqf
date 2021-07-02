@@ -4,9 +4,9 @@ setViewDistance current_view_distance;
 view_distance_reducers = [
 
 	// VILLAGES
-	[(MALO_view_distance / 3), getMarkerPos "chernogorsk", 1000],
+	[(MALO_view_distance / 3), getMarkerPos "chernogorsk", 2000],
 	[(MALO_view_distance / 3), getMarkerPos "dolina", 1000],
-	[(MALO_view_distance / 3), getMarkerPos "elektrozavodsk", 1000],
+	[(MALO_view_distance / 3), getMarkerPos "elektrozavodsk", 2000],
 	[(MALO_view_distance / 3), getMarkerPos "guglovo", 1000],
 	[(MALO_view_distance / 3), getMarkerPos "kamushovo", 1000],
 	[(MALO_view_distance / 3), getMarkerPos "mogilevka", 1000],

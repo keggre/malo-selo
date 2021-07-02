@@ -118,3 +118,25 @@
 	{}, 
 	true
 ] call cba_fnc_addSetting;
+
+[
+	"MALO_enable_radio", 
+	"CHECKBOX", 
+	["Enable music radio", "Enables or disables music radio."], 
+	"Malo Selo", 
+	MALO_enable_radio, 
+	0, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
+	"MALO_enable_backpack_radio", 
+	"CHECKBOX", 
+	["Enable backpack radio", "Allows backpacks to play music radio."], 
+	"Malo Selo", 
+	MALO_enable_backpack_radio, 
+	0, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
