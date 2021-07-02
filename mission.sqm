@@ -8,11 +8,11 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=18138;
+		nextID=18153;
 	};
 	class MarkerIDProvider
 	{
-		nextID=57;
+		nextID=58;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5044.356,356.28192,7153.6084};
-		dir[]={-0.8160696,-0.57595587,0.04809276};
-		up[]={-0.57496136,0.81747866,0.033883814};
-		aside[]={0.058830105,2.2281893e-007,0.99827206};
+		pos[]={4543.251,201.59911,1735.8562};
+		dir[]={0.29442218,-0.2245277,-0.92892569};
+		up[]={0.067837998,0.97446775,-0.21403436};
+		aside[]={-0.95326477,-7.4505806e-009,-0.30213645};
 	};
 };
 binarizationWanted=0;
@@ -1587,7 +1587,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5336;
+		items=5351;
 		class Item0
 		{
 			dataType="Object";
@@ -221805,6 +221805,141 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item5336
+		{
+			dataType="Marker";
+			position[]={5859.0083,290.35449,3479.1497};
+			name="peak_1";
+			type="Empty";
+			id=18138;
+			atlOffset=-0.2003479;
+		};
+		class Item5337
+		{
+			dataType="Marker";
+			position[]={2735.7646,447.20615,7027.4194};
+			name="peak_2";
+			type="Empty";
+			id=18139;
+			atlOffset=-0.2003479;
+		};
+		class Item5338
+		{
+			dataType="Marker";
+			position[]={3808.2805,235.36237,2610.1445};
+			name="peak_3";
+			type="Empty";
+			id=18140;
+			atlOffset=-0.2003479;
+		};
+		class Item5339
+		{
+			dataType="Marker";
+			position[]={5156.0117,174.54033,2240.4766};
+			name="peak_4";
+			type="Empty";
+			id=18141;
+			atlOffset=-0.2003479;
+		};
+		class Item5340
+		{
+			dataType="Marker";
+			position[]={3433.3018,216.13713,2065.2737};
+			name="peak_5";
+			type="Empty";
+			id=18142;
+			atlOffset=-0.2003479;
+		};
+		class Item5341
+		{
+			dataType="Marker";
+			position[]={5422.499,157.86598,2745.6816};
+			name="peak_6";
+			type="Empty";
+			id=18143;
+			atlOffset=-0.2003479;
+		};
+		class Item5342
+		{
+			dataType="Marker";
+			position[]={6101.9609,178.77452,2979.5942};
+			name="peak_7";
+			type="Empty";
+			id=18144;
+			atlOffset=-0.2003479;
+		};
+		class Item5343
+		{
+			dataType="Marker";
+			position[]={6896.522,178.62347,3198.6558};
+			name="peak_8";
+			type="Empty";
+			id=18145;
+			atlOffset=-0.2003479;
+		};
+		class Item5344
+		{
+			dataType="Marker";
+			position[]={7041.3262,196.38626,4004.3564};
+			name="peak_9";
+			type="Empty";
+			id=18146;
+			atlOffset=-0.2003479;
+		};
+		class Item5345
+		{
+			dataType="Marker";
+			position[]={6929.939,253.47897,3751.8787};
+			name="peak_10";
+			type="Empty";
+			id=18147;
+			atlOffset=-0.2003479;
+		};
+		class Item5346
+		{
+			dataType="Marker";
+			position[]={6566.0752,223.40848,6317.4956};
+			name="peak_11";
+			type="Empty";
+			id=18148;
+			atlOffset=-0.2003479;
+		};
+		class Item5347
+		{
+			dataType="Marker";
+			position[]={5467.0566,265.67969,6517.9927};
+			name="peak_12";
+			type="Empty";
+			id=18149;
+			atlOffset=-0.2003479;
+		};
+		class Item5348
+		{
+			dataType="Marker";
+			position[]={3543.7727,379.57919,6655.3701};
+			name="peak_13";
+			type="Empty";
+			id=18150;
+			atlOffset=-0.2003479;
+		};
+		class Item5349
+		{
+			dataType="Marker";
+			position[]={2489.3083,424.53506,7242.0093};
+			name="peak_14";
+			type="Empty";
+			id=18151;
+			atlOffset=-0.2003479;
+		};
+		class Item5350
+		{
+			dataType="Marker";
+			position[]={1334.5951,358.88522,5307.5869};
+			name="peak_15";
+			type="Empty";
+			id=18152;
+			atlOffset=-0.2003479;
 		};
 	};
 	class Connections

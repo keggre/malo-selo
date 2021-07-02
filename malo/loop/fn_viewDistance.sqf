@@ -31,7 +31,21 @@ view_distance_increasers = [
 	[3000, position darty_2, 100],
 
 	// PEAKS
-	[(MALO_view_distance * 3), getMarkerPos "castle1", 100]
+	[(MALO_view_distance * 3), getMarkerPos "peak_1", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_2", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_3", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_4", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_5", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_6", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_7", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_8", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_9", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_10", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_11", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_12", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_13", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_14", 250],
+	[(MALO_view_distance * 3), getMarkerPos "peak_15", 250]
 
 ];
 
