@@ -31,6 +31,7 @@ class malo
 		class playerSquadSimulation {};
 		class radio {};
 		class reload {};
+		class save {};
 		class viewDistance {};
 	};
 
