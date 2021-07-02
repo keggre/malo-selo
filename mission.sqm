@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4197.606,259.27643,5806.7046};
-		dir[]={0.53253293,-0.56699634,-0.62845266};
-		up[]={0.3665576,0.82371831,-0.43258223};
-		aside[]={-0.76294178,-3.3341348e-007,-0.64649624};
+		pos[]={5044.356,356.28192,7153.6084};
+		dir[]={-0.8160696,-0.57595587,0.04809276};
+		up[]={-0.57496136,0.81747866,0.033883814};
+		aside[]={0.058830105,2.2281893e-007,0.99827206};
 	};
 };
 binarizationWanted=0;
@@ -3490,7 +3490,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3538;
@@ -4170,7 +4170,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3723;
@@ -4187,7 +4187,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3724;
@@ -4204,7 +4204,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3725;
@@ -4289,7 +4289,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3736;
@@ -4306,7 +4306,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3737;
@@ -4325,7 +4325,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3740;
@@ -29374,7 +29374,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				name="guglovo_flag";
 				dynamicSimulation=1;
 			};
@@ -29803,7 +29803,7 @@ class Mission
 			{
 				text="activates when player gets in supply truck";
 				condition="call{!isNull (driver supplytruck1)}";
-				onActivation="call{ _handle = execVM ""supply_truck_1.sqf""; trg_poi1 setTriggerArea [200,200,0,false,100]; trg_poi2 setTriggerArea [200,200,0,false,100]; trg_poi3 setTriggerArea [200,200,0,false,100]; {_x enableAi ""PATH""; _x setSkill [""courage"", 1];} forEach shakhovka_civs; {_x setunitPos ""UP"";} forEach shakhovka_civs; {_x setunitPos ""AUTO"";} forEach shakhovka_civs;}";
+				onActivation="call{trg_poi1 setTriggerArea [200,200,0,false,100]; trg_poi2 setTriggerArea [200,200,0,false,100]; trg_poi3 setTriggerArea [200,200,0,false,100]; {_x enableAi ""PATH""; _x setSkill [""courage"", 1];} forEach shakhovka_civs; {_x setunitPos ""UP"";} forEach shakhovka_civs; {_x setunitPos ""AUTO"";} forEach shakhovka_civs; [""supply_truck_1"",[supplytruck1]] call BIS_fnc_taskSetDestination; " \n "}";
 				sizeA=0;
 				sizeB=0;
 			};
@@ -37792,7 +37792,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="src\pubsign.jpg";
+							value="img\pubsign.jpg";
 						};
 					};
 				};
@@ -97870,7 +97870,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033233643;
+					atlOffset=0.033477783;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97922,7 +97922,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033233643;
+			atlOffset=0.033477783;
 		};
 		class Item3578
 		{
@@ -98259,7 +98259,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15380859;
+					atlOffset=0.15405273;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98311,7 +98311,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15380859;
+			atlOffset=0.15405273;
 		};
 		class Item3583
 		{
@@ -100734,7 +100734,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				name="novy_flag";
 				dynamicSimulation=1;
 			};
@@ -104882,7 +104882,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="src\mechanicsign.jpg";
+							value="img\mechanicsign.jpg";
 						};
 					};
 				};
@@ -111254,7 +111254,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				name="castle1_flag";
 				dynamicSimulation=1;
 			};
@@ -126900,7 +126900,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";  msta_flag setFlagTexture """";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";  msta_flag setFlagTexture """";}";
 				name="msta_flag";
 				dynamicSimulation=1;
 			};
@@ -140662,7 +140662,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""src\bosnia.jpg"";}";
+				init="call{this SetFlagTexture ""img\bosnia.jpg"";}";
 				name="pusta_flag";
 				dynamicSimulation=1;
 			};
@@ -213807,7 +213807,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="src\kafana_1.jpg";
+							value="img\kafana_1.jpg";
 						};
 					};
 				};
@@ -214388,7 +214388,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="src\frontlines.jpg";
+							value="img\frontlines.jpg";
 						};
 					};
 				};

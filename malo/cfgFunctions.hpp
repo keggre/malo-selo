@@ -3,24 +3,47 @@ class malo
 	class main
 	{
 		file = "malo";
-		class allowWarCrimes {};
-		class ambientArty {};
-		class capsquads {};
-		class civs {};
-		class cutsceneAmbush {};
-		class cutsceneMortar {};
-		class flee {};
-		class initFlee {};
 		class main {};
+
+	};
+
+	class ambient
+	{
+		file = "malo\ambient"
+		class ambientArty {};
+		class ambientFire {};
+	};
+
+	class init
+	{
+		file = "malo\init"
+		class initCivs {};
+		class initFlee {};
+		class initSave {};
+		class initSliders {};
+	};
+
+	class loop
+	{
+		file = "malo\loop"
+		class allowWarCrimes {};
+		class flee {};
 		class playerSquadSimulation {};
 		class radio {};
 		class reload {};
-		class setViewDistance {};
-		class sliders {};
-		class smugglerTrucks {};
-		class supplyTruck {};
-		class suppressingFire {};
 		class viewDistance {};
-		
+	};
+
+	class misc
+	{
+		file = "malo\misc"
+		class capsquads {};
+		class setViewDistance {};
+	};
+
+	class missions
+	{
+		file = "malo\missions"
+		class smugglerTrucks {};
 	};
 };
