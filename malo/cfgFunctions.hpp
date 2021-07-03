@@ -41,11 +41,6 @@ class malo
 		class capsquads {};
 		class captureVillage {};
 		class setViewDistance {};
-	};
-
-	class missions
-	{
-		file = "malo\missions"
 		class smugglerTrucks {};
 	};
 
