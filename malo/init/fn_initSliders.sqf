@@ -120,23 +120,34 @@
 ] call cba_fnc_addSetting;
 
 [
-	"MALO_enable_radio", 
+	"MALO_allow_war_crimes", 
 	"CHECKBOX", 
-	["Enable music radio", "Enables or disables music radio."], 
+	["Allow war crimes", "When enabled, players will not be executed by friendly ai units for killing teammates or civilians."], 
 	"Malo Selo", 
-	MALO_enable_radio, 
+	MALO_allow_war_crimes, 
+	1, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
+	"MALO_saving", 
+	"CHECKBOX", 
+	["Enable saving", "Allows mission progress to be saved locally to the user profile."], 
+	"Malo Selo", 
+	MALO_saving, 
 	0, 
 	{}, 
 	false
 ] call cba_fnc_addSetting;
 
 [
-	"MALO_enable_backpack_radio", 
+	"MALO_loading", 
 	"CHECKBOX", 
-	["Enable backpack radio", "Allows backpacks to play music radio."], 
+	["Load save file", "When enabled, the save file from the user profile will be loaded at mission start if it exists."], 
 	"Malo Selo", 
-	MALO_enable_backpack_radio, 
+	MALO_loading, 
 	0, 
 	{}, 
-	false
+	true
 ] call cba_fnc_addSetting;

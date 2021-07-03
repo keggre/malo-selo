@@ -16,5 +16,7 @@ MALO_enable_cutscenes = true; 								// true
 MALO_ambient_plane = true;									// true
 MALO_ambient_fire = true;									// true
 
+MALO_allow_war_crimes = true;								// true
+
 MALO_saving = true;											// true
 MALO_loading = true;										// true

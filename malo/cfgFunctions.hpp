@@ -19,8 +19,8 @@ class malo
 		file = "malo\init"
 		class initCivs {};
 		class initFlee {};
-		class initSave {};
 		class initSliders {};
+		class initVillages {};
 	};
 
 	class loop
@@ -31,14 +31,15 @@ class malo
 		class playerSquadSimulation {};
 		class radio {};
 		class reload {};
-		class save {};
 		class viewDistance {};
+		class villages {};
 	};
 
 	class misc
 	{
 		file = "malo\misc"
 		class capsquads {};
+		class captureVillage {};
 		class setViewDistance {};
 	};
 
@@ -47,4 +48,11 @@ class malo
 		file = "malo\missions"
 		class smugglerTrucks {};
 	};
+
+	class save 
+	{
+		file = "malo\save"
+		class load {};
+		class save {};
+	}
 };

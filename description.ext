@@ -2,7 +2,6 @@ class CfgFunctions
 {
   #include "malo\cfgFunctions.hpp"
   #include "furniture\func.hpp"
-  #include "save\cfgFunctions.hpp"
 };
 
 class Extended_PreInit_EventHandlers {

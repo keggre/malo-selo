@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5462.5752,1296.4293,5196.9048};
-		dir[]={-0.73770773,-0.58442616,0.33798945};
-		up[]={-0.53131783,0.81144536,0.24342965};
-		aside[]={0.41652665,-1.8626451e-009,0.9091258};
+		pos[]={4326.7622,250.16463,5813.9048};
+		dir[]={-0.64748651,-0.41097054,-0.64176667};
+		up[]={-0.29188648,0.91164869,-0.28930795};
+		aside[]={-0.70396274,-2.9802322e-008,0.71023697};
 	};
 };
 binarizationWanted=0;
@@ -1368,6 +1368,9 @@ randomSeed=15011716;
 class ScenarioData
 {
 	author="keg";
+	overViewPicture="img\icon.jpg";
+	overViewPictureLocked="img\icon.jpg";
+	loadScreen="img\icon.jpg";
 	debriefing=0;
 	forceRotorLibSimulation=1;
 	disabledAI=1;
@@ -1565,7 +1568,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="malo selo 16";
+		briefingName="Malo Selo";
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.55083036;
@@ -1785,7 +1788,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="Empty";
+			side="West";
 			flags=4;
 			class Attributes
 			{
@@ -55355,8 +55358,8 @@ class Mission
 			class Attributes
 			{
 				text="capture village";
-				condition="call{this}";
-				onActivation="call{""guglovo"" setMarkerType ""o_hq"";  trg_poi4 setTriggerArea [5000,5000,0,false,100];  trg_poi5 setTriggerArea [5000,5000,0,false,100]; trg_poi6 setTriggerArea [5000,5000,0,false,100]; guglovo_flag setFlagTexture """"; hint ""We have captured Guglovo""; guglovo_marker setDamage 1; {_x enableAi ""PATH"";} forEach units un_check1_units; {_x enableAi ""PATH"";} forEach units un_check2_units; un_check1_apc setVehicleAmmo 0; [cap_1, ""cap_marker_1""] spawn MALO_fnc_capsquads;}";
+				condition="call{true}";
+				onActivation="call{[""guglovo""] call MALO_fnc_captureVillage;}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={20,30,60};
@@ -187820,6 +187823,7 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187871,6 +187875,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4871
 		{
@@ -187897,6 +187902,7 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187948,6 +187954,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4872
 		{
