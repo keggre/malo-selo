@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4326.7622,250.16463,5813.9048};
-		dir[]={-0.64748651,-0.41097054,-0.64176667};
-		up[]={-0.29188648,0.91164869,-0.28930795};
-		aside[]={-0.70396274,-2.9802322e-008,0.71023697};
+		pos[]={3074.229,405.1156,5899.3491};
+		dir[]={-0.32782403,-0.57259226,-0.75145322};
+		up[]={-0.22895864,0.81983691,-0.52482873};
+		aside[]={-0.91658163,2.7241185e-008,0.39986321};
 	};
 };
 binarizationWanted=0;
@@ -1788,7 +1788,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="West";
+			side="Empty";
 			flags=4;
 			class Attributes
 			{
@@ -4346,6 +4346,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=3741;
@@ -17694,6 +17695,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=5748;
@@ -17712,6 +17714,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=5749;
@@ -37169,6 +37172,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=6984;
@@ -44167,6 +44171,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=7449;
@@ -44184,6 +44189,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=7450;
@@ -44201,6 +44207,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=7451;
@@ -44219,6 +44226,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""img\srpska.jpg"";}";
 				dynamicSimulation=1;
 			};
 			id=7452;
@@ -55357,9 +55365,10 @@ class Mission
 			position[]={3064.177,380.0408,5850.3809};
 			class Attributes
 			{
+				name="trg_guglovo";
 				text="capture village";
-				condition="call{true}";
-				onActivation="call{[""guglovo""] call MALO_fnc_captureVillage;}";
+				condition="call{this}";
+				onActivation="call{[""guglovo""] spawn MALO_fnc_captureVillage;}";
 				sizeA=100;
 				sizeB=100;
 				timeout[]={20,30,60};
@@ -187823,7 +187832,6 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187875,7 +187883,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
-			atlOffset=2.8610229e-006;
 		};
 		class Item4871
 		{
@@ -187902,7 +187909,6 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187954,7 +187960,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
-			atlOffset=2.8610229e-006;
 		};
 		class Item4872
 		{

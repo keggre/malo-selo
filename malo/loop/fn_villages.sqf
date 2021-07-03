@@ -1,16 +1,15 @@
 {
 
-	_name = (_x select 0);
-	_serb = (_x select 1);
+	_serb = call compile (_x + "_serb");
 
 	if (_serb == true) then {
 
-		_name setMarkerType "o_hq"; 
+		_x setMarkerType "o_hq"; 
 
 	} else {
 
-		_name setMarkerType "b_hq"; 
+		_x setMarkerType "b_hq"; 
 
-	}
+	};
 
 } forEach villages;

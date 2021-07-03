@@ -21,6 +21,7 @@ class malo
 		class initFlee {};
 		class initSliders {};
 		class initVillages {};
+		class initPois {};
 	};
 
 	class loop
@@ -38,6 +39,7 @@ class malo
 	class misc
 	{
 		file = "malo\misc"
+		class activateTrigger {};
 		class capsquads {};
 		class captureVillage {};
 		class setViewDistance {};
