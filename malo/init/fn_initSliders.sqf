@@ -1,9 +1,33 @@
+MALO_simulation_distance = MALO_min_simulation_distance;
+
+[
+	"MALO_target_framerate", 
+	"SLIDER", 
+	["Target FPS", "Increases or decreases simulation distance and view distance to target a framerate. Set to 0 to disable."], 
+	"Malo Selo", 
+	[0, 60, MALO_target_framerate, 0], 
+	0, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
+	"MALO_min_simulation_distance", 
+	"SLIDER", 
+	["Minimum simulation distance", "Minimum radius in which ai units are simulated. Lower to improve game performance."], 
+	"Malo Selo", 
+	[100, 10000, MALO_min_simulation_distance, 0], 
+	1, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
 [
 	"MALO_view_distance", 
 	"SLIDER", 
 	["View distance", "Default view distance. Can be overwritten if dynamic view distance is on."], 
 	"Malo Selo", 
-	[1, 10000, MALO_view_distance, 0], 
+	[100, 10000, MALO_view_distance, 0], 
 	0, 
 	{}, 
 	false
@@ -25,7 +49,7 @@
 	"SLIDER", 
 	["Minimum view distance", "Minimum view distance possible when dynamic view distance is enabled."], 
 	"Malo Selo", 
-	[1, 10000, MALO_dynamic_view_distance_min, 0], 
+	[100, 10000, MALO_dynamic_view_distance_min, 0], 
 	0, 
 	{}, 
 	false
@@ -36,7 +60,7 @@
 	"SLIDER", 
 	["Maximum view distance", "Maximum view distance possible when dynamic view distance is enabled."], 
 	"Malo Selo", 
-	[1, 10000, MALO_dynamic_view_distance_max, 0], 
+	[100, 10000, MALO_dynamic_view_distance_max, 0], 
 	0, 
 	{}, 
 	false
@@ -58,7 +82,7 @@
 	"SLIDER", 
 	["View distance smoothing", "Constant that determines the smoothness of transitions between different view distances."], 
 	"Malo Selo", 
-	[1, 500, MALO_dynamic_view_distance_smoothing, 0], 
+	[1, 100, MALO_dynamic_view_distance_smoothing, 0], 
 	0, 
 	{}, 
 	false
@@ -147,7 +171,7 @@
 	["Load save file", "When enabled, the save file from the user profile will be loaded at mission start if it exists."], 
 	"Malo Selo", 
 	MALO_loading, 
-	0, 
+	1, 
 	{}, 
 	true
 ] call cba_fnc_addSetting;

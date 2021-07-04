@@ -28,6 +28,9 @@ class malo
 	{
 		file = "malo\loop"
 		class allowWarCrimes {};
+		class autoConfig {};
+		class debug {};
+		class dynamicSimulation {};
 		class flee {};
 		class playerSquadSimulation {};
 		class radio {};

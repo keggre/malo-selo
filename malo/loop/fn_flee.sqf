@@ -1,4 +1,8 @@
 {if(side _x==civilian)then{
+
+//Remove the eventHandler to prevent spamming 
+_civ removeAllEventHandlers "FiredNear";
+
 _x addEventHandler["FiredNear",{
 _civ=_this select 0;
 
@@ -20,7 +24,5 @@ _HP=selectRandom _HP;//Picks a building position from the list of building posit
 
 _civ doMove _HP;//Orders the civilian to move to the building position
 
-//Remove the eventHandler to prevent spamming 
-_civ removeAllEventHandlers "FiredNear";
 }];};
 }forEach allUnits-switchableUnits-playableUnits;

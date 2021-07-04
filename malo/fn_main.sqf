@@ -2,9 +2,6 @@
 current_view_distance = 1;
 next_view_distance = 1;
 
-publicVariable "current_view_distance";
-publicVariable "next_view_distance";
-
 // COMMANDS
 setViewDistance current_view_distance;
 
@@ -40,10 +37,14 @@ while {true} do {
 	// CALLS
 	call MALO_fnc_reload;
 	call MALO_fnc_playerSquadSimulation;
-	call MALO_fnc_viewDistance;
 	call MALO_fnc_radio;
 	call MALO_fnc_villages;
+	call MALO_fnc_dynamicSimulation;
+	call MALO_fnc_debug;
 	
+	// LOCALS
+	[] remoteExec ["MALO_fnc_viewDistance", clientOwner];
+
 	// CONDITIONS
 	if (random [0, 50, 100] == 1) then {
 		call MALO_fnc_flee;
@@ -55,6 +56,12 @@ while {true} do {
 
 	if (MALO_allow_war_crimes == true) then {
 		call MALO_fnc_allowWarCrimes;
+	};
+
+	if (MALO_target_framerate == 0) then {
+		MALO_simulation_distance = MALO_min_simulation_distance;
+	} else {
+		[] remoteExec ["MALO_fnc_autoConfig", clientOwner];
 	};
 
 	sleep .05;

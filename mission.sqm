@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4364.3359,360.6235,5812.7524};
-		dir[]={-0.63186312,-0.62197959,-0.46250165};
-		up[]={-0.50189418,0.78303361,-0.36736917};
-		aside[]={-0.59064931,-8.9406967e-008,0.80693597};
+		pos[]={3004.6235,612.60004,6284.8999};
+		dir[]={0.051256374,-0.60404742,-0.79529834};
+		up[]={0.038849793,0.79694831,-0.60279673};
+		aside[]={-0.99792945,1.8626451e-009,-0.064315796};
 	};
 };
 binarizationWanted=0;
@@ -1336,12 +1336,12 @@ class AddonsMetaData
 };
 class DynamicSimulation
 {
+	saturateByObjectDistance=0;
 	class EnableRadiuses
 	{
-		Prop=1000;
-		EmptyVehicle=1000;
-		Vehicle=2000;
-		Group=1000;
+		EmptyVehicle=50;
+		Vehicle=50;
+		Group=50;
 	};
 };
 dlcs[]=
@@ -1788,7 +1788,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="Empty";
+			side="West";
 			flags=4;
 			class Attributes
 			{
@@ -187837,6 +187837,7 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187888,6 +187889,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4871
 		{
@@ -187914,6 +187916,7 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187965,6 +187968,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4872
 		{

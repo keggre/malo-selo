@@ -1,12 +1,16 @@
 // THESE SETTINGS CAN ALSO BE CONFIGURED IN-GAME UNDER CONFIGURE -> ADDON OPTIONS -> MALO SELO
 
-MALO_view_distance = 3000;									// 3000
+MALO_target_framerate = 30; 								// 30
+
+MALO_min_simulation_distance = 500;							// 500
+
+MALO_view_distance = 2000;									// 2000
 
 MALO_dynamic_view_distance = true;							// true
-MALO_dynamic_view_distance_min = 1000;						// 1000
-MALO_dynamic_view_distance_max = 5000;						// 5000
+MALO_dynamic_view_distance_min = 500;						// 500
+MALO_dynamic_view_distance_max = 3000;						// 3000
 MALO_dynamic_view_distance_altitude_multiplier = 25;		// 25
-MALO_dynamic_view_distance_smoothing = 100;					// 100
+MALO_dynamic_view_distance_smoothing = 50;					// 50
 
 MALO_night_brightness = 25;									// 25
 MALO_time_multiplier = 18;									// 18
