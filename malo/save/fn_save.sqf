@@ -1,1 +1,2 @@
-// hint "Saving...";
+hint "Saving progress...";
+
