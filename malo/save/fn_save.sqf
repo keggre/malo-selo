@@ -1,2 +1,2 @@
-hint "Saving progress...";
+
 
