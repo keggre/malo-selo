@@ -50,10 +50,6 @@ while {true} do {
 		call MALO_fnc_flee;
 	};
 
-	if (MALO_saving == true) then {
-		call MALO_fnc_save;
-	};
-
 	if (MALO_allow_war_crimes == true) then {
 		call MALO_fnc_allowWarCrimes;
 	};
