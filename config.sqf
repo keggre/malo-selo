@@ -3,6 +3,7 @@
 MALO_target_framerate = 30; 								// 30
 
 MALO_min_simulation_distance = 500;							// 500
+MALO_max_simulation_distance = 2000;						// 2000
 
 MALO_view_distance = 2000;									// 2000
 

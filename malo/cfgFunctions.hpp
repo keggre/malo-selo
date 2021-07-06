@@ -20,6 +20,7 @@ class malo
 		class initCivs {};
 		class initFlee {};
 		class initSliders {};
+		class initRadio {};
 		class initVillages {};
 		class initPois {};
 	};
@@ -28,13 +29,12 @@ class malo
 	{
 		file = "malo\loop"
 		class allowWarCrimes {};
-		class autoConfig {};
 		class debug {};
 		class dynamicSimulation {};
 		class flee {};
 		class playerSquadSimulation {};
-		class radio {};
 		class reload {};
+		class simulationDistance {};
 		class viewDistance {};
 		class villages {};
 	};

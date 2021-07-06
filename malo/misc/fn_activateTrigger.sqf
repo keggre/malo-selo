@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 params ["_trg"];
 
 _trg setTriggerActivation ["ANY", "NOT PRESENT", false];

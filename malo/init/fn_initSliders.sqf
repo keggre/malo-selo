@@ -1,3 +1,5 @@
+if (!hasInterface) exitWith {};
+
 MALO_simulation_distance = MALO_min_simulation_distance;
 
 [
@@ -17,6 +19,17 @@ MALO_simulation_distance = MALO_min_simulation_distance;
 	["Minimum simulation distance", "Minimum radius in which ai units are simulated. Lower to improve game performance."], 
 	"Malo Selo", 
 	[100, 10000, MALO_min_simulation_distance, 0], 
+	1, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
+	"MALO_max_simulation_distance", 
+	"SLIDER", 
+	["Maximum simulation distance", "Maximum radius in which ai units are simulated. Lower to improve game performance."], 
+	"Malo Selo", 
+	[100, 10000, MALO_max_simulation_distance, 0], 
 	1, 
 	{}, 
 	false

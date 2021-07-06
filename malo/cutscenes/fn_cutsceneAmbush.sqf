@@ -1,3 +1,5 @@
+if (!hasInterface) exitWith {};
+
 if (MALO_enable_cutscenes == true) then {
 
 	private _camera = "camera" camCreate [4103.72,5712.99,15.5245];

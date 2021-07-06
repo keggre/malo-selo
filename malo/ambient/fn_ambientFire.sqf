@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 _turrets = [
 
 	t_turret_1,

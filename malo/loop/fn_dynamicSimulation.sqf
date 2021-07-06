@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 "Group" setDynamicSimulationDistance MALO_simulation_distance;
 "Vehicle" setDynamicSimulationDistance (MALO_simulation_distance * 2);
 "EmptyVehicle" setDynamicSimulationDistance (MALO_simulation_distance / 2);

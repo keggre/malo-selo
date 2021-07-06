@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 params ["_leader", "_pos"];
 
 { 

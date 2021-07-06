@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 _guns = [
 
 	a_mortar_1

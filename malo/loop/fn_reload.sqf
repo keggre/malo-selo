@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 arty_1 setVehicleAmmo 1;
 
 mortar_1 setVehicleAmmo 1;

@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 params ["_modifier", "_is_reducer"];
 
 _distance = (_modifier select 0);

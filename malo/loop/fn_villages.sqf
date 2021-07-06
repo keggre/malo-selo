@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 {
 
 	_serb = call compile (_x + "_serb");

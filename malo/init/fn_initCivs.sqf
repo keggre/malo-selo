@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 shakhovka_civs = [
 
 	civ_1,

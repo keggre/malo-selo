@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 {if(side _x==civilian)then{
 
 //Remove the eventHandler to prevent spamming 

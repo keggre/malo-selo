@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 smuggler_trucks_destroyed = false;
 
 _trucks = [

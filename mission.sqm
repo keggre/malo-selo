@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5654.3511,180.05141,1630.608};
-		dir[]={-0.8384707,-0.4376018,-0.3247638};
-		up[]={-0.40806162,0.89916885,-0.15805399};
-		aside[]={-0.36118221,0,0.93249524};
+		pos[]={4119.3091,285.37851,5690.4321};
+		dir[]={0.35998726,-0.82639652,0.43299466};
+		up[]={0.52831811,0.56308341,0.63546419};
+		aside[]={0.76895803,2.7404167e-007,-0.6393047};
 	};
 };
 binarizationWanted=0;
@@ -1789,7 +1789,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="West";
+			side="Empty";
 			flags=4;
 			class Attributes
 			{
@@ -5118,7 +5118,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5110.8291,6,1510.6355};
+				position[]={5110.8281,6,1510.6356};
 			};
 			areaSize[]={1,-1,1};
 			id=4404;
@@ -24702,19 +24702,20 @@ class Mission
 		class Item824
 		{
 			dataType="Trigger";
-			position[]={4132.5,210.96077,5748.061};
-			angle=2.9035807;
+			position[]={4205.7744,219.8958,5763.1479};
+			angle=2.9035819;
 			class Attributes
 			{
 				text="activates bosnian ambush task";
 				condition="call{this}";
 				onActivation="call{[] spawn MALO_fnc_cutsceneAmbush;}";
-				sizeA=20;
+				sizeA=100;
+				sizeB=100;
 				activationBy="WEST";
 			};
 			id=6338;
 			type="EmptyDetector";
-			atlOffset=-1.5258789e-005;
+			atlOffset=16.889648;
 		};
 		class Item825
 		{
@@ -152559,7 +152560,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5034.4082,6,1781.7889};
-			angle=0.39264667;
+			angle=0.39264649;
 			class Attributes
 			{
 				name="trg_e_obj_1";
@@ -156584,7 +156585,7 @@ class Mission
 					};
 					id=16312;
 					type="I_Bosnia_and_Herzegovina_Rifleman_3_01";
-					atlOffset=0.14684582;
+					atlOffset=0.14684629;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187838,7 +187839,7 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
+					atlOffset=6.6757202e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187890,7 +187891,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
-			atlOffset=2.8610229e-006;
+			atlOffset=6.6757202e-006;
 		};
 		class Item4871
 		{
@@ -187917,7 +187918,7 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
+					atlOffset=6.6757202e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187969,7 +187970,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
-			atlOffset=2.8610229e-006;
+			atlOffset=6.6757202e-006;
 		};
 		class Item4872
 		{
@@ -187996,7 +187997,6 @@ class Mission
 					};
 					id=17003;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15193176;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -188048,7 +188048,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17002;
-			atlOffset=0.15193176;
 		};
 		class Item4873
 		{

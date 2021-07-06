@@ -1,5 +1,11 @@
+if (!hasInterface) exitWith {if (MALO_dynamic_view_distance == true) then {setViewDistance MALO_dynamic_view_distance_max;} else {setViewDistance MALO_view_distance;};};
+
 current_view_distance = (current_view_distance + (next_view_distance - current_view_distance) / (MALO_dynamic_view_distance_smoothing * 10));
+
 setViewDistance current_view_distance;
+
+60 setFog fog_value;
+60 setOvercast ovc_value;
 
 view_distance_reducers = [
 
@@ -84,3 +90,17 @@ if (MALO_dynamic_view_distance == true) then {
 
 };
 
+fog_value = (((3000 - next_view_distance) / 6000) + .05);
+ovc_value =  (((3000 - next_view_distance) / 6000) + .5);
+
+if (fog_value > .5) then {
+
+	fog_value = .5;
+
+};
+
+if (ovc_value > 1) then {
+
+	ovc_value = 1;
+
+};

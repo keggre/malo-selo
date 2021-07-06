@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 villages = [
 	"dolina",
 	"elektrozavodsk",
