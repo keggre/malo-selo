@@ -91,7 +91,7 @@ if (MALO_dynamic_view_distance == true) then {
 };
 
 fog_value = (((3000 - next_view_distance) / 6000) + .05);
-ovc_value =  (((3000 - next_view_distance) / 6000) + .5);
+ovc_value =  (((3000 - next_view_distance) / 12000) + .5);
 
 if (fog_value > .5) then {
 
@@ -101,6 +101,6 @@ if (fog_value > .5) then {
 
 if (ovc_value > 1) then {
 
-	ovc_value = 1;
+	ovc_value = .75;
 
 };
