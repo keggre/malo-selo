@@ -6,7 +6,13 @@ if (diag_fps < MALO_target_framerate) then {
 
 	if (MALO_simulation_distance < MALO_min_simulation_distance) then {
 
-		MALO_simulation_distance = MALO_min_simulation_distance
+		MALO_simulation_distance = MALO_min_simulation_distance;
+
+	};
+
+	if (MALO_simulation_distance > MALO_max_simulation_distance) then {
+
+		MALO_simulation_distance = MALO_max_simulation_distance;
 
 	};
 
