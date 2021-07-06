@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=649;
 	class ItemIDProvider
 	{
 		nextID=18240;
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4119.3091,285.37851,5690.4321};
-		dir[]={0.35998726,-0.82639652,0.43299466};
-		up[]={0.52831811,0.56308341,0.63546419};
-		aside[]={0.76895803,2.7404167e-007,-0.6393047};
+		pos[]={4507.374,562.84094,5962.0601};
+		dir[]={-0.55529213,-0.74856246,-0.3623766};
+		up[]={-0.62688857,0.66305631,-0.40909931};
+		aside[]={-0.54651266,3.1944364e-007,0.83745807};
 	};
 };
 binarizationWanted=0;
@@ -22824,7 +22824,8 @@ class Mission
 			position[]={4269.3628,208.856,5760.043};
 			name="respawn_east";
 			text="Pub";
-			type="respawn_inf";
+			type="respawn_unknown";
+			colorName="ColorEAST";
 			id=6285;
 			atlOffset=-0.00035095215;
 		};
