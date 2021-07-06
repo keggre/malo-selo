@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4360.1338,470.6358,5471.272};
-		dir[]={-0.32480824,-0.58907914,0.73993516};
-		up[]={-0.2367823,0.80806589,0.53940678};
-		aside[]={0.91567314,8.1025064e-008,0.40195009};
+		pos[]={4595.6128,442.35181,5746.4497};
+		dir[]={-0.81991535,-0.57070363,0.04512481};
+		up[]={-0.56984127,0.82115602,0.031361748};
+		aside[]={0.05495277,0,0.9984889};
 	};
 };
 binarizationWanted=0;
@@ -1789,7 +1789,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="Empty";
+			side="West";
 			flags=4;
 			class Attributes
 			{
@@ -24704,7 +24704,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4205.7744,219.8958,5763.1479};
-			angle=2.9035819;
+			angle=2.9035814;
 			class Attributes
 			{
 				text="activates bosnian ambush task";
