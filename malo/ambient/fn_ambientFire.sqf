@@ -1,4 +1,5 @@
 if (!isServer) exitWith {};
+if (MALO_CFG_ambient_fire == false) exitWith {};
 
 _turrets = [
 

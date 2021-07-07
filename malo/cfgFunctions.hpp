@@ -12,6 +12,7 @@ class malo
 		file = "malo\ambient"
 		class ambientArty {};
 		class ambientFire {};
+		class ambientPlane {};
 	};
 
 	class init
@@ -35,8 +36,10 @@ class malo
 		class playerSquadSimulation {};
 		class reload {};
 		class simulationDistance {};
+		class supplyTruck {};
 		class viewDistance {};
 		class villages {};
+		class weather {};
 	};
 
 	class misc
@@ -53,6 +56,9 @@ class malo
 	{
 		file = "malo\save"
 		class load {};
+		class loadProgress {};
+		class loadProgressKeywords {};
 		class save {};
+		class savePush {};
 	}
 };

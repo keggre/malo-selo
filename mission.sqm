@@ -8,11 +8,11 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=18240;
+		nextID=18244;
 	};
 	class MarkerIDProvider
 	{
-		nextID=58;
+		nextID=59;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4595.6128,442.35181,5746.4497};
-		dir[]={-0.81991535,-0.57070363,0.04512481};
-		up[]={-0.56984127,0.82115602,0.031361748};
-		aside[]={0.05495277,0,0.9984889};
+		pos[]={4854.3438,223.92026,4343.6226};
+		dir[]={0.12988983,-0.70752436,-0.69465166};
+		up[]={0.1300433,0.70668751,-0.69547242};
+		aside[]={-0.98296618,-1.816079e-008,-0.18380049};
 	};
 };
 binarizationWanted=0;
@@ -1591,7 +1591,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5355;
+		items=5357;
 		class Item0
 		{
 			dataType="Object";
@@ -1789,7 +1789,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="West";
+			side="Empty";
 			flags=4;
 			class Attributes
 			{
@@ -20701,6 +20701,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				name="house_shootout";
 				dynamicSimulation=1;
 			};
 			id=6053;
@@ -21397,12 +21398,13 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4164.5098,203.7455,5758.5869};
+				position[]={4164.5098,203.7455,5758.5874};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="tractor_shootout";
 				dynamicSimulation=1;
 			};
 			id=6141;
@@ -21627,13 +21629,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4182.1372,202.00143,5752.6377};
-						angles[]={0,0.00023435669,0};
+						angles[]={0,0.00022689281,0};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
 						init="call{this disableAi ""PATH"";}";
+						name="civ_shootout";
 						ignoreByDynSimulGrid=1;
 					};
 					id=6232;
@@ -21931,8 +21934,9 @@ class Mission
 			position[]={4269.9121,208.88324,5758.998};
 			class Attributes
 			{
+				name="trg_shootout_1";
 				text="fire bosnian mortars";
-				condition="call{true}";
+				condition="call{false}";
 				onActivation="call{_tgt = getMarkerPos ""tgt1""; _ammo = getArtilleryAmmo [mortar_1] select 0; mortar_1 doArtilleryFire[_tgt,_ammo,5]; [] spawn MALO_fnc_cutsceneMortar; {_x setunitPos ""DOWN"";} forEach shakhovka_civs;}";
 				sizeA=0;
 				sizeB=0;
@@ -23308,8 +23312,9 @@ class Mission
 			position[]={4269.604,208.8441,5760.123};
 			class Attributes
 			{
+				name="trg_shootout_2";
 				text="activate assess mission";
-				condition="call{true}";
+				condition="call{false}";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={60,60,60};
@@ -23546,6 +23551,7 @@ class Mission
 			position[]={4182.271,202,5760.0288};
 			class Attributes
 			{
+				name="trg_shootout_3";
 				text="activate movement for bosnian ambush";
 				condition="call{this}";
 				onActivation="call{{_x enableAi ""MOVE"";} forEach units enemy1;}";
@@ -23562,7 +23568,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4182.2109,202,5761.1538};
+				position[]={4183.3262,202,5765.5557};
 			};
 			id=6305;
 			type="ModuleTaskSetState_F";
@@ -24688,9 +24694,10 @@ class Mission
 			position[]={4192.6602,202.01068,5767.5649};
 			class Attributes
 			{
+				name="trg_shootout_5";
 				text="end village raid";
 				condition="call{this}";
-				onActivation="call{{_x setDamage 1;} forEach units enemy1; trg_jeep setTriggerArea [10,10,0,false,10]; trg_supply1 setTriggerArea [100,100,0,false,100]; jeep setVehicleLock ""UNLOCKED"";}";
+				onActivation="call{{_x setDamage 1;} forEach units enemy1; trg_jeep setTriggerArea [10,10,0,false,10]; trg_supply1 setTriggerArea [100,100,0,false,100]; jeep setVehicleLock ""UNLOCKED""; [""shootout""] call MALO_fnc_savePush;}";
 				sizeA=150;
 				sizeB=150;
 				timeout[]={20,30,60};
@@ -24703,10 +24710,11 @@ class Mission
 		class Item824
 		{
 			dataType="Trigger";
-			position[]={4205.7744,219.8958,5763.1479};
-			angle=2.9035814;
+			position[]={4205.7739,219.89612,5763.1479};
+			angle=2.9035807;
 			class Attributes
 			{
+				name="trg_shootout_4";
 				text="activates bosnian ambush task";
 				condition="call{this}";
 				onActivation="call{[] spawn MALO_fnc_cutsceneAmbush;}";
@@ -24716,14 +24724,14 @@ class Mission
 			};
 			id=6338;
 			type="EmptyDetector";
-			atlOffset=16.889648;
+			atlOffset=16.889999;
 		};
 		class Item825
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4190.7539,202,5769.1729};
+				position[]={4191.3633,202,5770.3701};
 			};
 			id=6340;
 			type="ModuleTaskSetState_F";
@@ -25143,6 +25151,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				name="ambush_truck_2";
 			};
 			id=6364;
 			type="RHS_Ural_Civ_02";
@@ -26222,9 +26231,10 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4857.667,217.8129,4338.7998};
-			angle=0.88526559;
+			angle=0.88526589;
 			class Attributes
 			{
+				name="trg_ambush_1";
 				text="smuggler poi activation";
 				condition="call{this}";
 				onActivation="call{{_x enableAi ""MOVE"";} forEach units smugglers; }";
@@ -26483,12 +26493,13 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4855.9678,218.64055,4340.019};
-			angle=0.81536514;
+			angle=0.81536537;
 			class Attributes
 			{
+				name="trg_ambush_3";
 				text="end smuggler poi";
 				condition="call{this}";
-				onActivation="call{{removeAllWeapons _x;} forEach units smugglers; trg_police setTriggerArea [500,500,0,false,500]; grpName = createGroup civilian; {[_x] joinSilent grpName;} forEach units smugglers; grpName allowFleeing 1; trg_smuggler_trucks setTriggerArea [500,500,0,false,500];}";
+				onActivation="call{{removeAllWeapons _x;} forEach units smugglers; trg_police setTriggerArea [500,500,0,false,500]; grpName = createGroup civilian; {[_x] joinSilent grpName;} forEach units smugglers; grpName allowFleeing 1; trg_smuggler_trucks setTriggerArea [500,500,0,false,500]; [""poi2""] call MALO_fnc_savePush;}";
 				sizeA=100;
 				sizeB=100;
 				activationType="NOT PRESENT";
@@ -29810,6 +29821,7 @@ class Mission
 			position[]={5275.979,211,7126.1641};
 			class Attributes
 			{
+				name="trg_supply_truck_2";
 				text="activates when player gets in supply truck";
 				condition="call{!isNull (driver supplytruck1)}";
 				onActivation="call{trg_poi1 setTriggerArea [200,200,0,false,100]; trg_poi2 setTriggerArea [200,200,0,false,100]; trg_poi3 setTriggerArea [200,200,0,false,100]; {_x enableAi ""PATH""; _x setSkill [""courage"", 1];} forEach shakhovka_civs; {_x setunitPos ""UP"";} forEach shakhovka_civs; {_x setunitPos ""AUTO"";} forEach shakhovka_civs; [""supply_truck_1"",[supplytruck1]] call BIS_fnc_taskSetDestination; " \n "}";
@@ -45451,7 +45463,7 @@ class Mission
 				name="trg_albanian";
 				text="load albanian poi";
 				condition="call{this}";
-				onActivation="call{albanian_barn setVariable[""bis_disabled_Door_1"",0,true]; albanian_barn setVariable[""bis_disabled_Door_2"",0,true]; albanian_barn setVariable[""bis_disabled_Door_3"",0,true]; albanian_barn setVariable[""bis_disabled_Door_4"",0,true]; albanian_house setVariable[""bis_disabled_Door_1"",0,true]; albanian_truck setVehicleLock ""UNLOCKED""; {_x enableAi ""MOVE"";} forEach units albanians; [""poi1""] call BIS_fnc_deleteTask;}";
+				onActivation="call{albanian_barn setVariable[""bis_disabled_Door_1"",0,true]; albanian_barn setVariable[""bis_disabled_Door_2"",0,true]; albanian_barn setVariable[""bis_disabled_Door_3"",0,true]; albanian_barn setVariable[""bis_disabled_Door_4"",0,true]; albanian_house setVariable[""bis_disabled_Door_1"",0,true]; albanian_truck setVehicleLock ""UNLOCKED""; {_x enableAi ""MOVE"";} forEach units albanians; [""poi1""] call BIS_fnc_deleteTask; [""poi1""] call MALO_fnc_savePush;}";
 				sizeA=0;
 				sizeB=0;
 				activationBy="ANYPLAYER";
@@ -53412,6 +53424,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				name="ambush_truck_1";
 			};
 			id=6399;
 			type="RHS_Ural_Civ_02";
@@ -111686,7 +111699,10 @@ class Mission
 			position[]={4268.0308,208.94617,5756.8042};
 			class Attributes
 			{
+				name="trg_supply_truck_3";
 				text="supply truck mission complete";
+				condition="call{this}";
+				onActivation="call{[""supply_truck""] call MALO_fnc_savePush;}";
 				sizeA=120;
 				sizeB=120;
 			};
@@ -131738,6 +131754,7 @@ class Mission
 			position[]={4856.5859,217.95064,4339.3418};
 			class Attributes
 			{
+				name="trg_ambush_2";
 				condition="call{this}";
 				onActivation="call{[""poi3""] call BIS_fnc_deleteTask;}";
 				sizeA=100;
@@ -187840,7 +187857,6 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=6.6757202e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187892,7 +187908,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
-			atlOffset=6.6757202e-006;
 		};
 		class Item4871
 		{
@@ -187919,7 +187934,6 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=6.6757202e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187971,7 +187985,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
-			atlOffset=6.6757202e-006;
 		};
 		class Item4872
 		{
@@ -224223,16 +224236,249 @@ class Mission
 			};
 			id=18211;
 		};
+		class Item5355
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4188.6748,202,5756.7192};
+			};
+			id=18241;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="attack";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="fight off the Bosnian ambush";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ambush";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=5;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ASSIGNED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item5356
+		{
+			dataType="Marker";
+			position[]={4277.4087,208.3291,5762.2563};
+			name="supply_truck_destination";
+			type="Empty";
+			angle=219.88988;
+			id=18242;
+			atlOffset=-0.23260498;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=318;
+			nextID=320;
 		};
 		class Links
 		{
-			items=318;
+			items=320;
 			class Item0
 			{
 				linkID=0;
@@ -227408,6 +227654,26 @@ class Mission
 				linkID=317;
 				item0=18135;
 				item1=18065;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item318
+			{
+				linkID=318;
+				item0=6338;
+				item1=18241;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item319
+			{
+				linkID=319;
+				item0=6340;
+				item1=18241;
 				class CustomData
 				{
 					type="Sync";

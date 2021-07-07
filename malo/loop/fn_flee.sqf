@@ -1,9 +1,10 @@
 if (!isServer) exitWith {};
+if (random [0, 50, 100] != 1) exitWith {};
 
 {if(side _x==civilian)then{
 
 //Remove the eventHandler to prevent spamming 
-_civ removeAllEventHandlers "FiredNear";
+_x removeAllEventHandlers "FiredNear";
 
 _x addEventHandler["FiredNear",{
 _civ=_this select 0;

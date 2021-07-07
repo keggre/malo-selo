@@ -1,6 +1,6 @@
 if (!hasInterface) exitWith {};
 
-if (MALO_enable_cutscenes == true) then {
+if (MALO_CFG_enable_cutscenes == true) then {
 
 	sleep 33;
 

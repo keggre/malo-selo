@@ -8,15 +8,15 @@ _radius = (_modifier select 2);
 
 if (player distance _position < _radius) then {
 
-	if (_is_reducer == true && next_view_distance > _distance) then {
+	if (_is_reducer == true && MALO_next_view_distance > _distance) then {
 	
-		next_view_distance = _distance;
+		MALO_next_view_distance = _distance;
 
 	} else {
 
-		if (next_view_distance < _distance) then {
+		if (MALO_next_view_distance < _distance) then {
 
-			next_view_distance = _distance;
+			MALO_next_view_distance = _distance;
 
 		}
 

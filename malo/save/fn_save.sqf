@@ -1,1 +1,1 @@
-if (false) exitWith {};
+if (!hasInterface) exitWith {};
