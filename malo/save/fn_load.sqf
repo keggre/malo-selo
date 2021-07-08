@@ -2,8 +2,6 @@ if (false) exitWith {};
 
 sleep .05;
 
-fn_intro = [] spawn MALO_fnc_intro;
-
 if (isServer) then {
 
 	MALO_mission_progress = MALO_CFG_skip; 

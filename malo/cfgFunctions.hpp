@@ -51,7 +51,7 @@ class malo
 		class activateTrigger {};
 		class capsquads {};
 		class captureVillage {};
-		class intro {};
+		class createVillageSpawn {};
 		class killWithinRadius {};
 		class setViewDistance {};
 		class smugglerTrucks {};
@@ -65,5 +65,5 @@ class malo
 		class loadProgressKeywords {};
 		class save {};
 		class savePush {};
-	}
+	};
 };

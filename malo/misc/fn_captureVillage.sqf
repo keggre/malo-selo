@@ -35,6 +35,9 @@ call compile (_name + "_marker setDamage 1;");
 	call compile ("[cap_" + str _x + ", getMarkerPos 'cap_marker_" + str _x + "'] spawn MALO_fnc_capsquads;");
 } forEach _capsquad_nums;
 
+// ADD RESPAWN MARKER
+[_name] call MALO_fnc_createVillageSpawn;
+
 // ADD TO MISSION PROGRESS
 [_name] spawn MALO_fnc_savePush;
 

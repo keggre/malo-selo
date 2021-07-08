@@ -1,6 +1,6 @@
 if (!hasInterface) exitWith {};
 
-// hint (str diag_fps + " " + str MALO_current_view_distance + " " + str MALO_simulation_distance + " " + str MALO_delay);
+// hintSilent (str diag_fps + " " + str MALO_current_view_distance + " " + str MALO_simulation_distance + " " + str MALO_delay);
 
 if (alive cap_1) then {
 
@@ -18,4 +18,11 @@ if (alive cap_1) then {
 
 };
 
-malo_delay = 1;
+// malo_delay = 1;
+
+/*if ((rating player < 0)) then {
+	
+	player addRating abs (rating player)
+	
+};*/
+

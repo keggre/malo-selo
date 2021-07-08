@@ -8,7 +8,7 @@ waitUntil {scriptDone fn_config};
 MALO_init = true;
 MALO_delay = .05;
 MALO_min_delay = .05;
-MALO_max_delay = 1;
+MALO_max_delay = .5;
 MALO_current_view_distance = 1;
 MALO_next_view_distance = 1;
 MALO_fog_value = .05;

@@ -1,3 +1,5 @@
+respawnOnStart = 0;
+
 class CfgFunctions
 {
   #include "malo\cfgFunctions.hpp"

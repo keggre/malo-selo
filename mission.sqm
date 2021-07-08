@@ -8,11 +8,11 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=18247;
+		nextID=18258;
 	};
 	class MarkerIDProvider
 	{
-		nextID=60;
+		nextID=61;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4402.7017,339.86728,5906.6812};
-		dir[]={-0.47147089,-0.42260322,-0.77406847};
-		up[]={-0.21983866,0.90630645,-0.36093605};
-		aside[]={-0.85407579,5.4342672e-007,0.52020341};
+		pos[]={4899.9751,173.7883,1157.6521};
+		dir[]={-0.69293886,-0.710096,-0.12489747};
+		up[]={-0.69883502,0.7041049,-0.1259602};
+		aside[]={-0.17738476,-7.4505806e-009,0.98414159};
 	};
 };
 binarizationWanted=0;
@@ -1449,8 +1449,22 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=2;
+						items=3;
 						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item1
 						{
 							class data
 							{
@@ -1464,7 +1478,7 @@ class CustomAttributes
 								value="Counter";
 							};
 						};
-						class Item1
+						class Item2
 						{
 							class data
 							{
@@ -1592,7 +1606,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5356;
+		items=5367;
 		class Item0
 		{
 			dataType="Object";
@@ -108195,7 +108209,7 @@ class Mission
 			};
 			id=14229;
 			type="CFP_C_ASIA_Datsun_Pickup_01";
-			atlOffset=0.78952026;
+			atlOffset=0.83027649;
 		};
 		class Item3754
 		{
@@ -152307,12 +152321,12 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5034.4082,6,1781.7889};
-			angle=0.39264649;
+			angle=0.3926467;
 			class Attributes
 			{
 				name="trg_e_obj_1";
 				condition="call{this}";
-				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, getMarkerPos ""cap_marker_e_1""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_savePush;}";
+				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, getMarkerPos ""cap_marker_e_1""] spawn MALO_fnc_capsquads; [""e_obj_1""] spawn MALO_fnc_savePush; [""e_obj_1""] spawn MALO_fnc_createVillageSpawn;}";
 				sizeA=45;
 				activationType="NOT PRESENT";
 				activationBy="WEST";
@@ -152602,12 +152616,12 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5084.501,6.2020001,1543.98};
-			angle=5.6220365;
+			angle=5.6220369;
 			class Attributes
 			{
 				name="trg_e_obj_2";
 				condition="call{this}";
-				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, getMarkerPos ""cap_marker_e_2""] spawn MALO_fnc_capsquads; [e_obj_2] spawn MALO_fnc_savePush;}";
+				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, getMarkerPos ""cap_marker_e_2""] spawn MALO_fnc_capsquads; [""e_obj_2""] spawn MALO_fnc_savePush; [""e_obj_2""] spawn MALO_fnc_createVillageSpawn;}";
 				sizeA=30;
 				sizeB=30;
 				activationType="NOT PRESENT";
@@ -152904,7 +152918,7 @@ class Mission
 			{
 				name="trg_e_obj_3";
 				condition="call{this}";
-				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, getMarkerPos ""cap_marker_e_3""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_savePush; [e_obj_3] spawn MALO_fnc_savePush;}";
+				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, getMarkerPos ""cap_marker_e_3""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_createVillageSpawn;}";
 				sizeA=0;
 				sizeB=0;
 				activationType="NOT PRESENT";
@@ -153202,7 +153216,7 @@ class Mission
 			{
 				name="trg_e_obj_4";
 				condition="call{this}";
-				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, getMarkerPos ""cap_marker_e_4""] spawn MALO_fnc_capsquads; [e_obj_4] spawn MALO_fnc_savePush;}";
+				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, getMarkerPos ""cap_marker_e_4""] spawn MALO_fnc_capsquads; [""e_obj_4""] spawn MALO_fnc_savePush; [""e_obj_4""] spawn MALO_fnc_createVillageSpawn;}";
 				sizeA=20;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153501,7 +153515,7 @@ class Mission
 			{
 				name="trg_e_obj_5";
 				condition="call{this}";
-				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, getMarkerPos ""cap_marker_e_5""] spawn MALO_fnc_capsquads; [e_obj_5] spawn MALO_fnc_savePush;}";
+				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, getMarkerPos ""cap_marker_e_5""] spawn MALO_fnc_capsquads; [""e_obj_5""] spawn MALO_fnc_savePush; [""e_obj_5""] spawn MALO_fnc_createVillageSpawn;}";
 				sizeA=30;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153797,7 +153811,7 @@ class Mission
 			{
 				name="trg_e_obj_6";
 				condition="call{this}";
-				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, getMarkerPos ""cap_marker_e_6""] spawn MALO_fnc_capsquads; [e_obj_6] spawn MALO_fnc_savePush;}";
+				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, getMarkerPos ""cap_marker_e_6""] spawn MALO_fnc_capsquads; [""e_obj_6""] spawn MALO_fnc_savePush; [""e_obj_6""] spawn MALO_fnc_createVillageSpawn;}";
 				sizeA=35;
 				sizeB=15;
 				activationType="NOT PRESENT";
@@ -224207,6 +224221,116 @@ class Mission
 			angle=186.01143;
 			id=18244;
 			atlOffset=1.5258789e-005;
+		};
+		class Item5356
+		{
+			dataType="Marker";
+			position[]={3052.877,360.479,5851.6699};
+			name="guglovo_spawn";
+			text="Guglovo mosque";
+			type="Empty";
+			id=18247;
+			atlOffset=-0.070159912;
+		};
+		class Item5357
+		{
+			dataType="Marker";
+			position[]={1669.515,293.92801,6919.4761};
+			name="novy_spawn";
+			text="Novy Sobor school";
+			type="Empty";
+			id=18248;
+			atlOffset=-0.070037842;
+		};
+		class Item5358
+		{
+			dataType="Marker";
+			position[]={5886.8628,253.82201,4677.3062};
+			name="msta_spawn";
+			text="Msta";
+			type="Empty";
+			id=18249;
+			atlOffset=-0.069992065;
+		};
+		class Item5359
+		{
+			dataType="Marker";
+			position[]={3734.439,223.912,3060.0859};
+			name="pusta_spawn";
+			text="Pusta office";
+			type="Empty";
+			id=18250;
+			atlOffset=-0.069656372;
+		};
+		class Item5360
+		{
+			dataType="Marker";
+			position[]={5034.418,6.2540002,1790.91};
+			name="e_obj_1_spawn";
+			text="power station";
+			type="Empty";
+			id=18251;
+			atlOffset=0.25400019;
+		};
+		class Item5361
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4749.3608,6,1070.929};
+			};
+			title="spawn";
+			id=18252;
+		};
+		class Item5362
+		{
+			dataType="Marker";
+			position[]={5082.8931,6.5939999,1547.916};
+			name="e_obj_2_spawn";
+			text="UN compound";
+			type="Empty";
+			id=18253;
+			atlOffset=0.25442123;
+		};
+		class Item5363
+		{
+			dataType="Marker";
+			position[]={4983.9932,6.2540002,1426.765};
+			name="e_obj_3_spawn";
+			text="fire station";
+			type="Empty";
+			id=18254;
+			atlOffset=0.25400019;
+		};
+		class Item5364
+		{
+			dataType="Marker";
+			position[]={4937.8701,6.3429999,1313.521};
+			name="e_obj_4_spawn";
+			text="train station";
+			type="Empty";
+			id=18255;
+			atlOffset=0.25409603;
+		};
+		class Item5365
+		{
+			dataType="Marker";
+			position[]={4802.728,6.5830002,1207.545};
+			name="e_obj_5_spawn";
+			text="factory";
+			type="Empty";
+			id=18256;
+			atlOffset=0.25436449;
+		};
+		class Item5366
+		{
+			dataType="Marker";
+			position[]={4749.3521,6.3600001,1070.923};
+			name="e_obj_6_spawn";
+			text="warehouse";
+			type="Empty";
+			id=18257;
+			atlOffset=0.253901;
 		};
 	};
 	class Connections
