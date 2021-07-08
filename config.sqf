@@ -26,8 +26,9 @@ MALO_CFG_allow_war_crimes = true;													// true
 
 MALO_CFG_saving = true;																// true
 MALO_CFG_loading = true;															// true
+MALO_CFG_overwrite = false;															// false
 
 // DEBUG
 MALO_CFG_skip = [];
 // MALO_CFG_skip = ["shootout", "supply_truck", "poi1", "poi2", "poi3", "guglovo", "poi4", "poi5", "poi6", "novy", "msta"];
-MALO_CFG_skip = ["shootout", "supply_truck", "guglovo", "stary", "novy", "msta", "pusta", "poi1", "poi2", "poi3", "poi4", "poi5", "poi6", "poi7", "poi8", "poi9", "e_obj_1", "e_obj_2", "e_obj_3", "e_obj_4", "e_obj_5", "e_obj_6", "smuggler_truck_1", "smuggler_truck_2", "smuggler_truck_3", "smuggler_truck_4", "smuggler_truck_5", "tank"];
+// MALO_CFG_skip = ["shootout", "supply_truck", "guglovo", "stary", "novy", "msta", "pusta", "poi1", "poi2", "poi3", "poi4", "poi5", "poi6", "poi7", "poi8", "poi9", "e_obj_1", "e_obj_2", "e_obj_3", "e_obj_4", "e_obj_5", "e_obj_6", "smuggler_truck_1", "smuggler_truck_2", "smuggler_truck_3", "smuggler_truck_4", "smuggler_truck_5", "tank"];

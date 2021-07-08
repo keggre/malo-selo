@@ -13,7 +13,7 @@ if (isServer) then {
 
 };
 
-if (count MALO_mission_progress < 1) exitWith { 
+if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith { 
 
 	private _fn = {
 
@@ -66,7 +66,7 @@ private _fn = {
 
 	for "_i" from 0 to 150 do {
 
-		hint "Mission progress loaded.";
+		hintSilent "Mission progress loaded.";
 		uiSleep .1;
 
 	};

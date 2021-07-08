@@ -199,3 +199,14 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 	{}, 
 	true
 ] call cba_fnc_addSetting;
+
+[
+	"MALO_CFG_overwrite", 
+	"CHECKBOX", 
+	["Allow overwrite", "When enabled, previous saves will be overwritten when mission progress is saved."], 
+	"Malo Selo", 
+	MALO_CFG_overwrite, 
+	0, 
+	{}, 
+	false
+] call cba_fnc_addSetting;

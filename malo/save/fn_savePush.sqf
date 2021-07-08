@@ -2,4 +2,6 @@ if (!hasInterface) exitWith {};
 
 params ["_name"];
 
-// check if the thing already exists
+if (_name in MALO_mission_progress) exitWith {};
+
+MALO_mission_progress append [_name];

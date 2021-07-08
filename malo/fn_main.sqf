@@ -16,6 +16,15 @@ MALO_ovc_value = .55;
 
 setViewDistance MALO_current_view_distance;
 
+east setFriend [independent, 1];
+independent setFriend [east, 1];
+
+east setFriend [civilian, 1];
+civilian setFriend [east, 1];
+
+west setFriend [independent, 1];
+independent setFriend [west, 1];
+
 // INIT
 call MALO_fnc_initCivs;
 call MALO_fnc_initFlee;
@@ -34,10 +43,6 @@ fn_ambientPlane = [] spawn MALO_fnc_ambientPlane;
 call MALO_fnc_load;
 
 //////////
-sleep .05;
-sleep .05;
-sleep .05;
-sleep .05;
 sleep .05;
 //////////
 
