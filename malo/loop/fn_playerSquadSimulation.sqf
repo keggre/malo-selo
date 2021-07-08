@@ -1,3 +1,4 @@
 if (!isServer) exitWith {};
+if (MALO_init == true) exitWith {};
 
-{_x enableSimulation true;} forEach units player_squad;
+{_x enableSimulationGlobal true;} forEach units player_squad;

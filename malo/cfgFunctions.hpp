@@ -23,6 +23,7 @@ class malo
 		class initSliders {};
 		class initRadio {};
 		class initVillages {};
+		class initTasks {};
 		class initPois {};
 	};
 
@@ -31,6 +32,8 @@ class malo
 		file = "malo\loop"
 		class allowWarCrimes {};
 		class debug {};
+		class delay {};
+		class deleteTasks {};
 		class dynamicSimulation {};
 		class flee {};
 		class playerSquadSimulation {};
@@ -48,6 +51,8 @@ class malo
 		class activateTrigger {};
 		class capsquads {};
 		class captureVillage {};
+		class intro {};
+		class killWithinRadius {};
 		class setViewDistance {};
 		class smugglerTrucks {};
 	};

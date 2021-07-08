@@ -1,6 +1,7 @@
 if (!isServer) exitWith {};
 
 villages = [
+	"chernogorsk",
 	"dolina",
 	"elektrozavodsk",
 	"guglovo",
@@ -32,6 +33,7 @@ serb_villages = [
 
 village_capsquad_nums = [
 
+	/*chernogorsk*/			[],
 	/*dolina*/				[],
 	/*elektrozavodsk*/		[],
 	/*guglovo*/				[1],
@@ -53,6 +55,7 @@ village_capsquad_nums = [
 ]; publicVariable "village_capsquad_nums";
 
 village_fullnames = [
+	"Chernogorsk",
 	"Dolina",
 	"Elektrozavodsk",
 	"Guglovo",

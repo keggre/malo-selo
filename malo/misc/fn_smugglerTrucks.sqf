@@ -38,13 +38,14 @@ while {{!alive _x} count _trucks < count _trucks} do {
 		if (!alive _x) then {
 
 			[_name, "SUCCEEDED"] call BIS_fnc_taskSetState;
+			["smuggler_truck_" + str _n] call MALO_fnc_savePush;
 
 		};
 
 		_player_count = count playableUnits;
 		_i = 0;
 
-		/*for "_i" from 0 to _player_count - 1 do {
+		for "_i" from 0 to _player_count - 1 do {
 
 			_player = playableUnits select _i;
 
@@ -57,7 +58,7 @@ while {{!alive _x} count _trucks < count _trucks} do {
 
 			}
 
-		}*/
+		}
 
 	} forEach _trucks;
 

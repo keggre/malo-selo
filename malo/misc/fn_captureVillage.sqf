@@ -35,6 +35,9 @@ call compile (_name + "_marker setDamage 1;");
 	call compile ("[cap_" + str _x + ", getMarkerPos 'cap_marker_" + str _x + "'] spawn MALO_fnc_capsquads;");
 } forEach _capsquad_nums;
 
+// ADD TO MISSION PROGRESS
+[_name] spawn MALO_fnc_savePush;
+
 // UN RETREAT FOR GUGLOVO
 if (_name == "guglovo") then {
 	{_x enableAi "PATH";} forEach units un_check1_units; 
