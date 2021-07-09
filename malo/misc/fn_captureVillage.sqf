@@ -36,7 +36,10 @@ call compile (_name + "_marker setDamage 1;");
 } forEach _capsquad_nums;
 
 // ADD RESPAWN MARKER
-[_name] call MALO_fnc_createVillageSpawn;
+[_name] call MALO_fnc_createRespawn;
+
+// SHOW VILLAGE MARKER
+_name setMarkerAlpha 1;
 
 // ADD TO MISSION PROGRESS
 [_name] spawn MALO_fnc_savePush;

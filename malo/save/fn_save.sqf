@@ -1,4 +1,5 @@
 if (!hasInterface) exitWith {};
+if (MALO_CFG_saving == false) exitWith {};
 
 MALO_saved_mission_progress = profileNamespace getVariable ["MALO_saved_mission_progress", "None"];
 

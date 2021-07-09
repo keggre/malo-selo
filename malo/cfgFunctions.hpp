@@ -15,9 +15,18 @@ class malo
 		class ambientPlane {};
 	};
 
+	class cutscenes
+	{
+		file = "malo\cutscenes"
+		class cutsceneAmbush {};
+		class cutsceneMortar {};
+		class cutsceneOpening {};
+	};
+
 	class init
 	{
 		file = "malo\init"
+		class initAnimals {};
 		class initCivs {};
 		class initFlee {};
 		class initSliders {};
@@ -51,7 +60,7 @@ class malo
 		class activateTrigger {};
 		class capsquads {};
 		class captureVillage {};
-		class createVillageSpawn {};
+		class createRespawn {};
 		class killWithinRadius {};
 		class setViewDistance {};
 		class smugglerTrucks {};

@@ -9,7 +9,6 @@ private _count = 0;
 	if (_serb == true) then {
 
 		_x setMarkerType "o_hq"; 
-		_x setMarkerAlpha 1;
 
 	} else {
 
@@ -17,6 +16,24 @@ private _count = 0;
 		_count = _count + 1;
 
 	};
+
+	call compile ("
+
+		if (" + _x + "_discovered == true) then {
+			
+			'" + _x + "' setMarkerAlpha 1;
+
+			if !('respawn_east_" + _x + "' in allMapMarkers) then {
+
+				['" + _x + "'] spawn MALO_fnc_createRespawn;
+
+			};
+
+		};
+
+	");
+
+	"solnychniy" setMarkerAlpha 0;
 	
 } forEach villages;
 

@@ -1,3 +1,5 @@
+if (false) exitWith {};
+
 [
 	east, 
 	"end_mission", 

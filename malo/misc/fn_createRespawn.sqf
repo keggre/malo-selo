@@ -8,5 +8,6 @@ call compile ("
 	_marker setMarkerType 'respawn_unknown'; 
 	_marker setmarkercolor 'coloreast'; 
 	_marker setMarkerText ( markerText '" + _village + "_spawn');
+	_marker setMarkerAlpha 0;
 
 ");

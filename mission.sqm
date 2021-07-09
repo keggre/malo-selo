@@ -8,11 +8,11 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=18258;
+		nextID=18286;
 	};
 	class MarkerIDProvider
 	{
-		nextID=61;
+		nextID=62;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4899.9751,173.7883,1157.6521};
-		dir[]={-0.69293886,-0.710096,-0.12489747};
-		up[]={-0.69883502,0.7041049,-0.1259602};
-		aside[]={-0.17738476,-7.4505806e-009,0.98414159};
+		pos[]={4817.209,929.72217,6295.5986};
+		dir[]={-0.63598514,-0.60997534,-0.47270814};
+		up[]={-0.48955739,0.79242039,-0.36387292};
+		aside[]={-0.59653711,0,0.80258548};
 	};
 };
 binarizationWanted=0;
@@ -1606,7 +1606,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5367;
+		items=5388;
 		class Item0
 		{
 			dataType="Object";
@@ -18751,6 +18751,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				name="opening_cutscene_tgt";
 				createAsSimpleObject=1;
 				dynamicSimulation=1;
 			};
@@ -22842,9 +22843,10 @@ class Mission
 			dataType="Marker";
 			position[]={4269.3628,208.856,5760.043};
 			name="respawn_east";
-			text="Pub";
+			text="pub";
 			type="respawn_unknown";
 			colorName="ColorEAST";
+			alpha=0;
 			id=6285;
 			atlOffset=-0.00035095215;
 		};
@@ -28928,7 +28930,7 @@ class Mission
 			{
 				text="load staroye";
 				condition="call{this}";
-				onActivation="call{""staroye"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach staroye_civs;}";
+				onActivation="call{""staroye"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach staroye_civs; staroye_discovered = true;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="ANYPLAYER";
@@ -28953,7 +28955,7 @@ class Mission
 			{
 				text="load polana";
 				condition="call{this}";
-				onActivation="call{""polana"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach polana_civs;}";
+				onActivation="call{""polana"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach polana_civs; polana_discovered = true;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="ANYPLAYER";
@@ -29006,7 +29008,7 @@ class Mission
 			{
 				text="load dolina";
 				condition="call{this}";
-				onActivation="call{""dolina"" setMarkerAlpha 1; {_x enableAi ""MOVE""} forEach dolina_civs;}";
+				onActivation="call{""dolina"" setMarkerAlpha 1; {_x enableAi ""MOVE""} forEach dolina_civs; dolina_discovered = true;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="ANYPLAYER";
@@ -29112,7 +29114,7 @@ class Mission
 			{
 				text="load orlovets";
 				condition="call{this}";
-				onActivation="call{""orlovets"" setMarkerAlpha 1}";
+				onActivation="call{""orlovets"" setMarkerAlpha 1; orlovets_discovered = true;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="ANYPLAYER";
@@ -54785,7 +54787,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="use the artillery gun";
+							value="artillery";
 						};
 					};
 				};
@@ -110278,6 +110280,7 @@ class Mission
 					};
 					id=14286;
 					type="I_Bosnia_and_Herzegovina_Officer_01";
+					atlOffset=0.00015258789;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110349,7 +110352,7 @@ class Mission
 						angles[]={0,3.6717317,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.74571329;
@@ -110358,6 +110361,7 @@ class Mission
 					};
 					id=14287;
 					type="I_Bosnia_and_Herzegovina_Rifleman_4_01";
+					atlOffset=1.5924683;
 				};
 				class Item3
 				{
@@ -110429,7 +110433,7 @@ class Mission
 						angles[]={0,0.0023033475,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.74571329;
@@ -110439,6 +110443,7 @@ class Mission
 					};
 					id=14290;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=10.746155;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110481,7 +110486,7 @@ class Mission
 					};
 					id=14291;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
-					atlOffset=0.62820435;
+					atlOffset=0.62814331;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110524,6 +110529,7 @@ class Mission
 					};
 					id=14292;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=0.00015258789;
 				};
 				class Item8
 				{
@@ -110562,6 +110568,7 @@ class Mission
 					};
 					id=14294;
 					type="I_Bosnia_and_Herzegovina_Machinegunner_01";
+					atlOffset=0.00015258789;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110682,7 +110689,7 @@ class Mission
 					};
 					id=14299;
 					type="I_Bosnia_and_Herzegovina_Rifleman_4_01";
-					atlOffset=0.49380493;
+					atlOffset=0.49395752;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110725,6 +110732,7 @@ class Mission
 					};
 					id=14351;
 					type="I_Bosnia_and_Herzegovina_Machinegunner_01";
+					atlOffset=0.00015258789;
 				};
 				class Item16
 				{
@@ -110754,7 +110762,7 @@ class Mission
 						angles[]={0,4.6518798,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.74571329;
@@ -110764,6 +110772,7 @@ class Mission
 					};
 					id=14355;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=10.280182;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110797,7 +110806,7 @@ class Mission
 						angles[]={0,6.2276716,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.74571329;
@@ -110807,6 +110816,7 @@ class Mission
 					};
 					id=14357;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=9.9412842;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -110898,7 +110908,7 @@ class Mission
 						angles[]={0,0.90857041,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.74571329;
@@ -110907,7 +110917,7 @@ class Mission
 					};
 					id=14368;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
-					atlOffset=3.0517578e-005;
+					atlOffset=7.3721619;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -111029,7 +111039,7 @@ class Mission
 			};
 			id=14315;
 			type="Land_Hlaska";
-			atlOffset=0.43252563;
+			atlOffset=0.43228149;
 		};
 		class Item3779
 		{
@@ -111219,7 +111229,7 @@ class Mission
 			};
 			id=14371;
 			type="rhs_launcher_crate";
-			atlOffset=11.601318;
+			atlOffset=11.601471;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -111260,7 +111270,7 @@ class Mission
 			};
 			id=14372;
 			type="rhs_launcher_crate";
-			atlOffset=11.601563;
+			atlOffset=11.601715;
 		};
 		class Item3791
 		{
@@ -131568,7 +131578,7 @@ class Mission
 			{
 				name="trg_castle1_3";
 				condition="call{this}";
-				onActivation="call{{_x enableSimulation true;} forEach units enemy_17; activator_1 setDamage 1; castle1_flag setFlagTexture """";}";
+				onActivation="call{{_x enableSimulation true;} forEach units enemy_17; activator_1 setDamage 1; castle1_flag setFlagTexture """"; [""castle1""] spawn MALO_fnc_createRespawn;}";
 				sizeA=70;
 				sizeB=70;
 				activationType="NOT PRESENT";
@@ -133111,7 +133121,7 @@ class Mission
 				name="trg_castle1_4";
 				text="capture castle";
 				condition="call{this}";
-				onActivation="call{{_x setDamage 1;} forEach units enemy_17; ""castle1"" setMarkerType ""o_installation""; [""poi9""] spawn MALO_fncsavePush;}";
+				onActivation="call{{_x setDamage 1;} forEach units enemy_17; ""castle1"" setMarkerType ""o_installation""; [""poi9""] spawn MALO_fnc_savePush;}";
 				sizeA=200;
 				sizeB=200;
 				activationType="NOT PRESENT";
@@ -133274,7 +133284,7 @@ class Mission
 			};
 			id=15189;
 			type="ModuleTaskCreate_F";
-			atlOffset=0.50115967;
+			atlOffset=0.50131226;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -133498,12 +133508,12 @@ class Mission
 				angles[]={0.0035881216,4.0008802,6.1957068};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=15209;
 			type="Land_WoodenRamp";
+			atlOffset=7.4593506;
 		};
 		class Item4111
 		{
@@ -133514,12 +133524,12 @@ class Mission
 				angles[]={0.0075958921,6.2583108,0.0042846538};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=15229;
 			type="Land_WoodenRamp";
+			atlOffset=10.137421;
 		};
 		class Item4112
 		{
@@ -136679,6 +136689,7 @@ class Mission
 			};
 			id=15520;
 			type="LIB_FlaK_36_AA";
+			atlOffset=0.21661377;
 		};
 		class Item4218
 		{
@@ -136744,6 +136755,7 @@ class Mission
 			};
 			id=15531;
 			type="cfp_o_syarmy_ZU23";
+			atlOffset=0.00015258789;
 		};
 		class Item4222
 		{
@@ -152321,12 +152333,12 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5034.4082,6,1781.7889};
-			angle=0.3926467;
+			angle=0.39264649;
 			class Attributes
 			{
 				name="trg_e_obj_1";
 				condition="call{this}";
-				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, getMarkerPos ""cap_marker_e_1""] spawn MALO_fnc_capsquads; [""e_obj_1""] spawn MALO_fnc_savePush; [""e_obj_1""] spawn MALO_fnc_createVillageSpawn;}";
+				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, getMarkerPos ""cap_marker_e_1""] spawn MALO_fnc_capsquads; [""e_obj_1""] spawn MALO_fnc_savePush; [""e_obj_1""] spawn MALO_fnc_createRespawn;}";
 				sizeA=45;
 				activationType="NOT PRESENT";
 				activationBy="WEST";
@@ -152616,12 +152628,12 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5084.501,6.2020001,1543.98};
-			angle=5.6220369;
+			angle=5.6220365;
 			class Attributes
 			{
 				name="trg_e_obj_2";
 				condition="call{this}";
-				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, getMarkerPos ""cap_marker_e_2""] spawn MALO_fnc_capsquads; [""e_obj_2""] spawn MALO_fnc_savePush; [""e_obj_2""] spawn MALO_fnc_createVillageSpawn;}";
+				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, getMarkerPos ""cap_marker_e_2""] spawn MALO_fnc_capsquads; [""e_obj_2""] spawn MALO_fnc_savePush; [""e_obj_2""] spawn MALO_fnc_createRespawn;}";
 				sizeA=30;
 				sizeB=30;
 				activationType="NOT PRESENT";
@@ -152918,7 +152930,7 @@ class Mission
 			{
 				name="trg_e_obj_3";
 				condition="call{this}";
-				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, getMarkerPos ""cap_marker_e_3""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_createVillageSpawn;}";
+				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, getMarkerPos ""cap_marker_e_3""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_createRespawn;}";
 				sizeA=0;
 				sizeB=0;
 				activationType="NOT PRESENT";
@@ -153216,7 +153228,7 @@ class Mission
 			{
 				name="trg_e_obj_4";
 				condition="call{this}";
-				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, getMarkerPos ""cap_marker_e_4""] spawn MALO_fnc_capsquads; [""e_obj_4""] spawn MALO_fnc_savePush; [""e_obj_4""] spawn MALO_fnc_createVillageSpawn;}";
+				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, getMarkerPos ""cap_marker_e_4""] spawn MALO_fnc_capsquads; [""e_obj_4""] spawn MALO_fnc_savePush; [""e_obj_4""] spawn MALO_fnc_createRespawn;}";
 				sizeA=20;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153515,7 +153527,7 @@ class Mission
 			{
 				name="trg_e_obj_5";
 				condition="call{this}";
-				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, getMarkerPos ""cap_marker_e_5""] spawn MALO_fnc_capsquads; [""e_obj_5""] spawn MALO_fnc_savePush; [""e_obj_5""] spawn MALO_fnc_createVillageSpawn;}";
+				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, getMarkerPos ""cap_marker_e_5""] spawn MALO_fnc_capsquads; [""e_obj_5""] spawn MALO_fnc_savePush; [""e_obj_5""] spawn MALO_fnc_createRespawn;}";
 				sizeA=30;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153811,7 +153823,7 @@ class Mission
 			{
 				name="trg_e_obj_6";
 				condition="call{this}";
-				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, getMarkerPos ""cap_marker_e_6""] spawn MALO_fnc_capsquads; [""e_obj_6""] spawn MALO_fnc_savePush; [""e_obj_6""] spawn MALO_fnc_createVillageSpawn;}";
+				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, getMarkerPos ""cap_marker_e_6""] spawn MALO_fnc_capsquads; [""e_obj_6""] spawn MALO_fnc_savePush; [""e_obj_6""] spawn MALO_fnc_createRespawn;}";
 				sizeA=35;
 				sizeB=15;
 				activationType="NOT PRESENT";
@@ -224227,7 +224239,7 @@ class Mission
 			dataType="Marker";
 			position[]={3052.877,360.479,5851.6699};
 			name="guglovo_spawn";
-			text="Guglovo mosque";
+			text="mosque";
 			type="Empty";
 			id=18247;
 			atlOffset=-0.070159912;
@@ -224237,7 +224249,7 @@ class Mission
 			dataType="Marker";
 			position[]={1669.515,293.92801,6919.4761};
 			name="novy_spawn";
-			text="Novy Sobor school";
+			text="school";
 			type="Empty";
 			id=18248;
 			atlOffset=-0.070037842;
@@ -224257,7 +224269,7 @@ class Mission
 			dataType="Marker";
 			position[]={3734.439,223.912,3060.0859};
 			name="pusta_spawn";
-			text="Pusta office";
+			text="government office";
 			type="Empty";
 			id=18250;
 			atlOffset=-0.069656372;
@@ -224274,16 +224286,6 @@ class Mission
 		};
 		class Item5361
 		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4749.3608,6,1070.929};
-			};
-			title="spawn";
-			id=18252;
-		};
-		class Item5362
-		{
 			dataType="Marker";
 			position[]={5082.8931,6.5939999,1547.916};
 			name="e_obj_2_spawn";
@@ -224292,7 +224294,7 @@ class Mission
 			id=18253;
 			atlOffset=0.25442123;
 		};
-		class Item5363
+		class Item5362
 		{
 			dataType="Marker";
 			position[]={4983.9932,6.2540002,1426.765};
@@ -224302,7 +224304,7 @@ class Mission
 			id=18254;
 			atlOffset=0.25400019;
 		};
-		class Item5364
+		class Item5363
 		{
 			dataType="Marker";
 			position[]={4937.8701,6.3429999,1313.521};
@@ -224312,7 +224314,7 @@ class Mission
 			id=18255;
 			atlOffset=0.25409603;
 		};
-		class Item5365
+		class Item5364
 		{
 			dataType="Marker";
 			position[]={4802.728,6.5830002,1207.545};
@@ -224322,7 +224324,7 @@ class Mission
 			id=18256;
 			atlOffset=0.25436449;
 		};
-		class Item5366
+		class Item5365
 		{
 			dataType="Marker";
 			position[]={4749.3521,6.3600001,1070.923};
@@ -224331,6 +224333,221 @@ class Mission
 			type="Empty";
 			id=18257;
 			atlOffset=0.253901;
+		};
+		class Item5366
+		{
+			dataType="Marker";
+			position[]={5851.5972,292.83499,3463.083};
+			name="castle1_spawn";
+			text="castle";
+			type="Empty";
+			id=18258;
+			atlOffset=-0.069824219;
+		};
+		class Item5367
+		{
+			dataType="Marker";
+			position[]={4511.6221,254.015,4636.0518};
+			name="staroye_spawn";
+			text="POW camp";
+			type="Empty";
+			id=18261;
+			atlOffset=0.01499939;
+		};
+		class Item5368
+		{
+			dataType="Marker";
+			position[]={5280.1558,210.92999,7131.9438};
+			name="polana_spawn";
+			text="operations base";
+			type="Empty";
+			id=18263;
+			atlOffset=-0.070007324;
+		};
+		class Item5369
+		{
+			dataType="Marker";
+			position[]={6834.5791,176.94901,6529.7119};
+			name="orlovets_spawn";
+			type="Empty";
+			id=18265;
+			atlOffset=-0.070114136;
+		};
+		class Item5370
+		{
+			dataType="Marker";
+			position[]={5920.8848,81.081001,5832.3159};
+			name="dolina_spawn";
+			type="Empty";
+			id=18267;
+			atlOffset=0.26100159;
+		};
+		class Item5371
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5047.9409,120.51672,6228.9116};
+				angles[]={0.014664836,0,6.1571903};
+			};
+			title="animals";
+			id=18269;
+		};
+		class Item5372
+		{
+			dataType="Marker";
+			position[]={4625.2227,258.92032,4770.541};
+			name="animal_spawner_1";
+			text="sheep 1";
+			type="Empty";
+			id=18270;
+			atlOffset=0.00030517578;
+		};
+		class Item5373
+		{
+			dataType="Marker";
+			position[]={4191.2212,202,5780.7012};
+			name="animal_spawner_2";
+			text="chickens 1";
+			type="Empty";
+			id=18271;
+		};
+		class Item5374
+		{
+			dataType="Marker";
+			position[]={4295.9492,209,5701.4331};
+			name="animal_spawner_3";
+			text="goats 1";
+			type="Empty";
+			id=18272;
+		};
+		class Item5375
+		{
+			dataType="Marker";
+			position[]={4280.1831,223.035,5638.9219};
+			name="animal_spawner_4";
+			text="sheep 1";
+			type="Empty";
+			id=18273;
+			atlOffset=0.00022888184;
+		};
+		class Item5376
+		{
+			dataType="Marker";
+			position[]={5047.8052,120.53618,6228.7803};
+			name="animal_spawner_5";
+			text="sheep 1";
+			type="Empty";
+			id=18274;
+			atlOffset=0.00030517578;
+		};
+		class Item5377
+		{
+			dataType="Marker";
+			position[]={4401.54,190.44043,6267.8228};
+			name="animal_spawner_6";
+			text="sheep 1";
+			type="Empty";
+			id=18275;
+			atlOffset=-3.2591248;
+		};
+		class Item5378
+		{
+			dataType="Marker";
+			position[]={4938.9131,134,6611.3242};
+			name="animal_spawner_7";
+			text="chickens 1";
+			type="Empty";
+			id=18276;
+		};
+		class Item5379
+		{
+			dataType="Marker";
+			position[]={5298.4883,217.68047,7352.1816};
+			name="animal_spawner_8";
+			text="sheep 1";
+			type="Empty";
+			id=18277;
+			atlOffset=0.00030517578;
+		};
+		class Item5380
+		{
+			dataType="Marker";
+			position[]={5193.8652,195,7067.9849};
+			name="animal_spawner_9";
+			text="goats 1";
+			type="Empty";
+			id=18278;
+		};
+		class Item5381
+		{
+			dataType="Marker";
+			position[]={5165.3149,227.18401,7319.9102};
+			name="animal_spawner_10";
+			text="chickens 1";
+			type="Empty";
+			id=18279;
+			atlOffset=0.00025939941;
+		};
+		class Item5382
+		{
+			dataType="Marker";
+			position[]={4548.916,261.88901,4730.8721};
+			name="animal_spawner_11";
+			text="chickens 1";
+			type="Empty";
+			id=18280;
+			atlOffset=0.00018310547;
+		};
+		class Item5383
+		{
+			dataType="Marker";
+			position[]={4659.085,245.05292,4630.7456};
+			name="animal_spawner_12";
+			text="sheep 1";
+			type="Empty";
+			id=18281;
+			atlOffset=0.00030517578;
+		};
+		class Item5384
+		{
+			dataType="Marker";
+			position[]={4850.6548,255.754,4939.0122};
+			name="animal_spawner_13";
+			text="goats 1";
+			type="Empty";
+			id=18282;
+			atlOffset=-0.0002746582;
+		};
+		class Item5385
+		{
+			dataType="Marker";
+			position[]={5868.3574,76.800919,5778.6948};
+			name="animal_spawner_14";
+			text="sheep 1";
+			type="Empty";
+			id=18283;
+			atlOffset=0.00030517578;
+		};
+		class Item5386
+		{
+			dataType="Marker";
+			position[]={5634.9438,106.03859,5934.4951};
+			name="animal_spawner_15";
+			text="sheep 1";
+			type="Empty";
+			id=18284;
+			atlOffset=0.00030517578;
+		};
+		class Item5387
+		{
+			dataType="Marker";
+			position[]={6128.0029,70.077629,5843.6934};
+			name="animal_spawner_16";
+			text="sheep 1";
+			type="Empty";
+			id=18285;
+			atlOffset=0.00030517578;
 		};
 	};
 	class Connections

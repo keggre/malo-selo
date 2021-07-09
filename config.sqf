@@ -13,7 +13,7 @@ MALO_CFG_dynamic_view_distance_max = 3000;											// 3000
 MALO_CFG_dynamic_view_distance_altitude_multiplier = 25;							// 25
 MALO_CFG_dynamic_view_distance_smoothing = 50;										// 50
 
-MALO_CFG_night_brightness = 25;														// 25
+MALO_CFG_night_brightness = 50;														// 25
 MALO_CFG_time_multiplier = 18;														// 18
 
 MALO_CFG_enable_cutscenes = true; 													// true

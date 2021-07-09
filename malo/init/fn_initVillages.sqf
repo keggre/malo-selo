@@ -152,3 +152,19 @@ for "_i" from 0 to (count villages) - 1 do {
 	publicVariable (_item1 + "_fullname");
 
 };
+
+
+// CREATE [VILLAGE]_DISCOVERED VARIABLE FOR EACH VILLAGE
+
+_i = 0;
+
+for "_i" from 0 to (count villages) - 1 do {
+
+	_item = (villages select _i);
+
+	call compile (_item + "_discovered = false;");
+	publicVariable (_item + "_discovered");
+
+};
+
+shakhovka_discovered = true;

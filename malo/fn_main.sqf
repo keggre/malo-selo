@@ -1,4 +1,5 @@
-titleText [("<t size='2'> A small village in Republika Srpska, 1993 </t>"), "BLACK FADED", -1, true, true];
+[] spawn MALO_fnc_cutsceneOpening;
+
 hintSilent "Initializing mission...";
 
 fn_config = execVM "config.sqf";
@@ -9,12 +10,14 @@ MALO_init = true;
 MALO_delay = .05;
 MALO_min_delay = .05;
 MALO_max_delay = .5;
-MALO_current_view_distance = 1;
-MALO_next_view_distance = 1;
-MALO_fog_value = .05;
-MALO_ovc_value = .55;
+MALO_current_view_distance = 1000;
+MALO_next_view_distance = 1000;
+MALO_fog_value = .5;
+MALO_ovc_value = .75;
 
 setViewDistance MALO_current_view_distance;
+0 setFog MALO_fog_value;
+0 setOvercast MALO_ovc_value;
 
 east setFriend [independent, 1];
 independent setFriend [east, 1];
@@ -26,6 +29,7 @@ west setFriend [independent, 1];
 independent setFriend [west, 1];
 
 // INIT
+call MALO_fnc_initAnimals;
 call MALO_fnc_initCivs;
 call MALO_fnc_initFlee;
 call MALO_fnc_initPois;
@@ -42,16 +46,12 @@ fn_ambientPlane = [] spawn MALO_fnc_ambientPlane;
 // LOAD
 call MALO_fnc_load;
 
-//////////
 sleep .05;
-//////////
 
 if !("shootout" in MALO_mission_progress) then {
 	trg_shootout_1 call MALO_fnc_activateTrigger;
 	trg_shootout_2 call MALO_fnc_activateTrigger;
 };
-
-titleFadeOut 1;
 
 while {true} do {
 
