@@ -34,14 +34,10 @@ call MALO_fnc_initCivs;
 call MALO_fnc_initFlee;
 call MALO_fnc_initPois;
 call MALO_fnc_initRadio;
+call MALO_fnc_initSimulation;
 call MALO_fnc_initSliders;
 call MALO_fnc_initTasks;
 call MALO_fnc_initVillages;
-
-// AMBIENT
-fn_ambientArty = [] spawn MALO_fnc_ambientArty;
-fn_ambientFire = [] spawn MALO_fnc_ambientFire;
-fn_ambientPlane = [] spawn MALO_fnc_ambientPlane;
 
 // LOAD
 call MALO_fnc_load;
@@ -66,6 +62,7 @@ while {true} do {
 
 	// LOOP
 	call MALO_fnc_allowWarCrimes;
+	call MALO_fnc_ambient;
 	call MALO_fnc_debug;
 	call MALO_fnc_delay;
 	call MALO_fnc_deleteTasks;

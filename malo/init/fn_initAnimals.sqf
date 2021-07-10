@@ -3,9 +3,9 @@ if (!isServer) exitWith {};
 MALO_animal_spawn_types = [
 
   /*[marker text, types, spawn radius, animal radius, count]*/
-	["sheep 1", ["Sheep_random_F"], MALO_CFG_view_distance, 10, 10],
-	["goats 1", ["Goat_random_F"], MALO_CFG_view_distance, 5, 10],
-	["chickens 1", ["Hen_random_F", "Cock_random_F"], MALO_CFG_view_distance, 2.5, 10]
+	["sheep 1", ["Sheep_random_F"], MALO_CFG_min_simulation_distance, 10, 10],
+	["goats 1", ["Goat_random_F"], MALO_CFG_min_simulation_distance, 5, 5],
+	["chickens 1", ["Hen_random_F", "Cock_random_F"], MALO_CFG_min_simulation_distance, 2.5, 10]
 	
 ];
 

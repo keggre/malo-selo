@@ -1,5 +1,8 @@
 if (!isServer) exitWith {};
 
+
+// CIV LISTS FOR EACH VILLAGE
+
 shakhovka_civs = [
 
 	civ_1,

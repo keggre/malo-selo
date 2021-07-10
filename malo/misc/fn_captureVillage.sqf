@@ -41,14 +41,25 @@ call compile (_name + "_marker setDamage 1;");
 // SHOW VILLAGE MARKER
 _name setMarkerAlpha 1;
 
-// ADD TO MISSION PROGRESS
-[_name] spawn MALO_fnc_savePush;
+// IF VILLAGE WAS CAPTURED IN PREVIOUS SAVE
+if (_name in MALO_mission_progress) then {
+
+	// DELETE CIVS
+	private _var = missionNamespace getVariable [_name + "_civs", []];
+	{deleteVehicle _x;} forEach _var;
+
+};
 
 // UN RETREAT FOR GUGLOVO
 if (_name == "guglovo") then {
 	{_x enableAi "PATH";} forEach units un_check1_units; 
 	{_x enableAi "PATH";} forEach units un_check2_units; 
 	un_check1_apc setVehicleAmmo 0; 
+	if (_name in MALO_mission_progress) then {
+		{deleteVehicle _x;} forEach units un_check1_units; 
+		{deleteVehicle _x;} forEach units un_check2_units; 
+		deleteVehicle un_check1_apc;
+	};
 };
 
 // TRENCH FALLBACKS FOR NOVY
@@ -56,6 +67,11 @@ if (_name == "novy") then {
 	{_x enableAi "ALL";} forEach units t_enemy_1;  
 	{_x enableAi "ALL";} forEach units t_enemy_2; 
 	{_x enableAi "ALL";} forEach units t_friendly_1;
+	if (_name in MALO_mission_progress) then {
+		{deleteVehicle _x;} forEach units t_enemy_1;  
+		{deleteVehicle _x;} forEach units t_enemy_2; 
+		{deleteVehicle _x;} forEach units t_friendly_1;
+	};
 };
 
 // ACTIVATE PLANE AND UN RETREAT FOR MSTA
@@ -67,14 +83,31 @@ if (_name == "msta") then {
 	un_check3_apc setVehicleAmmo 0; 
 	un_check4_apc setVehicleAmmo 0; 
 	un_check5_apc setVehicleAmmo 0;
+	if (_name in MALO_mission_progress) then {
+		deleteVehicle us_plane_1;
+		{deleteVehicle _x;} forEach units un_check3_units; 
+		{deleteVehicle _x;} forEach units un_check4_units; 
+		{deleteVehicle _x;} forEach units un_check5_units; 
+		deleteVehicle un_check3_apc; 
+		deleteVehicle un_check4_apc; 
+		deleteVehicle un_check5_apc;
+	};
 };
 
 // TRENCH FALLBACK FOR PUSTA
 if (_name == "pusta") then {
 	{_x enableAi "ALL";} forEach units t_enemy_3;
+	if (_name in MALO_mission_progress) then {
+		{deleteVehicle _x} forEach units t_enemy_3;
+	};
 };
 
 // STARY
 if (_name == "stary") then {
 	// nothing yet
 };
+
+//////////////////////////////////////////////
+
+// ADD TO MISSION PROGRESS
+[_name] spawn MALO_fnc_savePush;

@@ -2,7 +2,7 @@ if (!hasInterface) exitWith {};
 
 // hintSilent (str diag_fps + " " + str MALO_current_view_distance + " " + str MALO_simulation_distance + " " + str MALO_delay);
 
-if (alive cap_1) then {
+/*if (alive cap_1) then {
 
 	_i = 1;
 
@@ -16,7 +16,7 @@ if (alive cap_1) then {
 
 	};
 
-};
+};*/
 
 // malo_delay = 1;
 
@@ -25,4 +25,10 @@ if (alive cap_1) then {
 	player addRating abs (rating player)
 	
 };*/
+
+/*{
+
+	if !(dynamicSimulationEnabled _x) then {diag_log _x;};
+
+} forEach allUnits;*/
 

@@ -142,7 +142,7 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 	MALO_CFG_ambient_arty, 
 	1, 
 	{}, 
-	true
+	false
 ] call cba_fnc_addSetting;
 
 [
@@ -153,7 +153,7 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 	MALO_CFG_ambient_fire, 
 	1, 
 	{}, 
-	true
+	false
 ] call cba_fnc_addSetting;
 
 [
@@ -164,7 +164,7 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 	MALO_CFG_ambient_plane, 
 	1, 
 	{}, 
-	true
+	false
 ] call cba_fnc_addSetting;
 
 [

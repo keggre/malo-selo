@@ -99,9 +99,6 @@ MALO_KEY_tank = {
 MALO_KEY_poi1 = {
 
 	trg_poi1 call MALO_fnc_activateTrigger;
-
-	// waitUntil {["poi1"] call BIS_fnc_taskExists};
-
 	trg_albanian call MALO_fnc_activateTrigger;
 
 	{_x setDamage 1;} forEach units albanians;
@@ -115,9 +112,6 @@ MALO_KEY_poi1 = {
 MALO_KEY_poi2 = {
 
 	trg_poi2 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi2"] call BIS_fnc_taskExists};
-
 	trg_scout_1 call MALO_fnc_activateTrigger;
 	trg_guglovo_load call MALO_fnc_activateTrigger;
 
@@ -130,9 +124,6 @@ MALO_KEY_poi2 = {
 MALO_KEY_poi3 = {
 
 	trg_poi3 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi3"] call BIS_fnc_taskExists};
-
 	trg_ambush_1 call MALO_fnc_activateTrigger;
 	trg_ambush_2 call MALO_fnc_activateTrigger;
 	trg_ambush_3 call MALO_fnc_activateTrigger;
@@ -148,9 +139,6 @@ MALO_KEY_poi3 = {
 MALO_KEY_poi4 = {
 
 	trg_poi4 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi4"] call BIS_fnc_taskExists};
-
 	trg_arty call MALO_fnc_activateTrigger;
 
 	_poi = "poi4";
@@ -162,13 +150,11 @@ MALO_KEY_poi4 = {
 MALO_KEY_poi5 = {
 
 	trg_poi5 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi5"] call BIS_fnc_taskExists};
-
 	trg_pilot call MALO_fnc_activateTrigger;
 	trg_pilot_capture call MALO_fnc_activateTrigger;
 
 	deleteVehicle pilot;
+	deleteVehicle us_heli_1;
 
 	_poi = "poi5";
 	waitUntil {[_poi] call BIS_fnc_taskExists};
@@ -179,9 +165,6 @@ MALO_KEY_poi5 = {
 MALO_KEY_poi6 = {
 
 	trg_poi6 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi6"] call BIS_fnc_taskExists};
-
 	trg_partisan call MALO_fnc_activateTrigger;
 
 	_poi = "poi6";
@@ -193,10 +176,8 @@ MALO_KEY_poi6 = {
 MALO_KEY_poi7 = {
 
 	trg_poi7 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi7"] call BIS_fnc_taskExists};
-
 	[west, position trg_arkan, 100] call MALO_fnc_killWithinRadius;
+	gunner arkan_turret setDamage 1;
 
 	trg_arkan call MALO_fnc_activateTrigger;
 	trg_arkan_2 call MALO_fnc_activateTrigger;
@@ -210,9 +191,6 @@ MALO_KEY_poi7 = {
 MALO_KEY_poi8 = {
 
 	trg_poi8 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi8"] call BIS_fnc_taskExists};
-
 	trg_kidnap call MALO_fnc_activateTrigger;
 	trg_kidnap_capture_1 call MALO_fnc_activateTrigger;
 	trg_kidnap_capture_2 call MALO_fnc_activateTrigger;
@@ -228,15 +206,16 @@ MALO_KEY_poi8 = {
 MALO_KEY_poi9 = {
 
 	trg_poi9 call MALO_fnc_activateTrigger;
-	
-	// waitUntil {["poi9"] call BIS_fnc_taskExists};
-
 	trg_castle1_1 call MALO_fnc_activateTrigger;
 	trg_castle1_2 call MALO_fnc_activateTrigger;
 	trg_castle1_3 call MALO_fnc_activateTrigger;
 	trg_castle1_4 call MALO_fnc_activateTrigger;
 
+	{_x enableSimulation false;} forEach units enemy_17;
+
 	[west, getMarkerPos "castle1", 250] call MALO_fnc_killWithinRadius;
+	
+	{gunner _x setDamage 1;} forEach [castle1_turret_1, castle1_turret_2, castle1_turret_3, aa_1];
 
 	_poi = "poi9";
 	waitUntil {[_poi] call BIS_fnc_taskExists};

@@ -1,5 +1,4 @@
 if (!isServer) exitWith {};
-if (MALO_CFG_ambient_arty == false) exitWith {};
 
 _guns = [
 
@@ -13,7 +12,7 @@ _targets = [
 	
 ];
 
-while {true} do {
+while {MALO_CFG_ambient_arty} do {
 
 	for "_i" from 0 to (count _guns - 1) do {
 
@@ -25,8 +24,10 @@ while {true} do {
 		_ammo = getArtilleryAmmo [_gun] select 0; 
 
 		_gun setVehicleAmmo 1;
-
-		_gun doArtilleryFire[_target,_ammo,5];
+		
+		if (!isPlayer gunner _gun) then {
+			_gun doArtilleryFire[_target,_ammo,5];
+		};
 
 	};
 

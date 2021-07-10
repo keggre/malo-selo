@@ -1,5 +1,4 @@
 if (!isServer) exitWith {};
-if (MALO_CFG_ambient_fire == false) exitWith {};
 
 _turrets = [
 
@@ -19,23 +18,26 @@ _targets = [
 
 ];
 
-while {true} do {
+while {MALO_CFG_ambient_fire} do {
 
-for "_i" from 0 to (count _turrets - 1) do {
+	for "_i" from 0 to (count _turrets - 1) do {
 
-_turret = _turrets select _i;
-_target = _targets select _i;
-_burst = random [1, 5, 10];
+		_turret = _turrets select _i;
+		_target = _targets select _i;
+		_burst = random [1, 5, 10];
 
-_string =  [str _i, str _turret, str _target] joinString " ";
+		_string =  [str _i, str _turret, str _target] joinString " ";
 
-_turret setVehicleAmmo 1;
-_turret doWatch _target; 
-_turret action ["useWeapon", _turret, gunner _turret, 1];
+		_turret setVehicleAmmo 1;
 
-};
+		if (!isPlayer gunner _turret) then {
+			_turret doWatch _target; 
+			_turret action ["useWeapon", _turret, gunner _turret, 1];
+		};
 
-_time = random [0,1,10];
-sleep _time / 10;
+	};
+
+	_time = random [0,1,10];
+	sleep _time / 10;
 
 };

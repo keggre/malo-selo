@@ -16,5 +16,12 @@ params ["_leader", "_pos"];
 
 _leader setPos _pos; 
 
-{_x enableAi 'ALL'; _x enableSimulation true; _x enableDynamicSimulation true;} forEach units group _leader;
+{
+
+	_x enableAi 'ALL'; 
+	_x enableSimulation true; 
+	_x enableDynamicSimulation true;
+
+} forEach units group _leader;
+
 group _leader enableDynamicSimulation true;

@@ -31,6 +31,7 @@ class malo
 		class initFlee {};
 		class initSliders {};
 		class initRadio {};
+		class initSimulation {};
 		class initVillages {};
 		class initTasks {};
 		class initPois {};
@@ -40,6 +41,7 @@ class malo
 	{
 		file = "malo\loop"
 		class allowWarCrimes {};
+		class ambient {};
 		class debug {};
 		class delay {};
 		class deleteTasks {};

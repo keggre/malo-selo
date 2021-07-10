@@ -2,7 +2,7 @@ if (false) exitWith {};
 
 params ["_side", "_position", "_radius"];
 
-private _objects = nearestObjects [_position, ["Man", "car", "tank"], _radius];
+private _objects = nearestObjects [_position, ["Man", "car", "tank", "turret"], _radius];
 
 {
 
