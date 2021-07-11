@@ -1,20 +1,11 @@
 if (false) exitWith {};
 
-MALO_simulated_units = [
-
-
-	
-];
-
+MALO_simulated_units = [];
 
 {
 
 	_x triggerDynamicSimulation false;
 
-} forEach allUnits;
+} forEach (allUnits - playableUnits);
 
-{
-
-	_x triggerDynamicSimulation true;
-
-} forEach units group player;
+// {_x enableDynamicSimulation true;} forEach (allUnits - playableUnits);
