@@ -28,6 +28,7 @@ class malo
 	{
 		file = "malo\init"
 		class initAnimals {};
+		class initBuildings {};
 		class initCivs {};
 		class initFlee {};
 		class initSliders {};

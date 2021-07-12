@@ -1,3 +1,5 @@
+// DEFINES TASKS AT THE START OF THE GAME
+
 if (false) exitWith {};
 
 [

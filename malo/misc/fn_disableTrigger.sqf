@@ -1,3 +1,5 @@
+// PREVENTS A TRIGGER FROM BEING ACTIVATED
+
 if (false) exitWith {};
 
 params ["_trg"];

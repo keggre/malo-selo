@@ -1,3 +1,5 @@
+// CURRENTLY UNFINISHED
+
 village_boundaries = [
 
 	/*chernogorsk*/			[],

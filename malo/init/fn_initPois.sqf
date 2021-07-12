@@ -1,3 +1,5 @@
+// DEFINES THE POINT OF INTEREST MISSION NAMES AND ASSOCIATED VILLAGES
+
 if (!isServer) exitWith {};
 
 pois = [

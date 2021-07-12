@@ -1,3 +1,5 @@
+// DEFINES VARIOUS VALUES RELATED TO THE VILLAGES
+
 if (!isServer) exitWith {};
 
 villages = [

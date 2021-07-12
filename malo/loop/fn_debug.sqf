@@ -1,3 +1,5 @@
+// TEMPORARY CODE
+
 if (!hasInterface) exitWith {};
 
 // hintSilent (str diag_fps + " " + str MALO_current_view_distance + " " + str MALO_simulation_distance + " " + str MALO_delay);

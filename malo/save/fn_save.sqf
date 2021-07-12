@@ -1,3 +1,5 @@
+// CHECKS FOR CHANGES IN THE MISSION SAVE FILE AND PUSHES THEM IF THE CONDITIONS ARE MET
+
 if (!hasInterface) exitWith {};
 if (MALO_CFG_saving == false) exitWith {};
 

@@ -1,3 +1,5 @@
+// RUNS WHEN A VILLAGE IS CAPTURED
+
 if (false) exitWith {};
 
 params["_name"];

@@ -1,3 +1,5 @@
+// UNFINISHED
+
 if (!isServer) exitWith {};
 if (random [0, 50, 100] != 1) exitWith {};
 

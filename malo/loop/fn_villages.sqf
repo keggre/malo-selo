@@ -1,3 +1,5 @@
+// MANAGES VARIOUS ASPECTS OF THE VILLAGES
+
 if (false) exitWith {};
 
 private _count = 0;

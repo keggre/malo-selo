@@ -1,3 +1,5 @@
+// ADJUSTS THE SIMULATION DISTANCE BASED OFF FRAMERATE
+
 if (!hasInterface) exitWith {MALO_simulation_distance = MALO_CFG_max_simulation_distance;};
 if (MALO_CFG_target_framerate == 0) exitWith {MALO_simulation_distance = MALO_CFG_min_simulation_distance;};
 

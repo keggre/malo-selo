@@ -1,3 +1,5 @@
+// ADJUSTS VIEW DISTANCE BASED OFF VARIOUS FACTORS, INCLUDING FRAMERATE
+
 if (!hasInterface) exitWith {if (MALO_CFG_dynamic_view_distance == true) then {setViewDistance MALO_CFG_dynamic_view_distance_max;} else {setViewDistance MALO_CFG_view_distance;};};
 
 MALO_current_view_distance = (MALO_current_view_distance + (MALO_next_view_distance - MALO_current_view_distance) / (MALO_CFG_dynamic_view_distance_smoothing * 5));

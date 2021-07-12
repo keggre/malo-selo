@@ -1,3 +1,5 @@
+// SHOOTS BURSTS AT SELECTED TARGETS FROM SELECTED GUNS
+
 if (!isServer) exitWith {};
 
 _turrets = [
@@ -22,14 +24,14 @@ while {MALO_CFG_ambient_gunfire} do {
 
 	for "_i" from 0 to (count _turrets - 1) do {
 
+		// SELECT TURRET, TARGET AND FIRING MODE
 		_turret = _turrets select _i;
 		_target = _targets select _i;
 		_burst = random [1, 5, 10];
 
-		_string =  [str _i, str _turret, str _target] joinString " ";
-
 		_turret setVehicleAmmo 1;
 
+		// CHECK IF PLAYER BEFORE SHOOTING
 		if (!isPlayer gunner _turret) then {
 			_turret doWatch _target; 
 			_turret action ["useWeapon", _turret, gunner _turret, 1];

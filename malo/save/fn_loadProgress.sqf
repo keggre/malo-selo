@@ -1,3 +1,5 @@
+// LOADS THE MISSION PROGRESS VARIABLE FROM THE PROFILE NAMESPACE
+
 if (!hasInterface) exitWith {};
 
 if (MALO_CFG_loading == false) exitWith {};

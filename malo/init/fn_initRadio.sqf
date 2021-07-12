@@ -1,3 +1,5 @@
+// DEFINES THE VARIABLES USED IN THE KLPQ MUSIC RADIO MOD
+
 if (!hasInterface) exitWith {};
 
 klpq_musicRadio_enable = true;

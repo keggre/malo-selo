@@ -1,3 +1,5 @@
+// DEALS WITH VIEW DISTANCE MODIFIERS
+
 if (false) exitWith {};
 
 params ["_modifier", "_is_reducer"];

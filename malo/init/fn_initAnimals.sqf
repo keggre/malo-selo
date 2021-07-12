@@ -1,3 +1,5 @@
+// CREATES ANIMAL SPAWN POINTS FROM MARKERS PLACED ON THE MAP IN THE EDITOR
+
 if (!isServer) exitWith {};
 
 MALO_animal_spawn_types = [

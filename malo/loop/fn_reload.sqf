@@ -1,3 +1,5 @@
+// GUNS WITH INFINITE AMMO
+
 if (!isServer) exitWith {};
 
 arty_1 setVehicleAmmo 1;

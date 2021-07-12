@@ -1,3 +1,5 @@
+// SETS THE WEATHER
+
 if (!isServer) exitWith {};
 
 60 setFog MALO_fog_value;

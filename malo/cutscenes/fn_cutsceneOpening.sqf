@@ -1,3 +1,5 @@
+// CUTSCENE THAT PLAYS AT THE START OF THE MISSION
+
 if (!hasInterface) exitWith {};
 if (false) exitWith {};
 

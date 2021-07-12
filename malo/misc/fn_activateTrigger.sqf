@@ -1,3 +1,5 @@
+// ACTIVATES A TRIGGER INSTANTLY
+
 if (false) exitWith {};
 
 params ["_trg"];

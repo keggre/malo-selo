@@ -1,3 +1,5 @@
+// CURRENTLY UNFINISHED
+
 if (false) exitWith {};
 
 MALO_simulated_units = [];

@@ -1,3 +1,5 @@
+// PLANE THAT FLIES RANDOMLY AROUND THE MAP
+
 if (!isServer) exitWith {};
 
 if (MALO_CFG_ambient_plane == true) then {

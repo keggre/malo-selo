@@ -1,3 +1,5 @@
+// DELETES COMPLETED TASKS
+
 if (!hasInterface) exitWith {};
 
 private _tasks = player call BIS_fnc_tasksUnit;

@@ -1,3 +1,5 @@
+// CONTROLS SCRIPTS RELATED TO VARIOUS AMBIENT FEATURES
+
 if (!isServer) exitWith {};
 
 private _scripts = [

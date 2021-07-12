@@ -1,3 +1,5 @@
+// SCRIPT FOR THE SMUGGLER TRUCKS SIDE MISSION
+
 if (false) exitWith {};
 
 smuggler_trucks_destroyed = false;

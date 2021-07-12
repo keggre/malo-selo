@@ -1,3 +1,5 @@
+// CUTSCENE THAT PLAYS WHILE THE MORTAR SHELLS LAND
+
 if (!hasInterface) exitWith {};
 if (MALO_CFG_enable_cutscenes == false) exitWith {};
 

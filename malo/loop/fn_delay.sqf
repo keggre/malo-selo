@@ -1,3 +1,5 @@
+// ADJUSTS THE MAIN LOOP DELAY BASED OFF OF FRAMERATE
+
 if (!hasInterface) exitWith {};
 
 if (diag_fps + 5 < MALO_CFG_target_framerate) then {

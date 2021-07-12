@@ -1,3 +1,5 @@
+// ADDS CONFIGURATION OPTIONS FOR THE MISSION IN THE PAUSE MENU
+
 if (!hasInterface) exitWith {};
 
 MALO_simulation_distance = MALO_CFG_min_simulation_distance;

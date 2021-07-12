@@ -1,3 +1,5 @@
+// CUTSCENE THAT PLAYS WHEN THE BOSNIAN AMBUSH BEGINS
+
 if (!hasInterface) exitWith {};
 if (MALO_CFG_enable_cutscenes == false) exitWith {};
 

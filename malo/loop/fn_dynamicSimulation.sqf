@@ -1,3 +1,5 @@
+// SETS DYNAMIC SIMULATION DISTANCES
+
 if (false) exitWith {};
 
 "Group" setDynamicSimulationDistance MALO_simulation_distance;

@@ -1,3 +1,5 @@
+// TELEPORTS CAPSQUADS TO THEIR DESTINATIONS
+
 if (false) exitWith {};
 
 params ["_leader", "_pos"];
