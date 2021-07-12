@@ -20,6 +20,7 @@ MALO_CFG_enable_cutscenes = true; 													// true
 
 MALO_CFG_ambient_arty = true;														// true
 MALO_CFG_ambient_fire = true;														// true
+MALO_CFG_ambient_gunfire = true;													// true
 MALO_CFG_ambient_plane = true;														// true
 
 MALO_CFG_allow_war_crimes = true;													// true

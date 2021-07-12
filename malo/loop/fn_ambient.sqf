@@ -4,6 +4,7 @@ private _scripts = [
 
 	"Arty",
 	"Fire",
+	"Gunfire",
 	"Plane"
 
 ];

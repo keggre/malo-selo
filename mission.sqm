@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=18361;
+		nextID=18362;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4239.1948,707.0127,5099.0859};
-		dir[]={-0.07170222,-0.66495281,0.74343574};
-		up[]={-0.06383656,0.7468853,0.66188163};
-		aside[]={0.9953813,0,0.09600164};
+		pos[]={7427.2627,190.46875,307.71741};
+		dir[]={0.18655829,-0.67118818,-0.71742767};
+		up[]={0.16891667,0.74128705,-0.64958507};
+		aside[]={-0.96781361,1.4901161e-008,-0.25166813};
 	};
 };
 binarizationWanted=0;
@@ -20377,8 +20377,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4239.9966,207.53487,5764.3159};
-				angles[]={0.083802111,6.1353116,0.08380425};
+				position[]={4239.9971,207.53491,5764.3159};
+				angles[]={0.083810709,6.1353035,0.083810709};
 			};
 			side="Empty";
 			flags=4;
@@ -20395,7 +20395,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4243.7119,207.23061,5762.7495};
+				position[]={4243.7119,206.97533,5762.7495};
 				angles[]={0,0.25928518,0};
 			};
 			side="Empty";
@@ -20406,6 +20406,7 @@ class Mission
 			};
 			id=6033;
 			type="Land_WW2_Wall_Wood1_5";
+			atlOffset=-0.25527954;
 		};
 		class Item740
 		{
@@ -30035,7 +30036,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -30328,6 +30329,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8103;
@@ -30347,6 +30349,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8086;
@@ -30367,6 +30370,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8097;
@@ -30387,6 +30391,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8101;
@@ -30406,6 +30411,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8102;
@@ -30426,6 +30432,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8104;
@@ -30446,6 +30453,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8084;
@@ -30484,6 +30492,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8068;
@@ -30504,6 +30513,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8080;
@@ -30524,6 +30534,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8082;
@@ -30544,6 +30555,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8096;
@@ -30563,6 +30575,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8088;
@@ -221816,7 +221829,7 @@ class Mission
 		class Item5328
 		{
 			dataType="Trigger";
-			position[]={4250.3452,214.03169,5709.186};
+			position[]={3114.542,344.32608,5981.582};
 			class Attributes
 			{
 				condition="call{smuggler_trucks_destroyed == true}";
@@ -221825,6 +221838,7 @@ class Mission
 			};
 			id=18134;
 			type="EmptyDetector";
+			atlOffset=0.00015258789;
 		};
 		class Item5329
 		{

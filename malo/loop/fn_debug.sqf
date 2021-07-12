@@ -35,3 +35,7 @@ if (!hasInterface) exitWith {};
 // {call compile ("trg_e_obj_" + str _x + " spawn MALO_fnc_activateTrigger;");} forEach [1, 2, 3, 4, 5, 6];
 
 // {_x enableSimulation false; _x enableDynamicSimulation true;} forEach (allUnits - playableUnits);
+
+// {_x enableDynamicSimulation false; _x enableSimulation false;} forEach ((allMissionObjects "ALL") - (nearestObjects [player, [], 500]));
+
+hint (str MALO_ambient_fire_buildings + str MALO_ambient_fire_building_distances);

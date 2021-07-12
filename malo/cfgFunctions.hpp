@@ -12,6 +12,7 @@ class malo
 		file = "malo\ambient"
 		class ambientArty {};
 		class ambientFire {};
+		class ambientGunfire {};
 		class ambientPlane {};
 	};
 
@@ -63,6 +64,8 @@ class malo
 		class capsquads {};
 		class captureVillage {};
 		class createRespawn {};
+		class damageWithinRadius {};
+		class disableTrigger {};
 		class killWithinRadius {};
 		class setViewDistance {};
 		class smugglerTrucks {};

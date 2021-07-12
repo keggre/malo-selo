@@ -42,8 +42,9 @@ MALO_KEY_supply_truck = {
 	call compile (
 
 		"MALO_KEY_" + _x + " = {
+			private _load_radius = missionNamespace getVariable ['" + _x + "' + '_load_radius', 500];
 			[trg_" + _x + "] call MALO_fnc_activateTrigger;
-			[west, getMarkerPos '" + _x + "', 500] call MALO_fnc_killWithinRadius;
+			[west, getMarkerPos '" + _x + "', _load_radius] call MALO_fnc_killWithinRadius;
 		};"
 
 	);

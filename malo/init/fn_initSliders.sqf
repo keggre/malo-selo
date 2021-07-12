@@ -137,7 +137,7 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 [
 	"MALO_CFG_ambient_arty", 
 	"CHECKBOX", 
-	["Enable ambient artillery", "Enables or disables ambient artillery. Only works on mission restart."], 
+	["Enable ambient artillery", "Enables or disables ambient artillery. Disable to improve performance."], 
 	"Malo Selo", 
 	MALO_CFG_ambient_arty, 
 	1, 
@@ -148,7 +148,7 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 [
 	"MALO_CFG_ambient_fire", 
 	"CHECKBOX", 
-	["Enable ambient gunfire", "Enables or disables ambient gunfire. Only works on mission restart."], 
+	["Enable ambient fire", "Enables or disables ambient fire. Disable to improve performance."], 
 	"Malo Selo", 
 	MALO_CFG_ambient_fire, 
 	1, 
@@ -157,9 +157,20 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 ] call cba_fnc_addSetting;
 
 [
+	"MALO_CFG_ambient_gunfire", 
+	"CHECKBOX", 
+	["Enable ambient gunfire", "Enables or disables ambient gunfire. Disable to improve performance."], 
+	"Malo Selo", 
+	MALO_CFG_ambient_gunfire, 
+	1, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
 	"MALO_CFG_ambient_plane", 
 	"CHECKBOX", 
-	["Enable ambient aircraft", "Enables or disables ambient aircraft. Only works on mission restart."], 
+	["Enable ambient aircraft", "Enables or disables ambient aircraft. Disable to improve performance."], 
 	"Malo Selo", 
 	MALO_CFG_ambient_plane, 
 	1, 
