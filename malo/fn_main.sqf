@@ -32,7 +32,6 @@ independent setFriend [west, 1];
 call MALO_fnc_initAnimals;
 call MALO_fnc_initBuildings;
 call MALO_fnc_initCivs;
-call MALO_fnc_initFlee;
 call MALO_fnc_initPois;
 call MALO_fnc_initRadio;
 call MALO_fnc_initSimulation;
@@ -64,12 +63,12 @@ while {true} do {
 	// LOOP
 	call MALO_fnc_allowWarCrimes;
 	call MALO_fnc_ambient;
+	call MALO_fnc_civs;
 	call MALO_fnc_debug;
 	call MALO_fnc_delay;
 	call MALO_fnc_deleteTasks;
 	call MALO_fnc_dynamicSimulation;
-	call MALO_fnc_flee;
-	call MALO_fnc_playerSquadSimulation;
+	call MALO_fnc_player;
 	call MALO_fnc_reload;
 	call MALO_fnc_simulationDistance;
 	call Malo_fnc_supplyTruck;

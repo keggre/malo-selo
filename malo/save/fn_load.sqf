@@ -4,6 +4,9 @@ if (false) exitWith {};
 
 sleep .05;
 
+
+// GET THE MISSION PROGRESS FROM THE HOST'S PROFILE NAMESPACE
+
 if (isServer) then {
 
 	MALO_mission_progress = MALO_CFG_skip; 
@@ -12,6 +15,9 @@ if (isServer) then {
 	publicVariable "MALO_mission_progress";
 
 };
+
+
+// IF PROGRESS NOT BEING LOADED
 
 if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith { 
 
@@ -33,7 +39,19 @@ if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith {
 
 hintSilent "Loading mission progress...";
 
+
+// LOAD INVENTORY
+if ((profileNamespace getVariable ["MALO_saved_inventory", false]) !isEqualTo false) then {
+	[player, [profileNamespace, "MALO_saved_inventory"]] call BIS_fnc_loadInventory;
+};
+
+
+// LOAD KEYWORDS
+
 call MALO_fnc_loadProgressKeywords;
+
+
+// SPAWN KEYWORD FUNCTIONS
 
 private _current = 0;
 private _count = count MALO_mission_progress;
@@ -56,9 +74,15 @@ private _count = count MALO_mission_progress;
 	
 } forEach MALO_mission_progress;
 
+
+// DISABLE DYNAMIC SIMULATION MOMENTARILY
+
 enableDynamicSimulationSystem false;
 uiSleep 5;
 enableDynamicSimulationSystem true;
+
+
+// HINT MISSION PROGRESS LOADED
 
 private _fn = {
 

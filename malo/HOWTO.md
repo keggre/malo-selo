@@ -1,9 +1,12 @@
 # villages
 * initVillages
+* initCivs
 * load trigger
 * capture trigger
 * buildings
 * vehicles
 * civs
 * animals
-* respawn marker
+* enemies
+* respawn 
+* flag

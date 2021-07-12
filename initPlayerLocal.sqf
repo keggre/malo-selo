@@ -1,1 +1,0 @@
-[player, [missionNameSpace, "VirtualInventory"]] call BIS_fnc_saveInventory;
