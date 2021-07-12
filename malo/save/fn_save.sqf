@@ -15,9 +15,10 @@ MALO_saved_mission_progress = profileNamespace getVariable ["MALO_saved_mission_
 if (MALO_saved_mission_progress isEqualTo MALO_mission_progress) exitWith {};
 if (count MALO_mission_progress < 1) exitWith {};
 
-if (ObjNull in MALO_saved_mission_progress) then {
+
+/*if (ObjNull in MALO_saved_mission_progress) then {
     {MALO_saved_mission_progress = MALO_saved_mission_progress - [objNull]} forEach MALO_saved_mission_progress;
-};
+};*/
 
 
 hintSilent "Saving mission progress...";

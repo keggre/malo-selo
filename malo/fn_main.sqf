@@ -29,7 +29,6 @@ west setFriend [independent, 1];
 independent setFriend [west, 1];
 
 // INIT
-call MALO_fnc_initAnimals;
 call MALO_fnc_initBuildings;
 call MALO_fnc_initCivs;
 call MALO_fnc_initPois;

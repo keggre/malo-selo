@@ -41,7 +41,8 @@ hintSilent "Loading mission progress...";
 
 
 // LOAD INVENTORY
-if ((profileNamespace getVariable ["MALO_saved_inventory", false]) !isEqualTo false) then {
+private _var = profileNamespace getVariable ["MALO_saved_inventory", false];
+if !(_var isEqualTo false) then {
 	[player, [profileNamespace, "MALO_saved_inventory"]] call BIS_fnc_loadInventory;
 };
 

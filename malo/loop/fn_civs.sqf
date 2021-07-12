@@ -34,12 +34,27 @@ MALO_fnc_civs_flee = {
 		};
 
 		private _objects = nearestObjects [_civ, _building_types, _radius];
-		private _positions = _objects buildingPos -1;
+
+		private _positions = [[0,0,0]];
+		{
+			{_positions append [_x];} forEach (_x buildingPos -1);
+		} forEach _objects;
+
 		private _position = selectRandom _positions;
 
 		_civ doMove _position;
 
-		sleep _delay;
+		private _distance_1 = 0;
+		while {_distance_1 < 50} do {
+			private _distance_1 = 100;
+			{
+				private _distance_2 = _x distance _civ;
+				if (_distance_1 > _distance_2) then {
+					_distance_1 = _distance_2;
+				};
+				sleep 1;
+			} forEach playableUnits;	
+		};
 
 		_civ switchMove "";
 	
@@ -76,10 +91,10 @@ MALO_fnc_civs_targeted = {
 	MALO_cursor_targets append [_unit];
 	publicVariable "MALO_cursor_targets";
 
-	_unit setVariable ["targeted", true, true]
+	_unit setVariable ["targeted", true, true];
 
 	while {_unit in MALO_cursor_targets} do {
-		waitUntil {_unit !in MALO_cursor_targets};
+		waitUntil {if (_unit in MALO_cursor_targets) then {false} else {true}};
 		sleep 1;
 	};
 
@@ -100,9 +115,9 @@ MALO_fnc_civs_surrender = {
 
 	if (_random <= _fear) then {
 	
-		_civ action ["Surrender", _civ]
+		_civ action ["Surrender", _civ];
 
-		waitUntil {(_civ getVariable ["targeted", false]) == false};
+		waitUntil {_civ getVariable ["targeted", false]};
 
 		_civ switchMove "";
 
@@ -117,58 +132,59 @@ MALO_fnc_civs_surrender = {
 // LOOPING THROUGH ALL CIVS
 
 {
+	if (!isPlayer _x) then {
 
-	if (side _x != civilian) exitWith {};
+		if (primaryWeapon _x != "") then {
+			_x setVariable ["armed", true, true];
+		};
 
-	if (_x primaryWeapon != "") then {
-		_x setVariable ["armed", false, true];
-	};
+		private _fear = _x getVariable ["fear", 1];
+		private _armed = _x getVariable ["armed", false];
+		private _will_flee = _x getVariable ["willFlee", false];
+		private _fleeing = _x getVariable ["fleeing", false];
+		private _targeted = _x getVariable ["targeted", false];
+		private _surrender = _x getVariable ["surrender", false];
 
-	private _fear = _x getVariable ["fear", 1];
-	private _armed = _x getVariable ["armed", true];
-	private _will_flee = _x getVariable ["willFlee", false];
-	private _fleeing = _x getVariable ["fleeing", false];
-	private _targeted = _x getVariable ["targeted", false];
-	private _surrender = _x getVariable ["surrender", false];
+		// MAKE A LIST OF CURSOR TARGETS
+		MALO_cursor_targets = [];
+		publicVariable "MALO_cursor_targets";
+		remoteExec ["MALO_fnc_civs_targets", 0];
 
-	// MAKE A LIST OF CURSOR TARGETS
-	MALO_cursor_targets = [];
-	publicVariable "MALO_cursor_targets";
-	remoteExec ["MALO_fnc_civs_targets", 0]
+		// IF A CIV ISN'T MOVING WHILE FLEEING
 
-	// IF A CIV ISN'T MOVING WHILE FLEEING
-
-	if (((speed (vehicle _x)) == 0) && _fleeing) then {
-		
-		_x doMove (getMarkerPos "origin"); 
-
-	};
-	
-	// ADD EVENT HANDLERS FOR FLEEING
-
-	if (!_will_flee && !_armed && !_fleeing) then {
-		
-		private _random = ((random [0, 50, 100]) / 100);
-		
-		_x setVariable ["random", _random, true];
-		_x setVariable ["willFlee", true, true];
-
-		_x addEventHandler ["FiredNear", {
-
-			private _civ = _this select 0;
+		if (((speed (vehicle _x)) == 0) && _fleeing) then {
 			
-			_civ spawn MALO_fnc_civs_flee;
+			_x doMove (getMarkerPos "origin"); 
 
-			_civ setVariable ["willFlee", false, true];
+		};
+		
+		// ADD EVENT HANDLERS FOR FLEEING
 
-		}];
+		if !(_will_flee || _armed || _fleeing) then {
+			
+			private _random = ((random [0, 50, 100]) / 100);
+			
+			_x setVariable ["random", _random, true];
+			_x setVariable ["willFlee", true, true];
 
-		if (_targeted && !_surrender) then {
+			_x addEventHandler ["FiredNear", {
 
-			_x spawn MALO_fnc_surrender;
+				private _civ = _this select 0;
+				
+				_civ spawn MALO_fnc_civs_flee;
+
+				_civ setVariable ["willFlee", false, true];
+
+			}];
+
+			if (_targeted && !_surrender) then {
+
+				_x spawn MALO_fnc_surrender;
+
+			};
 
 		};
 
 	};
 
-} forEach (allUnits - switchableUnits - playableUnits);
+} forEach allUnits;

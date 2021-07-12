@@ -40,4 +40,12 @@ MALO_animal_spawns= [];
 
 waitUntil {!MALO_CFG_ambient_animals};
 
-{deleteVeicle _x;} forEach MALO_animal_spawns;
+{deleteVehicle _x;} forEach MALO_animal_spawns;
+
+private _animal_types = [];
+
+{_animal_types append (_x select 1);} forEach MALO_animal_spawn_types;
+
+{
+	if (typeOf _x in _animal_types) then {deleteVehicle _x;};
+} forEach allMissionObjects "ALL";
