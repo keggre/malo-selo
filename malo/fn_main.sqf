@@ -35,7 +35,7 @@ call MALO_fnc_initCivs;
 call MALO_fnc_initPois;
 call MALO_fnc_initRadio;
 call MALO_fnc_initSimulation;
-call MALO_fnc_initSliders;
+call MALO_fnc_initOptions;
 call MALO_fnc_initTasks;
 call MALO_fnc_initVillages;
 

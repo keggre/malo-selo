@@ -1,15 +1,4 @@
-/*
-	Author: Keggre
-
-	Description:
-	Finds buildings of the selected types within a radius near the playable units and spawns a fire effect in them if they reach a damage threshold.
-
-	Parameter(s):
-	NONE
-
-	Returns:
-	NOTHING
-*/
+// FINDS BUILDINGS OF THE SELECTED TYPES WITHIN A RADIUS NEAR THE PLAYABLE UNITS AND SPAWNS A FIRE EFFECT IN THEM IF THEY REACH A DAMAGE THRESHOLD
 
 if (!isServer) exitWith {};
 

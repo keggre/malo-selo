@@ -4,6 +4,7 @@ if (!isServer) exitWith {};
 
 private _scripts = [
 
+	"Animals",
 	"Arty",
 	"Fire",
 	"Gunfire",

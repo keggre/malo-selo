@@ -10,6 +10,7 @@ class malo
 	class ambient
 	{
 		file = "malo\ambient"
+		class ambientAnimals {};
 		class ambientArty {};
 		class ambientFire {};
 		class ambientGunfire {};
@@ -27,10 +28,9 @@ class malo
 	class init
 	{
 		file = "malo\init"
-		class initAnimals {};
 		class initBuildings {};
 		class initCivs {};
-		class initSliders {};
+		class initOptions {};
 		class initRadio {};
 		class initSimulation {};
 		class initVillages {};

@@ -137,6 +137,17 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 ] call cba_fnc_addSetting;
 
 [
+	"MALO_CFG_ambient_animals", 
+	"CHECKBOX", 
+	["Enable ambient animals", "Enables or disables ambient animals. Disable to improve performance."], 
+	"Malo Selo", 
+	MALO_CFG_ambient_animals, 
+	1, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
 	"MALO_CFG_ambient_arty", 
 	"CHECKBOX", 
 	["Enable ambient artillery", "Enables or disables ambient artillery. Disable to improve performance."], 
