@@ -21,8 +21,8 @@ MALO_fnc_civs_flee = {
 	private _random = _civ getVariable ["random", 0];
 
 	if (_random <= _fear) then {
-		
-		_civ setVariable ["targeted", false, true];
+
+		_civ switchMove "";
 
 		switch (round(random 2)) do {
 				
@@ -71,9 +71,14 @@ MALO_fnc_civs_targets = {
 
 	if (!hasInterface) exitWith {};
 	
-	private _object = cursorTarget;
+	private _object = cursorObject;
 
-	if (_object isKindOf "MAN") then {
+	if (_object in MALO_cursor_targets) exitWith {};
+
+	if ((_object isKindOf "MAN") && (primaryWeapon player != "") && (cameraView == "GUNNER")) then {
+
+		MALO_cursor_targets append [_object];
+		publicVariable "MALO_cursor_targets";
 
 		_object spawn MALO_fnc_civs_targeted;
 
@@ -88,14 +93,19 @@ MALO_fnc_civs_targeted = {
 
 	params ["_unit"];
 
-	MALO_cursor_targets append [_unit];
-	publicVariable "MALO_cursor_targets";
-
 	_unit setVariable ["targeted", true, true];
+
+	private _fleeing = _unit getVariable ["fleeing", false];
+	private _surrender = _unit getVariable ["surrender", false];
+
+	if !(_surrender || _fleeing) then {
+		_unit setVariable ["surrender", true, true];
+		_unit spawn MALO_fnc_civs_surrender;
+	};
 
 	while {_unit in MALO_cursor_targets} do {
 		waitUntil {if (_unit in MALO_cursor_targets) then {false} else {true}};
-		sleep 1;
+		sleep 5;
 	};
 
 	sleep 1;
@@ -111,15 +121,20 @@ MALO_fnc_civs_surrender = {
 
 	params ["_civ"];
 
-	_civ setVariable ["surrender", true, true];
+	private _fear = _civ getVariable ["fear", 1];
+	private _armed = _civ getVariable ["armed", true];
+	private _random = _civ getVariable ["random", 0];
 
-	if (_random <= _fear) then {
+	if (_random <= _fear && !_armed) then {
 	
 		_civ action ["Surrender", _civ];
 
-		waitUntil {_civ getVariable ["targeted", false]};
+		while {_civ in MALO_cursor_targets} do {
+			waitUntil {if (_civ in MALO_cursor_targets) then {false} else {true}};
+			sleep (random [3, 5, 20]);
+		};
 
-		_civ switchMove "";
+		[_civ] spawn MALO_fnc_civs_flee;
 
 	};
 
@@ -129,12 +144,25 @@ MALO_fnc_civs_surrender = {
 
 };
 
-// LOOPING THROUGH ALL CIVS
+
+// LOOP THROUGH NEARBY UNITS
+
+private _units = [];
+{_units append (nearestObjects [_x, ["MAN"], 50]);} forEach playableUnits;
+
+/*private _close_units = [];
+{_units append (nearestObjects [_x, ["MAN"], 10]);} forEach playableUnits;
+
+private _serb_units = [];
+{_serb_units append (missionNamespace getVariable [_x + "_civs", []]);} forEach serb_villages;*/
 
 {
 	if (!isPlayer _x) then {
 
-		if (primaryWeapon _x != "") then {
+		// DETERMINE IF UNIT IS ARMED OR UNARMED
+		if (primaryWeapon _x == "") then {
+			_x setVariable ["armed", false, true];
+		} else {
 			_x setVariable ["armed", true, true];
 		};
 
@@ -151,14 +179,11 @@ MALO_fnc_civs_surrender = {
 		remoteExec ["MALO_fnc_civs_targets", 0];
 
 		// IF A CIV ISN'T MOVING WHILE FLEEING
-
 		if (((speed (vehicle _x)) == 0) && _fleeing) then {
-			
 			_x doMove (getMarkerPos "origin"); 
-
 		};
 		
-		// ADD EVENT HANDLERS FOR FLEEING
+		// BEHAVIOR EVENTS
 
 		if !(_will_flee || _armed || _fleeing) then {
 			
@@ -166,6 +191,9 @@ MALO_fnc_civs_surrender = {
 			
 			_x setVariable ["random", _random, true];
 			_x setVariable ["willFlee", true, true];
+
+
+			// FLEE IF FIRED NEAR
 
 			_x addEventHandler ["FiredNear", {
 
@@ -177,14 +205,8 @@ MALO_fnc_civs_surrender = {
 
 			}];
 
-			if (_targeted && !_surrender) then {
-
-				_x spawn MALO_fnc_surrender;
-
-			};
-
 		};
 
 	};
 
-} forEach allUnits;
+} forEach _units;

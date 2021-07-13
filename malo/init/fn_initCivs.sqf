@@ -235,5 +235,5 @@ elektrozavodsk_civs = [
 ]; publicVariable "elektrozavodsk_civs";
 
 // EXCLUDE CIVS FROM FLEEING
-private _exclude = shakhovka_civs;
-{_x setVariable ["fear", 0, true];} forEach _exclude;
+/*private _exclude = shakhovka_civs;
+{_x setVariable ["fear", 0, true];} forEach _exclude;*/

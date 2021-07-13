@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7427.2627,190.46875,307.71741};
-		dir[]={0.18655829,-0.67118818,-0.71742767};
-		up[]={0.16891667,0.74128705,-0.64958507};
-		aside[]={-0.96781361,1.4901161e-008,-0.25166813};
+		pos[]={4272.2637,216.17131,5754.0039};
+		dir[]={-0.19033726,-0.75831723,0.62347949};
+		up[]={-0.22141308,0.65188569,0.72527325};
+		aside[]={0.95642459,0,0.29197949};
 	};
 };
 binarizationWanted=0;
@@ -153,6 +153,7 @@ addons[]=
 	"A3_Weapons_F",
 	"WW2_Assets_c_Weapons_InfantryWeapons_c",
 	"rhssaf_c_gear",
+	"murshun_cigs",
 	"A3_Modules_F_Multiplayer",
 	"rhs_c_weapons",
 	"A3_Modules_F_Intel",
@@ -285,7 +286,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=185;
+		items=186;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -814,521 +815,526 @@ class AddonsMetaData
 		};
 		class Item92
 		{
+			className="murshun_cigs";
+			name="murshun_cigs";
+		};
+		class Item93
+		{
 			className="rhs_c_weapons";
 			name="AFRF Weapons Pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item93
+		class Item94
 		{
 			className="I_BIH";
 			name="I_BIH";
 			author="Por. Jox";
 		};
-		class Item94
+		class Item95
 		{
 			className="rhssaf_c_weapons";
 			name="RHS: SAF Weapons configuration";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item95
+		class Item96
 		{
 			className="SRB_artillery";
 			name="SRB_artillery";
 		};
-		class Item96
+		class Item97
 		{
 			className="B_Herceg_Bosna";
 			name="B_Herceg_Bosna";
 			author="Pvt.Jox [BIA]";
 		};
-		class Item97
+		class Item98
 		{
 			className="fow_characters_items_c";
 			name="fow_characters_items_c";
 		};
-		class Item98
+		class Item99
 		{
 			className="CUP_Creatures_People_Civil_Chernarus";
 			name="CUP_Creatures_People_Civil_Chernarus";
 		};
-		class Item99
+		class Item100
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item100
+		class Item101
 		{
 			className="CUP_Creatures_Military_PMC";
 			name="CUP_Creatures_Military_PMC";
 		};
-		class Item101
+		class Item102
 		{
 			className="CUP_Creatures_People_Core";
 			name="CUP_Creatures_People_Core";
 		};
-		class Item102
+		class Item103
 		{
 			className="CUP_WheeledVehicles_BRDM2";
 			name="CUP_WheeledVehicles_BRDM2";
 		};
-		class Item103
+		class Item104
 		{
 			className="us_military_uniforms";
 			name="us_military_uniforms";
 		};
-		class Item104
+		class Item105
 		{
 			className="CUP_Creatures_Military_USArmy";
 			name="CUP_Creatures_Military_USArmy";
 		};
-		class Item105
+		class Item106
 		{
 			className="CRO_HV_uniform_M93";
 			name="CRO_HV_uniform_M93";
 		};
-		class Item106
+		class Item107
 		{
 			className="rhsgref_c_weapons";
 			name="GREF Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item107
+		class Item108
 		{
 			className="RHSGREF_weapon_sounds";
 			name="GREF Weapon Sounds";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item108
+		class Item109
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item109
+		class Item110
 		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item110
+		class Item111
 		{
 			className="WW2_Objects_c_Structures_IF_Buildings_c";
 			name="WW2_Objects_c_Structures_IF_Buildings_c";
 		};
-		class Item111
+		class Item112
 		{
 			className="CUP_New_Buildings";
 			name="CUP_New_Buildings";
 		};
-		class Item112
+		class Item113
 		{
 			className="WW2_Objects_c_Vegetation_IF_Bushes_c";
 			name="WW2_Objects_c_Vegetation_IF_Bushes_c";
 		};
-		class Item113
+		class Item114
 		{
 			className="WW2_Objects_c_Structures_IF_Buildings2_c";
 			name="WW2_Objects_c_Structures_IF_Buildings2_c";
 		};
-		class Item114
+		class Item115
 		{
 			className="WW2_Objects_c_Vegetation_WW2_RJW_Normandy_c";
 			name="WW2_Objects_c_Vegetation_WW2_RJW_Normandy_c";
 		};
-		class Item115
+		class Item116
 		{
 			className="WW2_Objects_c_Misc_WW2_EditorPreview_c";
 			name="WW2_Objects_c_Misc_WW2_EditorPreview_c";
 		};
-		class Item116
+		class Item117
 		{
 			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2";
 			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2";
 		};
-		class Item117
+		class Item118
 		{
 			className="CUP_CASigns2";
 			name="CUP_CASigns2";
 		};
-		class Item118
+		class Item119
 		{
 			className="A3_Props_F_Oldman";
 			name="Arma 3 Oldman - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item119
+		class Item120
 		{
 			className="fow_structures_p_c";
 			name="fow_structures_p_c";
 		};
-		class Item120
+		class Item121
 		{
 			className="CUP_Creatures_People_Civil_Russia";
 			name="CUP_Creatures_People_Civil_Russia";
 		};
-		class Item121
+		class Item122
 		{
 			className="CUP_Weapons_Makarov";
 			name="CUP_Weapons_Makarov";
 		};
-		class Item122
+		class Item123
 		{
 			className="CUP_Weapons_Ammunition";
 			name="CUP_Weapons_Ammunition";
 		};
-		class Item123
+		class Item124
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item124
+		class Item125
 		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item125
+		class Item126
 		{
 			className="rhsusf_c_weapons";
 			name="RHSUSF Weapons & Accessories";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item126
+		class Item127
 		{
 			className="A3_Data_F_Exp_A";
 			name="Arma 3 Nexus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item127
+		class Item128
 		{
 			className="cfp_flags";
 			name="cfp_flags";
 			author="CFP Team";
 		};
-		class Item128
+		class Item129
 		{
 			className="rhsgref_sounds";
 			name="GREF Sounds";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item129
+		class Item130
 		{
 			className="CUP_Weapons_East_Attachments";
 			name="CUP_Weapons_East_Attachments";
 		};
-		class Item130
+		class Item131
 		{
 			className="CUP_CAStructures_Ruins";
 			name="CUP_CAStructures_Ruins";
 		};
-		class Item131
+		class Item132
 		{
 			className="WW2_Assets_c_Vehicles_Tanks_c_T34_85";
 			name="WW2_Assets_c_Vehicles_Tanks_c_T34_85";
 		};
-		class Item132
+		class Item133
 		{
 			className="WW2_Core_c_WW2_EditorPreviews_c";
 			name="WW2_Core_c_WW2_EditorPreviews_c";
 		};
-		class Item133
+		class Item134
 		{
 			className="WW2_Assets_c_Vehicles_Pictures_c";
 			name="WW2_Assets_c_Vehicles_Pictures_c";
 		};
-		class Item134
+		class Item135
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Market";
 			name="CUP_CAStructures_E_Misc_Misc_Market";
 		};
-		class Item135
+		class Item136
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Garbage";
 			name="CUP_CAStructures_E_Misc_Misc_Garbage";
 		};
-		class Item136
+		class Item137
 		{
 			className="mas_ww2_weapons";
 			name="mas_ww2_weapons";
 			author="massi & authors in credits";
 		};
-		class Item137
+		class Item138
 		{
 			className="WW2_Assets_c_Weapons_Mines_c";
 			name="WW2_Assets_c_Weapons_Mines_c";
 		};
-		class Item138
+		class Item139
 		{
 			className="WW2_Core_c_I44_Markers_c";
 			name="WW2_Core_c_I44_Markers_c";
 		};
-		class Item139
+		class Item140
 		{
 			className="WW2_Assets_c_Weapons_Ammoboxes_c";
 			name="WW2_Assets_c_Weapons_Ammoboxes_c";
 		};
-		class Item140
+		class Item141
 		{
 			className="WW2_Assets_c_Weapons_SimpleObjects_c";
 			name="WW2_Assets_c_Weapons_SimpleObjects_c";
 		};
-		class Item141
+		class Item142
 		{
 			className="CUP_CABuildings_Misc";
 			name="CUP_CABuildings_Misc";
 		};
-		class Item142
+		class Item143
 		{
 			className="CUP_CAMisc_ACR_Sign_Mines";
 			name="CUP_CAMisc_ACR_Sign_Mines";
 		};
-		class Item143
+		class Item144
 		{
 			className="CFP_C_AFG";
 			name="CFP_C_AFG";
 			author="CFP Team";
 		};
-		class Item144
+		class Item145
 		{
 			className="CFP_C_AFRCHRISTIAN";
 			name="CFP_C_AFRCHRISTIAN";
 			author="CFP Team";
 		};
-		class Item145
+		class Item146
 		{
 			className="CFP_C_AFRISLAMIC";
 			name="CFP_C_AFRISLAMIC";
 			author="CFP Team";
 		};
-		class Item146
+		class Item147
 		{
 			className="CFP_C_CHERNO_WIN";
 			name="CFP_C_CHERNO_WIN";
 			author="Drew";
 		};
-		class Item147
+		class Item148
 		{
 			className="CUP_WheeledVehicles_Ikarus";
 			name="CUP_WheeledVehicles_Ikarus";
 		};
-		class Item148
+		class Item149
 		{
 			className="CUP_CAStructures_E_HouseA_A_Mosque_big";
 			name="CUP_CAStructures_E_HouseA_A_Mosque_big";
 		};
-		class Item149
+		class Item150
 		{
 			className="CST_Industrial_Objects_Construction";
 			name="CST_Industrial_Objects_Construction";
 		};
-		class Item150
+		class Item151
 		{
 			className="A3_Structures_F_Exp_Cultural";
 			name="Arma 3 Apex - Cultural Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item151
+		class Item152
 		{
 			className="CUP_Weapons_Curator";
 			name="CUP_Weapons_Curator";
 		};
-		class Item152
+		class Item153
 		{
 			className="CFP_O_CHDKZ_SNW";
 			name="CFP_O_CHDKZ_SNW";
 			author="CFP Team";
 		};
-		class Item153
+		class Item154
 		{
 			className="CFP_C_ASIA";
 			name="CFP_C_ASIA";
 			author="CFP Team";
 		};
-		class Item154
+		class Item155
 		{
 			className="CRO_HV_artillery";
 			name="CRO_HV_artillery";
 		};
-		class Item155
+		class Item156
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item156
+		class Item157
 		{
 			className="rhs_c_troops";
 			name="AFRF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item157
+		class Item158
 		{
 			className="CUP_TrackedVehicles_M113";
 			name="CUP_TrackedVehicles_M113";
 		};
-		class Item158
+		class Item159
 		{
 			className="rhsgref_c_troops";
 			name="GREF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item159
+		class Item160
 		{
 			className="A3_Structures_F_Oldman";
 			name="Arma 3 Oldman - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item160
+		class Item161
 		{
 			className="A3_Missions_F_Oldman";
 			name="Arma 3 Old Man - Playable Content";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item161
+		class Item162
 		{
 			className="CFP_B_USARMY_1991_WDL";
 			name="CFP_B_USARMY_1991_WDL";
 			author="Drew";
 		};
-		class Item162
+		class Item163
 		{
 			className="VME_magazine_functions";
 			name="VME_magazine_functions";
 		};
-		class Item163
+		class Item164
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item164
+		class Item165
 		{
 			className="SRB_UAZ";
 			name="SRB_UAZ";
 		};
-		class Item165
+		class Item166
 		{
 			className="WW2_Assets_c_Vehicles_StaticWeapons_c_Flak36";
 			name="WW2_Assets_c_Vehicles_StaticWeapons_c_Flak36";
 		};
-		class Item166
+		class Item167
 		{
 			className="WW2_Assets_c_Vehicles_StaticWeapons_c_Flak_38";
 			name="WW2_Assets_c_Vehicles_StaticWeapons_c_Flak_38";
 		};
-		class Item167
+		class Item168
 		{
 			className="cfp_o_syarmy";
 			name="cfp_o_syarmy";
 			author="CFP Team";
 		};
-		class Item168
+		class Item169
 		{
 			className="CFP_B_USARMY_1991_DES";
 			name="CFP_B_USARMY_1991_DES";
 			author="Drew";
 		};
-		class Item169
+		class Item170
 		{
 			className="CUP_Weapons_Grenades";
 			name="CUP_Weapons_Grenades";
 		};
-		class Item170
+		class Item171
 		{
 			className="CUP_AirVehicles_AN2";
 			name="CUP_AirVehicles_AN2";
 		};
-		class Item171
+		class Item172
 		{
 			className="CUP_CAStructures_E_Mil";
 			name="CUP_CAStructures_E_Mil";
 		};
-		class Item172
+		class Item173
 		{
 			className="SovietBuildMod";
 			name="SovietBuildMod";
 		};
-		class Item173
+		class Item174
 		{
 			className="CST_Communal";
 			name="CST_Communal";
 		};
-		class Item174
+		class Item175
 		{
 			className="CUP_CAStructuresHouse_a_stationhouse";
 			name="CUP_CAStructuresHouse_a_stationhouse";
 		};
-		class Item175
+		class Item176
 		{
 			className="CRO_HV_M59_helmet";
 			name="CRO_HV_M59_helmet";
 		};
-		class Item176
+		class Item177
 		{
 			className="CUP_Weapons_PK";
 			name="CUP_Weapons_PK";
 		};
-		class Item177
+		class Item178
 		{
 			className="I_BIH_BMP";
 			name="I_BIH_BMP";
 		};
-		class Item178
+		class Item179
 		{
 			className="SRB_BM21";
 			name="SRB_BM21";
 		};
-		class Item179
+		class Item180
 		{
 			className="CUP_Creatures_Military_TakiInsurgents";
 			name="CUP_Creatures_Military_TakiInsurgents";
 		};
-		class Item180
+		class Item181
 		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item181
+		class Item182
 		{
 			className="WW2_Assets_c_Characters_Soviets_c_SOV_RKKA_Gear";
 			name="WW2_Assets_c_Characters_Soviets_c_SOV_RKKA_Gear";
 		};
-		class Item182
+		class Item183
 		{
 			className="CUP_Creatures_People_Civil_Takistan";
 			name="CUP_Creatures_People_Civil_Takistan";
 		};
-		class Item183
+		class Item184
 		{
 			className="sajkaca";
 			name="sajkaca";
 			author="Jox";
 		};
-		class Item184
+		class Item185
 		{
 			className="I_BIH_BM21";
 			name="I_BIH_BM21";
@@ -1804,7 +1810,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="Empty";
+			side="West";
 			flags=4;
 			class Attributes
 			{
@@ -21809,7 +21815,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -21926,7 +21932,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -22153,6 +22159,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -22285,6 +22301,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -22379,6 +22405,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -22473,6 +22509,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -22567,6 +22613,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -22661,6 +22717,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -22755,6 +22821,16 @@ class Mission
 							{
 								typeName="SP_Camo_Oak_Insg";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="murshun_cigs_lighter";
+										count=1;
+										ammoLeft=100;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -23086,7 +23162,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""rhs_weap_m70b1"",""CUP_SKS""],[10,3]],[[""CUP_HandGrenade_L109A1_HE"",""rhssaf_30Rnd_762x39mm_M67"",""CUP_10Rnd_762x39_SKS_M""],[10,30,20]],[[""KOS_YUG_helmet_m59_nocam_yug"",""FirstAidKit"",""G_Balaclava_blk""],[5,10,10]],[[],[]]],false]";
+							value="[[[[""rhs_weap_m70b1"",""CUP_SKS""],[10,3]],[[""CUP_HandGrenade_L109A1_HE"",""rhssaf_30Rnd_762x39mm_M67"",""CUP_10Rnd_762x39_SKS_M""],[10,30,20]],[[""KOS_YUG_helmet_m59_nocam_yug"",""FirstAidKit"",""G_Balaclava_blk"",""murshun_cigs_cig0_nv""],[5,10,10,10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -24681,7 +24757,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -25047,7 +25123,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -42513,7 +42589,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""sfp_remington870""],[1]],[[""CUP_6Rnd_12Gauge_Pellets_No0_Buck""],[5]],[[""FirstAidKit"",""H_StrawHat"",""CUP_H_SLA_BeanieGreen"",""SP_Bandana_Green"",""G_Squares"",""SP_Shades_Black"",""H_Cap_tan"",""H_Cap_blk""],[40,5,5,5,5,5,5,5]],[[],[]]],false]";
+							value="[[[[""sfp_remington870""],[1]],[[""CUP_6Rnd_12Gauge_Pellets_No0_Buck""],[5]],[[""FirstAidKit"",""H_StrawHat"",""CUP_H_SLA_BeanieGreen"",""SP_Bandana_Green"",""G_Squares"",""SP_Shades_Black"",""H_Cap_tan"",""H_Cap_blk"",""murshun_cigs_cig0_nv"",""immersion_cigs_cigar0_nv""],[40,5,5,5,5,5,5,5,50,10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -45093,7 +45169,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -97701,7 +97777,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033355713;
+					atlOffset=0.033477783;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97753,7 +97829,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033355713;
+			atlOffset=0.033477783;
 		};
 		class Item3577
 		{
@@ -98090,7 +98166,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15393066;
+					atlOffset=0.15405273;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98142,7 +98218,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15393066;
+			atlOffset=0.15405273;
 		};
 		class Item3582
 		{
@@ -177506,7 +177582,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -202472,7 +202548,6 @@ class Mission
 					};
 					id=17218;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
-					atlOffset=0.094558716;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -202560,7 +202635,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17230;
-			atlOffset=0.094558716;
 		};
 		class Item4947
 		{
@@ -202628,7 +202702,6 @@ class Mission
 					};
 					id=17221;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
-					atlOffset=0.10044861;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -202716,7 +202789,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17231;
-			atlOffset=0.10044861;
 		};
 		class Item4948
 		{
@@ -203111,7 +203183,6 @@ class Mission
 					};
 					id=17225;
 					type="I_Bosnia_and_Herzegovina_Rifleman_4_01";
-					atlOffset=0.08833313;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -203199,7 +203270,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17234;
-			atlOffset=0.08833313;
 		};
 		class Item4951
 		{

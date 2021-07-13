@@ -5,3 +5,6 @@ removeAllWeapons player;
 
 // REMOVE OTHER NON-PERSISTENT ITEMS
 player removeItems "FirstAidKit";
+
+// ADD ITEMS
+player addItem "murshun_cigs_lighter";

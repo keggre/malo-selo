@@ -2,7 +2,7 @@
 
 if (!isServer) exitWith {};
 
-private _delay_1 = 1; 									// DELAY FOR THE SERVER SCRIPT
+private _delay_1 = MALO_delay * 2; 						// DELAY FOR THE SERVER SCRIPT
 private _delay_2 = 60; 									// DELAY FOR THE LOCAL SCRIPTS
 private _radius = MALO_CFG_min_simulation_distance;		// MAXIMUM RADIUS FROM ANY PLAYER IN WHICH FIRES WILL BE STARTED
 private _thresh = .5;									// DAMAGE THRESHOLD TO START THE FIRE
