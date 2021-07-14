@@ -4,7 +4,7 @@ private _safe_weapons = [];
 
 private _condition = false;
 
-if (((weaponstate _unit) select 0 == "") || (primaryWeapon _unit in _safe_weapons)) then {
+if (((weaponstate _unit) select 0 == "") || ((weaponstate _unit) select 0 in _safe_weapons)) then {
 	_condition = false;
 } else {
 	_condition = true;

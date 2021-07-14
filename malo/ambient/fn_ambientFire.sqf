@@ -54,6 +54,7 @@ MALO_fnc_ambientFire_global = {
 		private _var = _vars select _i;
 		private _val = _vals select _i;
 		_string = _string + ("this setVariable ['" + _var + "', " + str _val + ", false]; ");
+		sleep _delay;
 	};
 
 	// CREATE THE FIRE

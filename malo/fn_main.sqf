@@ -63,6 +63,7 @@ while {true} do {
 	call MALO_fnc_allowWarCrimes;
 	call MALO_fnc_ambient;
 	call MALO_fnc_civs;
+	call MALO_fnc_combat;
 	call MALO_fnc_debug;
 	call MALO_fnc_delay;
 	call MALO_fnc_deleteTasks;

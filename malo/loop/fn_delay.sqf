@@ -4,11 +4,11 @@ if (!hasInterface) exitWith {};
 
 if (diag_fps + 5 < MALO_CFG_target_framerate) then {
 
-	MALO_delay = (MALO_delay + .05);
+	MALO_delay = (MALO_delay * 1.25);
 
 } else {
 
-	MALO_delay = (MALO_delay - .05);
+	MALO_delay = (MALO_delay * .75);
 
 };
 

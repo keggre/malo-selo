@@ -2,6 +2,10 @@
 
 if (!isServer) exitWith {};
 
+MALO_flee_limit = 10;
+
+MALO_flee_count = 0;
+
 
 // MAKES CIV FLEE TO NEAREST BUILDING
 
@@ -44,8 +48,10 @@ MALO_fnc_civs_flee = {
 
 		_civ doMove _position;
 
+		MALO_flee_count = MALO_flee_count + 1;
+
 		private _distance_1 = 0;
-		while {_distance_1 < 50} do {
+		while {(_distance_1 < 50) && !(MALO_flee_count > MALO_flee_limit)} do {
 			private _distance_1 = 100;
 			{
 				private _distance_2 = _x distance _civ;
@@ -55,6 +61,8 @@ MALO_fnc_civs_flee = {
 				sleep MALO_delay;
 			} forEach playableUnits;	
 		};
+
+		MALO_flee_count = MALO_flee_count - 1;
 
 		_civ switchMove "";
 	

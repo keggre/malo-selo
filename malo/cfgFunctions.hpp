@@ -44,6 +44,7 @@ class malo
 		class allowWarCrimes {};
 		class ambient {};
 		class civs {};
+		class combat {};
 		class debug {};
 		class delay {};
 		class deleteTasks {};

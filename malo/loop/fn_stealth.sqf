@@ -5,10 +5,8 @@ if (!hasInterface) exitWith {};
 private _max_distance = 50;
 private _max_cooldown = 60;
 
-private _uniforms = [];
-private _vehicles = [];
-
-private _safe_weapons = [];
+private _uniforms = ["SP_Oak_Camo_Insg", "VJ_OKLF_Camo"];
+private _vehicles = ["SRB_uaz_2", "O_Yugoslavia_GAZ_01"];
 
 
 // FIND OUT IF PLAYER IS ARMED OR NOT
@@ -31,17 +29,30 @@ private _vehicle = vehicle player;
 
 // BASE VALUE
 
-private _stealth = 0;
+private _stealth = .5;
 
 
-// POSITIVE MODIFIERS
+// MODIFIERS
 
-if !(_uniform in _uniforms) then {
-	_stealth = _stealth + 1;
+if (_uniform in _uniforms) then {
+	_stealth = _stealth - .5;
+} else {
+	_stealth = _stealth + .5;
 };
 
 if !((_vehicle in _vehicles) || ((vehicle player) == player)) then {
 	_stealth = _stealth + .5;
+};
+
+if (_armed && ((vehicle player) == player)) then {
+	_stealth = _stealth - .25;
+};
+
+
+// LOWER LIMIT
+
+if (_stealth < 0) then {
+	_stealth = 0;
 };
 
 
@@ -51,19 +62,9 @@ if (_stealth > 1) then {
 	_stealth = 1;
 };
 
+// APPLY VARIABLE
 
-// NEGATIVE MODIFIERS
-
-if (_armed) then {
-	_stealth = _stealth - .5;
-};
-
-
-// LOWER LIMIT
-
-if (_stealth < 0) then {
-	_stealth = 0;
-};
+player setVariable ["stealth", _stealth, true];
 
 
 // SEEN OR NOT SEEN
@@ -97,8 +98,14 @@ private _events = [
 		player setVariable [(_x + "EventCreated"), true, true];
 		call compile ("
 			player addEventHandler ['" + _x + "', {
-				player setVariable ['cooldown', 0, true];
-				player setVariable [('" + _x + "' + 'EventCreated'), false, true];
+				private _fnc = {
+					params ['_unit'];
+					_unit setVariable ['cooldown', 0, true];
+					sleep 5;
+					_unit setVariable [('" + _x + "' + 'EventCreated'), false, true];
+					private _stealth = _unit getVariable ['stealth', 0];
+				};
+				(_this select 0) spawn _fnc;
 			}];
 		");
 	};
@@ -108,7 +115,7 @@ private _events = [
 // ADD OR RESET COOLDOWN
 
 if ((_stealth == 1) && alive player) then {
-	player setVariable ["cooldown", _cooldown + MALO_delay, true];
+	player setVariable ["cooldown", _cooldown + MALO_delay + .1, true];
 } else {
 	player setVariable ["cooldown", 0, true];
 };
