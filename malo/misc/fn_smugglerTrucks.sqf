@@ -29,7 +29,7 @@ _n = 0;
 
 while {{!alive _x} count _trucks < count _trucks} do {
 
-	sleep 5;
+	sleep MALO_delay * 10;
 
 	_n = 0;
 

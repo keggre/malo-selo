@@ -41,3 +41,5 @@ if (!hasInterface) exitWith {};
 // {_x enableDynamicSimulation false; _x enableSimulation false;} forEach ((allMissionObjects "ALL") - (nearestObjects [player, [], 500]));
 
 // hint (str MALO_ambient_fire_buildings + str MALO_ambient_fire_building_distances);
+
+hint str (player getVariable ["cooldown", "none"]);

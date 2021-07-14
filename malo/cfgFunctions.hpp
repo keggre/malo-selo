@@ -51,6 +51,7 @@ class malo
 		class player {};
 		class reload {};
 		class simulationDistance {};
+		class stealth;
 		class supplyTruck {};
 		class viewDistance {};
 		class villages {};
@@ -66,6 +67,7 @@ class malo
 		class createRespawn {};
 		class damageWithinRadius {};
 		class disableTrigger {};
+		class isArmed {};
 		class killWithinRadius {};
 		class setViewDistance {};
 		class smugglerTrucks {};

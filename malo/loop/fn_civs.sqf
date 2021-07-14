@@ -52,7 +52,7 @@ MALO_fnc_civs_flee = {
 				if (_distance_1 > _distance_2) then {
 					_distance_1 = _distance_2;
 				};
-				sleep 1;
+				sleep MALO_delay;
 			} forEach playableUnits;	
 		};
 

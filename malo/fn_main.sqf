@@ -9,7 +9,7 @@ waitUntil {scriptDone fn_config};
 MALO_init = true;
 MALO_delay = .05;
 MALO_min_delay = .05;
-MALO_max_delay = .5;
+MALO_max_delay = 1;
 MALO_current_view_distance = 1000;
 MALO_next_view_distance = 1000;
 MALO_fog_value = .5;
@@ -70,7 +70,8 @@ while {true} do {
 	call MALO_fnc_player;
 	call MALO_fnc_reload;
 	call MALO_fnc_simulationDistance;
-	call Malo_fnc_supplyTruck;
+	call MALO_fnc_stealth;
+	call MALO_fnc_supplyTruck;
 	call MALO_fnc_viewDistance;
 	call MALO_fnc_villages;
 	call MALO_fnc_weather;
