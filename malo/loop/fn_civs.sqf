@@ -168,10 +168,10 @@ private _serb_units = [];
 	if (!isPlayer _x) then {
 
 		// DETERMINE IF UNIT IS ARMED OR UNARMED
-		if (primaryWeapon _x == "") then {
-			_x setVariable ["armed", false, true];
-		} else {
+		if (_x call MALO_fnc_isArmed) then {
 			_x setVariable ["armed", true, true];
+		} else {
+			_x setVariable ["armed", false, true];
 		};
 
 		private _fear = _x getVariable ["fear", 1];

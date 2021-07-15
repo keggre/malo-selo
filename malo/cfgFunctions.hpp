@@ -68,6 +68,7 @@ class malo
 		class createRespawn {};
 		class damageWithinRadius {};
 		class disableTrigger {};
+		class getClosestPlayer {};
 		class isArmed {};
 		class killWithinRadius {};
 		class setViewDistance {};

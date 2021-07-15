@@ -18,7 +18,7 @@ player setVariable ["armed", (player call MALO_fnc_isArmed), true];
 // GET PLAYER VARIABLES
 
 private _armed = player getVariable ["armed", false];
-private _cooldown = player getVariable ["cooldown", 0];
+private _cooldown = player getVariable ["cooldown", _max_cooldown];
 
 
 // GET PLAYER'S UNIFORM AND PLAYER'S VEHICLE
@@ -110,6 +110,20 @@ private _events = [
 		");
 	};
 } forEach _events;
+
+{
+	if ((side _x == west) && !(_x getVariable ["killedStealthEventCreated", false])) then {
+		_x setVariable ["killedStealthEventCreated", true, true];
+		_x addEventHandler ["Killed", {
+			private _unit = _this select 0;
+			private _player = _unit call MALO_fnc_getClosestPlayer;
+			if ((_unit distance _player) < 50) then {
+				_player setVariable ["cooldown", 0, true];
+			};
+			_x setVariable ["killedStealthEventCreated", false, true];
+		}];
+	};
+} forEach (nearestObjects [player, ["MAN"], 50]);
 
 
 // ADD OR RESET COOLDOWN
