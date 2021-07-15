@@ -5,8 +5,8 @@ if (!hasInterface) exitWith {};
 private _max_distance = 50;
 private _max_cooldown = 60;
 
-private _uniforms = ["SP_Oak_Camo_Insg", "VJ_OKLF_Camo"];
-private _vehicles = ["SRB_uaz_2", "O_Yugoslavia_GAZ_01"];
+private _uniforms = MALO_serb_uniforms;
+private _vehicles = MALO_serb_vehicles;
 
 
 // FIND OUT IF PLAYER IS ARMED OR NOT

@@ -137,6 +137,17 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 ] call cba_fnc_addSetting;
 
 [
+	"MALO_CFG_use_simple_objects", 
+	"CHECKBOX", 
+	["Use simple objects", "Enable to improve performance, but only when absolutely needed."], 
+	"Malo Selo", 
+	MALO_CFG_use_simple_objects, 
+	1, 
+	{}, 
+	true
+] call cba_fnc_addSetting;
+
+[
 	"MALO_CFG_ambient_animals", 
 	"CHECKBOX", 
 	["Enable ambient animals", "Enables or disables ambient animals. Disable to improve performance."], 

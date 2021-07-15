@@ -73,6 +73,7 @@ class malo
 		class killWithinRadius {};
 		class setViewDistance {};
 		class smugglerTrucks {};
+		class tooltip {};
 	};
 
 	class save 

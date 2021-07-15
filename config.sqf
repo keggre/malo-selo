@@ -18,6 +18,8 @@ MALO_CFG_time_multiplier = 18;														// 18
 
 MALO_CFG_enable_cutscenes = true; 													// true
 
+MALO_CFG_use_simple_objects = false;												// false
+
 MALO_CFG_ambient_animals = true;													// true
 MALO_CFG_ambient_arty = true;														// true
 MALO_CFG_ambient_fire = true;														// true

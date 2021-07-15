@@ -9,11 +9,13 @@ waitUntil {scriptDone fn_config};
 MALO_init = true;
 MALO_delay = .05;
 MALO_min_delay = .05;
-MALO_max_delay = 1;
+MALO_max_delay = 5;
 MALO_current_view_distance = 1000;
 MALO_next_view_distance = 1000;
 MALO_fog_value = .5;
 MALO_ovc_value = .75;
+MALO_serb_uniforms = ["SP_Oak_Camo_Insg", "VJ_OKLF_Camo"];
+MALO_serb_vehicles = ["SRB_uaz_2", "O_Yugoslavia_GAZ_01"];
 
 setViewDistance MALO_current_view_distance;
 0 setFog MALO_fog_value;
