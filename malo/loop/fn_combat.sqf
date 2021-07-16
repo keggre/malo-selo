@@ -1,6 +1,7 @@
 // CREATES EVENT HANDLERS THAT IMPROVE AI COMBAT REALISM
 
 if (!isServer) exitWith {};
+if (!MALO_CFG_advanced_ai) exitWith {};
 
 private _sides = [east, west];
 private _radius = MALO_simulation_distance;
@@ -8,6 +9,9 @@ private _radius = MALO_simulation_distance;
 
 MALO_combat_units = [];
 {MALO_combat_units append (nearestObjects [_x, ["MAN"], _radius]);} forEach playableUnits;
+
+
+// MAKES UNITS GET IN BUILDINGS WHEN FIRED UPON
 
 MALO_fnc_combat_getInside = {
 	
@@ -30,8 +34,13 @@ MALO_fnc_combat_getInside = {
 	waitUntil {unitReady _unit};
 
 	_unit setVariable ["willGetInside", false, true];
+
+	sleep 5;
 	
 };
+
+
+// LOOPING THROUGH NEARBY UNITS
 
 {
 
@@ -45,7 +54,12 @@ MALO_fnc_combat_getInside = {
 
 				private _unit = _this select 0;
 
+				/*if (selectRandom [true, false]) then {
+					_unit playAction "PlayerProne";
+				};*/
+
 				group _unit setBehaviour "COMBAT";
+				
 				_unit spawn MALO_fnc_combat_getInside;
 
 			}];

@@ -1,6 +1,7 @@
 // DEALS WITH CIVILIAN BEHAVIOR
 
 if (!isServer) exitWith {};
+if (!MALO_CFG_advanced_ai) exitWith {};
 
 MALO_flee_limit = 10;
 

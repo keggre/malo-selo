@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4293.7612,242.50967,5757.3394};
-		dir[]={-0.71684539,-0.67211348,-0.18546216};
-		up[]={-0.65068895,0.74044806,-0.16834617};
-		aside[]={-0.25047281,-7.4505806e-009,0.96812356};
+		pos[]={4269.1558,211.62755,5760.3257};
+		dir[]={0.79069573,-0.61105728,-0.037540693};
+		up[]={0.61036974,0.79158634,-0.028979167};
+		aside[]={-0.047424629,0,-0.99887484};
 	};
 };
 binarizationWanted=0;
@@ -21790,6 +21790,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=6231;
 			class CustomAttributes
@@ -21906,6 +21907,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=6233;
 			atlOffset=0.00016784668;
@@ -25097,6 +25099,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=6359;
 			atlOffset=0.0021209717;
@@ -33022,6 +33025,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6752;
 			atlOffset=0.00071716309;
@@ -33197,6 +33201,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6753;
 			atlOffset=0.0013275146;
@@ -33489,6 +33494,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6754;
 			atlOffset=0.0012207031;
@@ -33687,6 +33693,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6755;
 			atlOffset=1.0359955;
@@ -33877,6 +33884,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6756;
 			atlOffset=0.0011291504;
@@ -34018,6 +34026,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6757;
 			atlOffset=0.00067138672;
@@ -34217,6 +34226,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6758;
 			atlOffset=0.3769989;
@@ -34313,6 +34323,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6759;
 			atlOffset=0.18835449;
@@ -34636,6 +34647,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6760;
 			atlOffset=0.43499756;
@@ -35014,6 +35026,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6761;
 			atlOffset=0.25900269;
@@ -35295,6 +35308,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6762;
 			atlOffset=0.0004119873;
@@ -35550,6 +35564,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6763;
 			atlOffset=0.00067138672;
@@ -35855,6 +35870,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6764;
 			atlOffset=0.00091552734;
@@ -36160,6 +36176,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6765;
 			atlOffset=1.2740021;
@@ -36300,6 +36317,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6766;
 			atlOffset=0.00047302246;
@@ -36440,6 +36458,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6767;
 			atlOffset=0.00028991699;
@@ -36580,6 +36599,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6768;
 			atlOffset=0.00059509277;
@@ -36854,6 +36874,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6769;
 			atlOffset=0.00024414063;
@@ -37042,6 +37063,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6770;
 			atlOffset=1.1119995;
@@ -37237,6 +37259,7 @@ class Mission
 			{
 				behaviour="SAFE";
 				speedMode="LIMITED";
+				dynamicSimulation=1;
 			};
 			id=6771;
 			atlOffset=0.00091552734;
@@ -42042,6 +42065,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=7310;
 			atlOffset=6.1035156e-005;
@@ -104893,6 +104917,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=14115;
 			atlOffset=0.066192627;
@@ -201988,6 +202013,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=17204;
 		};
