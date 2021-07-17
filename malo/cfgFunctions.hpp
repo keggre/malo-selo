@@ -30,6 +30,7 @@ class malo
 		file = "malo\init"
 		class initBuildings {};
 		class initCivs {};
+		class initLoadouts {};
 		class initOptions {};
 		class initRadio {};
 		class initSimulation {};

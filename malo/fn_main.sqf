@@ -39,6 +39,7 @@ civilian setFriend [independent, 1];
 // INIT
 call MALO_fnc_initBuildings;
 call MALO_fnc_initCivs;
+call MALO_fnc_initLoadouts;
 call MALO_fnc_initPois;
 call MALO_fnc_initRadio;
 call MALO_fnc_initSimulation;
