@@ -100,6 +100,8 @@ if (_name == "msta") then {
 	un_check4_apc setVehicleAmmo 0; 
 	un_check5_apc setVehicleAmmo 0;
 	if (_name in MALO_mission_progress) then {
+		{deleteVehicle _x;} forEach units un_pilots_1; 
+		deleteVehicle un_heli_1;
 		deleteVehicle us_plane_1;
 		{deleteVehicle _x;} forEach units un_check3_units; 
 		{deleteVehicle _x;} forEach units un_check4_units; 

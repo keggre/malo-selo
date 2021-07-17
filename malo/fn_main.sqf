@@ -14,8 +14,8 @@ MALO_current_view_distance = 1000;
 MALO_next_view_distance = 1000;
 MALO_fog_value = .5;
 MALO_ovc_value = .75;
-MALO_serb_uniforms = ["SP_Oak_Camo_Insg", "VJ_OKLF_Camo"];
-MALO_serb_vehicles = ["SRB_uaz_2", "O_Yugoslavia_GAZ_01"];
+MALO_serb_uniforms = ["SP_Camo_Oak_Insg", "VJ_OKLF_Camo"];
+MALO_serb_vehicles = ["SRB_uaz_2", "O_Serbia_GAZ_66_01", "CUP_O_AN2_TK", "O_Serbia_Mi8AMT_01"];
 
 setViewDistance MALO_current_view_distance;
 0 setFog MALO_fog_value;
@@ -29,6 +29,12 @@ civilian setFriend [east, 1];
 
 west setFriend [independent, 1];
 independent setFriend [west, 1];
+
+west setFriend [civilian, 1];
+civilian setFriend [west, 1];
+
+independent setFriend [civilian, 1];
+civilian setFriend [independent, 1];
 
 // INIT
 call MALO_fnc_initBuildings;
@@ -46,8 +52,7 @@ call MALO_fnc_load;
 sleep .05;
 
 if !("shootout" in MALO_mission_progress) then {
-	trg_shootout_1 call MALO_fnc_activateTrigger;
-	trg_shootout_2 call MALO_fnc_activateTrigger;
+	[] spawn MALO_fnc_mission_shootout;
 };
 
 while {true} do {
@@ -75,6 +80,7 @@ while {true} do {
 	call MALO_fnc_simulationDistance;
 	call MALO_fnc_stealth;
 	call MALO_fnc_supplyTruck;
+	call MALO_fnc_tips;
 	call MALO_fnc_viewDistance;
 	call MALO_fnc_villages;
 	call MALO_fnc_weather;

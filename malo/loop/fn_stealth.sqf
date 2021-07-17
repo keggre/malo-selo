@@ -14,7 +14,6 @@ private _vehicles = MALO_serb_vehicles;
 player setVariable ["armed", (player call MALO_fnc_isArmed), true];
 
 
-
 // GET PLAYER VARIABLES
 
 private _armed = player getVariable ["armed", false];
@@ -24,7 +23,7 @@ private _cooldown = player getVariable ["cooldown", _max_cooldown];
 // GET PLAYER'S UNIFORM AND PLAYER'S VEHICLE
 
 private _uniform = uniform player;
-private _vehicle = vehicle player;
+private _vehicle = typeOf vehicle player;
 
 
 // BASE VALUE

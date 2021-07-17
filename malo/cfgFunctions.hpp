@@ -54,6 +54,7 @@ class malo
 		class simulationDistance {};
 		class stealth;
 		class supplyTruck {};
+		class tips {};
 		class viewDistance {};
 		class villages {};
 		class weather {};
@@ -72,8 +73,13 @@ class malo
 		class isArmed {};
 		class killWithinRadius {};
 		class setViewDistance {};
-		class smugglerTrucks {};
-		class tooltip {};
+	};
+
+	class missions
+	{
+		file = "malo\missions"
+		class mission_Shootout {};
+		class mission_SmugglerTrucks {};
 	};
 
 	class save 

@@ -33,9 +33,9 @@ MALO_fnc_combat_getInside = {
 
 	waitUntil {unitReady _unit};
 
-	_unit setVariable ["willGetInside", false, true];
-
 	sleep 5;
+
+	_unit setVariable ["willGetInside", false, true];
 	
 };
 

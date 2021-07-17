@@ -8,11 +8,11 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=18365;
+		nextID=18428;
 	};
 	class MarkerIDProvider
 	{
-		nextID=65;
+		nextID=66;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4269.1558,211.62755,5760.3257};
-		dir[]={0.79069573,-0.61105728,-0.037540693};
-		up[]={0.61036974,0.79158634,-0.028979167};
-		aside[]={-0.047424629,0,-0.99887484};
+		pos[]={4282.1592,216.35794,5767.7397};
+		dir[]={-0.60644358,-0.66106659,-0.44192237};
+		up[]={-0.53426939,0.7503168,-0.38932818};
+		aside[]={-0.58895117,7.2934199e-007,0.80821103};
 	};
 };
 binarizationWanted=0;
@@ -1402,6 +1402,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=2;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="ReviveBleedOutDelay";
 			expression="false";
 			class Value
@@ -1419,7 +1438,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
+		class Attribute2
 		{
 			property="ReviveRequiredTrait";
 			expression="false";
@@ -1438,7 +1457,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute2
+		class Attribute3
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -1502,7 +1521,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute3
+		class Attribute4
 		{
 			property="ReviveMode";
 			expression="false";
@@ -1521,10 +1540,10 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute4
+		class Attribute5
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1536,11 +1555,11 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
-		nAttributes=5;
+		nAttributes=6;
 	};
 	class Category1
 	{
@@ -1612,7 +1631,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5386;
+		items=5417;
 		class Item0
 		{
 			dataType="Object";
@@ -23146,7 +23165,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""rhs_weap_m70b1"",""CUP_SKS""],[10,3]],[[""CUP_HandGrenade_L109A1_HE"",""rhssaf_30Rnd_762x39mm_M67"",""CUP_10Rnd_762x39_SKS_M""],[10,30,20]],[[""KOS_YUG_helmet_m59_nocam_yug"",""FirstAidKit"",""G_Balaclava_blk"",""murshun_cigs_cig0_nv""],[5,10,10,10]],[[],[]]],false]";
+							value="[[[[""rhs_weap_m70b1"",""CUP_SKS""],[10,3]],[[""CUP_HandGrenade_L109A1_HE"",""rhssaf_30Rnd_762x39mm_M67"",""CUP_10Rnd_762x39_SKS_M""],[10,30,20]],[[""KOS_YUG_helmet_m59_nocam_yug"",""FirstAidKit"",""G_Balaclava_blk"",""murshun_cigs_cig0_nv"",""srb_headgear_sajkaca"",""srb_headgear_sajkaca_b"",""srb_headgear_sajkaca_c""],[5,10,10,10,10,10,10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -28951,7 +28970,7 @@ class Mission
 				name="trg_guglovo_load";
 				text="load guglovo";
 				condition="call{this}";
-				onActivation="call{""guglovo"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach units enemy_2; {_x enableAi ""MOVE"";} forEach guglovo_civs; hint ""Bosnian villages that have been discovered by your team will appear as blue flags on the map. All of these must be captured in order to complete the scenario."";}";
+				onActivation="call{""guglovo"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach units enemy_2; {_x enableAi ""MOVE"";} forEach guglovo_civs; MALO_tip_guglovo = true;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="ANYPLAYER";
@@ -29091,7 +29110,7 @@ class Mission
 			{
 				text="load msta";
 				condition="call{this}";
-				onActivation="call{""msta"" setMarkerAlpha 1; {_x enableAi ""MOVE""} forEach msta_civs; {_x enableAi ""MOVE""} forEach units enemy_18; hint ""Msta is a village protected by the UNPROFOR, attacking the village will likely provoke NATO retaliation""}";
+				onActivation="call{""msta"" setMarkerAlpha 1; {_x enableAi ""MOVE""} forEach msta_civs; {_x enableAi ""MOVE""} forEach units enemy_18; MALO_TIP_msta = true;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="ANYPLAYER";
@@ -112042,6 +112061,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				name="un_heli_1";
 			};
 			id=14414;
 			type="CUP_I_Mi17_UN";
@@ -112053,6 +112073,7 @@ class Mission
 			position[]={6016.9302,254.79314,4734.061};
 			class Attributes
 			{
+				name="trg_un_pilots_1";
 				text="load un pilots 1";
 				condition="call{this}";
 				onActivation="call{{_x enableAi ""MOVE""} forEach units un_pilots_1;}";
@@ -142870,7 +142891,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{hint ""Pusta has been set up as an operations base for attacking the Bosnian stronghold of Electrozavodsk. Here you can find various types of hardware to help in the attack""; [""tank""] spawn MALO_fnc_savePush;}";
+				onActivation="call{MALO_TIP_tank_delivered = true; [""tank""] spawn MALO_fnc_savePush;}";
 				sizeA=5;
 				sizeB=5;
 			};
@@ -187887,6 +187908,7 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187938,6 +187960,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4866
 		{
@@ -187964,6 +187987,7 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -188015,6 +188039,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4867
 		{
@@ -205207,8 +205232,8 @@ class Mission
 					{
 						name="driver_civ_2";
 					};
-					id=17361;
-					type="CFP_C_AFRISLAMIC_Civ_9_01";
+					id=18365;
+					type="LOP_CHR_Civ_Citizen_02";
 					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
@@ -205314,7 +205339,7 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=17361;
+						item0=18365;
 						item1=17360;
 						class CustomData
 						{
@@ -224791,17 +224816,6 @@ class Mission
 		};
 		class Item5364
 		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={5047.9409,120.51672,6228.9116};
-				angles[]={0.014664836,0,6.1571903};
-			};
-			title="animals";
-			id=18269;
-		};
-		class Item5365
-		{
 			dataType="Marker";
 			position[]={4625.2227,258.92032,4770.541};
 			name="animal_spawner_1";
@@ -224810,7 +224824,7 @@ class Mission
 			id=18270;
 			atlOffset=0.00030517578;
 		};
-		class Item5366
+		class Item5365
 		{
 			dataType="Marker";
 			position[]={4191.2212,202,5780.7012};
@@ -224819,7 +224833,7 @@ class Mission
 			type="Empty";
 			id=18271;
 		};
-		class Item5367
+		class Item5366
 		{
 			dataType="Marker";
 			position[]={4295.9492,209,5701.4331};
@@ -224828,7 +224842,7 @@ class Mission
 			type="Empty";
 			id=18272;
 		};
-		class Item5368
+		class Item5367
 		{
 			dataType="Marker";
 			position[]={4280.1831,223.035,5638.9219};
@@ -224838,7 +224852,7 @@ class Mission
 			id=18273;
 			atlOffset=0.00022888184;
 		};
-		class Item5369
+		class Item5368
 		{
 			dataType="Marker";
 			position[]={5047.8052,120.53618,6228.7803};
@@ -224848,7 +224862,7 @@ class Mission
 			id=18274;
 			atlOffset=0.00030517578;
 		};
-		class Item5370
+		class Item5369
 		{
 			dataType="Marker";
 			position[]={4401.54,190.44043,6267.8228};
@@ -224858,7 +224872,7 @@ class Mission
 			id=18275;
 			atlOffset=-3.2591248;
 		};
-		class Item5371
+		class Item5370
 		{
 			dataType="Marker";
 			position[]={4938.9131,134,6611.3242};
@@ -224867,7 +224881,7 @@ class Mission
 			type="Empty";
 			id=18276;
 		};
-		class Item5372
+		class Item5371
 		{
 			dataType="Marker";
 			position[]={5298.4883,217.68047,7352.1816};
@@ -224877,7 +224891,7 @@ class Mission
 			id=18277;
 			atlOffset=0.00030517578;
 		};
-		class Item5373
+		class Item5372
 		{
 			dataType="Marker";
 			position[]={5193.8652,195,7067.9849};
@@ -224886,7 +224900,7 @@ class Mission
 			type="Empty";
 			id=18278;
 		};
-		class Item5374
+		class Item5373
 		{
 			dataType="Marker";
 			position[]={5165.3149,227.18401,7319.9102};
@@ -224896,7 +224910,7 @@ class Mission
 			id=18279;
 			atlOffset=0.00025939941;
 		};
-		class Item5375
+		class Item5374
 		{
 			dataType="Marker";
 			position[]={4548.916,261.88901,4730.8721};
@@ -224906,7 +224920,7 @@ class Mission
 			id=18280;
 			atlOffset=0.00018310547;
 		};
-		class Item5376
+		class Item5375
 		{
 			dataType="Marker";
 			position[]={4659.085,245.05292,4630.7456};
@@ -224916,7 +224930,7 @@ class Mission
 			id=18281;
 			atlOffset=0.00030517578;
 		};
-		class Item5377
+		class Item5376
 		{
 			dataType="Marker";
 			position[]={4850.6548,255.754,4939.0122};
@@ -224926,7 +224940,7 @@ class Mission
 			id=18282;
 			atlOffset=-0.0002746582;
 		};
-		class Item5378
+		class Item5377
 		{
 			dataType="Marker";
 			position[]={5868.3574,76.800919,5778.6948};
@@ -224936,7 +224950,7 @@ class Mission
 			id=18283;
 			atlOffset=0.00030517578;
 		};
-		class Item5379
+		class Item5378
 		{
 			dataType="Marker";
 			position[]={5634.9438,106.03859,5934.4951};
@@ -224946,7 +224960,7 @@ class Mission
 			id=18284;
 			atlOffset=0.00030517578;
 		};
-		class Item5380
+		class Item5379
 		{
 			dataType="Marker";
 			position[]={6128.0029,70.077629,5843.6934};
@@ -224956,7 +224970,7 @@ class Mission
 			id=18285;
 			atlOffset=0.00030517578;
 		};
-		class Item5381
+		class Item5380
 		{
 			dataType="Group";
 			side="Civilian";
@@ -225033,7 +225047,7 @@ class Mission
 			id=18286;
 			atlOffset=-1.5258789e-005;
 		};
-		class Item5382
+		class Item5381
 		{
 			dataType="Marker";
 			position[]={5499.3203,238.1071,4401.8921};
@@ -225042,7 +225056,7 @@ class Mission
 			id=17371;
 			atlOffset=-0.016357422;
 		};
-		class Item5383
+		class Item5382
 		{
 			dataType="Object";
 			class PositionInfo
@@ -225059,7 +225073,7 @@ class Mission
 			type="Land_i_House_Small_02_c_white_F";
 			atlOffset=0.53598022;
 		};
-		class Item5384
+		class Item5383
 		{
 			dataType="Object";
 			class PositionInfo
@@ -225076,7 +225090,7 @@ class Mission
 			type="Land_i_House_Small_01_b_white_F";
 			atlOffset=0.75500488;
 		};
-		class Item5385
+		class Item5384
 		{
 			dataType="Object";
 			class PositionInfo
@@ -225092,6 +225106,295 @@ class Mission
 			id=18364;
 			type="Land_i_House_Small_01_b_white_F";
 			atlOffset=0.80000305;
+		};
+		class Item5385
+		{
+			dataType="Marker";
+			position[]={3032.4211,354.8559,5925.4614};
+			name="animal_spawner_17";
+			text="sheep 1";
+			type="Empty";
+			id=18369;
+		};
+		class Item5386
+		{
+			dataType="Marker";
+			position[]={3075.1826,360.38132,5836.0444};
+			name="animal_spawner_18";
+			text="chickens 1";
+			type="Empty";
+			id=18371;
+		};
+		class Item5387
+		{
+			dataType="Marker";
+			position[]={1727.0138,293.99762,6841.7769};
+			name="animal_spawner_19";
+			text="chickens 1";
+			type="Empty";
+			id=18376;
+		};
+		class Item5388
+		{
+			dataType="Marker";
+			position[]={1834.6475,294.00461,6885.6001};
+			name="animal_spawner_20";
+			text="goats 1";
+			type="Empty";
+			id=18377;
+		};
+		class Item5389
+		{
+			dataType="Marker";
+			position[]={1604.2185,295.9068,6984.1465};
+			name="animal_spawner_21";
+			text="sheep 1";
+			type="Empty";
+			id=18378;
+		};
+		class Item5390
+		{
+			dataType="Marker";
+			position[]={1778.5227,279.81311,6702.2495};
+			name="animal_spawner_22";
+			text="sheep 1";
+			type="Empty";
+			id=18379;
+		};
+		class Item5391
+		{
+			dataType="Marker";
+			position[]={5790.8203,259.12708,4543.6411};
+			name="animal_spawner_23";
+			text="chickens 1";
+			type="Empty";
+			id=18384;
+		};
+		class Item5392
+		{
+			dataType="Marker";
+			position[]={5778.2451,259.48306,4592.6724};
+			name="animal_spawner_24";
+			text="goats 1";
+			type="Empty";
+			id=18385;
+		};
+		class Item5393
+		{
+			dataType="Marker";
+			position[]={5841.2432,253.97676,4656.6587};
+			name="animal_spawner_25";
+			text="chickens 1";
+			type="Empty";
+			id=18386;
+		};
+		class Item5394
+		{
+			dataType="Marker";
+			position[]={6081.0029,248.14531,4740.6499};
+			name="animal_spawner_26";
+			text="sheep 1";
+			type="Empty";
+			id=18387;
+		};
+		class Item5395
+		{
+			dataType="Marker";
+			position[]={3790.3623,215.18275,2928.3618};
+			name="animal_spawner_27";
+			text="sheep 1";
+			type="Empty";
+			id=18393;
+		};
+		class Item5396
+		{
+			dataType="Marker";
+			position[]={3740.6094,223.11465,3025.439};
+			name="animal_spawner_28";
+			text="chickens 1";
+			type="Empty";
+			id=18394;
+		};
+		class Item5397
+		{
+			dataType="Marker";
+			position[]={3843.4136,223.03052,3112.5454};
+			name="animal_spawner_29";
+			text="chickens 1";
+			type="Empty";
+			id=18395;
+		};
+		class Item5398
+		{
+			dataType="Marker";
+			position[]={3745.9683,255.88301,3286.3425};
+			name="animal_spawner_30";
+			text="chickens 1";
+			type="Empty";
+			id=18397;
+		};
+		class Item5399
+		{
+			dataType="Marker";
+			position[]={3742.6443,223.33821,3005.1709};
+			name="animal_spawner_31";
+			text="goats 1";
+			type="Empty";
+			id=18398;
+		};
+		class Item5400
+		{
+			dataType="Marker";
+			position[]={4535.6318,50.458809,1830.9041};
+			name="animal_spawner_32";
+			text="sheep 1";
+			type="Empty";
+			id=18410;
+		};
+		class Item5401
+		{
+			dataType="Marker";
+			position[]={4600.4658,41.815285,1828.8752};
+			name="animal_spawner_33";
+			text="chickens 1";
+			type="Empty";
+			id=18411;
+		};
+		class Item5402
+		{
+			dataType="Marker";
+			position[]={4886.7417,19.775173,1614.0765};
+			name="animal_spawner_34";
+			text="chickens 1";
+			type="Empty";
+			id=18412;
+		};
+		class Item5403
+		{
+			dataType="Marker";
+			position[]={5034.4141,5.9899998,1644.8268};
+			name="animal_spawner_35";
+			text="chickens 1";
+			type="Empty";
+			id=18413;
+		};
+		class Item5404
+		{
+			dataType="Marker";
+			position[]={5218.2925,5.9899998,1501.3994};
+			name="animal_spawner_36";
+			text="chickens 1";
+			type="Empty";
+			id=18414;
+		};
+		class Item5405
+		{
+			dataType="Marker";
+			position[]={5191.5483,6.782228,1427.5159};
+			name="animal_spawner_37";
+			text="goats 1";
+			type="Empty";
+			id=18415;
+		};
+		class Item5406
+		{
+			dataType="Marker";
+			position[]={4934.5522,6,1262.5808};
+			name="animal_spawner_38";
+			text="chickens 1";
+			type="Empty";
+			id=18416;
+		};
+		class Item5407
+		{
+			dataType="Marker";
+			position[]={4394.5317,6.0100002,1182.2035};
+			name="animal_spawner_39";
+			text="sheep 1";
+			type="Empty";
+			id=18417;
+		};
+		class Item5408
+		{
+			dataType="Marker";
+			position[]={4412.2241,28.70343,1424.7332};
+			name="animal_spawner_40";
+			text="chickens 1";
+			type="Empty";
+			id=18418;
+		};
+		class Item5409
+		{
+			dataType="Marker";
+			position[]={4716.7891,13.187482,1393.1635};
+			name="animal_spawner_41";
+			text="chickens 1";
+			type="Empty";
+			id=18419;
+		};
+		class Item5410
+		{
+			dataType="Marker";
+			position[]={4721.1191,6.0279145,1323.4296};
+			name="animal_spawner_42";
+			text="goats 1";
+			type="Empty";
+			id=18420;
+		};
+		class Item5411
+		{
+			dataType="Marker";
+			position[]={5076.9619,6,1442.048};
+			name="animal_spawner_43";
+			text="dogs 1";
+			type="Empty";
+			id=18421;
+		};
+		class Item5412
+		{
+			dataType="Marker";
+			position[]={4688.1572,6,1097.9791};
+			name="animal_spawner_44";
+			text="dogs 1";
+			type="Empty";
+			id=18422;
+		};
+		class Item5413
+		{
+			dataType="Marker";
+			position[]={706.25842,301,6893.6294};
+			name="animal_spawner_45";
+			text="dogs 1";
+			type="Empty";
+			id=18424;
+		};
+		class Item5414
+		{
+			dataType="Marker";
+			position[]={1419.1177,6,1671.3862};
+			name="animal_spawner_46";
+			text="dogs 1";
+			type="Empty";
+			id=18425;
+		};
+		class Item5415
+		{
+			dataType="Marker";
+			position[]={1190.3485,6,1541.5508};
+			name="animal_spawner_47";
+			text="dogs 1";
+			type="Empty";
+			id=18426;
+		};
+		class Item5416
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={7494.166,8,5445.0068};
+			};
+			title="factory";
+			id=18427;
 		};
 	};
 	class Connections

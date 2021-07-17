@@ -26,9 +26,9 @@ if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith {
 		waitUntil {MALO_init == false};
 		
 		if (MALO_CFG_saving == true) then {
-			hint "Saving enabled. Mission progress will be saved automatically.";
+			MALO_TIP_saving_enabled = true;
 		} else {
-			hint "Saving not enabled. Mission progress will not be saved!";
+			MALO_TIP_saving_disabled = true;
 		};
 
 	};
@@ -85,17 +85,4 @@ enableDynamicSimulationSystem true;
 
 // HINT MISSION PROGRESS LOADED
 
-private _fn = {
-
-	_i = 0;
-
-	for "_i" from 0 to 150 do {
-
-		hintSilent "Mission progress loaded.";
-		uiSleep .1;
-
-	};
-
-};
-
-[] spawn _fn;
+MALO_TIP_progress_loaded = true;

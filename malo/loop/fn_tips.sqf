@@ -1,0 +1,114 @@
+// DEALS WITH HINTS
+
+if (!hasInterface) exitWith {};
+
+MALO_tips = [
+
+	// MISSION LOADING
+	["saving_enabled", "Saving enabled. Mission progress will be saved automatically.", true],
+	["saving_disabled", "Saving not enabled. Mission progress will not be saved!", true],
+	["progress_loaded", "Mission progress loaded.", true],
+
+	// GAMEPLAY TIPS
+	["log", 'A log of the mission hints can be found by pressing "m" and clicking "briefing -> hints" in the top left corner of the screen.', false],
+	["inventory", "Inventory items except for weapons and ammunition persist through respawns. Clothing items such as uniforms, vests or backpacks only need to be picked up once.", false],
+	["low_fps", 'You can adjust settings to improve performance in the pause menu under "Configuration -> Addon Options -> Malo Selo"', false],
+	["stealth", "Enemies are less likely to detect you when wearing civilian clothes or driving civilian vehicles. Keep a low profile to avoid being spotted entirely.", false],
+	["repair", "Toolkits are available in most vehicles and can be used to repair your vehicle.", false],
+	["mines", "Nearby landmines are marked on the map.", false],
+
+	// MISSION OR VILLAGE SPECIFIC
+	["guglovo", "Bosnian villages that have been discovered by your team will appear as blue flags on the map. All of these must be captured in order to complete the scenario.", true],
+	["msta", "Msta is a village protected by the UNPROFOR, attacking the village will likely provoke NATO retaliation", true],
+	["tank_delivered", "Pusta has been set up as an operations base for attacking the Bosnian stronghold of Electrozavodsk. Here you can find various types of hardware to help in the attack", true]
+
+];
+
+if !(missionNamespace getVariable ["MALO_tips_loaded", false]) then {
+
+	player addEventHandler ["take", {
+
+		MALO_TIP_inventory = true;
+
+	}];
+
+};
+
+private _fnc = {
+
+	waitUntil {!MALO_init};
+	sleep 5;
+
+	MALO_TIP_log = true;
+
+	if (diag_fps < 20) then {
+		MALO_TIP_low_fps = true;
+	};
+
+	if ((player getVariable ["stealth", 0]) >= .25) then {
+		MALO_TIP_stealth = true;
+	};
+
+};
+
+[] spawn _fnc;
+
+if (((vehicle player) != player) && (damage (vehicle player) > .2)) then {
+
+	MALO_TIP_repair = true;
+
+};
+
+
+// LOAD ALREADY SEEN TIPS FROM PROFILE NAMESPACE
+
+if !(missionNamespace getVariable ["MALO_tips_loaded", false]) then {
+
+	if (MALO_CFG_loading) then {
+		MALO_shown_tips = profileNamespace getVariable ["MALO_saved_shown_tips", []];
+	} else {
+		MALO_shown_tips = [];
+	};
+
+	MALO_tips_loaded = true;
+
+};
+
+
+// LOOPING THROUGH ALL TIPS
+
+{
+
+	private _name = (_x select 0);
+	private _text = (_x select 1);
+	private _repeats = (_x select 2);
+
+	private _condition_1 = (missionNamespace getVariable [("MALO_TIP_" + _name), false]);
+	private _condition_2 = (missionNamespace getVariable ["MALO_show_tip", true]);
+	private _condition_3 = !(_name in MALO_shown_tips) || _repeats;
+
+	if (_condition_1 && _condition_2 && _condition_3) then {
+
+		hint _text;
+		player createDiaryRecord ["Diary", ["Hints", _text]];
+		
+		missionNamespace setVariable [("MALO_TIP_" + _name), false, false];
+		MALO_shown_tips append [_name];
+
+		MALO_show_tip = false;
+		private _fnc = {
+			uisleep 30;
+			MALO_show_tip = true;
+		};
+		[] spawn _fnc;
+
+	};
+
+} forEach MALO_tips;
+
+
+// SAVE SHOWN TIPS
+
+profileNamespace setVariable ["MALO_saved_shown_tips", MALO_shown_tips];
+
+
