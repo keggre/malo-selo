@@ -54,7 +54,7 @@ class malo
 		class reload {};
 		class simulationDistance {};
 		class stealth;
-		class supplyTruck {};
+		class taskDestinations {};
 		class tips {};
 		class viewDistance {};
 		class villages {};

@@ -80,7 +80,7 @@ while {true} do {
 	call MALO_fnc_reload;
 	call MALO_fnc_simulationDistance;
 	call MALO_fnc_stealth;
-	call MALO_fnc_supplyTruck;
+	call MALO_fnc_taskDestinations;
 	call MALO_fnc_tips;
 	call MALO_fnc_viewDistance;
 	call MALO_fnc_villages;
