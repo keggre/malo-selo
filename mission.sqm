@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2474.4824,709.82745,6939.3628};
-		dir[]={-0.79765809,-0.54368645,-0.26105624};
-		up[]={-0.51671779,0.83928651,-0.16911043};
-		aside[]={-0.31104442,-1.7462298e-008,0.95039618};
+		pos[]={3984.762,709.47308,5872.8809};
+		dir[]={-0.83706403,-0.5273478,0.14579885};
+		up[]={-0.51953214,0.84964567,0.090491936};
+		aside[]={0.17159812,4.6333298e-008,0.98517996};
 	};
 };
 binarizationWanted=0;
@@ -1403,8 +1403,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1416,7 +1416,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -1543,8 +1543,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1556,7 +1556,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -30117,7 +30117,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -30410,7 +30409,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8103;
@@ -30430,7 +30428,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8086;
@@ -30451,7 +30448,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8097;
@@ -30472,7 +30468,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8101;
@@ -30492,7 +30487,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8102;
@@ -30513,7 +30507,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8104;
@@ -30534,7 +30527,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8084;
@@ -30573,7 +30565,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8068;
@@ -30594,7 +30585,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8080;
@@ -30615,7 +30605,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8082;
@@ -30636,7 +30625,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8096;
@@ -30656,7 +30644,6 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""MOVE"";}";
-						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=8088;
@@ -202580,7 +202567,6 @@ class Mission
 					};
 					id=17218;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
-					atlOffset=0.094558716;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -202668,7 +202654,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17230;
-			atlOffset=0.094558716;
 		};
 		class Item4944
 		{
@@ -202736,7 +202721,6 @@ class Mission
 					};
 					id=17221;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
-					atlOffset=0.10044861;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -202824,7 +202808,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17231;
-			atlOffset=0.10044861;
 		};
 		class Item4945
 		{
@@ -203219,7 +203202,6 @@ class Mission
 					};
 					id=17225;
 					type="I_Bosnia_and_Herzegovina_Rifleman_4_01";
-					atlOffset=0.08833313;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -203307,7 +203289,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17234;
-			atlOffset=0.08833313;
 		};
 		class Item4948
 		{
@@ -224632,7 +224613,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.3999;
+			angle=227.39981;
 			id=18517;
 			atlOffset=-0.062286377;
 		};

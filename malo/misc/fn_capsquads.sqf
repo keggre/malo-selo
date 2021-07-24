@@ -4,6 +4,11 @@ if (false) exitWith {};
 
 params ["_leader", "_pos"];
 
+if (_leader getVariable ["teleported", false]) exitWith {};
+_leader setVariable ["teleported", true, true];
+
+// waitUntil {(_pos distance (_pos call MALO_fnc_getClosestPlayer)) > 100};
+
 { 
 
 	if ( _x != _leader ) then { 

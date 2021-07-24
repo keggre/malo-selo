@@ -178,3 +178,28 @@ for "_i" from 0 to (count villages) - 1 do {
 };
 
 shakhovka_discovered = true;
+
+
+// GET UNIT COUNT AROUND VILLAGE
+
+MALO_fnc_getVillageCount = {
+
+	params ["_village"];
+
+	private _side = west;
+	private _position = getMarkerPos _village;
+	private _radius = missionNamespace getVariable [_village + "_load_radius", 500]; // "_unit_radius", 100
+
+	private _var = ({alive _x} count ([_side, _position, _radius] call MALO_fnc_getUnitsWithinRadius));
+
+	_var
+
+};
+
+{
+
+	private _var = _x call MALO_fnc_getVillageCount;
+
+	missionNamespace setVariable [(_x + "_count"), _var, true];
+
+} forEach villages;

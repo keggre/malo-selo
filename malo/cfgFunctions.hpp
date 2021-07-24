@@ -68,6 +68,7 @@ class malo
 		class callFunctions {};
 		class capsquads {};
 		class captureVillage {};
+		class getUnitsWithinRadius {};
 		class createRespawn {};
 		class damageWithinRadius {};
 		class disableTrigger {};

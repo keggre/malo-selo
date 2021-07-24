@@ -93,3 +93,37 @@ if (_exists == true) then {
 	["end_mission", _description] call BIS_fnc_taskSetDescription;
 
 };
+
+
+// ACTIVATE CAPSQUADS IF CASUALTY THRESHOLD IS MET
+
+{
+
+	private _previous_count = missionNamespace getVariable [(_x + "_count"), 1];
+	private _current_count = _x call MALO_fnc_getVillageCount;
+	private _casualties = (if (_previous_count == 0) then {0} else {((_previous_count - _current_count) / _previous_count)});
+	
+	private _capsquad_nums = missionNamespace getVariable [_x + "_capsquad_nums", []];
+	private _capsquad_count = count _capsquad_nums;
+
+	private _player_count = (count (units player_squad));
+	private _population = (_player_count / 7);
+
+	private _i = 1;
+
+	for "_i" from 1 to _capsquad_count do {
+
+		private _thresh = ((_i / _capsquad_count) * _population);
+
+		if (_casualties > _thresh) then {
+
+			private _index = _i - 1;
+			private _num = _capsquad_nums select _index;
+
+			call compile ("[cap_" + str _num + ", getMarkerPos 'cap_marker_" + str _num + "'] spawn MALO_fnc_capsquads;");
+
+		};
+
+	};
+
+} forEach villages;
