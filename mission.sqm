@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5200.2915,507.26901,4799.1328};
-		dir[]={-0.83705187,-0.52734011,0.14579664};
-		up[]={-0.51951838,0.84965426,0.09048906};
-		aside[]={0.17159525,0,0.98516762};
+		pos[]={4856.3887,681.39362,5425.0547};
+		dir[]={-0.84885556,-0.51340806,-0.12592232};
+		up[]={-0.50785065,0.85814464,-0.075336412};
+		aside[]={-0.14673789,0,0.98917544};
 	};
 };
 binarizationWanted=0;
@@ -1403,8 +1403,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1416,7 +1416,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -1543,8 +1543,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1556,7 +1556,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -224614,7 +224614,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.39978;
+			angle=227.39975;
 			id=18517;
 			atlOffset=-0.062286377;
 		};

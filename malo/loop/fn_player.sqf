@@ -36,7 +36,7 @@ private _events = [
 
 // SIMULATION
 player enableSimulationGlobal true;
-player triggerDynamicSimulation true;
+// player triggerDynamicSimulation true;
 
 
 // MAKE DEATH MARKERS
