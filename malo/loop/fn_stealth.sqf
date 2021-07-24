@@ -105,6 +105,7 @@ private _events = [
 					private _stealth = _unit getVariable ['stealth', 0];
 				};
 				(_this select 0) spawn _fnc;
+				(_this select 0) removeEventHandler ['" + _x + "', _thisEventHandler];
 			}];
 		");
 	};
@@ -119,7 +120,8 @@ private _events = [
 			if ((_unit distance _player) < 50) then {
 				_player setVariable ["cooldown", 0, true];
 			};
-			_x setVariable ["killedStealthEventCreated", false, true];
+			_unit setVariable ["killedStealthEventCreated", false, true];
+			_unit removeEventHandler ["Killed", _thisEventHandler];
 		}];
 	};
 } forEach (nearestObjects [player, ["MAN"], 50]);
@@ -128,7 +130,7 @@ private _events = [
 // ADD OR RESET COOLDOWN
 
 if ((_stealth == 1) && alive player) then {
-	player setVariable ["cooldown", _cooldown + MALO_delay + .1, true];
+	player setVariable ["cooldown", _cooldown + MALO_tick, true];
 } else {
 	player setVariable ["cooldown", 0, true];
 };

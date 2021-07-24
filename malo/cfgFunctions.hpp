@@ -65,6 +65,7 @@ class malo
 	{
 		file = "malo\misc"
 		class activateTrigger {};
+		class callFunctions {};
 		class capsquads {};
 		class captureVillage {};
 		class createRespawn {};

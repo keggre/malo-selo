@@ -31,7 +31,7 @@ MALO_fnc_combat_getInside = {
 
 	_unit doMove _position;
 
-	waitUntil {unitReady _unit};
+	waitUntil {(unitReady _unit) || ((_unit distance (call MALO_fnc_getClosestPlayer)) > 100)};
 
 	sleep 5;
 
@@ -54,13 +54,11 @@ MALO_fnc_combat_getInside = {
 
 				private _unit = _this select 0;
 
-				/*if (selectRandom [true, false]) then {
-					_unit playAction "PlayerProne";
-				};*/
-
 				group _unit setBehaviour "COMBAT";
 				
 				_unit spawn MALO_fnc_combat_getInside;
+
+				_unit removeEventHandler ["FiredNear", _thisEventHandler];
 
 			}];
 

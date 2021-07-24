@@ -212,6 +212,8 @@ private _serb_units = [];
 
 				_civ setVariable ["willFlee", false, true];
 
+				_civ removeEventHandler ["FiredNear", _thisEventHandler];
+
 			}];
 
 		};

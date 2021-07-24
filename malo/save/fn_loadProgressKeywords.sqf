@@ -131,7 +131,7 @@ MALO_KEY_poi3 = {
 	trg_ambush_2 call MALO_fnc_activateTrigger;
 	trg_ambush_3 call MALO_fnc_activateTrigger;
 
-	{_x setDamage 1;} forEach [ambush_truck_1, ambush_truck_2];
+	{deleteVehicle _x;} forEach [ambush_truck_1, ambush_truck_2];
 
 	_poi = "poi3";
 	waitUntil {[_poi] call BIS_fnc_taskExists};

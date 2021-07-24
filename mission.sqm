@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={805.2655,368.97336,7532.0718};
-		dir[]={-0.20970766,-0.75995386,0.61521769};
-		up[]={-0.24519043,0.64997703,0.7193132};
-		aside[]={0.94652224,-1.4901161e-008,0.32263857};
+		pos[]={2474.4824,709.82745,6939.3628};
+		dir[]={-0.79765809,-0.54368645,-0.26105624};
+		up[]={-0.51671779,0.83928651,-0.16911043};
+		aside[]={-0.31104442,-1.7462298e-008,0.95039618};
 	};
 };
 binarizationWanted=0;
@@ -97805,7 +97805,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033477783;
+					atlOffset=0.033355713;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97857,7 +97857,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033477783;
+			atlOffset=0.033355713;
 		};
 		class Item3574
 		{
@@ -98194,7 +98194,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15405273;
+					atlOffset=0.15393066;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98246,7 +98246,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15405273;
+			atlOffset=0.15393066;
 		};
 		class Item3579
 		{
@@ -202580,6 +202580,7 @@ class Mission
 					};
 					id=17218;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=0.094558716;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -202667,6 +202668,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17230;
+			atlOffset=0.094558716;
 		};
 		class Item4944
 		{
@@ -202734,6 +202736,7 @@ class Mission
 					};
 					id=17221;
 					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=0.10044861;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -202821,6 +202824,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17231;
+			atlOffset=0.10044861;
 		};
 		class Item4945
 		{
@@ -203215,6 +203219,7 @@ class Mission
 					};
 					id=17225;
 					type="I_Bosnia_and_Herzegovina_Rifleman_4_01";
+					atlOffset=0.08833313;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -203302,6 +203307,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17234;
+			atlOffset=0.08833313;
 		};
 		class Item4948
 		{
@@ -224626,7 +224632,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.39998;
+			angle=227.3999;
 			id=18517;
 			atlOffset=-0.062286377;
 		};

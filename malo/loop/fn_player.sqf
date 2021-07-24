@@ -25,7 +25,9 @@ private _events = [
 		call compile ("
 			player addEventHandler ['" + _x + "', {
 				saveProfileNamespace;
+				private _unit = _this select 0;
 				_unit setVariable [('" + _x + "' + 'SaveEventCreated'), false, true];
+				_unit removeEventHandler ['" + _x + "', _thisEventHandler];
 			}];
 		");
 	};

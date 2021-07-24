@@ -102,28 +102,36 @@ village_fullnames = [
 
 // CREATE [VILLAGE]_POIS LIST FOR EACH VILLAGE
 
-{
+private _fnc = {
 
-	call compile (_x + "_pois = [];");
-	publicVariable (_x + "_pois");
+	waitUntil {(count (missionNamespace getVariable ["poi_villages", []])) > 0};
 	
-	_i = 0;
+	{
 
-	for "_i" from 0 to (count poi_villages) - 1 do {
+		call compile (_x + "_pois = [];");
+		publicVariable (_x + "_pois");
+		
+		_i = 0;
 
-		_item1 = (poi_villages select _i);
-		_item2 = (pois select _i);
+		for "_i" from 0 to (count poi_villages) - 1 do {
 
-		if (_item1 == _x) then {
+			_item1 = (poi_villages select _i);
+			_item2 = (pois select _i);
 
-			call compile (_x + "_pois append ['" + _item2 + "'];");
-			publicVariable (_x + "_pois");
+			if (_item1 == _x) then {
+
+				call compile (_x + "_pois append ['" + _item2 + "'];");
+				publicVariable (_x + "_pois");
+
+			};
 
 		};
 
-	};
+	} foreach villages;
 
-} foreach villages;
+};
+
+[] spawn _fnc;
 
 
 // CREATE [VILLAGE]_CAPSQUAD_NUMS FOR EACH VILLAGE

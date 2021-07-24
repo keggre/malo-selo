@@ -37,15 +37,7 @@ independent setFriend [civilian, 1];
 civilian setFriend [independent, 1];
 
 // INIT
-call MALO_fnc_initBuildings;
-call MALO_fnc_initCivs;
-call MALO_fnc_initLoadouts;
-call MALO_fnc_initPois;
-call MALO_fnc_initRadio;
-call MALO_fnc_initSimulation;
-call MALO_fnc_initOptions;
-call MALO_fnc_initTasks;
-call MALO_fnc_initVillages;
+["MALO", "init"] call MALO_fnc_callFunctions;
 
 // LOAD
 call MALO_fnc_load;
@@ -58,6 +50,9 @@ if !("shootout" in MALO_mission_progress) then {
 
 while {true} do {
 
+	MALO_tick = time - (missionNamespace getVariable ["MALO_tick_time", 0]);
+	MALO_tick_time = time;
+
 	// VARS
 	MALO_init = false;
 	CHBN_adjustBrightness = (MALO_CFG_night_brightness / 100);
@@ -68,23 +63,7 @@ while {true} do {
 	[] spawn MALO_fnc_save;
 
 	// LOOP
-	call MALO_fnc_allowWarCrimes;
-	call MALO_fnc_ambient;
-	call MALO_fnc_civs;
-	call MALO_fnc_combat;
-	call MALO_fnc_debug;
-	call MALO_fnc_delay;
-	call MALO_fnc_deleteTasks;
-	call MALO_fnc_dynamicSimulation;
-	call MALO_fnc_player;
-	call MALO_fnc_reload;
-	call MALO_fnc_simulationDistance;
-	call MALO_fnc_stealth;
-	call MALO_fnc_taskDestinations;
-	call MALO_fnc_tips;
-	call MALO_fnc_viewDistance;
-	call MALO_fnc_villages;
-	call MALO_fnc_weather;
+	["MALO", "loop"] call MALO_fnc_callFunctions;
 
 	// DELAY
 	sleep MALO_delay;

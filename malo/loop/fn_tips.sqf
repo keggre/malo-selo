@@ -29,6 +29,8 @@ if !(missionNamespace getVariable ["MALO_tips_loaded", false]) then {
 	player addEventHandler ["take", {
 
 		MALO_TIP_inventory = true;
+		
+		(_this select 0) removeEventHandler ["take", _thisEventHandler];
 
 	}];
 

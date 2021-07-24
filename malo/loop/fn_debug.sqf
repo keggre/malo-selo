@@ -43,3 +43,5 @@ if (!hasInterface) exitWith {};
 // hint (str MALO_ambient_fire_buildings + str MALO_ambient_fire_building_distances);
 
 // hint str (player getVariable ["cooldown", "none"]);
+
+// hint str diag_activeScripts;

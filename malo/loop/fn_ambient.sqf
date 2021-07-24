@@ -2,15 +2,11 @@
 
 if (!isServer) exitWith {};
 
-private _scripts = [
-
-	"Animals",
-	"Arty",
-	"Fire",
-	"Gunfire",
-	"Plane"
-
-];
+private _configs = "true" configClasses (missionconfigFile >> "CfgFunctions" >> "MALO" >> "ambient");
+private _scripts = [];
+{
+	_scripts append [(configname _x)];
+} forEach _configs;
 
 private _var = missionNamespace getVariable ["MALO_ambients_loaded", false];
 
@@ -20,7 +16,7 @@ private _var = missionNamespace getVariable ["MALO_ambients_loaded", false];
 
 		call compile ("
 
-			fn_ambient" + _x + " = [] spawn MALO_fnc_ambient" + _x + ";
+			fn_" + _x + " = [] spawn MALO_fnc_" + _x + ";
 
 		");
 
@@ -30,9 +26,9 @@ private _var = missionNamespace getVariable ["MALO_ambients_loaded", false];
 
 		call compile ("
 
-			if (scriptDone fn_ambient" + _x + ") then {
+			if (scriptDone fn_" + _x + ") then {
 
-				fn_ambient" + _x + " = [] spawn MALO_fnc_ambient" + _x + ";
+				fn_" + _x + " = [] spawn MALO_fnc_" + _x + ";
 
 			};
 
