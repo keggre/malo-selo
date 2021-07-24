@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={3984.762,709.47308,5872.8809};
-		dir[]={-0.83706403,-0.5273478,0.14579885};
-		up[]={-0.51953214,0.84964567,0.090491936};
-		aside[]={0.17159812,4.6333298e-008,0.98517996};
+		dir[]={-0.83705187,-0.52734011,0.14579664};
+		up[]={-0.51951838,0.84965426,0.09048906};
+		aside[]={0.17159525,0,0.98516762};
 	};
 };
 binarizationWanted=0;
@@ -97792,7 +97792,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033355713;
+					atlOffset=0.033477783;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97844,7 +97844,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033355713;
+			atlOffset=0.033477783;
 		};
 		class Item3574
 		{
@@ -98181,7 +98181,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15393066;
+					atlOffset=0.15405273;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98233,7 +98233,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15393066;
+			atlOffset=0.15405273;
 		};
 		class Item3579
 		{
@@ -119885,6 +119885,7 @@ class Mission
 					};
 					id=14671;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -119936,6 +119937,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14670;
+			atlOffset=0.00012207031;
 		};
 		class Item3891
 		{
@@ -122750,7 +122752,7 @@ class Mission
 						angles[]={0,2.2663739,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.2;
@@ -122829,6 +122831,7 @@ class Mission
 					};
 					id=14964;
 					type="LOP_UN_Infantry_Rifleman";
+					atlOffset=3.3426514;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -224613,7 +224616,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.39981;
+			angle=227.3998;
 			id=18517;
 			atlOffset=-0.062286377;
 		};
