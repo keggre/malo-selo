@@ -8,11 +8,11 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=18518;
+		nextID=18520;
 	};
 	class MarkerIDProvider
 	{
-		nextID=70;
+		nextID=72;
 	};
 	class LayerIndexProvider
 	{
@@ -20,7 +20,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3984.762,709.47308,5872.8809};
+		pos[]={5200.2915,507.26901,4799.1328};
 		dir[]={-0.83705187,-0.52734011,0.14579664};
 		up[]={-0.51951838,0.84965426,0.09048906};
 		aside[]={0.17159525,0,0.98516762};
@@ -1403,8 +1403,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1416,7 +1416,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -1543,8 +1543,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1556,7 +1556,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -97792,7 +97792,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033477783;
+					atlOffset=0.033355713;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97844,7 +97844,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033477783;
+			atlOffset=0.033355713;
 		};
 		class Item3574
 		{
@@ -98181,7 +98181,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15405273;
+					atlOffset=0.15393066;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98233,7 +98233,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15405273;
+			atlOffset=0.15393066;
 		};
 		class Item3579
 		{
@@ -119885,7 +119885,6 @@ class Mission
 					};
 					id=14671;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -119937,7 +119936,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14670;
-			atlOffset=0.00012207031;
 		};
 		class Item3891
 		{
@@ -122752,7 +122750,7 @@ class Mission
 						angles[]={0,2.2663739,0};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						skill=0.2;
@@ -122831,7 +122829,6 @@ class Mission
 					};
 					id=14964;
 					type="LOP_UN_Infantry_Rifleman";
-					atlOffset=3.3426514;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -125754,7 +125751,8 @@ class Mission
 				onActivation="call{{_x action [""Surrender"", _x];} forEach units un_medics_1;}";
 				sizeA=20;
 				sizeB=20;
-				activationBy="ANYPLAYER";
+				sizeC=50;
+				activationBy="EAST";
 			};
 			id=14815;
 			type="EmptyDetectorAreaR50";
@@ -224616,7 +224614,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.3998;
+			angle=227.39978;
 			id=18517;
 			atlOffset=-0.062286377;
 		};
