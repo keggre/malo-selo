@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={4856.3887,681.39362,5425.0547};
-		dir[]={-0.84885556,-0.51340806,-0.12592232};
-		up[]={-0.50785065,0.85814464,-0.075336412};
-		aside[]={-0.14673789,0,0.98917544};
+		dir[]={-0.84885561,-0.51340801,-0.12592234};
+		up[]={-0.50785053,0.85814458,-0.075336404};
+		aside[]={-0.14673789,0,0.98917532};
 	};
 };
 binarizationWanted=0;
@@ -1344,12 +1344,12 @@ class AddonsMetaData
 };
 class DynamicSimulation
 {
-	saturateByObjectDistance=0;
 	class EnableRadiuses
 	{
-		EmptyVehicle=50;
-		Vehicle=50;
-		Group=50;
+		Prop=1000;
+		EmptyVehicle=1000;
+		Vehicle=1000;
+		Group=1000;
 	};
 };
 dlcs[]=
@@ -97792,7 +97792,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033355713;
+					atlOffset=0.033477783;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97844,7 +97844,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033355713;
+			atlOffset=0.033477783;
 		};
 		class Item3574
 		{
@@ -98181,7 +98181,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15393066;
+					atlOffset=0.15405273;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98233,7 +98233,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15393066;
+			atlOffset=0.15405273;
 		};
 		class Item3579
 		{
@@ -187898,6 +187898,7 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187949,6 +187950,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4866
 		{
@@ -187975,6 +187977,7 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -188026,6 +188029,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
+			atlOffset=2.8610229e-006;
 		};
 		class Item4867
 		{
@@ -224614,7 +224618,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.39975;
+			angle=227.39973;
 			id=18517;
 			atlOffset=-0.062286377;
 		};

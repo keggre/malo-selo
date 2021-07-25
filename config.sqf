@@ -2,7 +2,7 @@
 
 MALO_CFG_target_framerate = 30; 													// 30
 
-MALO_CFG_min_simulation_distance = 1000;											// 1000
+MALO_CFG_min_simulation_distance = 500;												// 500
 MALO_CFG_max_simulation_distance = 5000;											// 5000
 
 MALO_CFG_view_distance = 2000;														// 2000
