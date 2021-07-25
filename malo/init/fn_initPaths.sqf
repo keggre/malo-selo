@@ -1,5 +1,7 @@
 // CURRENTLY UNFINISHED
 
+if (!isServer) exitWith {};
+
 village_boundaries = [
 
 	/*chernogorsk*/			[],
@@ -21,6 +23,6 @@ village_boundaries = [
 	/*tulga*/				[],
 	/*vyshnoye*/			[]
 
-];
+]; publicVariable "village_boundaries";
 
  

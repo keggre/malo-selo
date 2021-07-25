@@ -50,6 +50,7 @@ class malo
 		class delay {};
 		class deleteTasks {};
 		class dynamicSimulation {};
+		class internationalOpinion {};
 		class player {};
 		class reload {};
 		class simulationDistance {};
@@ -90,7 +91,7 @@ class malo
 		file = "malo\save"
 		class load {};
 		class loadProgress {};
-		class loadProgressKeywords {};
+		class loadKeywords {};
 		class save {};
 		class savePush {};
 	};

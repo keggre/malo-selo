@@ -49,7 +49,7 @@ if (_condition) then {
 
 // LOAD KEYWORDS
 
-call MALO_fnc_loadProgressKeywords;
+call MALO_fnc_loadKeywords;
 
 
 // SPAWN KEYWORD FUNCTIONS

@@ -31,10 +31,10 @@ MALO_fnc_civs_flee = {
 
 		switch (round(random 2)) do {
 				
-			case 0:{_civ switchMove "ApanPercMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
-			case 1:{_civ playMoveNow "ApanPknlMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
-			case 2:{_civ playMoveNow "ApanPpneMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
-			default{_civ playMoveNow "ApanPknlMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
+			case 0: {_civ switchMove "ApanPercMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
+			case 1: {_civ playMoveNow "ApanPknlMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
+			case 2: {_civ playMoveNow "ApanPpneMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
+			default {_civ playMoveNow "ApanPknlMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
 		
 		};
 
@@ -169,10 +169,12 @@ private _serb_units = [];
 	if (!isPlayer _x) then {
 
 		// DETERMINE IF UNIT IS ARMED OR UNARMED
-		if (_x call MALO_fnc_isArmed) then {
-			_x setVariable ["armed", true, true];
-		} else {
-			_x setVariable ["armed", false, true];
+		if (alive _x) then {
+			if (_x call MALO_fnc_isArmed) then {
+				_x setVariable ["armed", true, true];
+			} else {
+				_x setVariable ["armed", false, true];
+			};
 		};
 
 		private _fear = _x getVariable ["fear", 1];

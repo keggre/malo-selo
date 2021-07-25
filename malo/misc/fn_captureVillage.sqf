@@ -92,7 +92,7 @@ if (_name == "novy") then {
 
 // ACTIVATE PLANE AND UN RETREAT FOR MSTA
 if (_name == "msta") then {
-	us_plane_1 enableSimulation true;
+	/*us_plane_1 enableSimulation true;*/
 	{_x enableAi "PATH";} forEach units un_check3_units; 
 	{_x enableAi "PATH";} forEach units un_check4_units; 
 	{_x enableAi "PATH";} forEach units un_check5_units; 

@@ -1,6 +1,6 @@
 // DAMAGES BUILDINGS WITHIN A RADIUS TO A RANDOM DEGREE
 
-if (false) exitWith {};
+if (!isServer) exitWith {};
 
 params ["_position", "_radius", "_types", "_min", "_mid", "_max"];
 
