@@ -29,7 +29,8 @@ MALO_fnc_ambientFire_global = {
 		"ParticleSpeed",
 		"EffectSize",
 		"ParticleOrientation",
-		"FireDamage"
+		"FireDamage",
+		"BIS_fnc_initModules_disableAutoActivation"
 	];
 
 	// FIRE VARIABLE VALUES
@@ -38,13 +39,14 @@ MALO_fnc_ambientFire_global = {
 		.5,
 		.5,
 		0,
-		2,
+		3,
 		20,
+		7.5,
 		1,
-		1,
-		sizeOf (typeOf _object),
+		((sizeOf (typeOf _object)) * (2/3)),
 		5.4,
-		1
+		1,
+		false
 	];
 
 	// ASSEMBLE STRING TO SET MODULE PARAMS
@@ -53,8 +55,7 @@ MALO_fnc_ambientFire_global = {
 	for "_i" from 0 to count _vars - 1 do {
 		private _var = _vars select _i;
 		private _val = _vals select _i;
-		_string = _string + ("this setVariable ['" + _var + "', " + str _val + ", false]; ");
-		sleep _delay;
+		_string = _string + ("this setVariable ['" + _var + "', " + str _val + ", true]; ");
 	};
 
 	// CREATE THE FIRE
@@ -83,7 +84,13 @@ MALO_fnc_ambientFire_global = {
 	};
 
 	// REMOVE THE FIRE
-	deleteVehicle _fire;
+	{
+		deleteVehicle _x;	
+	}forEach [
+		_fire getVariable "effectEmitter",
+		_fire getVariable "effectLight",
+		_fire
+	];
 
 }; publicVariable "MALO_fnc_ambientFire_global";
 
