@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6621.8965,19.35486,2880.238};
-		dir[]={0.84519351,-0.53459394,0.0039133066};
-		up[]={0.53461277,0.84509408,0.0024739457};
-		aside[]={0.0046263337,-6.1188621e-007,-1.0000707};
+		pos[]={4398.73,690.37189,6032.3301};
+		dir[]={-0.62789333,-0.66667914,-0.40160787};
+		up[]={-0.56162381,0.74534476,-0.3592211};
+		aside[]={-0.53882152,-1.4901161e-008,0.84241986};
 	};
 };
 binarizationWanted=0;
@@ -1346,10 +1346,8 @@ class DynamicSimulation
 {
 	class EnableRadiuses
 	{
-		Prop=1000;
-		EmptyVehicle=1000;
+		Prop=250;
 		Vehicle=1000;
-		Group=1000;
 	};
 };
 dlcs[]=
@@ -1394,7 +1392,7 @@ class ScenarioData
 	wreckRemovalMaxTime=3600;
 	corpseManagerMode=1;
 	corpseLimit=30;
-	minPlayerDistance=500;
+	minPlayerDistance=100;
 };
 class CustomAttributes
 {
@@ -1403,8 +1401,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1416,7 +1414,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -1543,8 +1541,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1556,7 +1554,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -32635,7 +32633,8 @@ class Mission
 				condition="call{this or {!alive _x} count units un_check2_units > 0}";
 				onActivation="call{grpName = createGroup west; " \n "{ _x enableAi ""ALL""; [_x] joinSilent grpName;} forEach units un_check2_units; activator_un_check_2 setDamage 1;}";
 				sizeA=10;
-				activationBy="ANYPLAYER";
+				activationType="GUER D";
+				activationBy="EAST";
 				isRectangle=1;
 			};
 			id=6661;
@@ -32653,7 +32652,8 @@ class Mission
 				condition="call{this or {!alive _x} count units un_check1_units > 0}";
 				onActivation="call{grpName = createGroup west; " \n "{ _x enableAi ""ALL""; [_x] joinSilent grpName;} forEach units un_check1_units; activator_un_check_1 setDamage 1;}";
 				sizeA=10;
-				activationBy="ANYPLAYER";
+				activationType="GUER D";
+				activationBy="EAST";
 				isRectangle=1;
 			};
 			id=6668;
@@ -108313,7 +108313,7 @@ class Mission
 			};
 			id=14229;
 			type="CFP_C_ASIA_Datsun_Pickup_01";
-			atlOffset=0.83027649;
+			atlOffset=0.8139801;
 		};
 		class Item3751
 		{
@@ -112997,7 +112997,8 @@ class Mission
 				condition="call{this or {!alive _x} count units un_check3_units > 0}";
 				onActivation="call{grpName = createGroup west; " \n "{ _x enableAi ""ALL""; [_x] joinSilent grpName;} forEach units un_check3_units; activator_un_check_3 setDamage 1;}";
 				sizeA=10;
-				activationBy="ANYPLAYER";
+				activationType="GUER D";
+				activationBy="EAST";
 				isRectangle=1;
 			};
 			id=14495;
@@ -114973,7 +114974,8 @@ class Mission
 				condition="call{this or {!alive _x} count units un_check4_units > 0}";
 				onActivation="call{grpName = createGroup west; " \n "{ _x enableAi ""ALL""; [_x] joinSilent grpName;} forEach units un_check4_units; activator_un_check_4 setDamage 1;}";
 				sizeA=10;
-				activationBy="ANYPLAYER";
+				activationType="GUER D";
+				activationBy="EAST";
 				isRectangle=1;
 			};
 			id=14546;
@@ -116801,7 +116803,8 @@ class Mission
 				condition="call{this or {!alive _x} count units un_check5_units > 0}";
 				onActivation="call{grpName = createGroup west; " \n "{ _x enableAi ""ALL""; [_x] joinSilent grpName;} forEach units un_check5_units; activator_un_check_5 setDamage 1;}";
 				sizeA=10;
-				activationBy="ANYPLAYER";
+				activationType="GUER D";
+				activationBy="EAST";
 				isRectangle=1;
 			};
 			id=14571;
@@ -144901,7 +144904,8 @@ class Mission
 				condition="call{this or {!alive _x} count units un_check6_units > 0}";
 				onActivation="call{grpName = createGroup west; " \n "{ _x enableAi ""ALL""; [_x] joinSilent grpName;} forEach units un_check6_units; activator_un_check_6 setDamage 1;}";
 				sizeA=10;
-				activationBy="ANYPLAYER";
+				activationType="GUER D";
+				activationBy="EAST";
 				isRectangle=1;
 			};
 			id=15880;
@@ -187898,7 +187902,6 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -187950,7 +187953,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
-			atlOffset=2.8610229e-006;
 		};
 		class Item4866
 		{
@@ -187977,7 +187979,6 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -188029,7 +188030,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
-			atlOffset=2.8610229e-006;
 		};
 		class Item4867
 		{
@@ -224618,7 +224618,7 @@ class Mission
 			alpha=0.5;
 			a=180;
 			b=25;
-			angle=227.39964;
+			angle=227.39963;
 			id=18517;
 			atlOffset=-0.062286377;
 		};
