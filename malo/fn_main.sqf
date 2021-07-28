@@ -48,6 +48,9 @@ if !("shootout" in MALO_mission_progress) then {
 	[] spawn MALO_fnc_mission_shootout;
 };
 
+MALO_current_view_distance = 100;
+MALO_next_view_distance = 100;
+
 while {true} do {
 
 	MALO_tick = time - (missionNamespace getVariable ["MALO_tick_time", 0]);

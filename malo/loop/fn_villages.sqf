@@ -127,3 +127,16 @@ if (_exists == true) then {
 	};
 
 } forEach villages;
+
+
+// SHOW MARKER
+
+{
+
+	if (missionNamespace getVariable [(_x + "_discovered"), false]) then {
+
+		_x setMarkerAlpha 1;
+
+	};
+
+} forEach villages;

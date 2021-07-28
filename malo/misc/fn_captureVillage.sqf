@@ -4,6 +4,9 @@ if (false) exitWith {};
 
 params["_name"];
 
+// WAIT UNTIL VILLAGE IS LOADED
+// waitUntil {missionNamespace getVariable [(_name + "_discovered"), false]};
+
 // SET [VILLAGE]_SERB TRUE
 call compile (_name + "_serb = true;");
 

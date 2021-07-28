@@ -45,6 +45,7 @@ MALO_KEY_supply_truck = {
 
 		"MALO_KEY_" + _x + " = {
 			private _load_radius = missionNamespace getVariable ['" + _x + "' + '_load_radius', 500];
+			[trg_load_" + _x + "] call MALO_fnc_activateTrigger;
 			[trg_" + _x + "] call MALO_fnc_activateTrigger;
 			[west, getMarkerPos '" + _x + "', _load_radius] call MALO_fnc_killWithinRadius;
 		};"
@@ -116,7 +117,7 @@ MALO_KEY_poi2 = {
 
 	trg_poi2 call MALO_fnc_activateTrigger;
 	trg_scout_1 call MALO_fnc_activateTrigger;
-	trg_guglovo_load call MALO_fnc_activateTrigger;
+	trg_load_guglovo call MALO_fnc_activateTrigger;
 
 	_poi = "poi2";
 	waitUntil {[_poi] call BIS_fnc_taskExists};

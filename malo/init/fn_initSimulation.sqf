@@ -44,3 +44,12 @@ private _fnc = {
 };
 
 [] spawn _fnc;
+
+// DELETE LANDMINES IF THE SETTING IS ON
+
+[] spawn {
+
+	waitUntil {!MALO_CFG_landmines};
+	{deleteVehicle _x} forEach allMines;
+
+;}

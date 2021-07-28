@@ -76,6 +76,9 @@ class malo
 		class getClosestPlayer {};
 		class isArmed {};
 		class killWithinRadius {};
+		class loadGroups {};
+		class loadVillage {};
+		class saveGroups {};
 		class setViewDistance {};
 	};
 

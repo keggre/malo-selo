@@ -203,3 +203,28 @@ MALO_fnc_getVillageCount = {
 	missionNamespace setVariable [(_x + "_count"), _var, true];
 
 } forEach villages;
+
+
+// CREATE VILLAGE UNIT VARIABLES
+
+
+
+
+// SAVE VILLAGE UNITS TO BE LOADED LATER
+
+/*{
+
+	if (_x != "shakhovka") then {
+
+		[(_x + "_enemies"), (missionNamespace getVariable [(_x + "_enemies"), []])] spawn MALO_fnc_saveGroups;
+
+		private _groups = [];
+		{
+			_groups append [(group _x)];
+
+		} forEach (missionNamespace getVariable [(_x + "_civs"), []]);
+		[(_x + "_civs"), _groups] spawn MALO_fnc_saveGroups;
+
+	};
+
+} forEach villages;*/

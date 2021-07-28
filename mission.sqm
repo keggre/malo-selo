@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7445.728,187.8243,308.91846};
-		dir[]={-0.50207961,-0.45011663,-0.7384519};
-		up[]={-0.25308177,0.89296973,-0.37222925};
-		aside[]={-0.82696176,0,0.56225818};
+		pos[]={5590.2246,519.75073,1313.827};
+		dir[]={-0.6987322,-0.71529561,0.012597207};
+		up[]={-0.71519369,0.69880486,0.012894292};
+		aside[]={0.0180264,-5.3045733e-007,0.99985051};
 	};
 };
 binarizationWanted=0;
@@ -28966,7 +28966,7 @@ class Mission
 			position[]={3052.3879,360.36307,5864.3579};
 			class Attributes
 			{
-				name="trg_guglovo_load";
+				name="trg_load_guglovo";
 				text="load guglovo";
 				condition="call{this}";
 				onActivation="call{""guglovo"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach units enemy_2; {_x enableAi ""MOVE"";} forEach guglovo_civs; MALO_tip_guglovo = true;}";
@@ -29002,6 +29002,7 @@ class Mission
 			position[]={4720.978,244.99001,4662.9731};
 			class Attributes
 			{
+				name="trg_load_staroye";
 				text="load staroye";
 				condition="call{this}";
 				onActivation="call{""staroye"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach staroye_civs; staroye_discovered = true;}";
@@ -29027,6 +29028,7 @@ class Mission
 			position[]={5280.7969,211.40601,7251.8262};
 			class Attributes
 			{
+				name="trg_load_polana";
 				text="load polana";
 				condition="call{this}";
 				onActivation="call{""polana"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach polana_civs; polana_discovered = true;}";
@@ -29054,6 +29056,7 @@ class Mission
 			position[]={3771.667,222.58698,3031.135};
 			class Attributes
 			{
+				name="trg_load_pusta";
 				text="load pusta";
 				condition="call{this}";
 				onActivation="call{""pusta"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach units enemy_20;}";
@@ -29080,6 +29083,7 @@ class Mission
 			position[]={5817.7749,180.97531,5754.7871};
 			class Attributes
 			{
+				name="trg_load_dolina";
 				text="load dolina";
 				condition="call{this}";
 				onActivation="call{""dolina"" setMarkerAlpha 1; {_x enableAi ""MOVE""} forEach dolina_civs; dolina_discovered = true;}";
@@ -29107,6 +29111,7 @@ class Mission
 			position[]={5875.4521,254.09055,4672.2168};
 			class Attributes
 			{
+				name="trg_load_msta";
 				text="load msta";
 				condition="call{this}";
 				onActivation="call{""msta"" setMarkerAlpha 1; {_x enableAi ""MOVE""} forEach msta_civs; {_x enableAi ""MOVE""} forEach units enemy_18; MALO_TIP_msta = true;}";
@@ -29186,6 +29191,7 @@ class Mission
 			position[]={6764.936,272.72144,6461.374};
 			class Attributes
 			{
+				name="trg_load_orlovets";
 				text="load orlovets";
 				condition="call{this}";
 				onActivation="call{""orlovets"" setMarkerAlpha 1; orlovets_discovered = true;}";
@@ -29240,6 +29246,7 @@ class Mission
 			position[]={1671.1479,293.98999,6872.0068};
 			class Attributes
 			{
+				name="trg_load_novy";
 				text="load novy";
 				condition="call{this}";
 				onActivation="call{""novy"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach units enemy_4; {_x enableAi ""MOVE"";} forEach novy_civs;}";
@@ -126855,6 +126862,7 @@ class Mission
 			position[]={5032.4111,6.277,1325.4969};
 			class Attributes
 			{
+				name="trg_load_elektrozavodsk";
 				text="load elektrozavodsk";
 				condition="call{this}";
 				onActivation="call{""elektrozavodsk"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach elektrozavodsk_civs;}";
@@ -191545,14 +191553,14 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={3751.9739,224.0394,3089.6619};
+					position[]={4945.4702,7.8677063,1119.0513};
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=18350;
 					type="Move";
-					atlOffset=-1.5258789e-005;
+					atlOffset=1.8677063;
 				};
 				class Item12
 				{

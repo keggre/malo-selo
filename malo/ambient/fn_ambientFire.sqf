@@ -3,10 +3,10 @@
 if (!isServer) exitWith {};
 
 private _delay_1 = MALO_delay * 2; 						// DELAY FOR THE SERVER SCRIPT
-private _delay_2 = 60; 									// DELAY FOR THE LOCAL SCRIPTS
-private _radius = MALO_CFG_min_simulation_distance;		// MAXIMUM RADIUS FROM ANY PLAYER IN WHICH FIRES WILL BE STARTED
+private _delay_2 = 1; 									// DELAY FOR THE LOCAL SCRIPTS
+private _radius = 3000;									// MAXIMUM RADIUS FROM ANY PLAYER IN WHICH FIRES WILL BE STARTED
 private _thresh = .5;									// DAMAGE THRESHOLD TO START THE FIRE
-private _step = .1;										// HOW MUCH THE BUILDING DAMAGE IS AFFECTED EACH ITERATION OF THE LOCAL SCRIPT
+private _step = (.1 / 60);								// HOW MUCH THE BUILDING DAMAGE IS AFFECTED EACH ITERATION OF THE LOCAL SCRIPT
 private _spread = 50;									// MAXIMUM SPREAD DISTANCE IN METERS
 private _limit = 10;									// MAXIMUM AMOUNT OF FIRES THAT CAN BE ACTIVE AT ANY GIVEN TIME
 private _types = MALO_building_types;					// BUILDING TYPES TO CATCH FIRE
@@ -45,7 +45,7 @@ MALO_fnc_ambientFire_global = {
 		1,
 		((sizeOf (typeOf _object)) * (2/3)),
 		5.4,
-		1,
+		((sizeOf (typeOf _object)) * (1/4)),
 		false
 	];
 
@@ -58,16 +58,24 @@ MALO_fnc_ambientFire_global = {
 		_string = _string + ("this setVariable ['" + _var + "', " + str _val + ", true]; ");
 	};
 
-	// CREATE THE FIRE
+	// CREATE THE FIRE AND SMOKE
 	private _group = createGroup sideLogic;
-	"ModuleEffectsFire_F" createUnit [
-		position _object,
-		_group,
-		_string
-	];
+	{
+		if (_x == "ModuleEffectsSmoke_F") then {
+			_vals set [4, 50];
+			_vals set [7, 1];
+		};
+		
+		_x createUnit [
+			position _object,
+			_group,
+			_string
+		];
+	} forEach ["ModuleEffectsFire_F", "ModuleEffectsSmoke_F"];
 	private _fire = nearestObject [position _object, "ModuleEffectsFire_F"];
+	private _smoke = nearestObject [position _object, "ModuleEffectsSmoke_F"];
 
-	while {_object in MALO_ambient_fire_buildings} do {
+	while {(_object in MALO_ambient_fire_buildings) && (alive _object)} do {
 
 		// DAMAGE THE BUILDING OVER TIME AND EXIT IF IT'S DESTROYED
 		_object setDamage ((damage _object) + _step);
@@ -83,14 +91,16 @@ MALO_fnc_ambientFire_global = {
 
 	};
 
-	// REMOVE THE FIRE
+	// REMOVE THE FIRE AND SMOKE
 	{
-		deleteVehicle _x;	
-	}forEach [
-		_fire getVariable "effectEmitter",
-		_fire getVariable "effectLight",
-		_fire
-	];
+		{
+			{deleteVehicle _x;} foreach _x;	
+		}forEach [
+			_x getVariable ["effectEmitter", []],
+			_x getVariable ["effectLight", []],
+			[_x]
+		];
+	} forEach [_fire, _smoke];
 
 }; publicVariable "MALO_fnc_ambientFire_global";
 

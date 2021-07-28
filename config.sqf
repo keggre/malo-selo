@@ -8,7 +8,7 @@ MALO_CFG_max_simulation_distance = 5000;											// 5000
 MALO_CFG_view_distance = 2000;														// 2000
 
 MALO_CFG_dynamic_view_distance = true;												// true
-MALO_CFG_dynamic_view_distance_min = 500;											// 500
+MALO_CFG_dynamic_view_distance_min = 100;											// 100
 MALO_CFG_dynamic_view_distance_max = 3000;											// 3000
 MALO_CFG_dynamic_view_distance_altitude_multiplier = 50;							// 50
 MALO_CFG_dynamic_view_distance_smoothing = 50;										// 50
@@ -21,6 +21,7 @@ MALO_CFG_enable_cutscenes = true; 													// true
 MALO_CFG_use_simple_objects = false;												// false
 
 MALO_CFG_advanced_ai = true;														// true
+MALO_CFG_landmines = true;															// true
 
 MALO_CFG_ambient_animals = true;													// true
 MALO_CFG_ambient_arty = true;														// true
