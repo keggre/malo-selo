@@ -64,6 +64,12 @@ MALO_fnc_combat_getInside = {
 
 		};
 
+		if (_x distance (_x findNearestEnemy _x) < 50) then {
+
+			_x enableAi "ALL";
+
+		};
+
 	};
 
 } forEach MALO_combat_units;
