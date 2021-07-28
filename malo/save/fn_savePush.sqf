@@ -1,6 +1,6 @@
 // ADDS A KEYWORD TO THE MISSION PROGRESS ARRAY
 
-if (!hasInterface) exitWith {};
+if (false) exitWith {};
 
 params ["_name"];
 

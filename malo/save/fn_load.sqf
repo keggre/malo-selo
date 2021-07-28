@@ -41,9 +41,11 @@ hintSilent "Loading mission progress...";
 
 
 // LOAD INVENTORY
-private _condition = profileNamespace getVariable ["MALO_returning_player", false];
-if (_condition) then {
-	[player, [profileNamespace, "MALO_saved_inventory"]] call BIS_fnc_loadInventory;
+if (hasInterface) then {
+	private _condition = profileNamespace getVariable ["MALO_returning_player", false];
+	if (_condition) then {
+		[player, [profileNamespace, "MALO_saved_inventory"]] call BIS_fnc_loadInventory;
+	};
 };
 
 

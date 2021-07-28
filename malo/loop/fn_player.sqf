@@ -35,7 +35,7 @@ private _events = [
 
 
 // SIMULATION
-player enableSimulationGlobal true;
+{_x enableSimulationGlobal true;} forEach units player_squad;
 // player triggerDynamicSimulation true;
 
 

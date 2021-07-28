@@ -1401,8 +1401,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1414,7 +1414,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -1541,8 +1541,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1554,7 +1554,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};

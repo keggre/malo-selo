@@ -33,7 +33,7 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 	];
 	
 	// SET VARIABLES
-	if ((MALO_CFG_loading == true) && hasInterface) then {
+	if ((MALO_CFG_loading == true) /*&& hasInterface*/) then {
 		missionNamespace setVariable ["MALO_international_opinion", (profileNamespace getVariable ["MALO_saved_international_opinion", 0]), true];
 		MALO_international_opinion_loading_handle = [] spawn {
 			private _i = 0;
@@ -143,7 +143,7 @@ publicVariable "MALO_international_opinion";
 
 if (scriptDone MALO_international_opinion_loading_handle) then {
 	private _fnc = {
-		if (!hasInterface) exitWith {};
+		// if (!hasInterface) exitWith {};
 		if (MALO_CFG_saving == true) then {
 			profileNamespace setVariable ["MALO_saved_international_opinion", MALO_international_opinion]
 		};

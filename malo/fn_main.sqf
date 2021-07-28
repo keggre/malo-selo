@@ -2,8 +2,8 @@
 
 hintSilent "Initializing mission...";
 
-fn_config = execVM "config.sqf";
-waitUntil {scriptDone fn_config};
+call compile preprocessFile "config.cfg";
+// waitUntil {scriptDone fn_config};
 
 // VARS
 MALO_init = true;
