@@ -70,6 +70,34 @@ MALO_fnc_combat_getInside = {
 
 		};
 
+		if (_x call BIS_fnc_enemyDetected) then {
+			
+			if ((combatMode (group _x)) == "SAFE") then {
+
+				(group _x) setCombatMode "AWARE";
+
+			};
+
+		} else {
+
+			(group _x) setCombatMode "SAFE";
+
+		};
+
+	};
+
+	if (typeOf _x == "LOP_UN_Infantry_Rifleman") then {
+
+		private _targeted = _x getVariable ["targeted", false];
+		private _armed = _x call MALO_fnc_isArmed;
+
+		if (_targeted && _armed) then {
+
+			private _group = createGroup west;
+			(units (group _x)) joinSilent _group;
+
+		};
+
 	};
 
 } forEach MALO_combat_units;
