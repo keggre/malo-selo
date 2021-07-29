@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={4328.5127,253.02859,5804.7607};
-		dir[]={-0.68587297,-0.57862628,-0.44132742};
-		up[]={-0.4865959,0.81559283,-0.31310186};
-		aside[]={-0.54111242,-1.4901161e-008,0.84095025};
+		dir[]={-0.68587303,-0.57862628,-0.44132748};
+		up[]={-0.48659593,0.81559283,-0.31310192};
+		aside[]={-0.54111254,0,0.84095031};
 	};
 };
 binarizationWanted=0;
@@ -1401,8 +1401,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1414,7 +1414,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -1541,8 +1541,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1554,7 +1554,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -112792,7 +112792,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5053.937,262.12448,4716.3379};
-			angle=6.0693793;
+			angle=6.0693789;
 			class Attributes
 			{
 				text="makes un check hostile";
