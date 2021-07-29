@@ -62,12 +62,12 @@ if (_name in MALO_mission_progress) then {
 };
 
 // IF VILLAGE IS CAPTURED AND PLAYERS HAVE LEFT THE AREA
-/*private _trg = createTrigger ["EmptyDetector", getMarkerPos _name];
-_trg setTriggerArea [(_load_radius * 3), (_load_radius * 3), 0, false];
+private _trg = createTrigger ["EmptyDetector", getMarkerPos _name];
+_trg setTriggerArea [(_load_radius * 2), (_load_radius * 2), 0, false];
 _trg setTriggerActivation ["ANYPLAYER", "NOT PRESENT", false];
 _trg setTriggerStatements ["this", ("
-	[ (getMarkerPos '" + _name + "'), " + str _load_radius + ", [], 0, .5, 1.25] spawn MALO_fnc_damageWithinRadius;
-"), ""];*/
+	" + _name + "_jeep hideObjectGlobal false;
+"), ""];
 
 // UN RETREAT FOR GUGLOVO
 if (_name == "guglovo") then {

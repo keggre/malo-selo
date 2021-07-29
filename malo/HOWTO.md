@@ -9,5 +9,6 @@
 * animals
 * enemies
 * respawn 
+* jeep
 * flag
 * mortar triggers

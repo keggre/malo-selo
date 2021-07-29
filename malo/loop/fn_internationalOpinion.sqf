@@ -12,6 +12,7 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 	// DEFINE EVENTS
 	MALO_intervention_events = [
 		["plane", {
+			"NATO is deploying air support to the area as retaliation against our war crimes." remoteExec ["hint", 0];
 			private _plane = createVehicle ["CFP_B_USARMY_1991_A10A_Thunderbolt_II_WDL_01", [0, 10000, 600], [], 0, "FLY"];
 			private _crew = createVehicleCrew _plane;
 			_crew addWaypoint [(getMarkerPos "shakhovka"), 3000];
