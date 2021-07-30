@@ -100,11 +100,11 @@ MALO_fnc_combat_getInside = {
 
 		// FREEZE SAFE UNITS IF IN A GROUP OF TWO OR MORE
 
-		if (!(_x call BIS_fnc_enemyDetected) && (count units group _x > 1) && (vehicle _x == _x) && !(count waypoints group _x > 1)) then {
-			_x disableAi "PATH";
-		} else {
-			if (count units group _x > 1) then {
+		if ((count units group _x > 1) && (vehicle _x == _x) && !(count waypoints group _x > 1)) then {
+			if (_x call BIS_fnc_enemyDetected) then {
 				_x enableAi "ALL";
+			} else {
+				_x disableAI "PATH";
 			};
 		};
 
