@@ -63,7 +63,7 @@ while {true} do {
 	setTimeMultiplier MALO_CFG_time_multiplier; 
 
 	// SAVE
-	[] spawn MALO_fnc_save;
+	call MALO_fnc_save;
 
 	// LOOP
 	["MALO", "loop"] call MALO_fnc_callFunctions;

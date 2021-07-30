@@ -12,6 +12,7 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 	// DEFINE EVENTS
 	MALO_intervention_events = [
 		["plane", {
+			sleep (random [0, 30, 60]);
 			"NATO is deploying air support to the area as retaliation against our war crimes." remoteExec ["hint", 0];
 			private _plane = createVehicle ["CFP_B_USARMY_1991_A10A_Thunderbolt_II_WDL_01", [0, 10000, 600], [], 0, "FLY"];
 			private _crew = createVehicleCrew _plane;
@@ -118,15 +119,12 @@ if ((_random < _elapsed) && !MALO_international_intervention_in_progress) then {
 	} forEach MALO_intervention_events;
 
 	if ((count MALO_potential_intervention_events) > 0) then {
-		[] spawn {
-			sleep (random [0, 30, 60]);
-			private _event = selectRandom MALO_potential_intervention_events;
-			private _name = _event select 0;
-			private _value = _event select 2;
-			MALO_international_intervention_in_progress = true;
-			MALO_international_opinion = MALO_international_opinion + (_value / 2);
-			call compile ("MALO_current_international_intervention_event = [] spawn MALO_fnc_internationalOpinion_" + _name + ";");
-		};
+		private _event = selectRandom MALO_potential_intervention_events;
+		private _name = _event select 0;
+		private _value = _event select 2;
+		MALO_international_intervention_in_progress = true;
+		MALO_international_opinion = MALO_international_opinion + (_value / 2);
+		call compile ("MALO_current_international_intervention_event = [] spawn MALO_fnc_internationalOpinion_" + _name + ";");
 	};
 
 } else {

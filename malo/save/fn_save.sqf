@@ -1,6 +1,5 @@
 // CHECKS FOR CHANGES IN THE MISSION SAVE FILE AND PUSHES THEM IF THE CONDITIONS ARE MET
 
-
 if (false) exitWith {};
 if (MALO_CFG_saving == false) exitWith {};
 
@@ -55,4 +54,4 @@ profileNamespace setVariable ["MALO_saved_mission_progress", MALO_mission_progre
 saveProfileNamespace;
 
 
-hintSilent "Mission progress saved.";
+hint "Mission progress saved.";

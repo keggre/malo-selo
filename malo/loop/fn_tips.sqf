@@ -16,7 +16,7 @@ MALO_tips = [
 	["stealth", "Enemies are less likely to detect you when wearing civilian clothes or driving civilian vehicles. Keep a low profile to avoid being spotted entirely.", false],
 	["repair", "Toolkits are available in most vehicles and can be used to repair your vehicle.", false],
 	["mines", "Nearby landmines are marked on the map.", false],
-	["international_opinion", "If players in your squad commit war crimes, the international opinion of the Serbs will be lowered. If the international opinion falls below a certain level, NATO could pursue direct intervention in the conflict.", false],
+	["international_opinion", "When players in your squad commit war crimes, the international opinion of the Serbs is lowered. If the international opinion falls below a certain level, NATO could pursue direct intervention in the conflict.", false],
 
 	// MISSION OR VILLAGE SPECIFIC
 	["guglovo", "Bosnian villages that have been discovered by your team will appear as blue flags on the map. All of these must be captured in order to complete the scenario.", false],

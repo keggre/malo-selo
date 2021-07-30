@@ -32,3 +32,4 @@ _leader setPos _pos;
 } forEach units group _leader;
 
 group _leader enableDynamicSimulation true;
+group _leader setVariable ["defensive", false, true];

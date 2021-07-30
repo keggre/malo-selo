@@ -66,6 +66,7 @@ class malo
 	{
 		file = "malo\misc"
 		class activateTrigger {};
+		class append {};
 		class callFunctions {};
 		class capsquads {};
 		class captureVillage {};
@@ -78,6 +79,7 @@ class malo
 		class killWithinRadius {};
 		// class loadGroups {};
 		class loadVillage {};
+		class noPlayersNearby {};
 		// class saveGroups {};
 		class setViewDistance {};
 	};

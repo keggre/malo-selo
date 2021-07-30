@@ -73,6 +73,11 @@ _trg setTriggerStatements ["this", ("
 if (_name == "guglovo") then {
 	{_x enableAi "PATH";} forEach units un_check1_units; 
 	{_x enableAi "PATH";} forEach units un_check2_units; 
+	{
+		call compile ("
+			[({if (!isPlayer (driver _x)) then {deleteVehicle _x;};} forEach un_check" + (str _x) + "_objects_delete), (getMarkerPos 'un_check" + (str _x) + "'), 500] spawn MALO_fnc_noPlayersNearby;
+		");
+	} forEach [1,2];
 	un_check1_apc setVehicleAmmo 0; 
 	if (_name in MALO_mission_progress) then {
 		{deleteVehicle _x;} forEach units un_check1_units; 

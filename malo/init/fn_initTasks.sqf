@@ -2,6 +2,8 @@
 
 if (false) exitWith {};
 
+player createDiaryRecord ["Diary", ["Introduction", "Welcome to Malo Selo!"]];
+
 [
 	east, 
 	"end_mission", 

@@ -19,7 +19,7 @@ MALO_fnc_civs_flee = {
 	_civ setVariable ["fleeing", true, true];
 	
 	private _building_types = MALO_building_types;
-	private _radius = 100;
+	private _radius = MALO_simulation_distance;
 	private _delay = random [0, 45, 60];
 	
 	private _fear = _civ getVariable ["fear", 1];
