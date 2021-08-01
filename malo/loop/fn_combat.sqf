@@ -85,7 +85,7 @@ MALO_fnc_combat_getInside = {
 
 		// ENABLE ALL AI IF ENEMY WITHIN TEN METERS
 
-		if (_x distance (_x findNearestEnemy _x) < 10) then {
+		if ((_x distance (_x findNearestEnemy _x) < 10) && (typeOf _x != "LOP_UN_Infantry_Rifleman")) then {
 			_x enableAi "ALL";
 		};
 
@@ -296,7 +296,7 @@ MALO_fnc_combat_getInside = {
 		private _targeted = _unit getVariable ["targeted", false];
 		private _armed = _unit call MALO_fnc_isArmed;
 
-		private MALO_fnc_combat_unHostile = {
+		MALO_fnc_combat_unHostile = {
 			params ["_unit"];
 			private _group = createGroup west;
 			(units (group _unit)) joinSilent _group;

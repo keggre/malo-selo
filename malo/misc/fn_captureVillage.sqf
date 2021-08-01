@@ -55,9 +55,11 @@ if (_name in MALO_mission_progress) then {
 	{deleteVehicle _x;} forEach _var;
 
 	// DESTROY BUILDINGS
-	call compile ("
-		[ (getMarkerPos '" + _name + "'), " + str _load_radius + ", [], 0, .5, 1.25] spawn MALO_fnc_damageWithinRadius;
-	");
+	if (_name != "pusta") then {
+		call compile ("
+			[ (getMarkerPos '" + _name + "'), " + str _load_radius + ", [], 0, .5, 1.25] spawn MALO_fnc_damageWithinRadius;
+		");
+	};
 
 };
 
