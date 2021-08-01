@@ -116,7 +116,7 @@ private _events = [
 		_x setVariable ["killedStealthEventCreated", true, true];
 		_x addEventHandler ["Killed", {
 			private _unit = _this select 0;
-			private _player = _unit call MALO_fnc_getClosestPlayer;
+			private _player = _unit call MALO_fnc_getNearestPlayer;
 			if ((_unit distance _player) < 50) then {
 				_player setVariable ["cooldown", 0, true];
 			};

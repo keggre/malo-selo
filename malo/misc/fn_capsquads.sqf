@@ -7,7 +7,7 @@ params ["_leader", "_pos"];
 if (_leader getVariable ["teleported", false]) exitWith {};
 _leader setVariable ["teleported", true, true];
 
-// waitUntil {(_pos distance (_pos call MALO_fnc_getClosestPlayer)) > 100};
+// waitUntil {(_pos distance (_pos call MALO_fnc_getNearestPlayer)) > 100};
 
 { 
 
@@ -32,4 +32,4 @@ _leader setPos _pos;
 } forEach units group _leader;
 
 group _leader enableDynamicSimulation true;
-group _leader setVariable ["defensive", false, true];
+group _leader setVariable ["aggressive", true, true];

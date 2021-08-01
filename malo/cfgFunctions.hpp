@@ -74,7 +74,7 @@ class malo
 		class createRespawn {};
 		class damageWithinRadius {};
 		class disableTrigger {};
-		class getClosestPlayer {};
+		class getNearestPlayer {};
 		class isArmed {};
 		class killWithinRadius {};
 		// class loadGroups {};

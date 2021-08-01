@@ -31,10 +31,11 @@ MALO_fnc_combat_getInside = {
 
 	private _position = selectRandom _positions;
 
-	_unit doMove _position;
-
-	waitUntil {(unitReady _unit) or (({alive _x} count (units player_squad)) < 1) or ((_unit distance (_unit call MALO_fnc_getClosestPlayer)) > 100)};
-
+	while {(_unit distance (_unit call MALO_fnc_getNearestPlayer)) < MALO_simulation_distance} do { 
+		_unit doMove _position;
+		waitUntil {(unitReady _unit) || ((_unit distance (_unit call MALO_fnc_getNearestPlayer)) > MALO_simulation_distance)};
+	};
+	
 	sleep 5;
 
 	_unit setVariable ["willGetInside", false, true];
@@ -46,7 +47,7 @@ MALO_fnc_combat_getInside = {
 
 {
 	
-	if (side _x in _sides && !isPlayer _x) then {
+	if ((side _x in _sides) && (!isPlayer _x) && (vehicle _x == _x)) then {
 		
 
 		// CREATE GET IN BUILDING EVENT HANDLER
@@ -114,17 +115,24 @@ MALO_fnc_combat_getInside = {
 		private _unit = _x;
 		private _group = group _unit;
 
+		private _aggressive = _group getVariable ["aggressive", false];
 		private _morale = _group getVariable ["morale", 100];
 
 		if (_unit call BIS_fnc_enemyDetected) then {
 
 			if ((behaviour _unit) == "SAFE") then {
-				_group setBehaviour "AWARE";
+				
+				if (_aggressive) then {
+					_group setBehaviour "STEALTH";
+				} else {
+					_group setBehaviour "AWARE";
+				};
+			
 			};
 
 		} else {
 
-			(group _unit) setBehaviour "SAFE";
+			_group setBehaviour "SAFE";
 
 		};
 
@@ -143,7 +151,7 @@ MALO_fnc_combat_getInside = {
 		private _sniper = (if (typeOf _unit in MALO_sniper_types) then {true} else {false});
 		private _in_vehicle = vehicle _unit != _unit;
 		private _enemy_spotted = _unit call BIS_fnc_enemyDetected;
-		private _defensive = _group getVariable ["defensive", true];
+		private _aggressive = _group getVariable ["aggressive", false];
 		private _morale = _group getVariable ["morale", 100];
 
 		if (_sniper || _in_vehicle) then {
@@ -166,7 +174,7 @@ MALO_fnc_combat_getInside = {
 
 			} else {
 				
-				if (!_defensive && _morale > 20) then {
+				if (_aggressive && _morale > 20) then {
 
 					_group setSpeedMode "FULL";
 					_group setCombatMode "RED";
@@ -265,6 +273,13 @@ MALO_fnc_combat_getInside = {
 
 			};
 
+			case "STEALTH": {
+
+				_group setFormation "FILE";
+				_unit setUnitPos "AUTO";
+
+			};
+
 			default {};
 
 		};
@@ -276,14 +291,29 @@ MALO_fnc_combat_getInside = {
 
 	if (typeOf _x == "LOP_UN_Infantry_Rifleman") then {
 
-		private _targeted = _x getVariable ["targeted", false];
-		private _armed = _x call MALO_fnc_isArmed;
+		private _unit = _x;
+		
+		private _targeted = _unit getVariable ["targeted", false];
+		private _armed = _unit call MALO_fnc_isArmed;
+
+		private MALO_fnc_combat_unHostile = {
+			params ["_unit"];
+			private _group = createGroup west;
+			(units (group _unit)) joinSilent _group;
+		};
 
 		if (_targeted && _armed) then {
+			_unit spawn MALO_fnc_combat_unHostile;
+		};
 
-			private _group = createGroup west;
-			(units (group _x)) joinSilent _group;
+		if !(_unit getVariable ["hitHostileEventHandlerCreated", false]) then {
+			_unit setVariable ["hitHostileEventHandlerCreated", true, true];
+			{
+				_unit addEventHandler [_x, {
+					_unit spawn MALO_fnc_combat_unHostile;
+				}];
 
+			} forEach ["Hit", "Killed"];
 		};
 
 	};
