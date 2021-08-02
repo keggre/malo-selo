@@ -4,7 +4,12 @@ if (!isServer) exitWith {};
 
 private _objects = _this;
 
+if (MALO_init) exitWith {
+	{deleteVehicle _x;} forEach _objects;
+};
+
 private _radius = MALO_CFG_view_distance;		// THE DEFAULT DISTANCE FOR DESPAWNING
+
 
 {
 	if !(dynamicSimulationEnabled _x) then {

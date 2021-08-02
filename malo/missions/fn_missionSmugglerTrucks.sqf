@@ -85,4 +85,6 @@ _n = 0;
 
 } forEach _trucks;
 
+_trucks spawn MALO_fnc_deleteObjects;
+
 smuggler_trucks_destroyed = true;

@@ -10,4 +10,4 @@ if !(_mission_required in MALO_mission_progress) exitWith {};
 
 ////
 
-[_missions_name, _mission_required] call MALO_fnc_missions_poi;
+[_mission_name, _mission_required] call MALO_fnc_missions_poi;
