@@ -1,8 +1,17 @@
-// SCRIPT FOR THE SMUGGLER TRUCKS SIDE MISSION
+// MISSION SCRIPT
 
 if (false) exitWith {};
 
-smuggler_trucks_destroyed = false;
+private _mission_required = "poi3";
+
+if (missionNamespace getVariable ["smuggler_trucks_destroyed", false]) exitWith {};
+if !(_mission_required in MALO_mission_progress) exitWith {};
+
+////
+
+sleep 30;
+
+trg_smuggler_trucks call MALO_fnc_activateTrigger;
 
 _trucks = [
 
@@ -40,7 +49,7 @@ while {{!alive _x} count _trucks < count _trucks} do {
 		if (!alive _x) then {
 
 			[_name, "SUCCEEDED"] call BIS_fnc_taskSetState;
-			["smuggler_truck_" + str _n] call MALO_fnc_savePush;
+			["smuggler_truck_" + str _n] call MALO_fnc_saveKeyword;
 
 		};
 

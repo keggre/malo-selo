@@ -5,7 +5,7 @@ if (false) exitWith {};
 params ["_object"];
 
 private _distance_1 = "None";
-private _player = "None";
+private _player = objNull;
 
 {
 
@@ -15,7 +15,7 @@ private _player = "None";
 		_distance_1 = _distance_2;
 	};
 
-	if (_player isEqualTo "None") then {
+	if (_player isEqualTo objNull) then {
 		_player = _x;
 	};
 

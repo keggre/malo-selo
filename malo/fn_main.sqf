@@ -44,9 +44,9 @@ call MALO_fnc_load;
 
 sleep .05;
 
-if !("shootout" in MALO_mission_progress) then {
-	[] spawn MALO_fnc_mission_shootout;
-};
+/*if !("shootout" in MALO_mission_progress) then {
+	[] spawn MALO_fnc_missionShootout;
+};*/
 
 MALO_current_view_distance = 100;
 MALO_next_view_distance = 100;

@@ -42,7 +42,6 @@ class malo
 	class loop
 	{
 		file = "malo\loop"
-		class allowWarCrimes {};
 		class ambient {};
 		class civs {};
 		class combat {};
@@ -51,6 +50,7 @@ class malo
 		class deleteTasks {};
 		class dynamicSimulation {};
 		class internationalOpinion {};
+		class missions {};
 		class player {};
 		class reload {};
 		class simulationDistance {};
@@ -71,6 +71,8 @@ class malo
 		class capsquads {};
 		class captureVillage {};
 		class getUnitsWithinRadius {};
+		class deleteObjects {};
+		class deleteUnCheckpoints {};
 		class createRespawn {};
 		class damageWithinRadius {};
 		class disableTrigger {};
@@ -87,8 +89,17 @@ class malo
 	class missions
 	{
 		file = "malo\missions"
-		class mission_Shootout {};
-		class mission_SmugglerTrucks {};
+		class missionShootout {};
+		class missionSmugglerTrucks {};
+		class poi1 {};
+		class poi2 {};
+		class poi3 {};
+		class poi4 {};
+		class poi5 {};
+		class poi6 {};
+		class poi7 {};
+		class poi8 {};
+		class poi9 {};
 	};
 
 	class save 
@@ -98,6 +109,6 @@ class malo
 		class loadProgress {};
 		class loadKeywords {};
 		class save {};
-		class savePush {};
+		class saveKeyword {};
 	};
 };

@@ -1401,8 +1401,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1414,7 +1414,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -1541,8 +1541,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1554,7 +1554,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -24787,7 +24787,7 @@ class Mission
 				name="trg_shootout_5";
 				text="end village raid";
 				condition="call{this}";
-				onActivation="call{{_x setDamage 1;} forEach units enemy1; trg_jeep setTriggerArea [10,10,0,false,10]; trg_supply1 setTriggerArea [100,100,0,false,100]; jeep setVehicleLock ""UNLOCKED""; [""shootout""] spawn MALO_fnc_savePush;}";
+				onActivation="call{{_x setDamage 1;} forEach units enemy1; trg_jeep setTriggerArea [10,10,0,false,10]; trg_supply1 setTriggerArea [100,100,0,false,100]; jeep setVehicleLock ""UNLOCKED""; [""shootout""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=150;
 				sizeB=150;
 				timeout[]={20,30,60};
@@ -26590,7 +26590,7 @@ class Mission
 				name="trg_ambush_3";
 				text="end smuggler poi";
 				condition="call{this}";
-				onActivation="call{{removeAllWeapons _x;} forEach units smugglers; trg_police setTriggerArea [500,500,0,false,500]; grpName = createGroup civilian; {[_x] joinSilent grpName;} forEach units smugglers; grpName allowFleeing 1; trg_smuggler_trucks setTriggerArea [500,500,0,false,500]; [""poi3""] spawn MALO_fnc_savePush;}";
+				onActivation="call{{removeAllWeapons _x;} forEach units smugglers; trg_police setTriggerArea [500,500,0,false,500]; grpName = createGroup civilian; {[_x] joinSilent grpName;} forEach units smugglers; grpName allowFleeing 1; trg_smuggler_trucks setTriggerArea [500,500,0,false,500]; [""poi3""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=100;
 				sizeB=100;
 				activationType="NOT PRESENT";
@@ -45581,7 +45581,7 @@ class Mission
 				name="trg_albanian";
 				text="load albanian poi";
 				condition="call{this}";
-				onActivation="call{albanian_barn setVariable[""bis_disabled_Door_1"",0,true]; albanian_barn setVariable[""bis_disabled_Door_2"",0,true]; albanian_barn setVariable[""bis_disabled_Door_3"",0,true]; albanian_barn setVariable[""bis_disabled_Door_4"",0,true]; albanian_house setVariable[""bis_disabled_Door_1"",0,true]; albanian_truck setVehicleLock ""UNLOCKED""; {_x enableAi ""MOVE"";} forEach units albanians; [""poi1""] call BIS_fnc_deleteTask; [""poi1""] spawn MALO_fnc_savePush;}";
+				onActivation="call{albanian_barn setVariable[""bis_disabled_Door_1"",0,true]; albanian_barn setVariable[""bis_disabled_Door_2"",0,true]; albanian_barn setVariable[""bis_disabled_Door_3"",0,true]; albanian_barn setVariable[""bis_disabled_Door_4"",0,true]; albanian_house setVariable[""bis_disabled_Door_1"",0,true]; albanian_truck setVehicleLock ""UNLOCKED""; {_x enableAi ""MOVE"";} forEach units albanians; [""poi1""] call BIS_fnc_deleteTask; [""poi1""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=0;
 				sizeB=0;
 				activationBy="ANYPLAYER";
@@ -56343,7 +56343,7 @@ class Mission
 				name="trg_pilot_capture";
 				text="capture pilot";
 				condition="call{this}";
-				onActivation="call{pilot switchmove """"; [pilot] join player_squad; pilot enableAi ""PATH""; pilot setCaptive true; us_heli_1 enableSimulation true; [""poi5""] spawn MALO_fnc_savePush;}";
+				onActivation="call{pilot switchmove """"; [pilot] join player_squad; pilot enableAi ""PATH""; pilot setCaptive true; us_heli_1 enableSimulation true; [""poi5""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={0,3,6};
@@ -58340,7 +58340,7 @@ class Mission
 				name="trg_partisan";
 				text="load partisan poi";
 				condition="call{this}";
-				onActivation="call{partisan_house setVariable[""bis_disabled_Door_1"",0,true]; partisan_house setVariable[""bis_disabled_Door_3"",0,true]; [""poi6""] call BIS_fnc_deleteTask; partisan_tank setVehicleLock ""UNLOCKED""; [""poi6""] spawn MALO_fnc_savePush;}";
+				onActivation="call{partisan_house setVariable[""bis_disabled_Door_1"",0,true]; partisan_house setVariable[""bis_disabled_Door_3"",0,true]; [""poi6""] call BIS_fnc_deleteTask; partisan_tank setVehicleLock ""UNLOCKED""; [""poi6""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=0;
 				sizeB=0;
 				activationBy="ANYPLAYER";
@@ -97589,7 +97589,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033477783;
+					atlOffset=0.033355713;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -97641,7 +97641,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033477783;
+			atlOffset=0.033355713;
 		};
 		class Item3573
 		{
@@ -97978,7 +97978,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15405273;
+					atlOffset=0.15393066;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98030,7 +98030,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15405273;
+			atlOffset=0.15393066;
 		};
 		class Item3578
 		{
@@ -108190,7 +108190,7 @@ class Mission
 				name="trg_arkan_2";
 				text="arkan poi complete";
 				condition="call{!alive arkan}";
-				onActivation="call{[""poi7""] spawn MALO_fnc_savePush;}";
+				onActivation="call{[""poi7""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=0;
 				sizeB=0;
 			};
@@ -111401,7 +111401,7 @@ class Mission
 				name="trg_supply_truck_3";
 				text="supply truck mission complete";
 				condition="call{this}";
-				onActivation="call{[""supply_truck""] spawn MALO_fnc_savePush;}";
+				onActivation="call{[""supply_truck""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=120;
 				sizeB=120;
 			};
@@ -127196,7 +127196,7 @@ class Mission
 				name="trg_scout_1";
 				text="finish guglovo poi";
 				condition="call{this}";
-				onActivation="call{[""poi2""] call BIS_fnc_deleteTask; [""poi2""] spawn MALO_fnc_savePush; }";
+				onActivation="call{[""poi2""] call BIS_fnc_deleteTask; [""poi2""] spawn MALO_fnc_saveKeyword; }";
 				sizeA=500;
 				sizeB=500;
 				repeatable=1;
@@ -130221,7 +130221,7 @@ class Mission
 			{
 				name="trg_kidnap_capture_2";
 				condition="call{this}";
-				onActivation="call{{_x switchmove """"; [_x] join player_squad; _x enableAi ""PATH""; _x setCaptive true;} forEach units un_squad_1; [""poi8""] spawn MALO_fnc_savePush;}";
+				onActivation="call{{_x switchmove """"; [_x] join player_squad; _x enableAi ""PATH""; _x setCaptive true;} forEach units un_squad_1; [""poi8""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={5,10,15};
@@ -133024,7 +133024,7 @@ class Mission
 				name="trg_castle1_4";
 				text="capture castle";
 				condition="call{this}";
-				onActivation="call{{_x setDamage 1;} forEach units enemy_17; ""castle1"" setMarkerType ""o_installation""; [""poi9""] spawn MALO_fnc_savePush;}";
+				onActivation="call{{_x setDamage 1;} forEach units enemy_17; ""castle1"" setMarkerType ""o_installation""; [""poi9""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=200;
 				sizeB=200;
 				activationType="NOT PRESENT";
@@ -142719,7 +142719,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{MALO_TIP_tank_delivered = true; [""tank""] spawn MALO_fnc_savePush;}";
+				onActivation="call{MALO_TIP_tank_delivered = true; [""tank""] spawn MALO_fnc_saveKeyword;}";
 				sizeA=5;
 				sizeB=5;
 			};
@@ -152320,7 +152320,7 @@ class Mission
 			{
 				name="trg_e_obj_1";
 				condition="call{this}";
-				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, getMarkerPos ""cap_marker_e_1""] spawn MALO_fnc_capsquads; [""e_obj_1""] spawn MALO_fnc_savePush; [""e_obj_1""] spawn MALO_fnc_createRespawn;}";
+				onActivation="call{e_marker_1 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_1; [cap_e_1, getMarkerPos ""cap_marker_e_1""] spawn MALO_fnc_capsquads; [""e_obj_1""] spawn MALO_fnc_saveKeyword; [""e_obj_1""] spawn MALO_fnc_createRespawn;}";
 				sizeA=45;
 				activationType="NOT PRESENT";
 				activationBy="WEST";
@@ -152615,7 +152615,7 @@ class Mission
 			{
 				name="trg_e_obj_2";
 				condition="call{this}";
-				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, getMarkerPos ""cap_marker_e_2""] spawn MALO_fnc_capsquads; [""e_obj_2""] spawn MALO_fnc_savePush; [""e_obj_2""] spawn MALO_fnc_createRespawn;}; MALO_international_opinion = MALO_international_opinion - 50;";
+				onActivation="call{e_marker_2 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_2; [cap_e_2, getMarkerPos ""cap_marker_e_2""] spawn MALO_fnc_capsquads; [""e_obj_2""] spawn MALO_fnc_saveKeyword; [""e_obj_2""] spawn MALO_fnc_createRespawn;}; MALO_international_opinion = MALO_international_opinion - 50;";
 				sizeA=30;
 				sizeB=30;
 				activationType="NOT PRESENT";
@@ -152912,7 +152912,7 @@ class Mission
 			{
 				name="trg_e_obj_3";
 				condition="call{this}";
-				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, getMarkerPos ""cap_marker_e_3""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_savePush; [""e_obj_3""] spawn MALO_fnc_createRespawn;}";
+				onActivation="call{e_marker_3 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_3; [cap_e_3, getMarkerPos ""cap_marker_e_3""] spawn MALO_fnc_capsquads; [e_obj_1] spawn MALO_fnc_saveKeyword; [""e_obj_3""] spawn MALO_fnc_saveKeyword; [""e_obj_3""] spawn MALO_fnc_createRespawn;}";
 				sizeA=0;
 				sizeB=0;
 				activationType="NOT PRESENT";
@@ -153210,7 +153210,7 @@ class Mission
 			{
 				name="trg_e_obj_4";
 				condition="call{this}";
-				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, getMarkerPos ""cap_marker_e_4""] spawn MALO_fnc_capsquads; [""e_obj_4""] spawn MALO_fnc_savePush; [""e_obj_4""] spawn MALO_fnc_createRespawn;}";
+				onActivation="call{e_marker_4 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_4; [cap_e_4, getMarkerPos ""cap_marker_e_4""] spawn MALO_fnc_capsquads; [""e_obj_4""] spawn MALO_fnc_saveKeyword; [""e_obj_4""] spawn MALO_fnc_createRespawn;}";
 				sizeA=20;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153509,7 +153509,7 @@ class Mission
 			{
 				name="trg_e_obj_5";
 				condition="call{this}";
-				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, getMarkerPos ""cap_marker_e_5""] spawn MALO_fnc_capsquads; [""e_obj_5""] spawn MALO_fnc_savePush; [""e_obj_5""] spawn MALO_fnc_createRespawn;}";
+				onActivation="call{e_marker_5 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_5; [cap_e_5, getMarkerPos ""cap_marker_e_5""] spawn MALO_fnc_capsquads; [""e_obj_5""] spawn MALO_fnc_saveKeyword; [""e_obj_5""] spawn MALO_fnc_createRespawn;}";
 				sizeA=30;
 				sizeB=20;
 				activationType="NOT PRESENT";
@@ -153805,7 +153805,7 @@ class Mission
 			{
 				name="trg_e_obj_6";
 				condition="call{this}";
-				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, getMarkerPos ""cap_marker_e_6""] spawn MALO_fnc_capsquads; [""e_obj_6""] spawn MALO_fnc_savePush; [""e_obj_6""] spawn MALO_fnc_createRespawn;}";
+				onActivation="call{e_marker_6 setDamage 1; {_x enableAi ""PATH"";} forEach units e_squad_obj_6; [cap_e_6, getMarkerPos ""cap_marker_e_6""] spawn MALO_fnc_capsquads; [""e_obj_6""] spawn MALO_fnc_saveKeyword; [""e_obj_6""] spawn MALO_fnc_createRespawn;}";
 				sizeA=35;
 				sizeB=15;
 				activationType="NOT PRESENT";
@@ -218883,7 +218883,7 @@ class Mission
 				name="trg_smuggler_trucks";
 				text="start smuggler trucks mission";
 				condition="call{this}";
-				onActivation="call{[] spawn MALO_fnc_smugglerTrucks;}";
+				onActivation="call{}";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={60,60,60};

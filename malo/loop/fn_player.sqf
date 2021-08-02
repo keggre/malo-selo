@@ -4,6 +4,15 @@ if (!hasInterface) exitWith {};
 if (MALO_init == true) exitWith {};
 
 
+// PREVENTS PLAYERS FROM BEING KILLED BY FRIENDLY AI BECAUSE OF TEAMKILLING OR CIVILIAN KILLS
+
+if (MALO_CFG_allow_war_crimes == true) then {
+	if ((rating player < 0)) then {
+		player addRating abs (rating player)
+	};
+};
+
+
 // MARK AS RETURNING PLAYER
 
 profileNamespace setVariable ["MALO_returning_player", true];

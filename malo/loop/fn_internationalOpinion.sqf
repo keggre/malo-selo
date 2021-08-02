@@ -21,11 +21,7 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 			_crew addWaypoint [[10000, 10000, 600], 0];
 			private _group = createGroup independent;
 			(units _crew) joinSilent _group;
-			_plane spawn {
-				sleep 60;
-				_this deleteVehicleCrew (driver _this);
-				deleteVehicle _this;
-			};
+			[driver _plane, _plane] spawn MALO_fnc_deleteObjects;
 		}, 50]
 	];
 
