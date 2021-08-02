@@ -93,9 +93,11 @@ MALO_fnc_combat_getInside = {
 		// SURRENDER IF MORALE LOW ENOUGH
 
 		if ((_x getVariable ["targeted", false]) && (((group _x) getVariable ["morale", 100]) < 20) && (side _x != east)) then {
-			removeAllWeapons _x;
+			/*removeAllWeapons _x;*/
+			_x action ["DropWeapon", _x, currentWeapon _x];
 			private _group = createGroup civilian;
 			[_x] joinSilent _group;
+			[_x] spawn MALO_fnc_deleteObjects;
 		};
 
 
