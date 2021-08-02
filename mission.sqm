@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3293.0107,499.64502,5692.4985};
-		dir[]={-0.71635288,-0.55566621,0.42198771};
-		up[]={-0.47877133,0.83140552,0.28203365};
-		aside[]={0.50755948,0,0.86161679};
+		pos[]={5866.9082,293.4798,4686.1792};
+		dir[]={0.75708175,-0.5936631,-0.27274817};
+		up[]={0.55852348,0.80471361,-0.20121506};
+		aside[]={-0.33893812,0,-0.94080877};
 	};
 };
 binarizationWanted=0;
@@ -1401,8 +1401,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1414,7 +1414,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -1541,8 +1541,8 @@ class CustomAttributes
 		};
 		class Attribute5
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1554,7 +1554,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -17055,6 +17055,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5580;
@@ -17172,6 +17173,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5588;
@@ -17189,6 +17191,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5589;
@@ -17207,6 +17210,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5590;
@@ -17225,6 +17229,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5591;
@@ -17242,6 +17247,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5592;
@@ -17260,6 +17266,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5593;
@@ -17277,6 +17284,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5594;
@@ -17293,6 +17301,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5595;
@@ -17310,6 +17319,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				presence=0;
 				dynamicSimulation=1;
 			};
 			id=5596;
@@ -112814,6 +112824,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check3_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14496;
@@ -112824,13 +112835,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5044.0044,261.89163,4719.3198};
-				angles[]={6.2578578,1.2914329,0.097025506};
+				position[]={5044.0039,261.89157,4719.3198};
+				angles[]={6.2578607,1.2914389,0.097022854};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check3_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14498;
@@ -114253,6 +114265,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check3_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14504;
@@ -114370,6 +114383,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check3_objects_delete"", this] spawn MALO_fnc_append;";
 				name="un_check3_apc";
 				dynamicSimulation=1;
 			};
@@ -114738,6 +114752,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check3_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14525;
@@ -114790,6 +114805,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check4_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14547;
@@ -114807,6 +114823,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check4_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14548;
@@ -116360,6 +116377,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check4_objects_delete"", this] spawn MALO_fnc_append;";
 				name="un_check4_apc";
 				dynamicSimulation=1;
 			};
@@ -116403,6 +116421,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check4_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14561;
@@ -116538,6 +116557,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check4_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14563;
@@ -116556,6 +116576,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check4_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14566;
@@ -116620,6 +116641,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check5_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14572;
@@ -116638,6 +116660,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check5_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14573;
@@ -117805,6 +117828,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check5_objects_delete"", this] spawn MALO_fnc_append;";
 				name="un_check5_apc";
 				dynamicSimulation=1;
 			};
@@ -117848,6 +117872,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check5_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14582;
@@ -117983,6 +118008,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check5_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14584;
@@ -118001,6 +118027,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""un_check5_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=14587;
@@ -212334,18 +212361,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5032.0811,261.01205,4707.106};
-				angles[]={6.2565231,1.3166705,0.10362761};
+				position[]={5032.0811,261.01208,4707.106};
+				angles[]={6.2565165,1.3166764,0.10362019};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="[""un_check3_objects_delete"", this] spawn MALO_fnc_append;";
 				dynamicSimulation=1;
 			};
 			id=17721;
 			type="SRB_uaz_2";
+			atlOffset=3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -212466,7 +212495,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""PATH""; [""un_check3_objects_delete"", this] spawn MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -212618,14 +212647,14 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5032.21,260.77359,4707.1392};
+					position[]={5032.21,260.77362,4707.1392};
 					type="GetIn";
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=18535;
-					atlOffset=1;
+					atlOffset=1.0000305;
 					class AttachedTo
 					{
 						id=17721;
@@ -212675,7 +212704,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""PATH""; [""un_check3_objects_delete"", this] spawn MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -212827,14 +212856,14 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5032.21,260.27359,4707.1392};
+					position[]={5032.21,260.27362,4707.1392};
 					type="GetIn";
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=18534;
-					atlOffset=0.5;
+					atlOffset=0.50003052;
 					class AttachedTo
 					{
 						id=17721;

@@ -12,6 +12,8 @@ player createDiaryRecord ["Diary", ["Introduction", "Welcome to Malo Selo!"]];
 	"CREATED",
 	nil,
 	nil,
-	"ATTACK"
+	"ATTACK",
+	nil,
+	false
 
 ] call BIS_fnc_taskCreate;

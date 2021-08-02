@@ -91,15 +91,15 @@ class malo
 		file = "malo\missions"
 		class missionShootout {};
 		class missionSmugglerTrucks {};
-		class poi1 {};
-		class poi2 {};
-		class poi3 {};
-		class poi4 {};
-		class poi5 {};
-		class poi6 {};
-		class poi7 {};
-		class poi8 {};
-		class poi9 {};
+		class missionPoi1 {};
+		class missionPoi2 {};
+		class missionPoi3 {};
+		class missionPoi4 {};
+		class missionPoi5 {};
+		class missionPoi6 {};
+		class missionPoi7 {};
+		class missionPoi8 {};
+		class missionPoi9 {};
 	};
 
 	class save 

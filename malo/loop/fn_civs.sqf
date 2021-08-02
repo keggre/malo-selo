@@ -140,10 +140,14 @@ MALO_fnc_civs_surrender = {
 
 		while {_civ in MALO_cursor_targets} do {
 			waitUntil {if (_civ in MALO_cursor_targets) then {false} else {true}};
-			sleep (random [3, 5, 20]);
+			sleep (random [1, 2, 3]);
 		};
 
-		[_civ] spawn MALO_fnc_civs_flee;
+		_civ switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+
+		sleep 1;
+
+		// [_civ] spawn MALO_fnc_civs_flee;
 
 	};
 

@@ -10,3 +10,5 @@ private _trg = createTrigger ["EmptyDetector", _position];
 _trg setTriggerArea [_radius, _radius, 0, false];
 _trg setTriggerActivation ["ANYPLAYER", "NOT PRESENT", false];
 _trg setTriggerStatements ["this", _string, ""];
+
+_trg

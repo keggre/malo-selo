@@ -15,7 +15,7 @@ MALO_next_view_distance = 1000;
 MALO_fog_value = .5;
 MALO_ovc_value = .75;
 MALO_serb_uniforms = ["SP_Camo_Oak_Insg", "VJ_OKLF_Camo"];
-MALO_serb_vehicles = ["SRB_uaz_2", "O_Serbia_GAZ_66_01", "CUP_O_AN2_TK", "O_Serbia_Mi8AMT_01"];
+MALO_serb_vehicles = ["SRB_uaz_2", "O_Serbia_GAZ_66_01", "CUP_O_AN2_TK", "O_Serbia_Mi8AMT_01", "LIB_T34_85", "KOS_YUG_t72_grom"];
 
 setViewDistance MALO_current_view_distance;
 0 setFog MALO_fog_value;

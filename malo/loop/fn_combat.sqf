@@ -122,7 +122,7 @@ MALO_fnc_combat_getInside = {
 
 			if ((behaviour _unit) == "SAFE") then {
 				
-				if (_aggressive) then {
+				if (_aggressive && (selectRandom [true, false])) then {
 					_group setBehaviour "STEALTH";
 				} else {
 					_group setBehaviour "AWARE";
