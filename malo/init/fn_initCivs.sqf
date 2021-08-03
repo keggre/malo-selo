@@ -234,6 +234,16 @@ elektrozavodsk_civs = [
 
 ]; publicVariable "elektrozavodsk_civs";
 
+kamyshovo_civs = [
+
+	civ_i_1,
+	civ_i_2,
+	civ_i_3,
+	civ_i_4,
+	civ_i_5
+
+]; publicVariable "staroye_civs";
+
 // EXCLUDE CIVS FROM FLEEING
 /*private _exclude = shakhovka_civs;
 {_x setVariable ["fear", 0, true];} forEach _exclude;*/

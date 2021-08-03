@@ -14,7 +14,7 @@ view_distance_reducers = [
 	[(MALO_CFG_view_distance / 1.5), getMarkerPos "dolina", 1000],
 	[(MALO_CFG_view_distance / 1.5), getMarkerPos "elektrozavodsk", 2000],
 	[(MALO_CFG_view_distance / 1.5), getMarkerPos "guglovo", 1000],
-	[(MALO_CFG_view_distance / 1.5), getMarkerPos "kamushovo", 1000],
+	[(MALO_CFG_view_distance / 1.5), getMarkerPos "kamyshovo", 1000],
 	[(MALO_CFG_view_distance / 1.5), getMarkerPos "mogilevka", 1000],
 	[(MALO_CFG_view_distance / 1.5), getMarkerPos "msta", 1000],
 	[(MALO_CFG_view_distance / 1.5), getMarkerPos "nadezhdino", 1000],

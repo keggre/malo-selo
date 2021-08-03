@@ -8,7 +8,7 @@ village_boundaries = [
 	/*dolina*/				[],
 	/*elektrozavodsk*/		[],
 	/*guglovo*/				[],
-	/*kamushovo*/			[],
+	/*kamyshovo*/			[],
 	/*mogilevka*/			[],
 	/*msta*/				[],
 	/*nadezhdino*/			[],

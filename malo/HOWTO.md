@@ -1,14 +1,14 @@
 # villages
-* initVillages
-* initCivs
 * load trigger
 * capture trigger
 * buildings
 * vehicles
-* civs
+* civs (initCivs)
 * animals
 * enemies
 * respawn 
-* jeep
 * flag
+* jeep
 * mortar triggers
+* capsquads (initVillages)
+* village marker unit

@@ -91,15 +91,26 @@ MALO_fnc_combat_getInside = {
 
 
 		// SURRENDER IF MORALE LOW ENOUGH
-
-		if ((_x getVariable ["targeted", false]) && (((group _x) getVariable ["morale", 100]) < 20) && (side _x != east)) then {
+		if ((((group _x) getVariable ["morale", 100]) < 20) && (side _x != east)) then {
 			/*removeAllWeapons _x;*/
-			_x action ["DropWeapon", _x, currentWeapon _x];
-			private _group = createGroup civilian;
-			[_x] joinSilent _group;
-			[_x] spawn MALO_fnc_deleteObjects;
+			if (_x getVariable ["targeted", false]) then {
+				private _group = createGroup civilian;
+				[_x] joinSilent _group;
+				[_x] spawn MALO_fnc_deleteObjects;
+				_x spawn {
+					/*_this setVariable ["surrender", true, true];*/
+					_this disableAi "MOVE"; 
+					waitUntil {!(_this isEqualTo objNull) || !(alive _this) || !(_this getVariable ["surrender", false])};
+					sleep 5;
+					removeAllWeapons _this;
+					while {!(_this isEqualTo objNull) || !(alive _this)} do {
+						_this switchmove "boundCaptive_loop";
+						sleep MALO_delay;
+					};
+				};
+			};
 		};
-
+		
 
 		// FREEZE SAFE UNITS IF IN A GROUP OF TWO OR MORE
 
@@ -184,8 +195,25 @@ MALO_fnc_combat_getInside = {
 				} else {
 
 					_group setSpeedMode "FULL";
-					
-					private _distance = (_unit distance (_unit findNearestEnemy _unit));
+
+					if (time - (_group getVariable ["enemy_distance_last_updated", 0]) > (MALO_delay * 10)) then {
+						_group setVariable ["enemy_distance_last_updated", time, true];
+						private _enemy_distance = "none";
+						{
+							private _unit = _x;
+							private _unit_enemy_distance = _unit distance (_unit findNearestEnemy _unit);
+							if (_enemy_distance isEqualTo "none") then {
+								_enemy_distance = _unit_enemy_distance;
+							} else {
+								if (_enemy_distance > _unit_enemy_distance) then {
+									_enemy_distance = _unit_enemy_distance;
+								};
+							};
+						} forEach units _group;
+						_group setVariable ["enemy_distance", _enemy_distance, true];
+					};
+					private _distance = _group getVariable ["enemy_distance", 0];
+
 					private _mid = 100;
 					private _far = 300;
 					private _range = "close";
