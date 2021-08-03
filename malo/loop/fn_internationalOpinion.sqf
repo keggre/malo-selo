@@ -17,6 +17,7 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 			private _plane = createVehicle ["CFP_B_USARMY_1991_A10A_Thunderbolt_II_WDL_01", [0, 10000, 600], [], 0, "FLY"];
 			private _crew = createVehicleCrew _plane;
 			_crew addWaypoint [(getMarkerPos "shakhovka"), 3000];
+			{_plane reveal _x;} forEach units east;
 			sleep (random [450, 600, 750]);
 			_crew addWaypoint [[10000, 10000, 600], 0];
 			private _group = createGroup independent;
