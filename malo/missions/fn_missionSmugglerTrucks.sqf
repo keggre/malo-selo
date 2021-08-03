@@ -13,7 +13,7 @@ sleep 30;
 
 trg_smuggler_trucks call MALO_fnc_activateTrigger;
 
-_trucks = [
+private _trucks = [
 
 	smuggler_truck_1,
 	smuggler_truck_2,
@@ -25,12 +25,12 @@ _trucks = [
 
 sleep 15;
 
-_n = 0;
+private _n = 0;
 
 {
 	
 	_n = _n + 1;
-	_name = ["smuggler_truck_task_", str _n] joinString "";
+	private _name = ["smuggler_truck_task_", str _n] joinString "";
 
 	[east, [_name, "smuggler_trucks"], ["", "smuggler truck"], _x, "CREATED", -1, false, "truck"] call BIS_fnc_taskCreate;
 
@@ -40,11 +40,11 @@ while {{!alive _x} count _trucks < count _trucks} do {
 
 	sleep MALO_delay * 10;
 
-	_n = 0;
+	private _n = 0;
 
 	{
 		_n = _n + 1;
-		_name = ["smuggler_truck_task_", str _n] joinString "";
+		private _name = ["smuggler_truck_task_", str _n] joinString "";
 
 		if (!alive _x) then {
 
@@ -53,33 +53,33 @@ while {{!alive _x} count _trucks < count _trucks} do {
 
 		};
 
-		_player_count = count playableUnits;
-		_i = 0;
+		private _player_count = count playableUnits;
+		private _i = 0;
 
 		for "_i" from 0 to _player_count - 1 do {
 
-			_player = playableUnits select _i;
+			private _player = playableUnits select _i;
 
 			if (_player distance _x < 50) then {
 
-				_grp_old = group driver _x;
-				_grp_new = createGroup west; 
+				private _grp_old = group driver _x;
+				private _grp_new = createGroup west; 
 
 				units _grp_old joinSilent _grp_new;
 
-			}
+			};
 
-		}
+		};
 
 	} forEach _trucks;
 
 };
 
-_n = 0;
+private _n = 0;
 
 {
 	_n = _n + 1;
-	_name = ["smuggler_truck_task_", str _n] joinString "";
+	private _name = ["smuggler_truck_task_", str _n] joinString "";
 
 	[_name] call BIS_fnc_deleteTask;
 

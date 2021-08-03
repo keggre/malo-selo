@@ -48,7 +48,7 @@ private _count = 0;
 
 	// MAKE CIVS FLEE WHEN ONE IS KILLED
 
-	call compile ("
+	/*call compile ("
 
 		if ('" + _x + "' in serb_villages) exitWith {};
 
@@ -57,26 +57,15 @@ private _count = 0;
 		if ({!alive _x} count _var > 0) then {
 
 			{
-				
-				_car = nearestObject [_x, 'CAR'];
 
-				if (isNull driver _car && _x distance _car < 10) then {
-
-					_waypoint = group _x addWaypoint [position _car, 0];
-					
-					_waypoint setWaypointType 'GETIN';
-
-				};
-
-				group _x addWaypoint [getMarkerPos 'origin', 0];
-				_x setUnitPos 'UP';
+				group _x addWaypoint [[0,0,0], 0];
 				_x setSpeedMode 'FULL';
 				
 			} forEach _var;
 
 		};
 	
-	");
+	");*/
 	
 } forEach villages;
 

@@ -20,6 +20,7 @@ private _load_radius = missionNamespace getVariable [_name + "_load_radius", 500
 private _flag = missionNamespace getVariable [_name + "_flag", "None"];
 
 private _civs = missionNamespace getVariable [_name + "_civs", []];
+private _objects_delete = missionNamespace getVariable [_name + "_objects_delete", []];
 
 // ACTIVATE THE POI TRIGGERS
 /*{
@@ -49,8 +50,8 @@ call compile (_name + "_marker setDamage 1;");
 // SHOW VILLAGE MARKER
 _name setMarkerAlpha 1;
 
-// DELETE CIVS
-_civs spawn MALO_fnc_deleteObjects;
+// DELETE OBJECTS
+(_civs + _objects_delete) spawn MALO_fnc_deleteObjects;
 
 // IF VILLAGE WAS CAPTURED IN PREVIOUS SAVE
 if (_name in MALO_mission_progress) then {

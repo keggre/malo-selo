@@ -3,7 +3,7 @@
 if (!isServer) exitWith {};
 if (!MALO_CFG_advanced_ai) exitWith {};
 
-MALO_flee_limit = 10;
+MALO_flee_limit = 100;
 
 MALO_flee_count = 0;
 
@@ -19,7 +19,9 @@ MALO_fnc_civs_flee = {
 	_civ setVariable ["fleeing", true, true];
 	
 	private _building_types = MALO_building_types;
-	private _radius = MALO_simulation_distance;
+	private _vehicle_types = MALO_civ_vehicles;
+	private _search_radius = 500;
+	private _civ_radius = MALO_simulation_distance;
 	private _delay = random [0, 45, 60];
 	
 	private _fear = _civ getVariable ["fear", 1];
@@ -28,9 +30,9 @@ MALO_fnc_civs_flee = {
 	if (_random <= _fear) then {
 
 		_civ switchMove "";
-
+		
 		switch (round(random 2)) do {
-				
+					
 			case 0: {_civ switchMove "ApanPercMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
 			case 1: {_civ playMoveNow "ApanPknlMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
 			case 2: {_civ playMoveNow "ApanPpneMstpSnonWnonDnon_G01";_civ setSpeedMode "FULL";};
@@ -38,34 +40,49 @@ MALO_fnc_civs_flee = {
 		
 		};
 
-		private _objects = nearestObjects [_civ, _building_types, _radius];
+		if (selectRandom [true, false]) then {
 
-		private _positions = [[0,0,0]];
-		{
-			{_positions append [_x];} forEach (_x buildingPos -1);
-		} forEach _objects;
+			private _objects = nearestObjects [_civ, _building_types, _search_radius];
 
-		private _position = selectRandom _positions;
+			private _positions = [(getMarkerPos "refugee_marker")];
+			{
+				{_positions append [_x];} forEach (_x buildingPos -1);
+			} forEach _objects;
 
-		_civ doMove _position;
+			private _position = selectRandom _positions;
+
+			_civ doMove _position;
+
+		} else {
+
+			private _objects = nearestObjects [_civ, ["CAR","TRUCK"], _search_radius];
+
+			private _vehicles = [];
+			{
+				if ((isNull driver _x) && (typeof _x in _vehicle_types)) then {
+					_vehicles append [_x];
+				};
+			} forEach _objects;
+
+			if (count _vehicles > 0) then {
+				private _vehicle = selectRandom _vehicles;
+				(group _civ) addVehicle _vehicle;
+				(group _civ) addWaypoint [(getMarkerPos "refugee_marker"), 0];
+				[_civ] orderGetIn true;
+			};
+			
+			_civ doMove (getMarkerPos "refugee_marker");
+		};
 
 		MALO_flee_count = MALO_flee_count + 1;
 
-		private _distance_1 = 0;
-		while {(_distance_1 < 50) && !(MALO_flee_count > MALO_flee_limit)} do {
-			private _distance_1 = 100;
-			{
-				private _distance_2 = _x distance _civ;
-				if (_distance_1 > _distance_2) then {
-					_distance_1 = _distance_2;
-				};
-				sleep MALO_delay;
-			} forEach playableUnits;	
-		};
+		sleep 5;
+		private _animation_state = animationState _civ;
+		waitUntil {(animationState _civ != _animation_state) || (_civ distance (_civ call MALO_fnc_getNearestPlayer) > _civ_radius) || (MALO_flee_count > MALO_flee_limit)};
 
 		MALO_flee_count = MALO_flee_count - 1;
 
-		_civ switchMove "";
+		/*_civ switchMove "";*/
 	
 	};
 
@@ -161,7 +178,7 @@ MALO_fnc_civs_surrender = {
 // LOOP THROUGH NEARBY UNITS
 
 private _units = [];
-{_units append (nearestObjects [_x, ["MAN"], 50]);} forEach playableUnits;
+{_units append (nearestObjects [_x, ["MAN"], MALO_simulation_distance]);} forEach playableUnits;
 
 /*private _close_units = [];
 {_units append (nearestObjects [_x, ["MAN"], 10]);} forEach playableUnits;
@@ -193,9 +210,15 @@ private _serb_units = [];
 		publicVariable "MALO_cursor_targets";
 		remoteExec ["MALO_fnc_civs_targets", 0];
 
-		// IF A CIV ISN'T MOVING WHILE FLEEING
-		if (((speed (vehicle _x)) == 0) && _fleeing) then {
-			_x doMove (getMarkerPos "origin"); 
+		// IF A CIV ISN'T MOVING WHILE IN A VEHICLE
+		if (((speed (vehicle _x)) < 1) && (vehicle _x != _x) && !_armed && !(count waypoints _x > 1)) then {
+			_x doMove (getMarkerPos "refugee_marker");
+			(group _x) addWaypoint [(getMarkerPos "refugee_marker"), 0];
+		};
+
+		// IF A CIV IS IN A VEHICLE WITHOUt A DRIVER
+		if ((vehicle _x != _x) && (isNull (driver vehicle _x)) && !_armed) then {
+			_x moveInDriver (vehicle _x);
 		};
 		
 		// BEHAVIOR EVENTS
@@ -213,11 +236,8 @@ private _serb_units = [];
 			_x addEventHandler ["FiredNear", {
 
 				private _civ = _this select 0;
-				
 				_civ spawn MALO_fnc_civs_flee;
-
 				_civ setVariable ["willFlee", false, true];
-
 				_civ removeEventHandler ["FiredNear", _thisEventHandler];
 
 			}];
