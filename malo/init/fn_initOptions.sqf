@@ -214,11 +214,11 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 ] call cba_fnc_addSetting;
 
 [
-	"MALO_CFG_ambient_plane", 
+	"MALO_CFG_ambient_aircraft", 
 	"CHECKBOX", 
 	["Enable ambient aircraft", "Enables or disables ambient aircraft. Disable to improve performance."], 
 	"Malo Selo", 
-	MALO_CFG_ambient_plane, 
+	MALO_CFG_ambient_aircraft, 
 	1, 
 	{}, 
 	false

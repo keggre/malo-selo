@@ -7,6 +7,7 @@ private _mission_required = "novy";
 
 if (_mission_name in MALO_mission_progress) exitWith {};
 if !(_mission_required in MALO_mission_progress) exitWith {};
+if !(missionNamespace getVariable ["smuggler_trucks_destroyed", false]) exitWith {};
 
 ////
 

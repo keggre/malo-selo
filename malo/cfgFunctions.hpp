@@ -14,7 +14,7 @@ class malo
 		class ambientArty {};
 		class ambientFire {};
 		class ambientGunfire {};
-		class ambientPlane {};
+		class ambientAircraft {};
 	};
 
 	class cutscenes
