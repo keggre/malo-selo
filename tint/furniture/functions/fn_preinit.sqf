@@ -5,7 +5,6 @@ tint_frnscript_running = true;
 MALO_hide_objects = [
 	"Land_SolarPanel_1_F",
 	"Land_Pumpkin_01_F", 
-	"Land_Plank_01_4m_F", 
 	"Land_Tablet_01_F", 
 	"Land_Projector_01_F", 
 	"Land_GamingSet_01_console_F", 
