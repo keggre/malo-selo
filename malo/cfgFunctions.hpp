@@ -66,8 +66,10 @@ class malo
 	{
 		file = "malo\misc"
 		class activateTrigger {};
+		class addSupport {};
 		class append {};
 		class callFunctions {};
+		class callSupport {};
 		class capsquads {};
 		class captureVillage {};
 		class getUnitsWithinRadius {};

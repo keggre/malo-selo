@@ -63,7 +63,20 @@ if (MALO_CFG_dynamic_view_distance == true) then {
 	{[_x, true] call MALO_fnc_setViewDistance;} forEach view_distance_reducers;
 
 	// ALTITUDE MODIFIER
-	MALO_next_view_distance = MALO_next_view_distance + ((getPosASL player) select 2) * MALO_CFG_dynamic_view_distance_altitude_multiplier / 10;
+	private _asl = (getPosASL player) select 2;
+	private _atl = (getPosATL player) select 2;
+	private _talt = _asl - _atl;
+	private _avg_talt = 208.51;
+	private _taltma = _talt - _avg_talt;
+	private _mult_1 = MALO_CFG_dynamic_view_distance_altitude_multiplier / 2;
+	private _mult_2 = MALO_CFG_dynamic_view_distance_altitude_multiplier;
+	private _mod_1 = _mult_1 * _taltma;
+	private _mod_2 = _mult_2 * _atl;
+	private _modifier = _mod_1 + _mod_2;
+	MALO_next_view_distance = MALO_next_view_distance + _modifier;
+	if (MALO_next_view_distance < 100) then {
+		MALO_next_view_distance = 100;
+	};
 
 	// TARGET FPS MODIFIER
 	if (diag_fps < MALO_CFG_target_framerate) then {
@@ -75,31 +88,24 @@ if (MALO_CFG_dynamic_view_distance == true) then {
 
 	// MIN
 	if (MALO_next_view_distance < MALO_CFG_dynamic_view_distance_min) then {
-
 		MALO_next_view_distance = MALO_CFG_dynamic_view_distance_min;
-
 	};
 
 	// MAX
 	if (MALO_next_view_distance > MALO_CFG_dynamic_view_distance_max) then {
-
 		MALO_next_view_distance = MALO_CFG_dynamic_view_distance_max;
-
 	};
 
 };
 
-MALO_fog_value = (((3000 - MALO_next_view_distance) / 6000) + .05);
-MALO_ovc_value =  (((3000 - MALO_next_view_distance) / 12000) + .5);
+private _distance = if (MALO_next_view_distance < MALO_current_view_distance) then {MALO_next_view_distance} else {MALO_current_view_distance};
+MALO_fog_value = (((3000 - _distance) / 6000) + .05);
+MALO_ovc_value =  (((3000 - _distance) / 12000) + .5);
 
 if (MALO_fog_value > .5) then {
-
 	MALO_fog_value = .5;
-
 };
 
 if (MALO_ovc_value > 1) then {
-
 	MALO_ovc_value = .75;
-
 };

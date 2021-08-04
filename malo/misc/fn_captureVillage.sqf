@@ -102,9 +102,9 @@ if (_name == "pusta") then {
 	} forEach [t_enemy_3];	
 };
 
-// STARY
+// ADD PANTERI FOR STARY
 if (_name == "stary") then {
-	// nothing yet
+	[kapetan, "panteri"] call BIS_fnc_addCommMenuItem;
 };
 
 //////////////////////////////////////////////

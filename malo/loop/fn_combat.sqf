@@ -129,13 +129,14 @@ MALO_fnc_combat_getInside = {
 		private _group = group _unit;
 
 		private _aggressive = _group getVariable ["aggressive", false];
+		private _stealthy = _group getVariable ["stealthy", false];
 		private _morale = _group getVariable ["morale", 100];
 
 		if (_unit call BIS_fnc_enemyDetected) then {
 
 			if ((behaviour _unit) == "SAFE") then {
 				
-				if (_aggressive && (selectRandom [true, false])) then {
+				if (_stealthy) then {
 					_group setBehaviour "STEALTH";
 				} else {
 					_group setBehaviour "AWARE";
