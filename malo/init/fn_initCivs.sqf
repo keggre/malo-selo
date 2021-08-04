@@ -242,7 +242,17 @@ kamyshovo_civs = [
 	civ_i_4,
 	civ_i_5
 
-]; publicVariable "staroye_civs";
+]; publicVariable "kamyshovo_civs";
+
+orlovets_civs = [
+
+	civ_j_1,
+	civ_j_2,
+	civ_j_3,
+	civ_j_4,
+	civ_j_5
+
+]; publicVariable "orlovets_civs";
 
 // EXCLUDE CIVS FROM FLEEING
 /*private _exclude = shakhovka_civs;

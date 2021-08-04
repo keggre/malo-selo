@@ -4,6 +4,21 @@ if (!hasInterface) exitWith {};
 if (MALO_init == true) exitWith {};
 
 
+// HIDE OBJECTS
+
+/*private _objects_last_hidden = player getVariable ["objects_last_hidden", 0];
+if (time - _objects_last_hidden > MALO_delay * 10) then {
+	player setVariable ["objects_last_hidden", time, false];
+	private _types = MALO_hide_objects;
+	private _objects = player nearObjects ["ALL", viewDistance];
+	{
+		if ((typeOf _x) in _types) then {
+			hideObject _x;
+		};
+	} forEach _objects;
+};*/
+
+
 // PREVENTS PLAYERS FROM BEING KILLED BY FRIENDLY AI BECAUSE OF TEAMKILLING OR CIVILIAN KILLS
 
 if (MALO_CFG_allow_war_crimes == true) then {
@@ -87,3 +102,4 @@ if !(player getVariable ["killedMarkerEventCreated", false]) then {
 	}];
 
 };
+
