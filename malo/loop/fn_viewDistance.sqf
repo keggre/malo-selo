@@ -6,6 +6,8 @@ MALO_current_view_distance = (MALO_current_view_distance + (MALO_next_view_dista
 
 setViewDistance MALO_current_view_distance;
 
+private _average_alt = 208.51;
+
 view_distance_reducers = [
 
 	// VILLAGES
@@ -66,7 +68,7 @@ if (MALO_CFG_dynamic_view_distance == true) then {
 	private _asl = (getPosASL player) select 2;
 	private _atl = (getPosATL player) select 2;
 	private _talt = _asl - _atl;
-	private _avg_talt = 208.51;
+	private _avg_talt = _average_alt;
 	private _taltma = _talt - _avg_talt;
 	private _mult_1 = MALO_CFG_dynamic_view_distance_altitude_multiplier / 2;
 	private _mult_2 = MALO_CFG_dynamic_view_distance_altitude_multiplier;
@@ -99,7 +101,9 @@ if (MALO_CFG_dynamic_view_distance == true) then {
 };
 
 private _distance = if (MALO_next_view_distance < MALO_current_view_distance) then {MALO_next_view_distance} else {MALO_current_view_distance};
-MALO_fog_value = (((3000 - _distance) / 6000) + .05);
+private _atl = (getPosATL player) select 2;
+
+MALO_fog_value = (((3000 - _distance) / 6000) + (.002 * _atl) + .05);
 MALO_ovc_value =  (((3000 - _distance) / 12000) + .5);
 
 if (MALO_fog_value > .5) then {
