@@ -10,9 +10,18 @@ private _aircraft = [
 if (MALO_CFG_ambient_aircraft) then {
 	{
 		{
-			_x enableSimulationGlobal true;
-			_x hideObjectGlobal false;
+			
+			if (!simulationEnabled _x) then {
+				_x enableSimulationGlobal true;
+				_x enableDynamicSimulation false;
+			};
+
+			if (isObjectHidden _x) then {
+				_x hideObjectGlobal false;
+			};
+
 			_x setFuel 1;
+
 		} forEach [driver _x, _x];
 	} forEach _aircraft;
 } else {

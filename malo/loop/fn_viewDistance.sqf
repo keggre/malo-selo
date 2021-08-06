@@ -36,7 +36,10 @@ view_distance_reducers = [
 view_distance_increasers = [
 
 	// ARTY POSITION
-	[3000, position darty_2, 100]/*,
+	[3000, position darty_2, 500],
+
+	// CHERNO BASE TEST
+	[1000, position cherno_base_test, 500]/*,
 
 	// PEAKS
 	[(MALO_CFG_view_distance * 1.5), getMarkerPos "peak_1", 250],
@@ -102,12 +105,18 @@ if (MALO_CFG_dynamic_view_distance == true) then {
 
 private _distance = if (MALO_next_view_distance < MALO_current_view_distance) then {MALO_next_view_distance} else {MALO_current_view_distance};
 private _atl = (getPosATL player) select 2;
+private _asl = (getPosASL player) select 2;
 
 MALO_fog_value = (((3000 - _distance) / 6000) + (.002 * _atl) + .05);
 MALO_ovc_value =  (((3000 - _distance) / 12000) + .5);
 
-if (MALO_fog_value > .5) then {
-	MALO_fog_value = .5;
+private _max_fog_value = .5 + (_asl / 1000);
+if (_max_fog_value > 1) then {
+	_max_fog_value = 1;
+};
+
+if (MALO_fog_value > _max_fog_value) then {
+	MALO_fog_value = _max_fog_value;
 };
 
 if (MALO_ovc_value > 1) then {

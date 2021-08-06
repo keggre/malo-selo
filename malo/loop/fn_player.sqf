@@ -4,19 +4,15 @@ if (!hasInterface) exitWith {};
 if (MALO_init == true) exitWith {};
 
 
-// HIDE OBJECTS
+// VARIABLES
 
-/*private _objects_last_hidden = player getVariable ["objects_last_hidden", 0];
-if (time - _objects_last_hidden > MALO_delay * 10) then {
-	player setVariable ["objects_last_hidden", time, false];
-	private _types = MALO_hide_objects;
-	private _objects = player nearObjects ["ALL", viewDistance];
-	{
-		if ((typeOf _x) in _types) then {
-			hideObject _x;
-		};
-	} forEach _objects;
-};*/
+{player setVariable [_x, (missionNamespace getVariable [_x, 0]), true]} forEach [
+	"MALO_simulation_distance",
+	"MALO_current_view_distance",
+	"MALO_next_view_distance",
+	"MALO_fog_value",
+	"MALO_ovc_value"
+];
 
 
 // PREVENTS PLAYERS FROM BEING KILLED BY FRIENDLY AI BECAUSE OF TEAMKILLING OR CIVILIAN KILLS
@@ -39,6 +35,7 @@ profileNamespace setVariable ["MALO_returning_player", true];
 
 
 // CREATE EVENT HANDLERS FOR PROFILE NAMESPACE SAVING
+
 private _events = [
 	"take"
 ];
@@ -59,8 +56,8 @@ private _events = [
 
 
 // SIMULATION
+
 {_x enableSimulationGlobal true;} forEach units player_squad;
-// player triggerDynamicSimulation true;
 
 
 // MAKE DEATH MARKERS

@@ -57,9 +57,9 @@ _name setMarkerAlpha 1;
 if (_name in MALO_mission_progress) then {
 
 	// DESTROY BUILDINGS
-	if (_name != "pusta") then {
+	if (true /*_name != "pusta"*/) then {
 		call compile ("
-			[ (getMarkerPos '" + _name + "'), " + str _load_radius + ", [], 0, .5, 1.25] spawn MALO_fnc_damageWithinRadius;
+			[ (getMarkerPos '" + _name + "'), " + str _load_radius + ", MALO_building_types, 0, .5, 1.25] spawn MALO_fnc_damageWithinRadius;
 		");
 	};
 

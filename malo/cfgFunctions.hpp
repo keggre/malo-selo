@@ -91,6 +91,7 @@ class malo
 	class missions
 	{
 		file = "malo\missions"
+		class chernogorsk {};
 		class missionShootout {};
 		class missionSmugglerTrucks {};
 		class missionPoi1 {};
