@@ -2,7 +2,7 @@ class malo
 {
 	class main
 	{
-		file = "malo";
+		file = "functions\malo";
 		class main {};
 
 	};
