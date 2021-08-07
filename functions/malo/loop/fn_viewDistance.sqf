@@ -39,10 +39,15 @@ view_distance_increasers = [
 	[3000, position darty_2, 500],
 
 	// CHERNO BASE TEST
-	[1000, position cherno_base_test, 500]/*,
+	[1000, position cherno_base_test, 500],
+
+	// TRENCH BASES
+	[2000, getMarkerPos "t_install_1", 500],
+	[2000, getMarkerPos "t_install_2", 500],
+	[2000, getMarkerPos "t_install_3", 500]
 
 	// PEAKS
-	[(MALO_CFG_view_distance * 1.5), getMarkerPos "peak_1", 250],
+	/*[(MALO_CFG_view_distance * 1.5), getMarkerPos "peak_1", 250],
 	[(MALO_CFG_view_distance * 1.5), getMarkerPos "peak_2", 250],
 	[(MALO_CFG_view_distance * 1.5), getMarkerPos "peak_3", 250],
 	[(MALO_CFG_view_distance * 1.5), getMarkerPos "peak_4", 250],

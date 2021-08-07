@@ -85,6 +85,7 @@ if (_name == "novy") then {
 		{_x enableAi "ALL";} forEach _units;
 		_units spawn MALO_fnc_deleteObjects; 
 	} forEach [t_enemy_1, t_enemy_2, t_friendly_1];
+	{deleteMarker _x;} forEach ["t_install_1", "t_install_2"];
 };
 
 // UN RETREAT FOR MSTA
@@ -100,11 +101,12 @@ if (_name == "pusta") then {
 		{_x enableAi "ALL";} forEach _units;
 		_units spawn MALO_fnc_deleteObjects; 
 	} forEach [t_enemy_3];	
+	{deleteMarker _x;} forEach ["t_install_3"];
 };
 
 // ADD PANTERI FOR STARY
 if (_name == "stary") then {
-	[kapetan, "panteri"] call BIS_fnc_addCommMenuItem;
+	/*[kapetan, "panteri"] call BIS_fnc_addCommMenuItem;*/
 };
 
 //////////////////////////////////////////////

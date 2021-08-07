@@ -268,50 +268,55 @@ MALO_fnc_combat_getInside = {
 		private _unit = _x;
 		private _group = group _unit;
 
+		private _can_move = (_unit checkAIFeature "MOVE") && (_unit checkAIFeature "PATH");
 		private _behavior = behaviour _unit;
 		private _unit_pos = unitPos _unit;
 
-		switch (_behavior) do {
+		if (_can_move) then {
 
-			case "SAFE": {
+			switch (_behavior) do {
 
-				_group setFormation "FILE";
+				case "SAFE": {
 
-				if (_unit_pos == "DOWN") then {
-					_unit setUnitPos "MIDDLE";
-				} else {
+					_group setFormation "FILE";
+
+					if (_unit_pos == "DOWN") then {
+						_unit setUnitPos "MIDDLE";
+					} else {
+						_unit setUnitPos "AUTO";
+					};
+
+				};
+				
+				case "AWARE": {
+
+					_group setFormation "FILE";
+
+					if ((speed (vehicle _unit))  == 0) then {
+						_unit setUnitPos "MIDDLE";
+					} else {
+						_unit setUnitPos "UP";
+					};
+
+				};
+
+				case "COMBAT": {
+
+					_group setFormation "FILE";
 					_unit setUnitPos "AUTO";
+
 				};
 
-			};
-			
-			case "AWARE": {
+				case "STEALTH": {
 
-				_group setFormation "FILE";
+					_group setFormation "FILE";
+					_unit setUnitPos "AUTO";
 
-				if ((speed (vehicle _unit))  == 0) then {
-					_unit setUnitPos "MIDDLE";
-				} else {
-					_unit setUnitPos "UP";
 				};
 
-			};
-
-			case "COMBAT": {
-
-				_group setFormation "FILE";
-				_unit setUnitPos "AUTO";
+				default {};
 
 			};
-
-			case "STEALTH": {
-
-				_group setFormation "FILE";
-				_unit setUnitPos "AUTO";
-
-			};
-
-			default {};
 
 		};
 
