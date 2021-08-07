@@ -9,7 +9,7 @@ class malo
 
 	class ambient
 	{
-		file = "malo\ambient"
+		file = "functions\malo\ambient"
 		class ambientAnimals {};
 		class ambientArty {};
 		class ambientFire {};
@@ -19,7 +19,7 @@ class malo
 
 	class cutscenes
 	{
-		file = "malo\cutscenes"
+		file = "functions\malo\cutscenes"
 		class cutsceneAmbush {};
 		class cutsceneMortar {};
 		class cutsceneOpening {};
@@ -27,7 +27,7 @@ class malo
 
 	class init
 	{
-		file = "malo\init"
+		file = "functions\malo\init"
 		class initBuildings {};
 		class initCivs {};
 		class initLoadouts {};
@@ -41,7 +41,7 @@ class malo
 
 	class loop
 	{
-		file = "malo\loop"
+		file = "functions\malo\loop"
 		class ambient {};
 		class civs {};
 		class combat {};
@@ -64,7 +64,7 @@ class malo
 
 	class misc
 	{
-		file = "malo\misc"
+		file = "functions\malo\misc"
 		class activateTrigger {};
 		class addSupport {};
 		class append {};
@@ -90,7 +90,7 @@ class malo
 
 	class missions
 	{
-		file = "malo\missions"
+		file = "functions\malo\missions"
 		class chernogorsk {};
 		class missionShootout {};
 		class missionSmugglerTrucks {};
@@ -107,7 +107,7 @@ class malo
 
 	class save 
 	{
-		file = "malo\save"
+		file = "functions\malo\save"
 		class load {};
 		class loadProgress {};
 		class loadKeywords {};

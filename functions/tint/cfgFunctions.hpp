@@ -1,6 +1,6 @@
 class tint {
   class furniture {
-    file = "tint\furniture\functions";
+    file = "functions\tint\furniture\functions";
     class dressDown {};
     class dressUp {};
     class translate {};
