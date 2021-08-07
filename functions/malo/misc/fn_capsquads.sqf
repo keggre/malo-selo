@@ -23,13 +23,6 @@ _leader setVariable ["teleported", true, true];
 
 _leader setPos _pos; 
 
-{
+[(units group _leader), false, 1] call MALO_fnc_hideObjects;
 
-	_x enableAi 'ALL'; 
-	_x enableSimulation true;
-	_x enableDynamicSimulation true;
-
-} forEach units group _leader;
-
-group _leader enableDynamicSimulation true;
 group _leader setVariable ["aggressive", true, true];

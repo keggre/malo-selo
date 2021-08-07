@@ -31,7 +31,7 @@ MALO_animal_spawns= [];
 			[_obj, _x select 1, _x select 2] spawn BIS_fnc_animalSiteSpawn;
 
 			MALO_animal_spawns append [_obj];
-			hideObject _obj;
+			hideObjectGlobal _obj;
 
 		};
 

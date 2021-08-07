@@ -80,6 +80,7 @@ class malo
 		class disableTrigger {};
 		class getNearestPlayer {};
 		class isArmed {};
+		class hideObjects {};
 		class killWithinRadius {};
 		// class loadGroups {};
 		class loadVillage {};
