@@ -2,11 +2,9 @@
 
 if (!isServer) exitWith {false};
 
-params ["_objects", "_hide", "_preset"];
-
-if (isNil _preset) then {
-	_preset = 0;
-};
+private _objects = param [0];
+private _hide = param [1];
+private _preset = param [2,0];
 
 private _vals = (switch (_preset) do {
 	case 1: {[true, true, false]};		// CAPSQUADS
@@ -19,7 +17,7 @@ _vals params ["_dynamic_simulation", "_enable_ai", "_vehicle_respawn"];
 {
 	private _vehicle = vehicle _x;
 	private _group = group _vehicle;
-	private _hiddden = _vehicle getVariable ["hidden", !_condition];
+	private _hidden = _vehicle getVariable ["hidden", !_hide];
 	if (_hidden != _hide) then {
 		_vehicle hideObjectGlobal !_hidden;
 		_vehicle enableSimulationGlobal _hidden;
