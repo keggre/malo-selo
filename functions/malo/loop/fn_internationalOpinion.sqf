@@ -18,7 +18,7 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 			private _crew = createVehicleCrew _plane;
 			_crew addWaypoint [(getMarkerPos "shakhovka"), 3000];
 			{_plane reveal _x;} forEach units east;
-			sleep (random [450, 600, 750]);
+			sleep (random [600, 900, 1200]);
 			_crew addWaypoint [[10000, 10000, 600], 0];
 			private _group = createGroup independent;
 			(units _crew) joinSilent _group;

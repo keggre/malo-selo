@@ -53,22 +53,26 @@ while {{!alive _x} count _trucks < count _trucks} do {
 
 		};
 
-		private _player_count = count playableUnits;
-		private _i = 0;
+		if (!isPlayer driver _x) then {
 
-		for "_i" from 0 to _player_count - 1 do {
+			private _player_count = count playableUnits;
+			private _i = 0;
 
-			private _player = playableUnits select _i;
+			for "_i" from 0 to _player_count - 1 do {
 
-			if (_player distance _x < 50) then {
+				private _player = playableUnits select _i;
+				
+				if (_player distance _x < 50) then {
 
-				private _grp_old = group driver _x;
-				private _grp_new = createGroup west; 
+					private _grp_old = group driver _x;
+					private _grp_new = createGroup west; 
 
-				units _grp_old joinSilent _grp_new;
+					units _grp_old joinSilent _grp_new;
+
+				};
 
 			};
-
+		
 		};
 
 	} forEach _trucks;
