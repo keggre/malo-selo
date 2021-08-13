@@ -10,7 +10,7 @@ MALO_tips = [
 	["progress_loaded", "Mission progress loaded.", true],
 
 	// GAMEPLAY TIPS
-	["log", 'A log of the mission hints can be found by pressing "m" and clicking "briefing -> hints" in the top left corner of the screen.', false],
+	["log", 'A log of the mission hints can be found by pressing "m" and clicking "briefing" -> "hints" in the top left corner of the screen.', false],
 	["inventory", "Inventory items except for weapons and ammunition persist through respawns. Clothing items such as uniforms, vests or backpacks only need to be picked up once.", false],
 	["low_fps", 'You can adjust settings to improve performance in the pause menu under "Configuration -> Addon Options -> Malo Selo"', false],
 	["stealth", "Enemies are less likely to detect you when wearing civilian clothes or driving civilian vehicles. Keep a low profile to avoid being spotted entirely.", false],

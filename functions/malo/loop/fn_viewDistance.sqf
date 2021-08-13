@@ -2,6 +2,34 @@
 
 if (!hasInterface) exitWith {if (MALO_CFG_dynamic_view_distance == true) then {setViewDistance MALO_CFG_dynamic_view_distance_max;} else {setViewDistance MALO_CFG_view_distance;};};
 
+MALO_fnc_viewDistance_modifier = {
+
+	params ["_modifier", "_is_reducer"];
+
+	_distance = (_modifier select 0);
+	_position = (_modifier select 1);
+	_radius = (_modifier select 2);
+
+	if (player distance _position < _radius) then {
+
+		if (_is_reducer == true && MALO_next_view_distance > _distance) then {
+		
+			MALO_next_view_distance = _distance;
+
+		} else {
+
+			if (MALO_next_view_distance < _distance) then {
+
+				MALO_next_view_distance = _distance;
+
+			};
+
+		};
+
+	};
+
+};
+
 MALO_current_view_distance = (MALO_current_view_distance + (MALO_next_view_distance - MALO_current_view_distance) * MALO_tick / (MALO_CFG_dynamic_view_distance_smoothing /** 5*/));
 
 setViewDistance MALO_current_view_distance;
@@ -70,7 +98,7 @@ MALO_next_view_distance = MALO_CFG_view_distance;
 if (MALO_CFG_dynamic_view_distance == true) then {
 
 	// REDUCERS
-	{[_x, true] call MALO_fnc_setViewDistance;} forEach view_distance_reducers;
+	{[_x, true] call MALO_fnc_viewDistance_modifier;} forEach view_distance_reducers;
 
 	// ALTITUDE MODIFIER
 	private _asl = (getPosASL player) select 2;
@@ -94,7 +122,7 @@ if (MALO_CFG_dynamic_view_distance == true) then {
 	};
 
 	// INCREASERS
-	{[_x, false] call MALO_fnc_setViewDistance;} forEach view_distance_increasers;
+	{[_x, false] call MALO_fnc_viewDistance_modifier;} forEach view_distance_increasers;
 
 	// MIN
 	if (MALO_next_view_distance < MALO_CFG_dynamic_view_distance_min) then {

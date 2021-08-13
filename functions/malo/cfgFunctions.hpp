@@ -86,7 +86,6 @@ class malo
 		class loadVillage {};
 		class noPlayersNearby {};
 		// class saveGroups {};
-		class setViewDistance {};
 	};
 
 	class missions
