@@ -2,93 +2,148 @@
 
 if (!isServer) exitWith {};
 
-private _delay_1 = MALO_delay * 2; 						// DELAY FOR THE SERVER SCRIPT
-private _delay_2 = 1; 									// DELAY FOR THE LOCAL SCRIPTS
+private _delay_main = MALO_delay * 10; 					// DELAY FOR THE MAIN SCRIPT
+private _delay_spawned = 1; 							// DELAY FOR THE SPAWNED SCRIPTS
 private _radius = 3000;									// MAXIMUM RADIUS FROM ANY PLAYER IN WHICH FIRES WILL BE STARTED
 private _thresh = .5;									// DAMAGE THRESHOLD TO START THE FIRE
 private _step = (.1 / 60);								// HOW MUCH THE BUILDING DAMAGE IS AFFECTED EACH ITERATION OF THE LOCAL SCRIPT
 private _spread = 50;									// MAXIMUM SPREAD DISTANCE IN METERS
-private _limit = 10;									// MAXIMUM AMOUNT OF FIRES THAT CAN BE ACTIVE AT ANY GIVEN TIME
+private _limit = 20;									// MAXIMUM AMOUNT OF FIRES THAT CAN BE ACTIVE AT ANY GIVEN TIME
 private _types = MALO_building_types;					// BUILDING TYPES TO CATCH FIRE
 
-MALO_ambient_fire_buildings = [];						// LEAVE EMPTY
+MALO_fire_count = 0;									// DON'T CHANGE
 
-MALO_fnc_ambientFire_global = {
+MALO_fnc_ambientFire_spawned = {
 
-	params ["_object", "_step", "_types", "_spread", "_delay"];
+	params ["_object", "_delay", "_radius", "_step", "_spread", "_limit", "_types"];
 
-	// FIRE VARIABLE NAMES
-	private _vars = [
-		"ColorRed",
-		"ColorGreen",
-		"ColorBlue",
-		"Timeout",
-		"ParticleLifeTime",
-		"ParticleDensity",
-		"ParticleSize",
-		"ParticleSpeed",
-		"EffectSize",
-		"ParticleOrientation",
-		"FireDamage",
-		"BIS_fnc_initModules_disableAutoActivation"
-	];
-
-	// FIRE VARIABLE VALUES
-	private _vals = [
-		.5,
-		.5,
-		.5,
-		0,
-		3,
-		20,
-		7.5,
-		1,
-		((sizeOf (typeOf _object)) * (2/3)),
-		5.4,
-		((sizeOf (typeOf _object)) * (1/4)),
-		false
-	];
-
-	// ASSEMBLE STRING TO SET MODULE PARAMS
-	private _string = "";
-	private _i = 0;
-	for "_i" from 0 to count _vars - 1 do {
-		private _var = _vars select _i;
-		private _val = _vals select _i;
-		_string = _string + ("this setVariable ['" + _var + "', " + str _val + ", true]; ");
-	};
-
-	// CREATE THE FIRE AND SMOKE
+	private _size = sizeOf (typeOf _object);
+	private _position = position _object;
 	private _group = createGroup sideLogic;
-	{
-		if (_x == "ModuleEffectsSmoke_F") then {
-			_vals set [4, 50];
-			_vals set [7, 1];
+
+	private _fire_init = [
+		[
+			"ColorRed",
+			"ColorGreen",
+			"ColorBlue",
+			"Timeout",
+			"ParticleLifeTime",
+			"ParticleDensity",
+			"ParticleSize",
+			"ParticleSpeed",
+			"EffectSize",
+			"ParticleOrientation",
+			"FireDamage",
+			"BIS_fnc_initModules_disableAutoActivation"
+		], 
+		[
+			.5,
+			.5,
+			.5,
+			0,
+			3,
+			20,
+			7.5,
+			1,
+			(_size * (2/3)),
+			5.4,
+			(_size * (1/4)),
+			false
+		]
+	] call MALO_fnc_assembleModuleInit;
+
+	private _smoke_init = [
+		[
+			"ColorRed",
+			"ColorGreen",
+			"ColorBlue",
+			"Timeout",
+			"ParticleLifeTime",
+			"ParticleDensity",
+			"ParticleSize",
+			"ParticleSpeed",
+			"EffectSize",
+			"ParticleOrientation",
+			"FireDamage",
+			"BIS_fnc_initModules_disableAutoActivation"
+		], 
+		[
+			.5,
+			.5,
+			.5,
+			0,
+			3,
+			20,
+			7.5,
+			1,
+			(_size * (2/3)),
+			5.4,
+			(_size * (1/4)),
+			false
+		]
+	] call MALO_fnc_assembleModuleInit;
+
+	MALO_fire_count = MALO_fire_count + 1;
+
+	while {true} do {
+
+		sleep _delay;
+
+		private _damage = damage _object;
+
+		// BREAK IF CONDITIONS MET
+		if (
+			(
+				!alive _object
+			) || (
+				_object distance (
+					_object call MALO_fnc_getNearestPlayer
+				) > _radius
+			) || (
+				MALO_fire_count > _limit;
+			)
+		) exitWith {};
+
+		// CREATE THE FIRE AND SMOKE
+		private _effects_created = _object getVariable ["MALO_fire_effects_created", false];
+		if (!_effects_created) then {
+			{
+				private _type = _x select 0;
+				private _init = _x select 1;
+				_type createUnit [
+					_position,
+					_group,
+					_init
+				];
+			} forEach [
+				["ModuleEffectsFire_F", _fire_init], 
+				["ModuleEffectsSmoke_F", _smoke_init]
+			];
+			_object setVariable ["MALO_fire_effects_created", true, true];
 		};
-		
-		_x createUnit [
-			position _object,
-			_group,
-			_string
-		];
-	} forEach ["ModuleEffectsFire_F", "ModuleEffectsSmoke_F"];
-	private _fire = nearestObject [position _object, "ModuleEffectsFire_F"];
-	private _smoke = nearestObject [position _object, "ModuleEffectsSmoke_F"];
-
-	while {(_object in MALO_ambient_fire_buildings) && (alive _object)} do {
-
-		// DAMAGE THE BUILDING OVER TIME AND EXIT IF IT'S DESTROYED
-		_object setDamage ((damage _object) + _step);
-		if (damage _object >= 1) exitWith {};
+		private _fire = nearestObject [_position, "ModuleEffectsFire_F"];
+		private _smoke = nearestObject [_position, "ModuleEffectsSmoke_F"];
+	
+		// DAMAGE THE BUILDING
+		_object setDamage (_damage + _step);
 
 		// DAMAGE NEARBY BUILDINGS
 		{
-			_x setDamage (damage _x + (_step * ((_spread - (_x distance _object)) / _spread) * ((damage _object) / 1)));
-
+			_x setDamage (
+				(
+					damage _x
+				) + (
+					_step * (
+						(_spread - (_x distance _object)) / 
+						_spread
+					) * (
+						(damage _object) / 
+						1
+					)
+				)
+			);
 		} forEach (nearestObjects [_object, _types, _spread]);
-		
-		sleep _delay;
-
+	
 	};
 
 	// REMOVE THE FIRE AND SMOKE
@@ -102,126 +157,7 @@ MALO_fnc_ambientFire_global = {
 		];
 	} forEach [_fire, _smoke];
 
-}; publicVariable "MALO_fnc_ambientFire_global";
-
-while {MALO_CFG_ambient_fire} do {
-
-	MALO_ambient_fire_building_distances = [];
-	
-
-	// MAKE AN ARRAY THAT STORES ALL THE DISTANCES FROM THE BUILDINGS TO THE NEAREST PLAYER
-
-	{
-
-		private _y = _x;
-
-		private _distance_1 = _radius + 1;
-		
-		{
-
-			private _distance_2 = _x distance _y;
-
-			if (_distance_1 > _distance_2) then {
-
-				_distance_1 = _distance_2;
-
-			};
-
-		} forEach playableUnits;
-
-		MALO_ambient_fire_building_distances append [_distance_1];
-
-	} forEach MALO_ambient_fire_buildings;
-	
-
-	// FIND ANY BUILDINGS THAT ARE TOO FAR AWAY FROM THE NEAREST PLAYER AND REMOVE THEM FROM THE ARRAYS
-
-	{
-
-		if (_x > _radius) then {
-
-			private _spot = MALO_ambient_fire_building_distances find _x;
-
-			MALO_ambient_fire_buildings deleteAt _spot;
-			MALO_ambient_fire_building_distances deleteAt _spot;
-
-		};
-
-	} forEach MALO_ambient_fire_building_distances;
-
-
-	// FIND ANY BUILDINGS THAT ARE ALREADY DESTOYED AND REMOVE THEM FROM THE ARRAYS
-
-	{
-
-		if (damage _x >= 1) then {
-
-			private _spot = MALO_ambient_fire_buildings find _x;
-
-			MALO_ambient_fire_buildings deleteAt _spot;
-			MALO_ambient_fire_building_distances deleteAt _spot;
-
-		};
-
-	} forEach MALO_ambient_fire_buildings;
-
-
-	// ADD A BUILDING TO THE ARRAY ACCORDING TO VARIOUS CONDITIONS
-
-	{
-		
-		private _y = _x;
-
-		{
-
-			// THE DAMAGE MUST BE ABOVE THE THRESHOLD AND CANNOT BE GREATER THAN OR EQUAL TO 1
-			if (damage _x < _thresh || damage _x >= 1) exitWith {};
-
-			// THE BUILDING IS NOT FOUND IN THE ARRAY
-			if !(_x in MALO_ambient_fire_buildings) then {
-
-				private _condition = true;
-
-				// THE FIRE LIMIT HAS BEEN REACHED
-				if (count MALO_ambient_fire_buildings >= _limit) then {
-
-					private _distance_1 = _x distance _y;
-					private _distance_2 = selectMin MALO_ambient_fire_building_distances;
-					private _spot = MALO_ambient_fire_building_distances find _distance_2;
-					
-					// THE BUILDING BEING ADDED IS CLOSER TO THE NEAREST PLAYER THAN THE BUILDING ON THE ARRAY THAT IS FURTHEST FROM THE NEAREST PLAYER
-					if (_distance_1 < _distance_2) then {
-
-						MALO_ambient_fire_buildings deleteAt _spot;
-						MALO_ambient_fire_building_distances deleteAt _spot;
-
-					} else {
-
-						_condition = false;
-
-					};
-					
-				};
-
-				// IF EVERYTHING SEEMS RIGHT THE BUILDING WILL BE ADDED AND A SCRIPT SPAWNED
-				if (_condition) then {
-					MALO_ambient_fire_buildings append [_x];
-					MALO_ambient_fire_building_distances append [0];
-					[_x, _step, _types, _spread, _delay_2] remoteExec ["MALO_fnc_ambientFire_global", 0]; 
-				};
-				
-			};
-
-		} forEach (nearestObjects [_y, _types, _radius]);
-
-	} forEach playableUnits;
-	
-	// BROADCASTED TO CLIENTS
-	publicVariable "MALO_ambient_fire_buildings";
-
-	sleep _delay_1;
+	MALO_fire_count = MALO_fire_count - 1;
 
 };
 
-// RUNS WHEN THE SETTING IS DISABLED IN THE CONFIG
-MALO_ambient_fire_buildings = [];
