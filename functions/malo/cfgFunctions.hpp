@@ -68,6 +68,7 @@ class malo
 		class activateTrigger {};
 		class addSupport {};
 		class append {};
+		class assembleModuleInit {};
 		class callFunctions {};
 		class callSupport {};
 		class capsquads {};
