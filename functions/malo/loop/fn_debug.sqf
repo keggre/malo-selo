@@ -45,3 +45,9 @@ if (!hasInterface) exitWith {};
 // hint str (player getVariable ["cooldown", "none"]);
 
 // hint str diag_activeScripts;
+
+/*[] spawn {{
+	if ((typeOf _x) in MALO_building_types) then {
+		deleteVehicle _x;
+	};
+} forEach allMissionObjects "ALL";}*/

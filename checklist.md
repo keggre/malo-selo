@@ -1,7 +1,7 @@
 # villages
 * load trigger
 * capture trigger
-* buildings
+* buildings (check if in building list)
 * vehicles
 * civs (initCivs)
 * animals
