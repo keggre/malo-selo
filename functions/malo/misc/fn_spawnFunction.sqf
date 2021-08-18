@@ -6,10 +6,10 @@ params ["_prefix", "_category"];
 
 private _configs = "true" configClasses (missionconfigFile >> "CfgFunctions" >> _prefix >> _category);
 private _scripts = []; {_scripts append [(configname _x)];} forEach _configs;
-private _condition = missionNamespace getVariable [(_prefix + "_" + _category + "_functions_loaded"), false];
-private _index = missionNamespace getVariable [(_prefix + "_" + _category + "_function_index"), false];
+private _condition = (missionNamespace getVariable [(_prefix + "_" + _category + "_functions_loaded"), false]);
+private _index = (missionNamespace getVariable [(_prefix + "_" + _category + "_function_index"), 0]);
 
-if {_condition} then {
+if (_condition) then {
 	private _script = _scripts select _index;
 	call compile ("
 		if (scriptDone fn_" + _script + ") then {

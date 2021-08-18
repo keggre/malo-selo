@@ -35,7 +35,7 @@ if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith {
 
 };
 
-hintSilent "Loading mission progress...";
+// hintSilent "Loading mission progress...";
 
 
 // LOAD INVENTORY
@@ -57,23 +57,17 @@ call MALO_fnc_loadKeywords;
 private _current = 0;
 private _count = count MALO_mission_progress;
 
+["MALO_load_mission_progress", "Loading mission progress..."] call BIS_fnc_startLoadingScreen;
 {
-
 	_current = _current + 1;
-
 	try {
-
 		call compile ("key_" + _x + " = [] call MALO_KEY_" + _x + ";");
-
 	} catch {
-
 		hintSilent (composeText ['FAILED TO LOAD: "' + _x + '"', 'EXCEPTION: "' + _exception + '"', 'Skipping.']);
-
 	};
-
 	progressLoadingScreen (_current / _count);
-	
 } forEach MALO_mission_progress;
+"MALO_load_mission_progress" call BIS_fnc_endLoadingScreen;
 
 
 // DISABLE DYNAMIC SIMULATION MOMENTARILY
