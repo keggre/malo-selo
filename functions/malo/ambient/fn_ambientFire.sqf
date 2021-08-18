@@ -18,12 +18,15 @@ MALO_fnc_ambientFire_spawned = {
 	params ["_object", "_delay", "_radius", "_step", "_spread", "_limit", "_types"];
 
 	private _size = sizeOf (typeOf _object);
+	
 	private _position = [
 		(((position _object) select 0) + ((boundingCenter _object) select 0)),
 		(((position _object) select 1) + ((boundingCenter _object) select 1)),
 		(((position _object) select 2) + ((boundingCenter _object) select 2) + ((2/3) * (((boundingBox _object) select 1) select 2)))
 	];
+
 	private _group = createGroup sideLogic;
+	_group deleteGroupWhenEmpty true;
 
 	private _fire_init = [
 		["ColorRed", .5],
