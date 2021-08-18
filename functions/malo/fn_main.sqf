@@ -54,7 +54,6 @@ while {true} do {
 
 	// FUNCTIONS
 	["MALO", "loop"] call MALO_fnc_callFunctions;
-	{["MALO", _x] call MALO_fnc_spawnFunction;} forEach ["ambient", "missions"];
 	call MALO_fnc_save;
 
 	// DELAY

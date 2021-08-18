@@ -1,6 +1,6 @@
 // SPAWNS A FUNCTION OF A GIVEN PREFIX AND CATEGORY
 
-if (!isServer) exitWith {};
+if (false) exitWith {};
 
 params ["_prefix", "_category"];
 
