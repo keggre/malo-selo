@@ -87,6 +87,7 @@ class malo
 		class loadVillage {};
 		class noPlayersNearby {};
 		// class saveGroups {};
+		class spawnFunction {};
 	};
 
 	class missions

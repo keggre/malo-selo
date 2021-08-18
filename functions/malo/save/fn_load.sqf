@@ -21,7 +21,7 @@ if (isServer) then {
 
 if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith { 
 
-	private _fn = {
+	[] spawn {
 
 		waitUntil {MALO_init == false};
 		
@@ -32,8 +32,6 @@ if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith {
 		};
 
 	};
-
-	[] spawn _fn;
 
 };
 
@@ -65,7 +63,7 @@ private _count = count MALO_mission_progress;
 
 	try {
 
-		call compile ("key_" + _x + " = [] spawn MALO_KEY_" + _x + ";");
+		call compile ("key_" + _x + " = [] call MALO_KEY_" + _x + ";");
 
 	} catch {
 

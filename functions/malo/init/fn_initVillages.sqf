@@ -102,7 +102,7 @@ village_fullnames = [
 
 // CREATE [VILLAGE]_POIS LIST FOR EACH VILLAGE
 
-private _fnc = {
+[] spawn {
 
 	waitUntil {(count (missionNamespace getVariable ["poi_villages", []])) > 0};
 	
@@ -130,8 +130,6 @@ private _fnc = {
 	} foreach villages;
 
 };
-
-[] spawn _fnc;
 
 
 // CREATE [VILLAGE]_CAPSQUAD_NUMS FOR EACH VILLAGE

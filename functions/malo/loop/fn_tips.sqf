@@ -26,21 +26,13 @@ MALO_tips = [
 ];
 
 if !(missionNamespace getVariable ["MALO_tips_loaded", false]) then {
-
 	player addEventHandler ["take", {
-
 		MALO_TIP_inventory = true;
-		
 		(_this select 0) removeEventHandler ["take", _thisEventHandler];
-
 	}];
-
 };
 
-private _fnc = {
-
-	waitUntil {!MALO_init};
-	sleep 5;
+if (time - 5 > MALO_init_time) then {
 
 	MALO_TIP_log = true;
 
@@ -56,13 +48,9 @@ private _fnc = {
 		MALO_TIP_international_opinion = true;
 	};
 
-};
-
-[] spawn _fnc;
-
-if (((vehicle player) != player) && (damage (vehicle player) > .2)) then {
-
-	MALO_TIP_repair = true;
+	if (((vehicle player) != player) && (damage (vehicle player) > .2)) then {
+		MALO_TIP_repair = true;
+	};
 
 };
 
@@ -156,11 +144,10 @@ if (_condition_1 && _condition_2 && _condition_3) then {
 
 		// BLOCK OTHER TIPS FROM SHOWING UNTIL 30 SECONDS HAVE PASSED
 		MALO_show_tip = false;
-		private _fnc = {
+		[] spawn {
 			uisleep 30;
 			MALO_show_tip = true;
 		};
-		[] spawn _fnc;
 
 	};
 
