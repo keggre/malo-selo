@@ -109,6 +109,24 @@ if (_name == "stary") then {
 	/*[kapetan, "panteri"] call BIS_fnc_addCommMenuItem;*/
 };
 
+// ELEKTROZAVODSK RETREAT
+if (_name == "elektrozavodsk") then {
+	{
+		private _num = _x;
+		private _group = missionNamespace getVariable [("e_squad_obj_" + (str _num)), grpNull];
+		{
+			private _unit = _x;
+			_unit setSkill .2;
+		} forEach units _group;
+	} forEach [1,2,3,4,5,6,7];
+	{
+		private _turret = _x
+		_turret setVehicleAmmo 0;
+	} forEach [e_turret_1, e_turret_2];
+	mortar_2_op setDamage 1;
+	[6] spawn MALO_fnc_deleteUnCheckpoints;
+};
+
 //////////////////////////////////////////////
 
 // ADD TO MISSION PROGRESS
