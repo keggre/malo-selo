@@ -120,7 +120,7 @@ if (_name == "elektrozavodsk") then {
 		} forEach units _group;
 	} forEach [1,2,3,4,5,6,7];
 	{
-		private _turret = _x
+		private _turret = _x;
 		_turret setVehicleAmmo 0;
 	} forEach [e_turret_1, e_turret_2];
 	mortar_2_op setDamage 1;

@@ -153,6 +153,7 @@ while {MALO_CFG_ambient_fire} do {
 			private _damage = damage _object;
 			if (
 				!(_object getVariable ["MALO_ambient_fire_active", false]) &&
+				!(_object getVariable ["MALO_ambient_fire_disabled", false]) &&
 				(_damage >= _thresh) &&
 				(alive _object) &&
 				(simulationEnabled _object)
