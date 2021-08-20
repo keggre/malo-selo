@@ -103,7 +103,7 @@ MALO_fnc_combat_getInside = {
 					waitUntil {!(_this isEqualTo objNull) || !(alive _this) || !(_this getVariable ["surrender", false])};
 					sleep 5;
 					removeAllWeapons _this;
-					while {!(_this isEqualTo objNull) || !(alive _this)} do {
+					while {!(_this isEqualTo objNull) && (alive _this)} do {
 						_this switchmove "boundCaptive_loop";
 						sleep MALO_delay;
 					};
@@ -231,6 +231,7 @@ MALO_fnc_combat_getInside = {
 						case "close": {
 							if (_morale < 20) then {
 								_group setCombatMode "BLUE";
+								_unit enableAi "ALL";
 							} else {
 								_group setCombatMode "RED";
 							};

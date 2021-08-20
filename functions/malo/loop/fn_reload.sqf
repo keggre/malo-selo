@@ -2,15 +2,10 @@
 
 if (!isServer) exitWith {};
 
-arty_1 setVehicleAmmo 1;
+/* ["MALO_infinite_ammo", this] call MALO_fnc_append; */
 
-mortar_1 setVehicleAmmo 1;
-mortar_2 setVehicleAmmo 1;
-mortar_3 setVehicleAmmo 1;
+private _vehicles = missionNamespace getVariable ["MALO_infinite_ammo", []];
 
-aa_1 setVehicleAmmo 1;
-aa_2 setVehicleAmmo 1;
-
-darty_1 setVehicleAmmo 1;
-darty_2 setVehicleAmmo 1;
-darty_3 setVehicleAmmo 1;
+{
+	_x setVehicleAmmo 1;
+} forEach _vehicles;

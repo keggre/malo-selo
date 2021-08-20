@@ -225,6 +225,17 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 ] call cba_fnc_addSetting;
 
 [
+	"MALO_CFG_ambient_sounds", 
+	"CHECKBOX", 
+	["Enable ambient sounds", "Enables or disables ambient sounds. Disable to improve performance."], 
+	"Malo Selo", 
+	MALO_CFG_ambient_sounds, 
+	1, 
+	{}, 
+	false
+] call cba_fnc_addSetting;
+
+[
 	"MALO_CFG_allow_war_crimes", 
 	"CHECKBOX", 
 	["Allow war crimes", "When enabled, players will not be executed by friendly ai units for killing teammates or civilians."], 

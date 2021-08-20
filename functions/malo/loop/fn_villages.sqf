@@ -8,17 +8,18 @@ private _count = 0;
 
 	// SET MARKER COLOR AND COUNT CAPTURED VILLAGES
 
-	private _serb = call compile (_x + "_serb");
+	private _serb = missionNamespace getVariable [(_x + "_serb"), false];
+	private _un = missionNamespace getVariable [(_x + "_un"), false];
 
-	if (_serb == true) then {
-
-		_x setMarkerType "o_hq"; 
-
+	if (_serb) then {
+		_x setMarkerType "malo_srpskaSquareFlag";
 	} else {
-
-		_x setMarkerType "b_hq"; 
+		if (_un) then {
+			_x setMarkerType "malo_unSquareFlag";
+		} else {
+			_x setMarkerType "malo_bosniaSquareFlag"; 
+		};
 		_count = _count + 1;
-
 	};
 
 
@@ -121,11 +122,11 @@ if (_exists == true) then {
 // SHOW MARKER
 
 {
-
-	if (missionNamespace getVariable [(_x + "_discovered"), false]) then {
-
-		_x setMarkerAlpha 1;
-
+	if (markerAlpha _x > 0) then {
+		missionNamespace setVariable [(_x + "_discovered"), true, true];
 	};
-
+	
+	if (missionNamespace getVariable [(_x + "_discovered"), false]) then {
+		_x setMarkerAlpha 1;
+	};
 } forEach villages;

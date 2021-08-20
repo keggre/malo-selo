@@ -48,7 +48,7 @@ call compile (_name + "_marker setDamage 1;");
 [_name] call MALO_fnc_createRespawn;
 
 // SHOW VILLAGE MARKER
-_name setMarkerAlpha 1;
+_name setMarkerAlpha .5;
 
 // DELETE OBJECTS
 (_civs + _objects_delete) spawn MALO_fnc_deleteObjects;

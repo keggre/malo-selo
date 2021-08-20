@@ -19,7 +19,7 @@ MALO_tips = [
 	["international_opinion", "When players in your squad commit war crimes, the international opinion of the Serbs is lowered. If the international opinion falls below a certain level, NATO could pursue direct intervention in the conflict.", false],
 
 	// MISSION OR VILLAGE SPECIFIC
-	["guglovo", "Bosnian villages that have been discovered by your team will appear as blue flags on the map. All of these must be captured in order to complete the scenario.", false],
+	["guglovo", "Bosnian villages that have been discovered by your team will appear as Bosnian flag icons on the map. All of these must be captured in order to complete the scenario.", false],
 	["msta", "Msta is a village protected by the UNPROFOR, attacking the village will likely provoke NATO retaliation", false],
 	["tank_delivered", "Pusta has been set up as an operations base for attacking the Bosnian stronghold of Electrozavodsk. Here you can find various types of hardware to help in the attack", false]
 
@@ -32,7 +32,7 @@ if !(missionNamespace getVariable ["MALO_tips_loaded", false]) then {
 	}];
 };
 
-if (time - 5 > MALO_init_time) then {
+if (time - 5 > (missionNamespace getVariable ["MALO_init_time", 600])) then {
 
 	MALO_TIP_log = true;
 

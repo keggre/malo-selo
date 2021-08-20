@@ -2,8 +2,9 @@
 Arma mission set in the Bosnian war. Open-world campaign-style co-op mission.
 
 # Installation
-* Create a folder named "malo_selo.Woodland_ACR" in the directory "Documents\Arma 3\mpmissions\".
-* Place the repository contents in this folder and drag the preset.html into the Arma 3 launcher mods section. 
+* Create a folder named "malo_selo.Woodland_ACR" in the directory "Documents\Arma 3\mpmissions\" and place the repository contents in this folder.
+* Open the Arma 3 launcher and click "local mod" then add "Documents\Arma 3\mpmissions\malo_selo.Woodland_ACR\@malo_selo\" as a local mod.
+* Drag the preset.html into the Arma 3 launcher mods section. Ensure it includes the local mod.
 * Run the mission from a LAN or internet session (dedicated server not guaranteed to function properly)
 
 # Performance

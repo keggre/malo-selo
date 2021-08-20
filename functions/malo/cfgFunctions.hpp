@@ -15,6 +15,7 @@ class malo
 		class ambientFire {};
 		class ambientGunfire {};
 		class ambientAircraft {};
+		class ambientSounds {};
 	};
 
 	class cutscenes

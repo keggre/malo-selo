@@ -33,6 +33,8 @@ serb_villages = [
 	"staroye"
 ];
 
+msta_un = true;
+
 village_capsquad_nums = [
 
 	/*chernogorsk*/			[],
