@@ -3,7 +3,6 @@
 if (false) exitWith {};
 
 
-
 // GET THE SAVED MISSION PROGRESS IF EXISTS
 
 MALO_saved_mission_progress = profileNamespace getVariable ["MALO_saved_mission_progress", "None"];
@@ -51,6 +50,10 @@ if ((MALO_saved_mission_progress isEqualTo "None") == false && MALO_CFG_overwrit
 };
 
 if (MALO_overwrite_detected == true) exitWith {hintSilent "SAVING ERROR: overwrite not allowed! Change the setting in the config."};
+
+// SAVE VARIABLES
+
+call MALO_fnc_saveVariables;
 
 
 // SAVE TO THE PROFILE NAMESPACE

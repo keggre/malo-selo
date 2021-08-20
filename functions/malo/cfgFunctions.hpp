@@ -115,7 +115,9 @@ class malo
 		class load {};
 		class loadProgress {};
 		class loadKeywords {};
+		class loadVariables;
 		class save {};
 		class saveKeyword {};
+		class saveVariables;
 	};
 };

@@ -35,7 +35,14 @@ if (count MALO_mission_progress < 1 || MALO_CFG_loading == false) exitWith {
 
 };
 
+
 // hintSilent "Loading mission progress...";
+
+
+// LOAD VARIABLES
+if (isServer) then {
+	[] spawn MALO_fnc_loadVariables;
+};
 
 
 // LOAD INVENTORY
