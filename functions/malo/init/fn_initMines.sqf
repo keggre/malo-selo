@@ -4,6 +4,8 @@ if (!isServer) exitWith {};
 
 MALO_fnc_initMines_spawned = {
 
+	if (!isServer) exitWith {};
+
 	private _minefield = _this;
 
 	private _density = (1/100);
