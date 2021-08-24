@@ -8,11 +8,11 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=19213;
+		nextID=19215;
 	};
 	class MarkerIDProvider
 	{
-		nextID=79;
+		nextID=81;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4196.3638,354.39249,5293.2344};
-		dir[]={-0.42097515,-0.53787261,-0.73042053};
-		up[]={-0.26859286,0.8430171,-0.46602553};
-		aside[]={-0.86641842,-8.2887709e-008,0.49935764};
+		pos[]={5009.0239,189.95232,1311.8794};
+		dir[]={-0.76182216,-0.56856471,-0.31042129};
+		up[]={-0.52653158,0.82263851,-0.21454692};
+		aside[]={-0.3773483,0,0.92607152};
 	};
 };
 binarizationWanted=0;
@@ -1386,9 +1386,9 @@ randomSeed=15011716;
 class ScenarioData
 {
 	author="keg";
-	overViewPicture="images\icon.jpg";
-	overViewPictureLocked="images\icon.jpg";
-	loadScreen="images\icon.jpg";
+	overViewPicture="images\overview.jpg";
+	overViewPictureLocked="images\overview.jpg";
+	loadScreen="images\loading.jpg";
 	debriefing=0;
 	saving=0;
 	forceRotorLibSimulation=1;
@@ -1412,63 +1412,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="ReviveRequiredItems";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=2;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="ReviveBleedOutDelay";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=300;
-				};
-			};
-		};
-		class Attribute2
-		{
-			property="ReviveRequiredTrait";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute3
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -1532,7 +1475,26 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute4
+		class Attribute1
+		{
+			property="ReviveRequiredTrait";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute2
 		{
 			property="ReviveMode";
 			expression="false";
@@ -1551,7 +1513,26 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute5
+		class Attribute3
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=300;
+				};
+			};
+		};
+		class Attribute4
 		{
 			property="SharedObjectives";
 			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
@@ -1570,7 +1551,45 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=6;
+		class Attribute5
+		{
+			property="ReviveUnconsciousStateMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=2;
+				};
+			};
+		};
+		nAttributes=7;
 	};
 	class Category1
 	{
@@ -31269,10 +31288,8 @@ class Mission
 			dataType="Marker";
 			position[]={4135.8779,314.44,5194.6831};
 			name="un_check1";
-			type="n_installation";
+			type="malo_unSquareFlag_small";
 			alpha=0;
-			a=0.80000001;
-			b=0.80000001;
 			id=6654;
 			atlOffset=-0.00045776367;
 		};
@@ -31295,10 +31312,8 @@ class Mission
 			dataType="Marker";
 			position[]={3801.9529,293.11899,6343.439};
 			name="un_check2";
-			type="n_installation";
+			type="malo_unSquareFlag_small";
 			alpha=0;
-			a=0.80000001;
-			b=0.80000001;
 			id=6656;
 			atlOffset=0.00012207031;
 		};
@@ -76017,10 +76032,8 @@ class Mission
 			dataType="Marker";
 			position[]={5050.1201,256.30499,4715.3511};
 			name="un_check3";
-			type="n_installation";
+			type="malo_unSquareFlag_small";
 			alpha=0;
-			a=0.80000001;
-			b=0.80000001;
 			id=14493;
 			atlOffset=-5.4408569;
 		};
@@ -79833,10 +79846,8 @@ class Mission
 			dataType="Marker";
 			position[]={5113.9121,284.20801,5001.6162};
 			name="un_check4";
-			type="n_installation";
+			type="malo_unSquareFlag_small";
 			alpha=0;
-			a=0.80000001;
-			b=0.80000001;
 			id=14569;
 			atlOffset=-5.3621826;
 		};
@@ -81284,10 +81295,8 @@ class Mission
 			dataType="Marker";
 			position[]={6450.875,200.573,4833.5581};
 			name="un_check5";
-			type="n_installation";
+			type="malo_unSquareFlag_small";
 			alpha=0;
-			a=0.80000001;
-			b=0.80000001;
 			id=14590;
 			atlOffset=-5.3579407;
 		};
@@ -81860,6 +81869,7 @@ class Mission
 					};
 					id=14643;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -81911,6 +81921,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14642;
+			atlOffset=0.0002746582;
 		};
 		class Item1778
 		{
@@ -81937,6 +81948,7 @@ class Mission
 					};
 					id=14645;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -81988,6 +82000,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14644;
+			atlOffset=0.0002746582;
 		};
 		class Item1779
 		{
@@ -82728,6 +82741,7 @@ class Mission
 					};
 					id=14665;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -82779,6 +82793,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14664;
+			atlOffset=0.0002746582;
 		};
 		class Item1789
 		{
@@ -82805,6 +82820,7 @@ class Mission
 					};
 					id=14667;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -82856,6 +82872,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14666;
+			atlOffset=0.0002746582;
 		};
 		class Item1790
 		{
@@ -82882,6 +82899,7 @@ class Mission
 					};
 					id=14669;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -82933,6 +82951,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14668;
+			atlOffset=0.0002746582;
 		};
 		class Item1791
 		{
@@ -82959,6 +82978,7 @@ class Mission
 					};
 					id=14671;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -83010,6 +83030,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14670;
+			atlOffset=0.00012207031;
 		};
 		class Item1792
 		{
@@ -83386,6 +83407,7 @@ class Mission
 					};
 					id=14681;
 					type="LOP_CHR_Civ_Random";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -83437,6 +83459,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14680;
+			atlOffset=0.0002746582;
 		};
 		class Item1797
 		{
@@ -88221,6 +88244,7 @@ class Mission
 					};
 					id=14808;
 					type="LOP_UN_Infantry_Corpsman";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -88360,6 +88384,7 @@ class Mission
 					};
 					id=14812;
 					type="LOP_UN_Infantry_Corpsman";
+					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -88689,6 +88714,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14807;
+			atlOffset=0.0002746582;
 		};
 		class Item1847
 		{
@@ -88706,7 +88732,7 @@ class Mission
 			};
 			id=14815;
 			type="EmptyDetectorAreaR50";
-			atlOffset=0.00012207031;
+			atlOffset=0.00039672852;
 		};
 		class Item1848
 		{
@@ -90705,6 +90731,7 @@ class Mission
 			};
 			id=15009;
 			type="Land_Camping_Light_F";
+			atlOffset=0.0002746582;
 		};
 		class Item1924
 		{
@@ -96174,7 +96201,7 @@ class Mission
 				name="trg_castle1_4";
 				text="capture castle";
 				condition="call{this}";
-				onActivation="call{{_x setDamage 1;} forEach units enemy_17; ""castle1"" setMarkerType ""o_installation""; [""poi9""] spawn MALO_fnc_saveKeyword; [kapetan, support_requester, heli_support_1 ] call BIS_fnc_addSupportLink;}";
+				onActivation="call{{_x setDamage 1;} forEach units enemy_17; ""castle1"" setMarkerType ""malo_srpskaSquareFlag_small""; [""poi9""] spawn MALO_fnc_saveKeyword; [kapetan, support_requester, heli_support_1 ] call BIS_fnc_addSupportLink;}";
 				sizeA=200;
 				sizeB=200;
 				activationType="NOT PRESENT";
@@ -97673,7 +97700,7 @@ class Mission
 			dataType="Marker";
 			position[]={5854.5781,282.13101,3479.458};
 			name="castle1";
-			type="b_installation";
+			type="malo_bosniaSquareFlag_small";
 			alpha=0;
 			id=15284;
 			atlOffset=-8.8175659;
@@ -109251,10 +109278,8 @@ class Mission
 			dataType="Marker";
 			position[]={4798.2642,57.137001,3235.615};
 			name="un_check6";
-			type="n_installation";
+			type="malo_unSquareFlag_small";
 			alpha=0;
-			a=0.80000001;
-			b=0.80000001;
 			id=15899;
 			atlOffset=-5.3462753;
 		};
@@ -116007,7 +116032,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16255;
@@ -116050,7 +116075,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16256;
@@ -116094,7 +116119,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16257;
@@ -116138,7 +116163,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16258;
@@ -116182,7 +116207,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16259;
@@ -116225,7 +116250,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16260;
@@ -116268,7 +116293,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16261;
@@ -116331,7 +116356,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16263;
@@ -116375,7 +116400,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16264;
@@ -116419,7 +116444,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16265;
@@ -116462,7 +116487,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16266;
@@ -116505,7 +116530,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16267;
@@ -116548,7 +116573,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16269;
@@ -116592,7 +116617,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16270;
@@ -116635,7 +116660,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16271;
@@ -116679,7 +116704,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16272;
@@ -116723,7 +116748,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16273;
@@ -116766,7 +116791,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16274;
@@ -116809,7 +116834,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16275;
@@ -116852,7 +116877,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16276;
@@ -117145,7 +117170,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16302;
@@ -117188,7 +117213,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16303;
@@ -117232,7 +117257,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16304;
@@ -117276,7 +117301,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16305;
@@ -117319,7 +117344,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16306;
@@ -117363,7 +117388,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16307;
@@ -117407,7 +117432,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16308;
@@ -117533,7 +117558,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16310;
@@ -117577,7 +117602,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16311;
@@ -117621,7 +117646,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16312;
@@ -117665,7 +117690,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16313;
@@ -117709,7 +117734,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16314;
@@ -117753,7 +117778,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16315;
@@ -117797,7 +117822,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16316;
@@ -117841,7 +117866,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16317;
@@ -117885,7 +117910,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16318;
@@ -117929,7 +117954,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16319;
@@ -117973,7 +117998,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16320;
@@ -118017,7 +118042,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16321;
@@ -118061,7 +118086,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80074573;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16322;
@@ -118489,7 +118514,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16325;
@@ -118532,7 +118557,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16326;
@@ -118576,7 +118601,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16327;
@@ -118619,7 +118644,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16328;
@@ -118662,7 +118687,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16329;
@@ -118705,7 +118730,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16330;
@@ -118748,7 +118773,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16331;
@@ -118873,7 +118898,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16333;
@@ -118916,7 +118941,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16334;
@@ -118959,7 +118984,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16335;
@@ -119002,7 +119027,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16336;
@@ -119045,7 +119070,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16337;
@@ -119089,7 +119114,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16338;
@@ -119132,7 +119157,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16339;
@@ -119175,7 +119200,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16340;
@@ -119218,7 +119243,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16341;
@@ -119262,7 +119287,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16342;
@@ -119305,7 +119330,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16343;
@@ -119349,7 +119374,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -119432,7 +119457,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -119674,7 +119699,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16937;
@@ -119718,7 +119743,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -119800,7 +119825,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Up";
 					};
@@ -119882,7 +119907,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -119965,7 +119990,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -120248,7 +120273,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16348;
@@ -120292,7 +120317,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16349;
@@ -120336,7 +120361,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16350;
@@ -120380,7 +120405,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16351;
@@ -120424,7 +120449,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16352;
@@ -120468,7 +120493,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16353;
@@ -120512,7 +120537,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16354;
@@ -120638,7 +120663,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16356;
@@ -120682,7 +120707,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16357;
@@ -120726,7 +120751,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16358;
@@ -120770,7 +120795,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -120853,7 +120878,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16360;
@@ -120935,7 +120960,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16361;
@@ -120979,7 +121004,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16362;
@@ -121023,7 +121048,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16363;
@@ -121067,7 +121092,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16364;
@@ -121111,7 +121136,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -121194,7 +121219,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -121277,7 +121302,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16367;
@@ -121321,7 +121346,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.79650992;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16368;
@@ -121567,7 +121592,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16371;
@@ -121611,7 +121636,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16372;
@@ -121655,7 +121680,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16373;
@@ -121699,7 +121724,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16374;
@@ -121743,7 +121768,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16375;
@@ -121787,7 +121812,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Down";
 					};
@@ -121870,7 +121895,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 					};
@@ -121973,7 +121998,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16379;
@@ -122017,7 +122042,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16380;
@@ -122061,7 +122086,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16381;
@@ -122105,7 +122130,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16382;
@@ -122148,7 +122173,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16383;
@@ -122192,7 +122217,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16384;
@@ -122236,7 +122261,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16385;
@@ -122279,7 +122304,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16386;
@@ -122323,7 +122348,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16387;
@@ -122367,7 +122392,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16388;
@@ -122411,7 +122436,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16389;
@@ -122455,7 +122480,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16390;
@@ -122499,7 +122524,7 @@ class Mission
 					{
 						skill=0.74571329;
 						init="call{this disableAi ""PATH"";}";
-						presence=0.80498147;
+						presence=0.5;
 						ignoreByDynSimulGrid=1;
 					};
 					id=16391;
@@ -134103,6 +134128,7 @@ class Mission
 					showWP="NEVER";
 					id=16645;
 					type="Move";
+					atlOffset=0.0002746582;
 				};
 				class Item10
 				{
@@ -169295,7 +169321,7 @@ class Mission
 			dataType="Marker";
 			position[]={2835.155,408.21201,7546.3882};
 			name="t_install_1";
-			type="b_installation";
+			type="malo_bosniaSquareFlag_small";
 			alpha=0;
 			id=17610;
 			atlOffset=-10.565277;
@@ -169339,7 +169365,7 @@ class Mission
 			dataType="Marker";
 			position[]={2816.6687,424.86075,6880.7471};
 			name="t_install_2";
-			type="b_installation";
+			type="malo_bosniaSquareFlag_small";
 			alpha=0;
 			id=17613;
 			atlOffset=-10.565277;
@@ -170586,7 +170612,7 @@ class Mission
 			dataType="Marker";
 			position[]={3655.3359,308.33701,3541.217};
 			name="t_install_3";
-			type="b_installation";
+			type="malo_bosniaSquareFlag_small";
 			alpha=0;
 			id=17662;
 			atlOffset=-10.565155;
@@ -202073,7 +202099,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=164.19743;
+			angle=164.19742;
 			id=19179;
 			atlOffset=10.27066;
 		};
@@ -202207,7 +202233,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=205.72556;
+			angle=205.72552;
 			id=19188;
 			atlOffset=-14.839539;
 		};
@@ -202237,8 +202263,9 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=112.68064;
+			angle=112.68063;
 			id=19192;
+			atlOffset=7.6293945e-006;
 		};
 		class Item3556
 		{
@@ -202281,7 +202308,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=205.72554;
+			angle=205.72552;
 			id=19195;
 			atlOffset=-4.9599152;
 		};
@@ -202385,7 +202412,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=223.02499;
+			angle=223.02493;
 			id=19202;
 			atlOffset=-2.4061432;
 		};
@@ -202488,7 +202515,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=227.429;
+			angle=227.42897;
 			id=19209;
 			atlOffset=-8.8937988;
 		};
@@ -202518,7 +202545,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=217.21306;
+			angle=217.21304;
 			id=19212;
 			atlOffset=-2.6877503;
 		};

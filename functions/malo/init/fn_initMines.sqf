@@ -8,7 +8,7 @@ MALO_fnc_initMines_spawned = {
 
 	private _minefield = _this;
 
-	private _density = (1/100);
+	private _density = (1/25);
 	private _type = "rhs_mine_a200_bz";
 
 	private _area = _minefield call BIS_fnc_getArea;
@@ -36,6 +36,8 @@ MALO_fnc_initMines_spawned = {
 				"water"
 			]
 		] call BIS_fnc_randomPos;
+		
+		if (isOnRoad _position) exitWith {};
 
 		private _mine = createMine [_type, _position, [], 0];
 		_mine setVectorUp surfaceNormal position _mine;

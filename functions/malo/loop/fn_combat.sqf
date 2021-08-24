@@ -232,6 +232,7 @@ MALO_fnc_combat_getInside = {
 							if (_morale < 20) then {
 								_group setCombatMode "BLUE";
 								_unit enableAi "ALL";
+								_unit doMove [0,0,0];
 							} else {
 								_group setCombatMode "RED";
 							};

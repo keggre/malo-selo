@@ -29,6 +29,8 @@ MALO_fnc_civs_flee = {
 
 	if (_random <= _fear) then {
 
+		if (!alive _civ) exitWith {};
+
 		_civ switchMove "";
 		
 		switch (round(random 2)) do {
@@ -159,6 +161,8 @@ MALO_fnc_civs_surrender = {
 			waitUntil {if (_civ in MALO_cursor_targets) then {false} else {true}};
 			sleep (random [1, 2, 3]);
 		};
+
+		if (!alive _civ) exitWith {};
 
 		_civ switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
 

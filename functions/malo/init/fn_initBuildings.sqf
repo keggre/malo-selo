@@ -149,4 +149,4 @@ MALO_building_types = [
 	"Land_WW2_HQ",
 	"Land_WW2_City_House_2e_Lone_3"
 ]; 
-publicVariable "MALO_buildingTypes";
+publicVariable "MALO_building_types";

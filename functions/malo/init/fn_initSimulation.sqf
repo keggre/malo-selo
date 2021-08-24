@@ -6,7 +6,7 @@ MALO_simulated_units = [];
 MALO_simple_object_types = MALO_building_types + ["HOUSE", "BUILDING", "Land_Razorwire_F", "Land_BagFence_Long_F", "CUP_ker_deravej", "TREE", "RHS_mine_a200_bz", "CUP_les_dub", "144_vegetation_MB_T_Ulmus_Smalliviy", "LAND_RattanChair_01_F", "LAND_RattanTable_01_F"];
 
 {
-	_x triggerDynamicSimulation false;
+	_x triggerDynamicSimulation true;
 } forEach (allUnits - playableUnits);
 
 {
