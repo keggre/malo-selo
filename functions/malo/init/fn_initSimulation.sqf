@@ -33,9 +33,3 @@ MALO_simple_object_types = MALO_building_types + ["HOUSE", "BUILDING", "Land_Raz
 		} forEach vehicles;
 	};
 };
-
-// DELETE LANDMINES IF THE SETTING IS ON
-[] spawn {
-	waitUntil {!MALO_CFG_landmines};
-	{deleteVehicle _x} forEach allMines;
-;}

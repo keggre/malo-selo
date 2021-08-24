@@ -32,6 +32,7 @@ class malo
 		class initBuildings {};
 		class initCivs {};
 		class initLoadouts {};
+		class initMines {};
 		class initOptions {};
 		class initRadio {};
 		class initSimulation {};

@@ -15,7 +15,7 @@ MALO_tips = [
 	["low_fps", 'You can adjust settings to improve performance in the pause menu under "Configuration -> Addon Options -> Malo Selo"', false],
 	["stealth", "Enemies are less likely to detect you when wearing civilian clothes or driving civilian vehicles. Keep a low profile to avoid being spotted entirely.", false],
 	["repair", "Toolkits are available in most vehicles and can be used to repair your vehicle.", false],
-	["mines", "Nearby landmines are marked on the map.", false],
+	["mines", "Nearby minefields are marked on the map when nearby.", false],
 	["international_opinion", "When players in your squad commit war crimes, the international opinion of the Serbs is lowered. If the international opinion falls below a certain level, NATO could pursue direct intervention in the conflict.", false],
 
 	// MISSION OR VILLAGE SPECIFIC

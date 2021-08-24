@@ -159,17 +159,6 @@ MALO_simulation_distance = MALO_CFG_min_simulation_distance;
 ] call cba_fnc_addSetting;
 
 [
-	"MALO_CFG_landmines", 
-	"CHECKBOX", 
-	["Landmines", "Disable to improve performance."], 
-	"Malo Selo", 
-	MALO_CFG_landmines, 
-	1, 
-	{}, 
-	true
-] call cba_fnc_addSetting;
-
-[
 	"MALO_CFG_ambient_animals", 
 	"CHECKBOX", 
 	["Enable ambient animals", "Enables or disables ambient animals. Disable to improve performance."], 
