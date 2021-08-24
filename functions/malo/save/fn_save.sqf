@@ -27,7 +27,7 @@ diag_log str MALO_mission_progress;
 
 // EXIT IF SAVING IS SET TO FALSE
 
-if (MALO_CFG_saving == false) exitWith {};
+if (!MALO_CFG_saving) exitWith {};
 
 
 hintSilent "Saving mission progress...";

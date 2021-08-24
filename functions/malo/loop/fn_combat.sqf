@@ -36,7 +36,7 @@ MALO_fnc_combat_getInside = {
 		waitUntil {(unitReady _unit) || ((_unit distance (_unit call MALO_fnc_getNearestPlayer)) > MALO_simulation_distance)};
 	};
 	
-	sleep 5;
+	sleep 600;
 
 	_unit setVariable ["willGetInside", false, true];
 	

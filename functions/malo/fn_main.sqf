@@ -2,7 +2,7 @@
 
 hintSilent "Initializing mission...";
 
-call compile preprocessFile "config.cfg";
+call compile preprocessFile "CONFIG.cfg";
 
 // VARS
 MALO_init = true;

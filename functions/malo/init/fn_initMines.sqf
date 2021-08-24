@@ -30,28 +30,31 @@ MALO_fnc_initMines_spawned = {
 
 		private _position = [
 			[
-				[_center, [_a, _b, _angle, _is_rectangle]], 
+				[_center, [_a, _b, _angle, _is_rectangle]]
 			],
 			[
 				"water"
 			]
 		] call BIS_fnc_randomPos;
 
-		_type createVehicle _position;
+		private _mine = createMine [_type, _position, [], 0];
+		_mine setVectorUp surfaceNormal position _mine;
+		_mine enableSimulation true;
+		_mine enableDynamicSimulation true;
 
 	};
 
 	private _radius = (
 		if (_a < _b) then {
-			_a
+			_a / 2
 		} else {
-			_b
+			_b / 2
 		}
 	);
 
 	private _position = [
 		[
-			[_center, _radius], 
+			[_center, _radius]
 		],
 		[
 			"water"
@@ -79,7 +82,7 @@ MALO_fnc_initMines_spawned = {
 
 		private _trigger = createTrigger ["EmptyDetector", _center, true];
 		_trigger setTriggerArea [_a * 1.5, _b * 1.5, _angle, _is_rectangle, 100];
-		_trigger setTriggerActivation ["ANY", "PRESENT", false];
+		_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false];
 		_trigger setTriggerStatements ["this", ("'" + _marker + "' spawn MALO_fnc_initMines_spawned;"), ""];
 
 	};

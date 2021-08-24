@@ -206,9 +206,9 @@ private _serb_units = [];
 		private _surrender = _x getVariable ["surrender", false];
 
 		// MAKE A LIST OF CURSOR TARGETS
-		MALO_cursor_targets = [];
+		/*MALO_cursor_targets = [];
 		publicVariable "MALO_cursor_targets";
-		remoteExec ["MALO_fnc_civs_targets", 0];
+		remoteExec ["MALO_fnc_civs_targets", 0];*/
 
 		// IF A CIV ISN'T MOVING WHILE IN A VEHICLE
 		if (((speed (vehicle _x)) < 1) && (vehicle _x != _x) && !_armed && !(count waypoints _x > 1)) then {
