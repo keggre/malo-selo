@@ -231,7 +231,7 @@ MALO_fnc_combat_getInside = {
 						
 						case "close": {
 							if (_morale < 20) then {
-								_group setCombatMode "BLUE";
+								_group setCombatMode "YELLOW";
 								_unit enableAi "ALL";
 								_unit doMove (getMarkerPos "west_retreat_marker");
 							} else {
