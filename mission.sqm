@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=19244;
+		nextID=19446;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4659.2915,605.8205,5278.1572};
-		dir[]={-0.71219635,-0.4506402,0.53823769};
-		up[]={-0.35951862,0.89270562,0.27170381};
-		aside[]={0.60292846,0,0.79779524};
+		pos[]={3133.9976,816.94733,3003.8157};
+		dir[]={0.8322311,-0.51043713,0.21701832};
+		up[]={0.49409312,0.85980529,0.12884025};
+		aside[]={0.25235966,-1.0272488e-006,-0.96775031};
 	};
 };
 binarizationWanted=0;
@@ -283,13 +283,14 @@ addons[]=
 	"cfp_headgear",
 	"CUP_WaterVehicles_PBX",
 	"CUP_WaterVehicles_Zodiac",
-	"CUP_WaterVehicles_Fishing_Boat"
+	"CUP_WaterVehicles_Fishing_Boat",
+	"CUP_Editor_A2_Roads_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=188;
+		items=189;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -1346,6 +1347,11 @@ class AddonsMetaData
 			className="CUP_WaterVehicles_Fishing_Boat";
 			name="CUP_WaterVehicles_Fishing_Boat";
 		};
+		class Item188
+		{
+			className="CUP_Editor_A2_Roads_Config";
+			name="CUP_Editor_A2_Roads_Config";
+		};
 	};
 };
 class DynamicSimulation
@@ -1656,7 +1662,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3581;
+		items=3725;
 		class Item0
 		{
 			dataType="Object";
@@ -60843,7 +60849,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033477783;
+					atlOffset=0.033355713;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -60895,7 +60901,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033477783;
+			atlOffset=0.033355713;
 		};
 		class Item1475
 		{
@@ -61232,7 +61238,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15405273;
+					atlOffset=0.15393066;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -61284,7 +61290,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15405273;
+			atlOffset=0.15393066;
 		};
 		class Item1480
 		{
@@ -62269,7 +62275,7 @@ class Mission
 					};
 					id=13823;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.30499268;
+					atlOffset=0.30517578;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -62321,7 +62327,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13822;
-			atlOffset=0.30499268;
+			atlOffset=0.30517578;
 		};
 		class Item1493
 		{
@@ -82963,7 +82969,6 @@ class Mission
 					};
 					id=14671;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -83015,7 +83020,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14670;
-			atlOffset=0.00012207031;
 		};
 		class Item1792
 		{
@@ -149138,7 +149142,6 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -149190,7 +149193,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
-			atlOffset=2.8610229e-006;
 		};
 		class Item2656
 		{
@@ -149217,7 +149219,6 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -149269,7 +149270,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
-			atlOffset=2.8610229e-006;
 		};
 		class Item2657
 		{
@@ -168131,11 +168131,10 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2803.8245,432.73322,6863.333};
+				position[]={2802.0615,432.6825,6862.146};
 				angles[]={6.0514235,0.59756529,0.14171126};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
@@ -168143,7 +168142,7 @@ class Mission
 			};
 			id=17579;
 			type="SRB_uaz_2";
-			atlOffset=-0.02432251;
+			atlOffset=0.4487915;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -168249,11 +168248,10 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2798.9146,432.33588,6864.5874};
+				position[]={2797.2776,432.18536,6862.605};
 				angles[]={6.0514235,0.82235277,0.14171126};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
@@ -168261,7 +168259,7 @@ class Mission
 			};
 			id=17580;
 			type="SRB_uaz_2";
-			atlOffset=-0.0206604;
+			atlOffset=0.53036499;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -185715,8 +185713,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6837.5068,178.27834,6524.936};
-				angles[]={0,3.8615193,0};
+				position[]={6837.311,178.26344,6524.4692};
+				angles[]={0,3.5532148,0};
 			};
 			side="Empty";
 			flags=4;
@@ -185728,7 +185726,7 @@ class Mission
 			};
 			id=18524;
 			type="SRB_uaz_2";
-			atlOffset=0.012954712;
+			atlOffset=-0.0014801025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -193725,7 +193723,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.049884945;
+			atlOffset=0.050000072;
 		};
 		class Item3398
 		{
@@ -193903,7 +193901,7 @@ class Mission
 			};
 			id=18884;
 			type="CUP_C_PBX_CIV";
-			atlOffset=0.069286674;
+			atlOffset=0.074973613;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -204574,6 +204572,2805 @@ class Mission
 			};
 			id=19242;
 			atlOffset=0.044219971;
+		};
+		class Item3581
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5022.0034,249.85608,7385.5962};
+				angles[]={0,1.173329,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19248;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-0.51144409;
+		};
+		class Item3582
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5032.8848,248.61929,7389.5767};
+				angles[]={0,1.1491261,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19250;
+			type="CUP_A2_Road_mud_10_100";
+			atlOffset=-0.21742249;
+		};
+		class Item3583
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5047.7363,245.66699,7392.4321};
+				angles[]={0,1.3420914,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19251;
+			type="CUP_A2_Road_mud_30_25";
+			atlOffset=-0.88180542;
+		};
+		class Item3584
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5024.3687,250.04947,7384.8086};
+				angles[]={0,0.37924191,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19253;
+			type="Land_dirt_road_damage_long_04_F";
+			atlOffset=0.003616333;
+		};
+		class Item3585
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5096.1929,239.15222,7352.293};
+				angles[]={0,5.66852,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19260;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.016952515;
+		};
+		class Item3586
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5107.2109,236.09978,7337.2622};
+				angles[]={0,5.2108459,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19261;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-1.414093;
+		};
+		class Item3587
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5123.5029,234.55106,7325.4253};
+				angles[]={0,1.9499886,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19262;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.50350952;
+		};
+		class Item3588
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5139.7749,230.52368,7315.4131};
+				angles[]={0,4.209362,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19271;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=1.2381897;
+		};
+		class Item3589
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5133.4702,231.86021,7318.1831};
+				angles[]={0,5.4175491,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19274;
+			type="CUP_A2_Road_mud_6";
+			atlOffset=0.90098572;
+		};
+		class Item3590
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5087.917,240.4425,7368.6738};
+				angles[]={0,2.4104135,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19275;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.24150085;
+		};
+		class Item3591
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5075.0117,242.2083,7382.4116};
+				angles[]={0,1.9634458,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19276;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.069458008;
+		};
+		class Item3592
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5062.0259,244.30769,7388.9614};
+				angles[]={0,1.7164167,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19277;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.00010681152;
+		};
+		class Item3593
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4604.4414,275.18616,7554.2876};
+				angles[]={0,0.85424376,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19279;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.12542725;
+		};
+		class Item3594
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4613.1182,276.15536,7554.3252};
+				angles[]={0,3.9682388,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19280;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.14880371;
+		};
+		class Item3595
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4624.606,277.21133,7559.394};
+				angles[]={0,0.90309519,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19282;
+			type="CUP_A2_Road_mud_30_25";
+			atlOffset=0.06640625;
+		};
+		class Item3596
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4633.6436,278.02658,7563.7905};
+				angles[]={0,3.3942168,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19283;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.015319824;
+		};
+		class Item3597
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4638.103,278.6181,7571.1099};
+				angles[]={0,3.5394394,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19284;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-0.012054443;
+		};
+		class Item3598
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2840.022,418.69888,7549.3711};
+				angles[]={0,4.5619435,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19287;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=0.092193604;
+		};
+		class Item3599
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2815.6904,419.57114,7550.3315};
+				angles[]={0,1.3194053,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19288;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.086425781;
+		};
+		class Item3600
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2821.7966,419.25851,7546.2798};
+				angles[]={0,5.3741817,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19290;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=0.010986328;
+		};
+		class Item3601
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2800.3467,419.60226,7550.9165};
+				angles[]={0,4.5332222,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19291;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.050933838;
+		};
+		class Item3602
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2786.9092,418.43512,7550.9551};
+				angles[]={0,0.75104398,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19293;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.023681641;
+		};
+		class Item3603
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2777.4949,415.90256,7540.3003};
+				angles[]={0,0.27593601,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19294;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.04397583;
+		};
+		class Item3604
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2767.9028,412.57797,7522.5366};
+				angles[]={0,3.5037074,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19295;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.040557861;
+		};
+		class Item3605
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2758.1621,410.37131,7508.1479};
+				angles[]={0,0.55156374,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19296;
+			type="CUP_A2_Road_mud_10_100";
+			atlOffset=0.036560059;
+		};
+		class Item3606
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2737.9551,415.36884,7482.0757};
+				angles[]={0.017332481,0,5.9376283};
+			};
+			areaSize[]={5,0,5};
+			flags=1;
+			id=19299;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=8.4447021;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item3607
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2736.7168,406.57993,7475.2012};
+				angles[]={0,3.3702109,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19301;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.016693115;
+		};
+		class Item3608
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2744.686,407.82635,7488.5908};
+				angles[]={0,0.3343482,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19302;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.070281982;
+		};
+		class Item3609
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2751.2419,409.06769,7498.918};
+				angles[]={0,3.7669537,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19304;
+			type="CUP_A2_Road_mud_6";
+			atlOffset=0.021636963;
+		};
+		class Item3610
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2778.2461,428.35168,6868.8101};
+				angles[]={0,0.32586551,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19306;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.26449585;
+		};
+		class Item3611
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2771.3008,425.81866,6860.3364};
+				angles[]={0,3.4739764,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19307;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.32901001;
+		};
+		class Item3612
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2787.3826,430.72559,6870.5322};
+				angles[]={0,1.3052394,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19308;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item3613
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2794.4563,431.98126,6866.5542};
+				angles[]={0,4.5310488,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19309;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=1.1007996;
+		};
+		class Item3614
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2802.8875,432.1637,6866.0918};
+				angles[]={0,4.5099769,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19310;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=0.22268677;
+		};
+		class Item3615
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2759.2598,422.90237,6854.9434};
+				angles[]={0,0.98312318,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19312;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.47576904;
+		};
+		class Item3616
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2743.4236,417.58884,6844.9253};
+				angles[]={0,0.61224598,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19313;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.14672852;
+		};
+		class Item3617
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2731.8523,412.62912,6830.5151};
+				angles[]={0,0.3343482,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19315;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.32156372;
+		};
+		class Item3618
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2721.0735,407.13132,6812.6753};
+				angles[]={0,3.5993407,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19317;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.31921387;
+		};
+		class Item3619
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2726.0437,408.64243,6819.1221};
+				angles[]={0,0.35661435,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19318;
+			type="CUP_A2_Road_mud_6";
+			atlOffset=-0.18695068;
+		};
+		class Item3620
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2713.3125,405.12393,6809.6821};
+				angles[]={0,0.4749034,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19321;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.022918701;
+		};
+		class Item3621
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2708.2212,402.9888,6802.2271};
+				angles[]={0,5.8407331,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19322;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.17489624;
+		};
+		class Item3622
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2707.0083,401.87915,6795.1226};
+				angles[]={0.017332481,0,5.9376283};
+			};
+			areaSize[]={5,0,5};
+			flags=1;
+			id=19323;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=-0.040893555;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item3623
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2707.7634,401.55853,6791.3101};
+				angles[]={0,2.9414275,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19324;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.07220459;
+		};
+		class Item3624
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2696.5996,399.58539,6782.8628};
+				angles[]={0,4.0509815,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19325;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.38369751;
+		};
+		class Item3625
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2689.95,397.83984,6776.0454};
+				angles[]={0.017332481,0,5.9376283};
+			};
+			areaSize[]={5,0,5};
+			flags=1;
+			id=19326;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item3626
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2682.8181,397.54532,6779.4595};
+				angles[]={0,4.484621,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19327;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.028503418;
+		};
+		class Item3627
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2675.2834,397.43204,6784.0161};
+				angles[]={0,1.4025594,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19328;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.042053223;
+		};
+		class Item3628
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2638.5925,395.36758,6764.8862};
+				angles[]={0,3.7469921,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19329;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=3.7153931;
+		};
+		class Item3629
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2665.9607,396.4201,6783.8691};
+				angles[]={0,0.54123932,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19330;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.044616699;
+		};
+		class Item3630
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2657.0107,394.74356,6777.3584};
+				angles[]={0,3.7289972,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19331;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.048919678;
+		};
+		class Item3631
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2650.1145,393.80835,6775.4277};
+				angles[]={0,0.57060981,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19332;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.065002441;
+		};
+		class Item3632
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2625.8569,389.41553,6752.2407};
+				angles[]={0,0.59361625,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19333;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.11346436;
+		};
+		class Item3633
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2614.04,386.36108,6738.3989};
+				angles[]={0,3.7481992,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19335;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.18399048;
+		};
+		class Item3634
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2604.949,383.81113,6723.8701};
+				angles[]={0,0.30443543,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19336;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.70333862;
+		};
+		class Item3635
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2595.8669,378.75626,6706.1152};
+				angles[]={0,3.4021325,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19339;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=3.0517578e-005;
+		};
+		class Item3636
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2584.2598,374.77396,6691.2832};
+				angles[]={0,3.7836525,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19340;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.25064087;
+		};
+		class Item3637
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2571.3015,371.75928,6678.9453};
+				angles[]={0,0.55607474,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19341;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.21731567;
+		};
+		class Item3638
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2558.4622,367.70175,6663.7524};
+				angles[]={0,3.6248424,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19342;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.070709229;
+		};
+		class Item3639
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2550.1191,365.16638,6653.2764};
+				angles[]={0,6.1544967,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19343;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.19155884;
+		};
+		class Item3640
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2547.7153,363.71136,6642.3921};
+				angles[]={0,3.0251293,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19344;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.13870239;
+		};
+		class Item3641
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2542.6462,362.22241,6635.1895};
+				angles[]={0,6.1498494,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19345;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.1149292;
+		};
+		class Item3642
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2540.0435,360.31851,6624.9648};
+				angles[]={0,3.0268147,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19346;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item3643
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2532.2937,357.87497,6614.0356};
+				angles[]={0,0.39791059,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19347;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.17602539;
+		};
+		class Item3644
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2521.0681,355.13843,6597.2896};
+				angles[]={0,3.5568886,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19348;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.017578125;
+		};
+		class Item3645
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2509.915,352.98239,6583.0293};
+				angles[]={0,0.46981823,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19349;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-6.1035156e-005;
+		};
+		class Item3646
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2499.032,350.41693,6567.897};
+				angles[]={0,3.7437823,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19350;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.43731689;
+		};
+		class Item3647
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2489.1501,348.33499,6553.9688};
+				angles[]={0,3.7437823,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19352;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.45828247;
+		};
+		class Item3648
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2479.2085,346.07544,6540.0767};
+				angles[]={0,3.7437823,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19353;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.37579346;
+		};
+		class Item3649
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2467.7761,343.66422,6525.6143};
+				angles[]={0,3.6645911,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19354;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.080963135;
+		};
+		class Item3650
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2455.4321,340.58224,6512.4722};
+				angles[]={0,0.57121927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19355;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.56488037;
+		};
+		class Item3651
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2443.9243,338.47696,6498.6865};
+				angles[]={0,3.7437823,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19356;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.21505737;
+		};
+		class Item3652
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2434.4116,336.60593,6484.9653};
+				angles[]={0,3.7437823,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19357;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.011352539;
+		};
+		class Item3653
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2426.4734,334.3313,6476.4624};
+				angles[]={0,3.7406917,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19358;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.3770752;
+		};
+		class Item3654
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2418.1919,332.35678,6474.1968};
+				angles[]={0,0.52615267,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19359;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.014984131;
+		};
+		class Item3655
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2412.4448,331.84915,6467.9351};
+				angles[]={0,0.50808781,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19361;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-0.021148682;
+		};
+		class Item3656
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2411.2063,331.88992,6465.6406};
+				angles[]={0,0.50808781,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19362;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=0.021148682;
+		};
+		class Item3657
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2422.5798,333.32593,6476.7891};
+				angles[]={0.017332481,0,5.9376283};
+			};
+			areaSize[]={5,0,5};
+			flags=1;
+			id=19363;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=-0.010253906;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item3658
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3691.6143,314.81467,3530.7126};
+				angles[]={0,1.3844965,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19365;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item3659
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3704.6985,314.81635,3530.1982};
+				angles[]={0,1.498087,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19366;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.14273071;
+		};
+		class Item3660
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3722.7888,314.34692,3527.5847};
+				angles[]={0,4.6183004,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19367;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.015686035;
+		};
+		class Item3661
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3742.5281,312.96021,3524.7263};
+				angles[]={0,1.5753261,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19368;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.35140991;
+		};
+		class Item3662
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3758.8994,311.52441,3519.8193};
+				angles[]={0,5.0812788,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19369;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.048400879;
+		};
+		class Item3663
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3771.6436,309.74579,3514.114};
+				angles[]={0,1.718748,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19370;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.095245361;
+		};
+		class Item3664
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3777.2573,308.7746,3507.6216};
+				angles[]={0,4.773632,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19371;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.059814453;
+		};
+		class Item3665
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3785.7979,307.08838,3502.8923};
+				angles[]={0,1.7634519,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19372;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.15411377;
+		};
+		class Item3666
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3790.6965,305.83435,3496.3589};
+				angles[]={0,4.8915796,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19373;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=9.1552734e-005;
+		};
+		class Item3667
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3803.9707,303.31931,3488.7478};
+				angles[]={0,1.9069012,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19375;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=1.2700195;
+		};
+		class Item3668
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3813.9158,298.30542,3483.7891};
+				angles[]={0,4.3853869,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19376;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.27645874;
+		};
+		class Item3669
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3823.9619,294.82834,3483.3965};
+				angles[]={0,1.1973436,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19377;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.18939209;
+		};
+		class Item3670
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3831.8704,291.81186,3481.2522};
+				angles[]={0,4.1403399,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19378;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.1690979;
+		};
+		class Item3671
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3846.761,287.58398,3486.0491};
+				angles[]={0,1.0432819,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19379;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.63897705;
+		};
+		class Item3672
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3858.9968,283.70023,3490.3318};
+				angles[]={0,3.6241581,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19380;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=3.0517578e-005;
+		};
+		class Item3673
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3867.5266,281.88748,3497.8103};
+				angles[]={0,0.52980834,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19381;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.27774048;
+		};
+		class Item3674
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3880.4653,278.86166,3501.1445};
+				angles[]={0,4.2427716,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19383;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=2.4134827;
+		};
+		class Item3675
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3892.6196,274.74936,3503.8884};
+				angles[]={0,1.0529451,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19384;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.068664551;
+		};
+		class Item3676
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3836.1985,234.10603,2621.0723};
+				angles[]={0,3.0142455,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19385;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.043487549;
+		};
+		class Item3677
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3838.1191,233.57437,2631.2617};
+				angles[]={0,5.9777074,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19386;
+			type="CUP_A2_Road_mud_60_10";
+		};
+		class Item3678
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3832.7449,234.46384,2616.3284};
+				angles[]={0,0.72085118,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19387;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=6.1035156e-005;
+		};
+		class Item3679
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3841.3601,232.73332,2638.7087};
+				angles[]={0,2.7934213,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19388;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.0097198486;
+		};
+		class Item3680
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3836.9817,232.07277,2651.9443};
+				angles[]={0,2.4032319,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19390;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.0081481934;
+		};
+		class Item3681
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3828.6321,231.18425,2663.998};
+				angles[]={0,5.1822844,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19391;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.010055542;
+		};
+		class Item3682
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3825.7988,230.15742,2671.606};
+				angles[]={0,2.0472848,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19392;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.13568115;
+		};
+		class Item3683
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3815.2927,228.63145,2681.5422};
+				angles[]={0,5.2446108,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19393;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.18234253;
+		};
+		class Item3684
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3806.0942,226.80992,2694.0645};
+				angles[]={0,5.65206,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19394;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.092178345;
+		};
+		class Item3685
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3800.5088,225.39825,2705.7686};
+				angles[]={0,1.8935817,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19395;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.0095062256;
+		};
+		class Item3686
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3797.9436,225.7115,2700.1775};
+				angles[]={6.0768309,0,6.0832286};
+			};
+			areaSize[]={10,0,10};
+			flags=1;
+			id=19396;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=-0.13668823;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item3687
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3792.7039,224.42039,2713.26};
+				angles[]={0,5.2117529,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19397;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.052947998;
+		};
+		class Item3688
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3791.1917,223.49162,2721.9226};
+				angles[]={0,5.9012718,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19398;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.0022125244;
+		};
+		class Item3689
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3794.5071,222.81969,2728.9019};
+				angles[]={0,2.9639113,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19399;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.059234619;
+		};
+		class Item3690
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3797.2578,221.37071,2743.9646};
+				angles[]={0,6.2713938,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19400;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.19207764;
+		};
+		class Item3691
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3799.9617,219.29538,2756.7563};
+				angles[]={0,2.626523,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19401;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.14102173;
+		};
+		class Item3692
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3798.395,217.88411,2767.3884};
+				angles[]={0,5.8285394,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19402;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.056213379;
+		};
+		class Item3693
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3802.0803,215.72476,2780.3413};
+				angles[]={0,3.1966825,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19403;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.048919678;
+		};
+		class Item3694
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3803.6348,213.0314,2798.5354};
+				angles[]={0,2.8078494,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19404;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.11433411;
+		};
+		class Item3695
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3802.6951,211.77283,2805.4707};
+				angles[]={6.0768309,0,6.0832286};
+			};
+			areaSize[]={10,0,10};
+			flags=1;
+			id=19405;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=-4.5776367e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item3696
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3801.4729,211.89468,2810.7197};
+				angles[]={0,2.7859712,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19406;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-0.015411377;
+		};
+		class Item3697
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5828.0776,263.00787,3664.3362};
+				angles[]={0,5.4477458,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19407;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.098449707;
+		};
+		class Item3698
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5836.1123,264.987,3650.8584};
+				angles[]={0,2.393127,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19409;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.11978149;
+		};
+		class Item3699
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5842.7637,269.21741,3633.6531};
+				angles[]={0,2.7416854,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19410;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.046600342;
+		};
+		class Item3700
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5847.5845,272.237,3616.8582};
+				angles[]={0,5.7056961,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19411;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.17807007;
+		};
+		class Item3701
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5852.3076,274.54819,3602.1541};
+				angles[]={0,2.6083901,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19412;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.09475708;
+		};
+		class Item3702
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5850.583,276.19501,3594.3779};
+				angles[]={0,5.819922,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19413;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.093566895;
+		};
+		class Item3703
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5852.6895,278.13525,3583.8333};
+				angles[]={0,2.5610933,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19414;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.033996582;
+		};
+		class Item3704
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5851.8223,281.17636,3570.6077};
+				angles[]={0,6.0878949,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19415;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.4251709;
+		};
+		class Item3705
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5853.2354,284.00647,3552.0261};
+				angles[]={0,6.1292777,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19416;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=0.00091552734;
+		};
+		class Item3706
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5855.1357,286.74951,3534.084};
+				angles[]={0,2.893589,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19417;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=-0.010253906;
+		};
+		class Item3707
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5855.5449,288.18863,3522.2148};
+				angles[]={0,6.2821913,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19418;
+			type="CUP_A2_Road_mud_6";
+			atlOffset=-0.24084473;
+		};
+		class Item3708
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4961.167,134.48625,6621.3315};
+				angles[]={0,3.2576311,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19419;
+			type="CUP_A2_Road_mud_22_50";
+			atlOffset=0.48625183;
+		};
+		class Item3709
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4954.2617,134,6608.8555};
+				angles[]={0,3.6219323,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19420;
+			type="CUP_A2_Road_mud_60_10";
+		};
+		class Item3710
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4946.8735,134,6606.9897};
+				angles[]={0,1.4860986,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19422;
+			type="CUP_A2_Road_mud_6konec";
+		};
+		class Item3711
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4966.7656,136.25952,6635.9375};
+				angles[]={0,0.14467701,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19423;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.058624268;
+		};
+		class Item3712
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4974.8325,137.56071,6639.9731};
+				angles[]={0,0.97104722,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19424;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.096878052;
+		};
+		class Item3713
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4983.4961,138.7079,6638.7124};
+				angles[]={0,4.1013384,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19425;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.20213318;
+		};
+		class Item3714
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4995.0947,142.22527,6641.8613};
+				angles[]={0,1.0824403,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19426;
+			type="CUP_A2_Road_mud_30_25";
+			atlOffset=0.69639587;
+		};
+		class Item3715
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5009.1997,146.36441,6642.8721};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19428;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=0.13618469;
+		};
+		class Item3716
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5020.9033,149.14986,6642.7954};
+				angles[]={0,4.7489119,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19429;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-0.0050506592;
+		};
+		class Item3717
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6828.4248,176.99464,6506.5996};
+				angles[]={0,5.9258623,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19430;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=4.5776367e-005;
+		};
+		class Item3718
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6831.2402,176.26782,6492.895};
+				angles[]={0,2.8129551,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19431;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=0.013015747;
+		};
+		class Item3719
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6834.6455,175.01813,6482.2441};
+				angles[]={0,6.0105691,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19432;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=-0.075942993;
+		};
+		class Item3720
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6833.7368,177.0256,6527.9741};
+				angles[]={0,3.0795984,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19440;
+			type="CUP_A2_Road_mud_1_1000";
+			atlOffset=-0.0015106201;
+		};
+		class Item3721
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6832.4912,177.03966,6513.877};
+				angles[]={0,3.0917327,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19441;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.00099182129;
+		};
+		class Item3722
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6832.165,177.0295,6527.6587};
+				angles[]={0,1.8936489,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19442;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=-0.002532959;
+		};
+		class Item3723
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6825.4048,177.00227,6531.0518};
+				angles[]={0,0.99354827,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19443;
+			type="CUP_A2_Road_mud_60_10";
+			atlOffset=0.00010681152;
+		};
+		class Item3724
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6818.3325,176.99152,6529.0864};
+				angles[]={0,1.0742043,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=19445;
+			type="CUP_A2_Road_mud_6konec";
+			atlOffset=0.00039672852;
 		};
 	};
 	class Connections
