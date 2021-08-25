@@ -30,13 +30,14 @@ MALO_fnc_combat_getInside = {
 	} forEach _objects;
 
 	private _position = selectRandom _positions;
+	_unit doMove _position;
 
-	while {(_unit distance (_unit call MALO_fnc_getNearestPlayer)) < MALO_simulation_distance} do { 
+	/*while {(_unit distance (_unit call MALO_fnc_getNearestPlayer)) < MALO_simulation_distance} do { 
 		_unit doMove _position;
 		waitUntil {(unitReady _unit) || ((_unit distance (_unit call MALO_fnc_getNearestPlayer)) > MALO_simulation_distance)};
-	};
+	};*/
 	
-	sleep 600;
+	sleep (random [0,300,600]);
 
 	_unit setVariable ["willGetInside", false, true];
 	
@@ -232,7 +233,7 @@ MALO_fnc_combat_getInside = {
 							if (_morale < 20) then {
 								_group setCombatMode "BLUE";
 								_unit enableAi "ALL";
-								_unit doMove [0,0,0];
+								_unit doMove (getMarkerPos "west_retreat_marker");
 							} else {
 								_group setCombatMode "RED";
 							};
