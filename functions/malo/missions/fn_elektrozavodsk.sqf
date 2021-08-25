@@ -48,3 +48,6 @@ private _stages = [
 	};
 
 } forEach _stages;
+
+private _statements = triggerStatements trg_elektrozavodsk;
+trg_elektrozavodsk setTriggerStatements ["this", _statements select 1, _statements select 2];

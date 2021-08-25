@@ -11,11 +11,15 @@ private _spread = 100;									// MAXIMUM SPREAD DISTANCE IN METERS
 private _limit = 20;									// MAXIMUM AMOUNT OF FIRES THAT CAN BE ACTIVE AT ANY GIVEN TIME
 private _types = MALO_building_types;					// BUILDING TYPES TO CATCH FIRE
 
-MALO_ambient_fire_count = 0;							// DON'T CHANGE
+MALO_ambient_fire_count = 0;
+
+private _center = createCenter sideLogic;
+private _group = createGroup _center;
+_group deleteGroupWhenEmpty false;
 
 MALO_fnc_ambientFire_spawned = {
 
-	params ["_object", "_delay", "_radius", "_step", "_spread", "_limit", "_types"];
+	params ["_object", "_delay", "_radius", "_step", "_spread", "_limit", "_types", "_group"];
 
 	private _size = sizeOf (typeOf _object);
 	
@@ -24,9 +28,6 @@ MALO_fnc_ambientFire_spawned = {
 		(((position _object) select 1) + ((boundingCenter _object) select 1)),
 		(((position _object) select 2) + ((boundingCenter _object) select 2) + ((2/3) * (((boundingBox _object) select 1) select 2)))
 	];
-
-	private _group = createGroup sideLogic;
-	_group deleteGroupWhenEmpty true;
 
 	private _fire_init = [
 		["ColorRed", .5],
@@ -159,7 +160,7 @@ while {MALO_CFG_ambient_fire} do {
 				(simulationEnabled _object)
 			) then {
 				_object setVariable ["MALO_ambient_fire_active", true, true];
-				[_object, _delay, _radius, _step, _spread, _limit, _types] spawn MALO_fnc_ambientFire_spawned;
+				[_object, _delay, _radius, _step, _spread, _limit, _types, _group] spawn MALO_fnc_ambientFire_spawned;
 			};
 		} forEach (nearestObjects [_unit, _types, _radius]);
 	} forEach playableUnits;

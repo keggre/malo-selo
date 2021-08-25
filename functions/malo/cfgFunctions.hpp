@@ -83,6 +83,7 @@ class malo
 		class disableTrigger {};
 		class getNearestPlayer {};
 		class isArmed {};
+		class switchSide {};
 		class hideObjects {};
 		class killWithinRadius {};
 		// class loadGroups {};
