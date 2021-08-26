@@ -19,5 +19,6 @@ MALO_hide_objects = [
 	"Land_Laptop_F",
 	"Land_GamingSet_01_camera_F",
 	"Land_GamingSet_01_controller_F",
-	"Land_SolarPanel_2_F"
+	"Land_SolarPanel_2_F",
+	"Land_Laptop_unfolded_F"
 ];

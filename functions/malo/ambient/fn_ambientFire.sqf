@@ -8,7 +8,7 @@ private _radius = 3000;									// MAXIMUM RADIUS FROM ANY PLAYER IN WHICH FIRES
 private _thresh = .5;									// DAMAGE THRESHOLD TO START THE FIRE
 private _step = (.1 / 60);								// HOW MUCH THE BUILDING DAMAGE IS AFFECTED EACH ITERATION OF THE LOCAL SCRIPT
 private _spread = 100;									// MAXIMUM SPREAD DISTANCE IN METERS
-private _limit = 1000;									// MAXIMUM AMOUNT OF FIRES THAT CAN BE ACTIVE AT ANY GIVEN TIME
+private _limit = 10;									// MAXIMUM AMOUNT OF FIRES THAT CAN BE ACTIVE AT ANY GIVEN TIME
 private _types = MALO_building_types;					// BUILDING TYPES TO CATCH FIRE
 
 MALO_ambient_fire_count = 0;
