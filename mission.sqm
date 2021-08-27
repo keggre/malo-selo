@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3133.9976,816.94733,3003.8157};
-		dir[]={0.8322311,-0.51043713,0.21701832};
-		up[]={0.49409312,0.85980529,0.12884025};
-		aside[]={0.25235966,-1.0272488e-006,-0.96775031};
+		pos[]={5877.2417,266.78476,4685.2886};
+		dir[]={0.82023412,-0.57223964,0.0030060797};
+		up[]={0.57239491,0.81997114,0.002095317};
+		aside[]={0.0036674095,-1.1718994e-006,-1.0001066};
 	};
 };
 binarizationWanted=0;
@@ -89798,13 +89798,12 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this SetFlagTexture ""images\bosnia.jpg"";  msta_flag setFlagTexture """";}";
+				init="call{this SetFlagTexture ""images\bosnia.jpg"";}";
 				name="msta_flag";
 				dynamicSimulation=1;
 			};
 			id=14925;
 			type="RHS_HBZ_Flag";
-			atlOffset=-1.5258789e-005;
 		};
 		class Item1894
 		{
@@ -94641,7 +94640,7 @@ class Mission
 			{
 				name="trg_castle1_3";
 				condition="call{this}";
-				onActivation="call{{_x enableDynamicSimulation true;} forEach units enemy_17; activator_1 setDamage 1; castle1_flag setFlagTexture """"; [""castle1""] spawn MALO_fnc_createRespawn;}";
+				onActivation="call{{_x enableDynamicSimulation true;} forEach units enemy_17; activator_1 setDamage 1; castle1_flag setFlagTexture ""images\srpska.jpg""; [""castle1""] spawn MALO_fnc_createRespawn;}";
 				sizeA=70;
 				sizeB=70;
 				activationType="NOT PRESENT";
@@ -115583,7 +115582,7 @@ class Mission
 				name="trg_elektrozavodsk_old";
 				text="capture village (obj)";
 				condition="false";
-				onActivation="call{""elektrozavodsk"" setMarkerType ""o_hq""; elektrozavodsk_flag setFlagTexture """"; hint ""We have captured Electrozavodsk""; elektrozavodsk_marker setDamage 1; {_x setSkill .2;} forEach units e_squad_obj_1; {_x setSkill .2;} forEach units e_squad_obj_2; {_x setSkill .2;} forEach units e_squad_obj_3; {_x setSkill .2;} forEach units e_squad_obj_4; {_x setSkill .2;} forEach units e_squad_obj_5; {_x setSkill .2;} forEach units e_squad_obj_6; e_turret_1 setVehicleAmmo 0; e_turret_2 setVehicleAmmo 0; mortar_2_op setDamage 1; {_x enableAi ""PATH"";} forEach units un_check6_units; un_check6_apc setVehicleAmmo 0; elektrozavodsk_serb = true;}";
+				onActivation="call{""elektrozavodsk"" setMarkerType ""o_hq""; elektrozavodsk_flag setFlagTexture ""images/srpska.jpg""; hint ""We have captured Electrozavodsk""; elektrozavodsk_marker setDamage 1; {_x setSkill .2;} forEach units e_squad_obj_1; {_x setSkill .2;} forEach units e_squad_obj_2; {_x setSkill .2;} forEach units e_squad_obj_3; {_x setSkill .2;} forEach units e_squad_obj_4; {_x setSkill .2;} forEach units e_squad_obj_5; {_x setSkill .2;} forEach units e_squad_obj_6; e_turret_1 setVehicleAmmo 0; e_turret_2 setVehicleAmmo 0; mortar_2_op setDamage 1; {_x enableAi ""PATH"";} forEach units un_check6_units; un_check6_apc setVehicleAmmo 0; elektrozavodsk_serb = true;}";
 				sizeA=15;
 				sizeB=15;
 				timeout[]={10,10,10};
@@ -168142,7 +168141,7 @@ class Mission
 			};
 			id=17579;
 			type="SRB_uaz_2";
-			atlOffset=0.4487915;
+			atlOffset=0.44662476;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -168259,7 +168258,7 @@ class Mission
 			};
 			id=17580;
 			type="SRB_uaz_2";
-			atlOffset=0.53036499;
+			atlOffset=0.53051758;
 			class CustomAttributes
 			{
 				class Attribute0

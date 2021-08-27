@@ -20,6 +20,8 @@ if (!_init && ("shootout" in MALO_mission_progress)) then {
 			{_plane reveal _x;} forEach units east;
 			sleep (random [600, 900, 1200]);
 			_crew addWaypoint [[10000, 10000, 600], 0];
+			_crew setBehaviour "COMBAT";
+			_crew setCombatMode "RED";
 			private _group = createGroup independent;
 			(units _crew) joinSilent _group;
 			[driver _plane, _plane] spawn MALO_fnc_deleteObjects;

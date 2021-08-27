@@ -179,6 +179,13 @@ MALO_fnc_civs_surrender = {
 };
 
 
+// MAKE A LIST OF CURSOR TARGETS
+
+MALO_cursor_targets = [];
+publicVariable "MALO_cursor_targets";
+remoteExec ["MALO_fnc_civs_targets", 0];
+
+
 // LOOP THROUGH NEARBY UNITS
 
 private _units = [];
@@ -191,6 +198,7 @@ private _serb_units = [];
 {_serb_units append (missionNamespace getVariable [_x + "_civs", []]);} forEach serb_villages;*/
 
 {
+
 	if (!isPlayer _x) then {
 
 		// DETERMINE IF UNIT IS ARMED OR UNARMED
@@ -208,11 +216,6 @@ private _serb_units = [];
 		private _fleeing = _x getVariable ["fleeing", false];
 		private _targeted = _x getVariable ["targeted", false];
 		private _surrender = _x getVariable ["surrender", false];
-
-		// MAKE A LIST OF CURSOR TARGETS
-		/*MALO_cursor_targets = [];
-		publicVariable "MALO_cursor_targets";
-		remoteExec ["MALO_fnc_civs_targets", 0];*/
 
 		// IF A CIV ISN'T MOVING WHILE IN A VEHICLE
 		if (((speed (vehicle _x)) < 1) && (vehicle _x != _x) && !_armed && !(count waypoints _x > 1)) then {
