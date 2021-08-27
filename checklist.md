@@ -10,5 +10,6 @@
 * flag
 * jeep
 * mortar triggers
+* minefields
 * capsquads (initVillages)
 * village marker unit
