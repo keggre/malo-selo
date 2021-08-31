@@ -103,12 +103,29 @@ MALO_fnc_civs_targets = {
 
 	if (_object in MALO_cursor_targets) exitWith {};
 
-	if ((_object isKindOf "MAN") && (primaryWeapon player != "") && (cameraView == "GUNNER")) then {
+	if ((primaryWeapon player != "") && (cameraView == "GUNNER")) then {
 
-		MALO_cursor_targets append [_object];
-		publicVariable "MALO_cursor_targets";
+		if (_object isKindOf "MAN") then {
 
-		_object spawn MALO_fnc_civs_targeted;
+			MALO_cursor_targets append [_object];
+			publicVariable "MALO_cursor_targets";
+
+			_object spawn MALO_fnc_civs_targeted;
+
+		} else {
+
+			if ((!isNil {driver _object}) && (speed _object < 1)) then {
+
+				{
+
+					private _unit = _x select 0;
+					_unit spawn MALO_fnc_civs_targeted;
+
+				} forEach (fullCrew _object);
+
+			};
+
+		};
 
 	};
 
@@ -125,6 +142,10 @@ MALO_fnc_civs_targeted = {
 
 	private _fleeing = _unit getVariable ["fleeing", false];
 	private _surrender = _unit getVariable ["surrender", false];
+
+	if (vehicle _unit != _unit) then {
+		(group _unit) leaveVehicle (vehicle _unit);
+	};
 
 	if !(_surrender || _fleeing) then {
 		_unit setVariable ["surrender", true, true];
@@ -154,7 +175,13 @@ MALO_fnc_civs_surrender = {
 	private _random = _civ getVariable ["random", 0];
 
 	if (_random <= _fear && !_armed) then {
-	
+		
+		if (vehicle _civ != _civ) then {
+			waitUntil {sleep 1; (vehicle _civ == _civ)};
+			_civ action ["Surrender", _civ];
+			sleep (random [3,5,10]);
+		};
+
 		_civ action ["Surrender", _civ];
 
 		while {_civ in MALO_cursor_targets} do {
@@ -223,7 +250,7 @@ private _serb_units = [];
 			(group _x) addWaypoint [(getMarkerPos "refugee_marker"), 0];
 		};
 
-		// IF A CIV IS IN A VEHICLE WITHOUt A DRIVER
+		// IF A CIV IS IN A VEHICLE WITHOUT A DRIVER
 		if ((vehicle _x != _x) && (isNull (driver vehicle _x)) && !_armed) then {
 			_x moveInDriver (vehicle _x);
 		};

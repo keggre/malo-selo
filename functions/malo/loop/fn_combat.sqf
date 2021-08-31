@@ -339,6 +339,7 @@ MALO_fnc_combat_getInside = {
 			params ["_unit"];
 			private _group = createGroup west;
 			(units (group _unit)) joinSilent _group;
+			{_x enableAi "ALL";} forEach units _group;
 		};
 
 		if (_targeted && _armed) then {
