@@ -60,6 +60,14 @@ private _events = [
 {_x enableSimulationGlobal true;} forEach units player_squad;
 
 
+// VOICE
+
+private _speaker = "RHS_Male03CZ";
+if (speaker player != _speaker) then {
+	player setSpeaker _speaker;
+};
+
+
 // MAKE DEATH MARKERS
 
 if !(player getVariable ["killedMarkerEventCreated", false]) then {

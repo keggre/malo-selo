@@ -6,6 +6,7 @@ Arma mission set in the Bosnian war. Open-world campaign-style co-op mission.
 * Open the Arma 3 launcher and click "local mod" then add "Documents\Arma 3\mpmissions\malo_selo.Woodland_ACR\@malo_selo\" as a local mod.
 * Drag the preset.html into the Arma 3 launcher mods section. Ensure it includes the local mod.
 * Find the Malo Selo in the mission selection screen under "Bystrica" and run the mission from a LAN or internet session (dedicated server not guaranteed to function properly)
+* The mission adjusts to suit the player count, so it can be played solo or with others.
 
 # Performance
 * Since the mission is still incomplete, performance may not be completely optomized. 
