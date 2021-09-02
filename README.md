@@ -16,4 +16,4 @@ Arma mission set in the Bosnian war. Open-world campaign-style co-op mission.
 # Saving
 * Vanilla saving is disabled for this mission because it cannot function properly with the size of the mission
 * Instead, persistent saving is built into the mission and enabled by default. Mission progress is saved to your user profile automatically. This can be configured in the mission settings (see #performance).
-* A list of completed missions is also periodically saved to the RPT log file. Search for "MALO MISSION PROGRESS".
+* A list of completed missions is also periodically saved to the RPT log file. Search for "MALO SELO MISSION PROGRESS".
