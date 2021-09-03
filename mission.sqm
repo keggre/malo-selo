@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=19673;
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4285.5591,256.96112,5795.6655};
-		dir[]={-0.39812374,-0.60109031,-0.69295591};
-		up[]={-0.2994419,0.7991811,-0.52119488};
-		aside[]={-0.86708248,1.4901161e-008,0.49816459};
+		pos[]={6098.8794,247.08475,4678.0874};
+		dir[]={0.64535367,-0.59694004,0.47663546};
+		up[]={0.48017481,0.80228579,0.35464019};
+		aside[]={0.59409678,1.4901161e-008,-0.80439365};
 	};
 };
 binarizationWanted=0;
@@ -26447,7 +26447,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -26579,7 +26579,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -26710,7 +26710,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -26842,7 +26842,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -27236,7 +27236,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -27368,7 +27368,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -27500,7 +27500,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -27632,7 +27632,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -27764,7 +27764,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -27896,7 +27896,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -31244,7 +31244,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 						class Inventory
@@ -31396,7 +31396,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -31528,7 +31528,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 						class Inventory
@@ -31680,7 +31680,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -31812,7 +31812,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 						class Inventory
@@ -31964,7 +31964,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						stance="Middle";
 						class Inventory
@@ -75770,7 +75770,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76166,7 +76166,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76297,7 +76297,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76429,7 +76429,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76560,7 +76560,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76691,7 +76691,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76822,7 +76822,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -76953,7 +76953,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -77699,7 +77699,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78094,7 +78094,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78226,7 +78226,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78357,7 +78357,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78488,7 +78488,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78619,7 +78619,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78750,7 +78750,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -78881,7 +78881,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -79012,7 +79012,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						stance="Up";
 						class Inventory
@@ -79482,7 +79482,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -79878,7 +79878,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -80010,7 +80010,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -80142,7 +80142,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -80273,7 +80273,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -80405,7 +80405,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -209223,7 +209223,7 @@ class Mission
 			alpha=0;
 			a=100;
 			b=100;
-			angle=212.81097;
+			angle=212.81096;
 			id=19623;
 			atlOffset=-6.1035156e-005;
 		};
