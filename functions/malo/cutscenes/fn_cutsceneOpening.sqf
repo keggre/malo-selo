@@ -38,7 +38,7 @@ onPreloadFinished {
 
 	["MALO_loading", "Loading mission..."] call BIS_fnc_startLoadingScreen;
 
-	waitUntil {!(missionNamespace getVariable ["MALO_init", true])};
+	waitUntil {(missionNamespace getVariable ["MALO_init", true]) == false};
 
 	[] spawn MALO_fnc_cutsceneOpening_spawned;
 
