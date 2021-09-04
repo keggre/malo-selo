@@ -33,7 +33,7 @@ if (!isServer) exitWith {};
 				private _position = [[[getMarkerPos _village, 2000]],[]] call BIS_fnc_randomPos;; 
 				if (
 					(_position call MALO_fnc_ambientSounds_getDistanceToNearestBosnianVillage < 2000) &&
-					(_position distance (_position call MALO_fnc_getNearestPlayer) > 1000)
+					(_position distance (_position call MALO_fnc_getNearestPlayer) > 2000)
 				) exitWith {_position};
 			}
 		);
@@ -44,8 +44,8 @@ if (!isServer) exitWith {};
 	private _group = createGroup _center;
 	private _logic = _group createUnit ["LOGIC", [0,0,0], [], 0, ""];
 
-	/**/private _marker = createMarker ["ambient_sound_marker", [0,0,0]];
-	_marker setMarkerType "dot";/**/
+	/*private _marker = createMarker ["ambient_sound_marker", [0,0,0]];
+	_marker setMarkerType "dot";*/
 
 	while {MALO_CFG_ambient_sounds} do {
 
@@ -64,12 +64,12 @@ if (!isServer) exitWith {};
 		_logic setPos _position;
 		playSound3D [_sound, _logic, false, position _logic, 5];
 
-		/**/_marker setmarkerPos _position;/**/
+		/*_marker setmarkerPos _position;*/
 
 		sleep (random [
-				5,
-				10,
-				60 + (
+				0,
+				1,
+				10 + (
 					60 *
 					(
 						abs (
@@ -84,3 +84,5 @@ if (!isServer) exitWith {};
 	};
 
 };
+
+waitUntil {!MALO_CFG_ambient_sounds};

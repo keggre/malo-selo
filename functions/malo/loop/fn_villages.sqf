@@ -10,6 +10,7 @@ private _count = 0;
 
 	private _serb = missionNamespace getVariable [(_x + "_serb"), false];
 	private _un = missionNamespace getVariable [(_x + "_un"), false];
+	private _croat = missionNamespace getVariable [(_x + "_croat"), false];
 
 	if (_serb) then {
 		_x setMarkerType "malo_srpskaSquareFlag";
@@ -17,7 +18,11 @@ private _count = 0;
 		if (_un) then {
 			_x setMarkerType "malo_unSquareFlag";
 		} else {
-			_x setMarkerType "malo_bosniaSquareFlag"; 
+			if (_croat) then {
+				_x setMarkerType "malo_hercegSquareFlag";
+			} else {
+				_x setMarkerType "malo_bosniaSquareFlag"; 
+			};
 		};
 		_count = _count + 1;
 	};

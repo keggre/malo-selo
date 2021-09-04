@@ -8,11 +8,11 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=19673;
+		nextID=19676;
 	};
 	class MarkerIDProvider
 	{
-		nextID=81;
+		nextID=83;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3858.2058,322.5318,6342.9507};
-		dir[]={-0.89742506,-0.43919674,0.041647192};
-		up[]={-0.43872452,0.89839089,0.020360079};
-		aside[]={0.046357539,-1.8626451e-009,0.99892485};
+		pos[]={2140.3577,231.60333,4380.0107};
+		dir[]={0.47144037,-0.68208152,-0.55908692};
+		up[]={0.43969929,0.73126751,-0.5214445};
+		aside[]={-0.76450914,-9.406358e-008,-0.64466155};
 	};
 };
 binarizationWanted=0;
@@ -1662,7 +1662,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3870;
+		items=3871;
 		class Item0
 		{
 			dataType="Object";
@@ -30239,7 +30239,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="this disableAi ""PATH""";
+						init="this disableAi ""PATH""; [""guglovo_objects_delete"", this] call MALO_fnc_append;";
 						ignoreByDynSimulGrid=1;
 						stance="Up";
 					};
@@ -49573,7 +49573,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8116;
@@ -49616,7 +49616,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8118;
@@ -49659,7 +49659,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8124;
@@ -49703,7 +49703,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8120;
@@ -49803,7 +49803,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8132;
@@ -49846,7 +49846,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8133;
@@ -49889,7 +49889,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8134;
@@ -49932,7 +49932,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8135;
@@ -49994,7 +49994,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8137;
@@ -50036,7 +50036,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8140;
@@ -50078,7 +50078,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8141;
@@ -50120,7 +50120,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.75249052;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8142;
@@ -50181,7 +50181,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74571329;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE"";  [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8145;
@@ -50224,7 +50224,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74571329;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE"";  [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8148;
@@ -50266,7 +50266,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74571329;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE"";  [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8149;
@@ -50307,7 +50307,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74571329;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE"";  [""guglovo_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8150;
@@ -56624,7 +56624,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74571329;
-						init="this disableAi ""PATH""";
+						init="this disableAi ""PATH""; [""guglovo_objects_delete"", this] call MALO_fnc_append;";
 						ignoreByDynSimulGrid=1;
 						stance="Up";
 					};
@@ -56713,20 +56713,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3445.7979,349.90945,5649.2026};
-						angles[]={0,0.9880349,0};
+						position[]={3445.7981,349.90918,5649.2026};
+						angles[]={0,0.98803091,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						skill=0.75249052;
-						init="this disableAi ""PATH""";
+						init="this disableAi ""PATH""; [""guglovo_objects_delete"", this] call MALO_fnc_append;";
 						ignoreByDynSimulGrid=1;
 					};
 					id=8109;
 					type="I_Bosnia_and_Herzegovina_Sniper_01";
-					atlOffset=0.035583496;
+					atlOffset=0.035308838;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -56748,7 +56748,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -56757,7 +56795,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=8110;
-			atlOffset=0.035583496;
+			atlOffset=0.035308838;
 		};
 		class Item1357
 		{
@@ -60527,7 +60565,7 @@ class Mission
 					};
 					id=13787;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.033477783;
+					atlOffset=0.033355713;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -60579,7 +60617,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13786;
-			atlOffset=0.033477783;
+			atlOffset=0.033355713;
 		};
 		class Item1455
 		{
@@ -60916,7 +60954,7 @@ class Mission
 					};
 					id=13797;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15405273;
+					atlOffset=0.15393066;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -60968,7 +61006,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=13796;
-			atlOffset=0.15405273;
+			atlOffset=0.15393066;
 		};
 		class Item1460
 		{
@@ -63475,7 +63513,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13962;
@@ -63518,7 +63556,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13963;
@@ -63561,7 +63599,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13964;
@@ -63605,7 +63643,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13965;
@@ -63721,7 +63759,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13969;
@@ -63763,7 +63801,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13970;
@@ -63806,7 +63844,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13971;
@@ -63850,7 +63888,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13972;
@@ -63966,7 +64004,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13976;
@@ -64009,7 +64047,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13977;
@@ -64051,7 +64089,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13978;
@@ -64095,7 +64133,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13979;
@@ -64244,7 +64282,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13984;
@@ -64286,7 +64324,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13985;
@@ -64329,7 +64367,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13986;
@@ -64373,7 +64411,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13987;
@@ -64490,7 +64528,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13990;
@@ -64533,7 +64571,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13991;
@@ -64576,7 +64614,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13992;
@@ -64620,7 +64658,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""novy_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=13993;
@@ -71886,7 +71924,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""vyshnoye_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14258;
@@ -71929,7 +71967,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""vyshnoye_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14259;
@@ -71972,7 +72010,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""vyshnoye_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14260;
@@ -72015,7 +72053,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""vyshnoye_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14261;
@@ -72131,7 +72169,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14264;
@@ -72174,7 +72212,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14265;
@@ -72217,7 +72255,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14266;
@@ -72261,7 +72299,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14267;
@@ -72376,7 +72414,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14270;
@@ -72418,7 +72456,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14271;
@@ -72461,7 +72499,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14272;
@@ -72505,7 +72543,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14273;
@@ -72621,7 +72659,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14276;
@@ -72664,7 +72702,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14277;
@@ -72707,7 +72745,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.74910194;
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14278;
@@ -72750,7 +72788,7 @@ class Mission
 					{
 						skill=0.74910194;
 						rank="CORPORAL";
-						init="call{this disableAi ""MOVE"";}";
+						init="call{this disableAi ""MOVE""; [""mogilevka_objects_delete"", this] call MALO_fnc_append;}";
 						ignoreByDynSimulGrid=1;
 					};
 					id=14279;
@@ -82471,7 +82509,6 @@ class Mission
 					};
 					id=14671;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -82523,7 +82560,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=14670;
-			atlOffset=0.00012207031;
 		};
 		class Item1761
 		{
@@ -193121,7 +193157,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.049884945;
+			atlOffset=0.050000072;
 		};
 		class Item3360
 		{
@@ -193299,7 +193335,7 @@ class Mission
 			};
 			id=18884;
 			type="CUP_C_PBX_CIV";
-			atlOffset=0.069286674;
+			atlOffset=0.074973613;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -210115,6 +210151,24 @@ class Mission
 			id=19672;
 			type="Land_Razorwire_F";
 			atlOffset=3.8146973e-006;
+		};
+		class Item3870
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2144.5161,217.96361,4370.0991};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this SetFlagTexture ""images\herceg.jpg"";}";
+				name="mogilevka_flag";
+				dynamicSimulation=1;
+			};
+			id=19675;
+			type="RHS_HBZ_Flag";
 		};
 	};
 	class Connections
