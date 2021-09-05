@@ -18,7 +18,7 @@ MALO_bosnian_loadouts = [
 
 ]; publicVariable "MALO_bosnian_loadouts";
 
-{
+/*{
 
 	private _leader = leader _x;
 	private _group = _x;
@@ -49,4 +49,4 @@ MALO_bosnian_loadouts = [
 
 	};
 
-} forEach allGroups;
+} forEach allGroups;*/

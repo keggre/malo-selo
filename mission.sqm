@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=19676;
+		nextID=19677;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2631.6267,750.01196,5003.4531};
-		dir[]={0.40167588,-0.43121845,0.80790293};
-		up[]={0.19197619,0.90224755,0.38612756};
-		aside[]={0.89543378,0,-0.44519475};
+		pos[]={4148.605,501.99213,6330.2715};
+		dir[]={-0.77780658,-0.61953056,-0.10582442};
+		up[]={-0.61387491,0.78497249,-0.083520703};
+		aside[]={-0.13481289,0,0.99087107};
 	};
 };
 binarizationWanted=0;
@@ -1860,7 +1860,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="Empty";
+			side="West";
 			flags=4;
 			class Attributes
 			{
@@ -148576,7 +148576,6 @@ class Mission
 					};
 					id=16999;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15585947;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -148628,7 +148627,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=16998;
-			atlOffset=0.15585947;
 		};
 		class Item2618
 		{
@@ -148655,7 +148653,6 @@ class Mission
 					};
 					id=17001;
 					type="LOP_CHR_Civ_Random";
-					atlOffset=0.15585947;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -148707,7 +148704,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=17000;
-			atlOffset=0.15585947;
 		};
 		class Item2619
 		{
@@ -170712,7 +170708,7 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=8;
+				items=9;
 				class Item0
 				{
 					dataType="Object";
@@ -172197,9 +172193,23 @@ class Mission
 						nAttributes=6;
 					};
 				};
+				class Item8
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={-4763.7847,387.46143,3850.1357};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=19676;
+					type="Move";
+					atlOffset=314.37988;
+				};
 			};
 			class Attributes
 			{
+				name="lepo_selo_squad";
 				behaviour="CARELESS";
 				dynamicSimulation=1;
 			};
