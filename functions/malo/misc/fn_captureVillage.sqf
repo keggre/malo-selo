@@ -76,6 +76,7 @@ _trg setTriggerStatements ["this", ("
 // UN RETREAT FOR GUGLOVO
 if (_name == "guglovo") then {
 	[1,2] spawn MALO_fnc_deleteUnCheckpoints;
+	{_x enableAi "ALL";} forEach units lepo_selo_squad;
 };
 
 // TRENCH FALLBACKS FOR NOVY

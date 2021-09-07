@@ -34,6 +34,7 @@ serb_villages = [
 ];
 
 msta_un = true;
+mogilevka_croat = true;
 
 village_capsquad_nums = [
 
