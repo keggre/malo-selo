@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=514;
 	class ItemIDProvider
 	{
-		nextID=19677;
+		nextID=19685;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4148.605,501.99213,6330.2715};
-		dir[]={-0.77780658,-0.61953056,-0.10582442};
-		up[]={-0.61387491,0.78497249,-0.083520703};
-		aside[]={-0.13481289,0,0.99087107};
+		pos[]={5026.9277,819.9082,3511.2893};
+		dir[]={0.697788,-0.68127435,-0.2212628};
+		up[]={0.64940816,0.73202819,-0.20592195};
+		aside[]={-0.30225992,0,-0.95322561};
 	};
 };
 binarizationWanted=0;
@@ -284,13 +284,14 @@ addons[]=
 	"CUP_WaterVehicles_Zodiac",
 	"CUP_WaterVehicles_Fishing_Boat",
 	"WW2_Core_c_I44_Markers_c",
-	"CUP_Editor_A2_Roads_Config"
+	"CUP_Editor_A2_Roads_Config",
+	"CUP_Editor_Signs_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=189;
+		items=190;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -1352,6 +1353,11 @@ class AddonsMetaData
 			className="CUP_Editor_A2_Roads_Config";
 			name="CUP_Editor_A2_Roads_Config";
 		};
+		class Item189
+		{
+			className="CUP_Editor_Signs_Config";
+			name="CUP_Editor_Signs_Config";
+		};
 	};
 };
 class DynamicSimulation
@@ -1662,7 +1668,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3871;
+		items=3876;
 		class Item0
 		{
 			dataType="Object";
@@ -1860,7 +1866,7 @@ class Mission
 				position[]={5278.7368,213.07042,7136.9512};
 				angles[]={0,4.5644546,0};
 			};
-			side="West";
+			side="Empty";
 			flags=4;
 			class Attributes
 			{
@@ -18424,11 +18430,33 @@ class Mission
 			class Attributes
 			{
 				name="opening_cutscene_tgt";
-				createAsSimpleObject=1;
 				dynamicSimulation=1;
 			};
 			id=5875;
 			type="I44_Vegetation_MB_T_Ulmus_Smallivy";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item649
 		{
@@ -19315,7 +19343,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				dynamicSimulation=1;
 			};
 			id=5958;
@@ -20021,7 +20048,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				dynamicSimulation=1;
 			};
 			id=6028;
@@ -20039,7 +20065,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				dynamicSimulation=1;
 			};
 			id=6029;
@@ -20119,13 +20144,12 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4220.3179,205.24667,5768.4209};
-				angles[]={0.11943002,6.1353116,0.12336948};
+				angles[]={0.11943288,6.1353035,0.12337732};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				dynamicSimulation=1;
 			};
 			id=6039;
@@ -89356,8 +89380,8 @@ class Mission
 				text="load elektrozavodsk";
 				condition="call{this}";
 				onActivation="call{""elektrozavodsk"" setMarkerAlpha 1; {_x enableAi ""MOVE"";} forEach elektrozavodsk_civs; elektrozavodsk_discovered = true;}";
-				sizeA=2500;
-				sizeB=2500;
+				sizeA=2000;
+				sizeB=2000;
 				activationBy="ANYPLAYER";
 			};
 			id=14933;
@@ -210183,6 +210207,96 @@ class Mission
 			};
 			id=19675;
 			type="RHS_HBZ_Flag";
+		};
+		class Item3871
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4140.3208,312.50211,5197.8955};
+				angles[]={0,4.2590394,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""un_check1_objects_delete"", this] call MALO_fnc_append;";
+			};
+			id=19677;
+			type="CUP_sign_stop";
+			atlOffset=-2.6300049;
+		};
+		class Item3872
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4131.9985,314.28467,5192.0752};
+				angles[]={0.12486213,1.2458589,6.1485677};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""un_check1_objects_delete"", this] call MALO_fnc_append;";
+			};
+			id=19678;
+			type="CUP_sign_stop";
+			atlOffset=-2.5189819;
+		};
+		class Item3873
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4805.3604,62.063072,3243.5552};
+				angles[]={0,3.9550557,6.1974721};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""un_check6_objects_delete"", this] call MALO_fnc_append;";
+			};
+			id=19679;
+			type="CUP_sign_stop";
+			atlOffset=-2.4579964;
+		};
+		class Item3874
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4808.144,60.634441,3228.5203};
+				angles[]={6.1982694,5.6615324,0.011621562};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""un_check6_objects_delete"", this] call MALO_fnc_append;";
+			};
+			id=19680;
+			type="CUP_sign_stop";
+			atlOffset=-2.5853615;
+		};
+		class Item3875
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4787.6924,63.22818,3244.3735};
+				angles[]={6.1493149,2.3708897,6.0679231};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""un_check6_objects_delete"", this] call MALO_fnc_append;";
+			};
+			id=19681;
+			type="CUP_sign_stop";
+			atlOffset=-2.582901;
 		};
 	};
 	class Connections
