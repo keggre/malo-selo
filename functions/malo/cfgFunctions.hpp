@@ -89,6 +89,7 @@ class malo
 		// class loadGroups {};
 		class loadVillage {};
 		class noPlayersNearby {};
+		class parseMagazineDetail {};
 		// class saveGroups {};
 		class spawnFunction {};
 	};

@@ -8,7 +8,7 @@ class EditorData
 	toggles=514;
 	class ItemIDProvider
 	{
-		nextID=19685;
+		nextID=19725;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3060.177,422.95609,5751.2061};
-		dir[]={0.11606261,-0.53897083,0.83440232};
-		up[]={0.074258514,0.84229457,0.53387243};
-		aside[]={0.99055111,-2.9921648e-007,-0.13778301};
+		pos[]={5251.5361,224.95847,7146.8359};
+		dir[]={0.75581723,-0.45262179,-0.47317612};
+		up[]={0.38364568,0.89169693,-0.24017943};
+		aside[]={-0.53064048,4.5238994e-007,-0.84760755};
 	};
 };
 binarizationWanted=0;
@@ -53564,7 +53564,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -53734,7 +53734,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
-						init="call{this disableAi ""PATH"";}";
+						init="call{this disableAi ""MOVE"";}";
 						ignoreByDynSimulGrid=1;
 						stance="Up";
 						class Inventory
@@ -193195,7 +193195,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item3360
 		{
@@ -193373,7 +193373,7 @@ class Mission
 			};
 			id=18884;
 			type="CUP_C_PBX_CIV";
-			atlOffset=0.074973613;
+			atlOffset=0.069286674;
 			class CustomAttributes
 			{
 				class Attribute0
