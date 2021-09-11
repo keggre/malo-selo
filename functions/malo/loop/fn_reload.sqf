@@ -28,11 +28,27 @@ private _player = call {
 } forEach _infinite_ammo;
 
 /*{
+
 	private _vehicle = _x;
-	private _detail = magazinesDetail _vehicle;
-	private _objects = nearestObjects [_vehicle, [], 10];
+	private _details = magazinesDetail _vehicle;
+	private _parsed = _details call MALO_fnc_parseMagazineDetail;
+
+	private _deltas = [];
 	{
-		private _object = _x;
-		private _
-	} forEach _objects;
+		private _type = _x select 0;
+		private _current = (_x select 1) select 0;
+		private _capacity = (_x select 1) select 1;
+		private _delta = _capacity - _current;
+		if (_delta > 0) then {
+			_deltas append [[_type, _delta]];
+		};
+	} forEach _parsed;
+
+	if (count _deltas > 0) then {
+		private _objects = nearestObjects [_vehicle, [], 10];
+		{
+			private _object = _x;
+		} forEach _objects;
+	};
+
 } forEach _player;*/
