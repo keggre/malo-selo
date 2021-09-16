@@ -13,8 +13,8 @@ private _fnc = {
 	private _index_cb = (_detail find "]");
 
 	private _type = _detail select [0, _index_op];
-	private _current = parseNumber (_detail select [_index_op, _index_sl - _index_op]);
-	private _capacity = parseNumber (_detail select [_index_sl, _index_cp - _index_sl]);
+	private _current = parseNumber (_detail select [_index_op + 1, _index_sl - _index_op]);
+	private _capacity = parseNumber (_detail select [_index_sl + 1, _index_cp - _index_sl]);
 
 	[_type, [_current, _capacity]]
 
@@ -32,6 +32,7 @@ if (typeName _this == "ARRAY") then {
 	if (typename _this == "OBJECT") then {
 		private _object = _this;
 		private _details = magazinesDetail _object;
+		private _return = [];
 		{
 			private _detail = _x;
 			_return append [_x call _fnc];
