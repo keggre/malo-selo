@@ -11,7 +11,7 @@ MALO_fnc_rearm_spawned = {
 	private _type = (_this select 1) select 0;
 	private _count = (_this select 1) select 1;
 	
-	private 
+	
 
 };
 
@@ -84,7 +84,7 @@ private _player = call {
 						};
 
 						if (_count > 0) then {
-							private 
+							// private 
 							[[_object, _vehicle], [_type, _count]] spawn MALO_fnc_rearm_spawned;
 							breakTo "main";
 						};

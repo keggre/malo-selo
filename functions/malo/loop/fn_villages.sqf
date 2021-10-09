@@ -6,25 +6,45 @@ private _count = 0;
 
 {
 
-	// SET MARKER COLOR AND COUNT CAPTURED VILLAGES
+	private _name = _x;
+
+	// SET VILLAGE MARKER, FLAG, AND COUNT CAPTURED VILLAGES
 
 	private _serb = missionNamespace getVariable [(_x + "_serb"), false];
 	private _un = missionNamespace getVariable [(_x + "_un"), false];
 	private _croat = missionNamespace getVariable [(_x + "_croat"), false];
 
+	private _texture = "";	
+
 	if (_serb) then {
 		_x setMarkerType "malo_srpskaSquareFlag";
+		_texture = "images\srpska.jpg";
 	} else {
 		if (_un) then {
 			_x setMarkerType "malo_unSquareFlag";
+			_texture = "images\bosnia.jpg";
 		} else {
 			if (_croat) then {
 				_x setMarkerType "malo_hercegSquareFlag";
+				_texture = "images\herceg.jpg";
 			} else {
 				_x setMarkerType "malo_bosniaSquareFlag"; 
+				_texture = "images\bosnia.jpg";
 			};
 		};
 		_count = _count + 1;
+	};
+
+	private _flag = missionNamespace getVariable [_name + "_flag", "None"];
+
+	if !(_flag isEqualTo "None") then {
+		if (typeName _flag == "ARRAY") then {
+			{
+				_x setFlagTexture _texture;
+			} forEach _flag;
+		} else {
+			_flag setFlagTexture _texture;
+		};
 	};
 
 

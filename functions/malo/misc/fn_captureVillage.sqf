@@ -29,9 +29,9 @@ private _objects_delete = missionNamespace getVariable [_name + "_objects_delete
 } forEach _pois;*/
 
 // CHANGE THE VILLAGE FLAG TEXTURE
-if !(_flag isEqualTo "None") then {
+/*if !(_flag isEqualTo "None") then {
 	_flag setFlagTexture "images\srpska.jpg";
-};
+};*/
 
 // NOTIFY THE USER THAT THE VILLAGE HAS BEEN CAPTURED
 call compile ("hint ('We have captured ' + " + _name + "_fullname + '.');");
