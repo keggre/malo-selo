@@ -9,7 +9,7 @@ Arma mission set in the Bosnian war. Open-world campaign-style co-op mission.
 * The mission adjusts to suit the player count, so it can be played solo or with others.
 
 # Performance
-* Since the mission is still incomplete, performance may not be completely optomized. 
+* Since the mission is still incomplete, performance may not be completely optimized. 
 * By default, the mission should adjust the view distance and simulation distance according to your framerate.
 * Settings can be adjusted in "CONFIG.cfg" or in-game from the pause menu in "Configure" -> "Addon Options" -> "Malo Selo".
 
